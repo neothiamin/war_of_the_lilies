@@ -31,24 +31,10 @@ union = {
 }
 
 alliance = {
-	first = FRA
-	second = PRO
-	start_date = 1431.1.25
-	end_date = 1453.7.18
-}
-
-alliance = {
 	first = LOR
 	second = BAR
 	start_date = 1480.7.10
 	end_date = 1483.3.23
-}
-
-alliance = {
-	first = FRA
-	second = GEN
-	start_date = 1458.1.1
-	end_date = 1461.1.1
 }
 
 # Burgundy - Brittany alliance for balance

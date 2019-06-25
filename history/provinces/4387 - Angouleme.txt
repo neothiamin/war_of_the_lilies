@@ -1,7 +1,7 @@
 # 4387 Angoulême
 
-owner = FRA
-controller = FRA
+owner = ENG
+controller = ENG
 capital = "Angoulême"
 is_city = yes
 culture = cosmopolitan_french
@@ -11,6 +11,7 @@ base_tax = 3
 base_production = 3
 trade_goods = livestock
 base_manpower = 2
+add_core = ENG
 add_core = FRA
 estate = estate_burghers
 discovered_by = eastern

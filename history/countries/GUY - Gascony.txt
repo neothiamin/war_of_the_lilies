@@ -2,18 +2,45 @@ government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = western
-primary_culture = gascon
+primary_culture = english
 add_accepted_culture = cosmopolitan_french
+add_accepted_culture = gascon
 religion = catholic
 capital = 174 	# Bordeaux
 
+1429.1.1 = {
+    monarch = {
+		name = "John IV"
+        culture = gascon
+		dynasty = "de Armagnac"
+		birth_date = 1396.8.15
+		death_date = 1450.11.5
+		adm = 1
+		dip = 5
+		mil = 3
+	}
+	heir = {
+		name = "John V"
+        culture = gascon
+		dynasty = "de Armagnac"
+		birth_date = 1420.1.1
+		death_date = 1473.3.5
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
 
-1515.1.1 = { government = monarchy
-add_government_reform = autocracy_reform }
-
-1560.1.1 = { religion = reformed }
-
-1589.8.3 = { set_legacy_government = administrative_monarchy }
-
-1661.3.9 = { government = monarchy
-add_government_reform = autocracy_reform }
+1431.1.1 = {
+	queen = {
+		country_of_origin = PRO
+		name = "Marie"
+		dynasty = "de Anjou"
+		birth_date = 1404.8.14
+		death_date = 1463.11.29
+		female = yes
+		adm = 3
+		dip = 0
+		mil = 1
+	}
+}

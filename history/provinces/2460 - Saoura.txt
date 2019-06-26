@@ -19,7 +19,7 @@ discovered_by = ottoman
 discovered_by = western
 discovered_by = sub_saharan
 
-1444.1.1 = {
+1420.1.1 = {
 	owner = TFL
 	controller = TFL
 	add_core = TFL

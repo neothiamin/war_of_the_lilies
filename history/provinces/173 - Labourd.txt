@@ -1,7 +1,7 @@
 # 173 Labourd - Principal cities: Bayonne (can't change file name)
 
-owner = ENG
-controller = ENG
+owner = GUY
+controller = GUY
 capital = "Bayonne"
 is_city = yes
 culture = basque

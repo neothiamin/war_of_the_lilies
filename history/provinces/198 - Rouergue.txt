@@ -16,7 +16,6 @@ estate = estate_nobles
 add_core = GUY
 add_core = TOU
 add_core = PRO
-add_core = FRA
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim

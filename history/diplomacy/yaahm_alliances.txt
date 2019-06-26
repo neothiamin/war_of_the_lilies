@@ -13,3 +13,19 @@ alliance = {
 	start_date = 1428.1.1
 	end_date = 1444.1.1
 }
+
+#Burgundy swears an oath of non-interference in Flanders after the Second Treaty of Bourges, allowing England to move in in 1430.
+vassal = {
+	first = ENG
+	second = FLA
+	start_date = 1430.1.1
+	end_date = 1444.1.1
+}
+
+#John IV of Armagnac is granted the Duchy of Aquitaine
+vassal = {
+	first = ENG
+	second = GUY
+	start_date = 1428.1.1
+	end_date = 1444.1.1
+}

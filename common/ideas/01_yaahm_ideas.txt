@@ -1,0 +1,46 @@
+GUY_ideas = {
+
+    start = {
+        legitimacy = 0.5
+        num_accepted_cultures = 1
+    }
+
+    bonus = {
+        infantry_power = 0.1
+    }
+
+    trigger = {
+        tag = GUY
+    }
+
+    free = yes
+
+    guy_accesion_of_john = {
+        prestige = 1
+    }
+
+    guy_gironde_estuary = {
+        global_own_trade_power = 0.1        
+        global_ship_trade_power = 0.2
+    }
+
+    guy_massif_central = {        
+        defensiveness = 0.2
+    }
+
+    guy_french_legacy = {
+        diplomatic_reputation = 1
+    }
+
+    guy_dual_alliances = {
+        diplomats = 1
+    }
+
+    guy_centralization = {
+        administrative_efficiency = 0.05
+    }
+
+    guy_artillery = {
+        artillery_power = 0.1
+    }
+}

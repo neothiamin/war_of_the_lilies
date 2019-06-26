@@ -1,7 +1,7 @@
 # 194 Périgord - Principal cities: Bergerac
 
-owner = ENG
-controller = ENG
+owner = GUY
+controller = GUY
 capital = "Bergerac"
 is_city = yes
 culture = gascon

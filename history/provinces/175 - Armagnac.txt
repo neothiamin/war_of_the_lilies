@@ -1,7 +1,7 @@
 # 175 Armagnac - Principal cities: Auch
 
-owner = ENG
-controller = ENG
+owner = GUY
+controller = GUY
 capital = "Auch"
 is_city = yes
 culture = gascon
@@ -13,10 +13,8 @@ trade_goods = wool
 base_manpower = 5
 add_local_autonomy = 25
 estate = estate_nobles
-add_core = AMG
-add_core = GUY
 add_core = ENG
-add_core = FRA
+add_core = GUY
 
 
 

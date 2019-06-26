@@ -1,7 +1,7 @@
 # 195 Limousin - Principal cities: Limoges
 
-owner = ENG
-controller = ENG
+owner = GUY
+controller = GUY
 capital = "Limoges"
 is_city = yes
 culture = gascon
@@ -12,7 +12,6 @@ base_production = 4
 trade_goods = livestock
 base_manpower = 2
 add_core = ENG
-add_core = FRA
 add_core = GUY
 discovered_by = eastern
 discovered_by = western

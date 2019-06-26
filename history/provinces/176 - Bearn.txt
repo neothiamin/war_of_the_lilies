@@ -1,7 +1,7 @@
 # 176 Béarn - Principal cities: Pau
 
-owner = ENG
-controller = ENG
+owner = GUY
+controller = GUY
 capital = "Pau"
 is_city = yes
 culture = gascon
@@ -14,8 +14,6 @@ base_manpower = 4
 add_core = FOI
 add_core = GUY
 add_core = ENG
-add_core = FRA
-add_core = AMG
 add_local_autonomy = 25
 estate = estate_nobles
 

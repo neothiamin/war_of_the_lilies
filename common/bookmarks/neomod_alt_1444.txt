@@ -7,7 +7,14 @@ bookmark =
 	center = 112
 	default = yes
 	
+	country = ENG
+	country = BUR
+	country = SCO
+	country = PRO
+	country = CAS
+	country = HAB
+
 	easy_country = ENG
 	easy_country = BUR
-	easy_country = PRO
+	easy_country = SCO
 }

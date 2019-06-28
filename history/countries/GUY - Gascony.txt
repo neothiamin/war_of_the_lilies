@@ -44,3 +44,10 @@ capital = 174 	# Bordeaux
 		mil = 1
 	}
 }
+
+1435.1.12 = {
+	add_country_modifier = {
+		name = "guy_subject_of_england"
+		duration = 5475
+	}
+}

@@ -1,0 +1,3 @@
+guy_subject_of_england = {
+    liberty_desire = -25
+}

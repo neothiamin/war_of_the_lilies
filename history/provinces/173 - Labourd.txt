@@ -13,7 +13,6 @@ trade_goods = wine
 base_manpower = 4
 add_core = ENG
 add_core = GUY
-fort_15th = yes
 
 
 

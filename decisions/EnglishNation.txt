@@ -18,6 +18,9 @@ country_decisions = {
 				primary_culture = english
 				tag = KOI
 			}
+			capital_scope = {
+				region = british_isles_region
+			}
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no

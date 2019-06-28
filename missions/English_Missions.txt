@@ -445,6 +445,32 @@ eng_chesapeake_dominance = {
 
 }
 
+yaahm_english_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	
+	potential = {
+		OR = {
+			tag = ENG
+			tag = GBR
+		}
+		is_random_new_world = no
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	yaahm_eng_french_throne = {
+		icon = mission_empire
+		required_missions = {}
+		position = 1
+	
+		trigger = {
+			
+		}
+	}
+}
+
 eng_indian_ocean_exploration = {
 	
 	slot = 5
@@ -636,29 +662,4 @@ eng_british_cot_dominance = {
 		}
 	}
 
-}
-
-yaahm_english_missions_3 = {
-	slot = 3
-	ai = yes
-	
-	potential = {
-		OR = {
-			tag = ENG
-			tag = GBR
-		}
-		is_random_new_world = no
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-
-	yaahm_eng_french_throne = {
-		icon = mission_empire
-		required_missions = {}
-		position = 1
-
-		trigger = {
-			
-		}
-	}
 }

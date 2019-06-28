@@ -1,3 +1,7 @@
 guy_subject_of_england = {
     liberty_desire = -25
 }
+
+chateau_de_foix = {
+    local_defensiveness = 0.2
+}

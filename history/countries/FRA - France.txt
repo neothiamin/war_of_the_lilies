@@ -89,7 +89,6 @@ historical_rival = ENG
 		name = "Louis III"
 		dynasty = "de Anjou"
 		birth_date = 1403.7.25
-		death_date = 1434.1.1
 		adm = 1
 		dip = 4
 		mil = 2

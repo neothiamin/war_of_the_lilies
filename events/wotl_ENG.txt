@@ -1,0 +1,116 @@
+########################################
+# YAAHM events for England             #
+########################################
+
+namespace = wotl_eng
+
+#The State of Affairs
+#This event is a brief rundown of the ongoing strife in France and the possibility of rebellion that may culminate in the War of the Lilies.
+#England gets a few choices: they can go it alone, seek help from either Burgundy or Provence, or begin to delegate power, giving various French duchies cores on Northern France.
+country_event = {
+
+    id = wotl_eng.1
+    title = wotl_eng.1.t
+    desc = wotl_eng.1.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+        NOT = {
+            is_year = 1445
+        }
+        owns_core_province = 183
+        always = no
+    }
+
+    mean_time_to_happen = {
+        months = 16
+    }
+
+    immediate = {
+        set_country_flag = wotl_eng_state_of_affairs_happened
+    }
+
+    #We will be fine!
+    option = {
+        name = wotl_eng.1.a
+    }
+
+    #We ought to approach the Burgundians.
+    option = {
+        name = wotl_eng.1.b
+    }
+
+    #We ought to approach [PRO.Monarch.GetName].
+    option = {
+        name = wotl_eng.1.c
+    }
+
+    #Perhaps some lenience would be best?
+    option = {
+        name = wotl_eng.1.d
+    }
+}
+
+#Heir's Culture
+#Triggered by on_new_heir
+country_event = {
+
+    id = wotl_eng.2
+    title = wotl_eng.2.t
+    desc = wotl_eng.2.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    is_triggered_only = yes
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    #Available for Anglo-France or England/Great Britain if they either accepted the French or England before 1450
+    trigger = {
+        OR = {
+            AND = {
+                tag = ENG
+                NOT = {
+                    is_year = 1450
+                }
+            }
+            #tag = ANF
+            AND = {
+                OR = {                    
+                    tag = ENG
+                    tag = GBR
+                }                
+                has_country_flag = eng_accepted_french
+            }
+        }
+        owns_core_province = 183
+    }
+
+    #[Root.Heir.GetSheHe] shall be raised in the true English fashion!
+    option = {
+        name = wotl_eng.2.a
+        hidden_effect = {
+            set_heir_culture = english
+        }
+    }
+
+    #[Root.Heir.GetSheHe] ought to know the fineries of life on the Continent.
+    option = {
+        name = wotl_eng.2.b
+        hidden_effect = {
+            set_heir_culture = cosmopolitan_french
+        }
+    }
+
+    #[Root.Heir.GetSheHe] will be raised in a way to mirror William the First!
+    option = {
+        name = wotl_eng.2.c
+        hidden_effect = {
+            set_heir_culture = normand
+        }
+    }
+}

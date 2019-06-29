@@ -2414,6 +2414,7 @@ country_event = {
 		NOT = { has_country_flag = had_war_of_the_roses }
 		NOT = { has_disaster = war_of_the_roses }
 		NOT = { is_year = 1500 }
+		always = no
 	}
 	
 	mean_time_to_happen = {

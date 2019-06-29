@@ -1,2 +1,12 @@
 ﻿l_english:
- 
+ wotl_eng.1.t:0 ""
+ wotl_eng.1.desc:0 ""
+ wotl_eng.1.a:0 ""
+ wotl_eng.1.b:0 ""
+ wotl_eng.1.c:0 ""
+ wotl_eng.1.d:0 ""
+ wotl_eng.2.t:0 "The Culture of [Root.Heir.GetName]"
+ wotl_eng.2.desc:0 "With the birth of [Root.Heir.GetName], and the declaration of [Root.Heir.GetHerHim] as Heir Apparent, a troubling dilemma has manifested itself.\n\n\"You see, my [Root.Monarch.GetTitle]...\" an advisor says, quivering, \"...many of the nobility are... worried, let's say, about how the new babe will be raised. Of course, Your word rules in this [Root.GovernmentName], and so the decision is ultimately yours to make.\""
+ wotl_eng.2.a:0 "[Root.Heir.GetSheHeCap] shall be raised in the true English fashion!"
+ wotl_eng.2.b:0 "[Root.Heir.GetSheHeCap] ought to know the fineries of life on the Continent."
+ wotl_eng.2.c:0 "[Root.Heir.GetSheHeCap] will be raised in a way to mirror William the First!"

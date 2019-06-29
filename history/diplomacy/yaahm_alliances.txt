@@ -26,6 +26,13 @@ vassal = {
 vassal = {
 	first = ENG
 	second = GUY
-	start_date = 1428.1.1
-	end_date = 1444.1.1
+	start_date = 1428.1.1	
+	end_date = 2000.1.1	
+}
+
+vassal = { #MORE DECENTRALIZATION
+	first = ENG
+	second = NOL
+	start_date = 1000.1.1
+	end_date = 2000.1.1	
 }

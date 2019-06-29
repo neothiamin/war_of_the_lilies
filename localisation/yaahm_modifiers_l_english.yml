@@ -2,4 +2,6 @@
  guy_subject_of_england:0 "Aquitaine Resurrected"
  desc_guy_subject_of_england:0 "The recreation of the Duchy of Aquitaine and the accession of John IV de Armagnac as the new Duke has left us feeling somewhat appeased with our new English overlords." 
  chateau_de_foix:0 "Château de Foix"
- desc_chateau_de_foix:0 "Built sometime before 987, the Château de Foix is the home of the Count of Foix and is situated above the Ariège valley. Its walls have never been broken, and are popularly believed to be impenetrable." 
+ desc_chateau_de_foix:0 "Built sometime before 987, the Château de Foix is the home of the Count of Foix and is situated above the Ariège valley. Its walls have never been broken, and are popularly believed to be impenetrable."
+ eng_game_start_upkeep:0 "Diplomacy Stretched Thin"
+ desc_eng_game_start_upkeep:0 "The recent acquisition of the lands of France have left our diplomats working harder than ever with less than ever. We might be able to maintain our diplomatic web for a while longer, but something will have to give..."

@@ -5,3 +5,8 @@ guy_subject_of_england = {
 chateau_de_foix = {
     local_defensiveness = 0.2
 }
+
+eng_game_start_upkeep = {    
+    diplomatic_upkeep = 2
+    diplomatic_reputation = -1
+}

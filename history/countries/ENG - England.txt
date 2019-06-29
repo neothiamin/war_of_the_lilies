@@ -42,4 +42,9 @@ national_focus = DIP
 		dip = 1
 		mil = 5
 	}
+
+	add_country_modifier = {
+		name = "eng_game_start_upkeep"
+		duration = 5475
+	}
 }

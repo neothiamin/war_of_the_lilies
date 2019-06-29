@@ -55,7 +55,7 @@ country_event = {
 }
 
 #Heir's Culture
-#Triggered by on_new_heir
+#Had to do some hacky stuff for this one since the on_action doesn't work. :rage:
 country_event = {
 
     id = wotl_eng.2
@@ -63,10 +63,8 @@ country_event = {
     desc = wotl_eng.2.desc
     picture = LIBERUM_VETO_eventPicture
 
-    is_triggered_only = yes
-
     mean_time_to_happen = {
-        days = 1
+        months = 6
     }
 
     #Available for Anglo-France or England/Great Britain if they either accepted the French or England before 1450
@@ -78,16 +76,23 @@ country_event = {
                     is_year = 1450
                 }
             }
-            #tag = ANF
             AND = {
                 OR = {                    
                     tag = ENG
                     tag = GBR
                 }                
-                has_country_flag = eng_accepted_french
+                has_country_flag = wotl_eng_accepted_french
             }
         }
         owns_core_province = 183
+        has_heir = yes
+        NOT = {
+            has_heir_flag = wotl_eng_heir_culture_event_fired
+        }
+    }
+
+    immediate = {
+        set_heir_flag = wotl_eng_heir_culture_event_fired
     }
 
     #[Root.Heir.GetSheHe] shall be raised in the true English fashion!

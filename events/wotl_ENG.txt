@@ -26,31 +26,16 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 16
+        months = 4
     }
 
     immediate = {
         set_country_flag = wotl_eng_state_of_affairs_happened
     }
 
-    #We will be fine!
+    #God is with us.
     option = {
         name = wotl_eng.1.a
-    }
-
-    #We ought to approach the Burgundians.
-    option = {
-        name = wotl_eng.1.b
-    }
-
-    #We ought to approach [PRO.Monarch.GetName].
-    option = {
-        name = wotl_eng.1.c
-    }
-
-    #Perhaps some lenience would be best?
-    option = {
-        name = wotl_eng.1.d
     }
 }
 
@@ -64,7 +49,7 @@ country_event = {
     picture = LIBERUM_VETO_eventPicture
 
     mean_time_to_happen = {
-        months = 6
+        months = 4
     }
 
     #Available for Anglo-France or England/Great Britain if they either accepted the French or England before 1450

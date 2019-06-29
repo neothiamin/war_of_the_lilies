@@ -465,8 +465,8 @@ yaahm_english_missions_5 = {
 		required_missions = {}
 		position = 1
 	
-		trigger = {
-			
+		trigger = {			
+			always = no
 		}
 	}
 }

@@ -36,3 +36,18 @@ vassal = { #MORE DECENTRALIZATION
 	start_date = 1000.1.1
 	end_date = 2000.1.1	
 }
+
+# Kalmar Union
+union = {
+	first = DAN
+	second = SWE
+	start_date = 1397.6.17
+	end_date = 1448.6.20
+}
+# Denmark-Norway
+union = {
+	first = DAN
+	second = NOR
+	start_date = 1397.6.17
+	end_date = 1449.11.20
+}

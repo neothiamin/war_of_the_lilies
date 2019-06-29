@@ -1,10 +1,7 @@
 ﻿l_english:
- wotl_eng.1.t:0 ""
- wotl_eng.1.desc:0 ""
- wotl_eng.1.a:0 ""
- wotl_eng.1.b:0 ""
- wotl_eng.1.c:0 ""
- wotl_eng.1.d:0 ""
+ wotl_eng.1.t:0 "State of Affairs"
+ wotl_eng.1.desc:0 "\"Your Majesty,\" the note reads.\n\n\"I write to you, our most Magnificent [Root.Monarch.GetTitle], with news of unrest. As you know, your rule as [Root.Monarch.GetTitle] of [Root.GetName] is most righteous, and indeed hath been ordained by our Lord in Heaven above Himself. There are, however, some who question your rule.\"\n\n\"On the Continent, there is word, amongst the peasantry and Old Guard alike, of concepts nothing short of treason. The merchants postulate about \"how much higher profits would be\" if Your Majesty were not the one issuing taxes and tariffs on goods traded in the markets of Paris and Reims.\"\n\n In the South, it is said that your vassal, [GUY.Monarch.GetName], is incompetent, and illegitimate. Open rebellion is common, and even the lowliest peasant is known to keep a sharpened pitchfork in his shed.\n\nAnd in the Lowlands, some speak of your cousin, the [FLA.Monarch.GetTitle] of [FLA.GetName], and [FLA.Monarch.GetHerHis] ruthless ways. \"The Invader,\" they call [FLA.Monarch.GetHerHim].\n\nYour Majesty, I would not write to you if I were not so deeply troubled, not only for your well-being, but for the well-being of your people. We are doing the best we can to stifle dissent and reassure the peasantry that all will be well, but we fear our wo---ma--------lling on de----ar----.\n\n---odspee----,\n\nYo------mbl------ssal...\"\n\nThe rest of the note is illegible, a jumbled mess of strokes and tears in the parchment."
+ wotl_eng.1.a:0 "God is with us, and God is with [Root.Monarch.GetName]."
  wotl_eng.2.t:0 "The Culture of [Root.Heir.GetName]"
  wotl_eng.2.desc:0 "With the birth of [Root.Heir.GetName], and the declaration of [Root.Heir.GetHerHim] as Heir Apparent, a troubling dilemma has manifested itself.\n\n\"You see, my [Root.Monarch.GetTitle]...\" an advisor says, quivering, \"...many of the nobility are... worried, let's say, about how the new babe will be raised. Of course, Your word rules in this [Root.GovernmentName], and so the decision is ultimately yours to make.\""
  wotl_eng.2.a:0 "[Root.Heir.GetSheHeCap] shall be raised in the true English fashion!"

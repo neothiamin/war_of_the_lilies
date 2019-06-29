@@ -1,2 +1,4 @@
 #Aquitaine
 #AQI = "countries/Aquitaine.txt"
+
+ANF = "countries/AngloFrance.txt"

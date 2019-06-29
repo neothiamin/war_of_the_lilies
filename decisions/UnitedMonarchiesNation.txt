@@ -1,0 +1,97 @@
+country_decisions = {
+
+	anglo_french_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_global_flag = united_monarchies_formed }
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = ANF }
+            OR = {
+                tag = ENG
+                tag = GBR
+            }
+            ROOT = {
+                has_country_flag = anf_eligible
+            }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+                province_id = 186		# Reims
+                province_id = 183		# Paris
+				province_id = 236		# London
+				province_id = 184		# Orleans
+				province_id = 234		# Wessex
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 12
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 186		# Reims
+			owns_core_province = 183		# Paris
+			owns_core_province = 236		# London
+			owns_core_province = 184		# Orleans
+			owns_core_province = 234		# Wessex
+		}
+		effect = {
+			change_tag = ANF
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			british_isles_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ANF
+			}
+            france_region = {
+                limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ANF
+            }
+			add_prestige = 25
+			set_global_flag = united_monarchies_formed
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

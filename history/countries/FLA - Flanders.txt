@@ -16,6 +16,7 @@ capital = 90	# Brugge
 		dip = 0
 		mil = 2
 	}
+	add_ruler_personality = cruel_personality
 	set_ruler_flag = wotl_fla_john_the_invader
     queen = {
 		name = "Margaret Beauchamp"

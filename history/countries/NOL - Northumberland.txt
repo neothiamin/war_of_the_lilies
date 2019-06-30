@@ -15,4 +15,5 @@ capital = 246	# Newcastle
 		dip = 2
 		mil = 4
 	}
+	add_ruler_personality = secretive_personality
 }

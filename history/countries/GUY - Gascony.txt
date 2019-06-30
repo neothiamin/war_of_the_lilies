@@ -19,6 +19,7 @@ capital = 174 	# Bordeaux
 		dip = 5
 		mil = 3
 	}
+	add_ruler_personality = intricate_web_weaver_personality
 	heir = {
 		name = "John V"
         culture = gascon

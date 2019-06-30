@@ -13,6 +13,7 @@ capital = "Scarborough"
 is_city = yes
 add_core = ENG
 add_core = NOL
+add_core = YRK
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman

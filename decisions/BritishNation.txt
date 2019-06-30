@@ -14,7 +14,7 @@ country_decisions = {
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
 			OR = {
-				culture_group = british
+				tag = SCO
 				primary_culture = highland_scottish
 			}
 			capital_scope = {
@@ -163,29 +163,15 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			OR = {
-				AND = {
-					tag = ENG
-					OR = {
-						ai = no
-						AND = {
-							ai = yes
-							SCO = {	is_subject_of = ENG	}
-							#This overlaps with allow for AI, is meant to negate do_not_integrate
-							SCO = { NOT = { num_of_cities = 15 } } #Keep this number the same as in allow
-						}
-					}
-				}
-				AND = {
-					tag = SCO
-					OR = {
-						ai = no
-						AND = {
-							ai = yes
-							ENG = {	is_subject_of = SCO	}
-							#This overlaps with allow for AI, is meant to negate do_not_integrate
-							ENG = { NOT = { num_of_cities = 41 } } #Keep this number the same as in allow
-						}
+			AND = {
+				tag = SCO
+				OR = {
+					ai = no
+					AND = {
+						ai = yes
+						ENG = {	is_subject_of = SCO	}
+						#This overlaps with allow for AI, is meant to negate do_not_integrate
+						ENG = { NOT = { num_of_cities = 41 } } #Keep this number the same as in allow
 					}
 				}
 			}
@@ -196,23 +182,13 @@ country_decisions = {
 			is_nomad = no
 			is_at_war = no
 			legitimacy = 100
-			OR = {
-				AND = {
-					tag = ENG
-					OR = {
-						SCO = {	junior_union_with = ENG	}
-						SCO = {	is_subject_of = ENG	}
-					}
-					SCO = { NOT = { num_of_cities = 15 } } #Keep this number the same as in potential
+			AND = {
+				tag = SCO
+				OR = {
+					ENG = {	junior_union_with = SCO	}
+					ENG = {	is_subject_of = SCO	}
 				}
-				AND = {
-					tag = SCO
-					OR = {
-						ENG = {	junior_union_with = SCO	}
-						ENG = {	is_subject_of = SCO	}
-					}
-					ENG = { NOT = { num_of_cities = 41 } } #Keep this number the same as in potential
-				}
+				ENG = { NOT = { num_of_cities = 41 } } #Keep this number the same as in potential
 			}
 		}
 		effect = {

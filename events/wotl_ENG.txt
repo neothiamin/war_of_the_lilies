@@ -22,7 +22,6 @@ country_event = {
             is_year = 1445
         }
         owns_core_province = 183
-        always = no
     }
 
     mean_time_to_happen = {

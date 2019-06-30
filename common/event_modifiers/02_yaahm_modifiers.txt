@@ -10,3 +10,12 @@ eng_game_start_upkeep = {
     diplomatic_upkeep = 2
     diplomatic_reputation = -1
 }
+
+anf_rebuilt_louvre = {
+    local_development_cost = -0.05
+    local_tax_modifier = 0.1
+}
+anf_no_louvre = {
+    local_unrest = 4    
+    local_tax_modifier = -0.1
+}

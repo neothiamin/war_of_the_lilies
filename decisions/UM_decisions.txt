@@ -1,0 +1,31 @@
+country_decisions = {
+
+    move_capital_to_paris = {
+        potential = {
+			normal_or_historical_nations = yes
+			tag = ANF
+            owns_core_province = 183
+            NOT = {
+                capital = 183
+            }
+		}
+        provinces_to_highlight = {
+			province_id = 183	# Île-de-France
+		}
+        allow = {
+            owns_core_province = 183
+            OR = {
+                accepted_culture = cosmopolitan_french
+                primary_culture = cosmopolitan_french
+            }
+        }
+        effect = {
+            183 = { #Paris
+				move_capital_effect = yes
+			}
+            hidden_effect = {
+                set_country_flag = anf_moved_capital_to_paris
+            }
+        }
+    }
+}

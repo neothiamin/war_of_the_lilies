@@ -1,5 +1,5 @@
 ########################################
-# YAAHM events for England             #
+# WOTL events for England              #
 ########################################
 
 namespace = wotl_eng
@@ -296,4 +296,3 @@ country_event = {
         }
     }
 }
-

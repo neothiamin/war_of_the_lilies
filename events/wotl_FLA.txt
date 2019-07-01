@@ -78,6 +78,10 @@ country_event = {
         is_at_war = no
     }
 
+    mean_time_to_happen = {
+        months = 2
+    }
+    
     immediate = {
         set_global_flag = wotl_fla_flemish_revolt_happened
         clr_global_flag = wotl_fla_flemish_revolt_possible        

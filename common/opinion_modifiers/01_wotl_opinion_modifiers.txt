@@ -1,0 +1,4 @@
+wotl_bur_non_interference = {
+    opinion = 50
+    yearly_decay = 5
+}

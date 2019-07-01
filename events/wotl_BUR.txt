@@ -1,0 +1,54 @@
+########################################
+# WOTL events for Burgundy             #
+########################################
+
+namespace = wotl_bur
+
+country_event = {
+    id = wotl_bur.1
+    title = wotl_bur.1.t
+    desc = wotl_bur.1.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    trigger = {
+        tag = BUR
+        has_global_flag = wotl_fla_flemish_revolt_happened
+        is_at_war = no
+    }
+
+    mean_time_to_happen = {
+        months = 2
+    }
+
+    #We must step in.
+    option = {
+        name = wotl_bur.1.a
+        ai_chance = {
+            factor = 70
+        }
+        declare_war_with_cb = {
+            who = FLA
+            casus_belli = cb_bur_flemish_war
+            war_goal_province = 90
+        }
+        hidden_effect = {            
+            remove_historical_friend = ENG
+            ENG = {
+                remove_historical_friend = BUR
+            }
+        }
+    }
+
+    #It is none of our concern.
+    option = {
+        name = wotl_bur.1.b
+        ai_chance = {
+            factor = 30
+        }
+        reverse_add_opinion = {
+            who = ENG
+            modifier = wotl_bur_non_interference
+        }
+    }
+    
+}

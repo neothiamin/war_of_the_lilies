@@ -6,6 +6,7 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_france_flag }
+			has_global_flag = wotl_french_revival
 			OR = {
 				ai = no
 				is_playing_custom_nation = no

@@ -82,6 +82,7 @@ country_event = {
     #[Root.Heir.GetSheHe] shall be raised in the true English fashion!
     option = {
         name = wotl_eng.2.a
+        ai_chance = { factor = 50 }
         hidden_effect = {
             set_heir_culture = english
         }
@@ -90,6 +91,7 @@ country_event = {
     #[Root.Heir.GetSheHe] ought to know the fineries of life on the Continent.
     option = {
         name = wotl_eng.2.b
+        ai_chance = { factor = 35 }
         hidden_effect = {
             set_heir_culture = cosmopolitan_french
         }
@@ -98,6 +100,7 @@ country_event = {
     #[Root.Heir.GetSheHe] will be raised in a way to mirror William the First!
     option = {
         name = wotl_eng.2.c
+        ai_chance = { factor = 15 }
         hidden_effect = {
             set_heir_culture = normand
         }

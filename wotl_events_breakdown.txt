@@ -1,0 +1,19 @@
+State of Affairs - Done
+
+---
+1. JTI Executes Local
+---
+
+Is England, Flanders has the wotl_fla_john_the_invader flag, is after 1438
+
+"Your Majesty,
+
+Your cousin, Duke John of Beaufort, known as \"The Invader\" among his detractors and much of the peasantry in his domain of Flanders, has once again shown why he has been ascribed that moniker.
+
+John recently has been increasingly paranoid, fully aware of the fact that he, an Englishman, rules over a duchy of Flemings, and has begun fully exercising his right as chief \"executive\". This time, though, one too many heads have rolled.
+
+John has just executed a merchant, (random name here), for \"treason and conspiracy against the Crown\"; however, it seems that, unlike with his previous victims, his court has been unable to find (or fabricate) a single shred of evidence. Word of this seemingly arbitrary and tyrannical execution has made its way from the throne room to the town square in Brugge, and hundreds of Flemings, from the lowliest peasants to the holiest clergymen, have taken up arms in open rebellion against the Pretender, John \"The Invader\" of Beaufort!"
+
+1a. "We must support John!"
+
+1b. "John has gone too far."

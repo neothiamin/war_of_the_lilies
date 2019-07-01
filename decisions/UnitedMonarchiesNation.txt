@@ -11,10 +11,7 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = { exists = ANF }
-            OR = {
-                tag = ENG
-                tag = GBR
-            }
+            tag = ENG
             ROOT = {
                 has_country_flag = anf_eligible
             }

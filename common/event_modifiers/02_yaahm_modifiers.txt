@@ -8,7 +8,7 @@ chateau_de_foix = {
 
 eng_game_start_upkeep = {    
     diplomatic_upkeep = 2
-    diplomatic_reputation = -1
+    diplomatic_reputation = -2
 }
 
 anf_rebuilt_louvre = {

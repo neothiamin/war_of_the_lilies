@@ -139,16 +139,21 @@ country_event = {
 
     immediate = {
         #set_global_flag = wotl_jti_execution_happened
-        set_saved_name = {
-            key = executed_fleming
-            type = advisor
-            scope = FLA
+        FLA = {
+            set_saved_name = {
+                key = executed_fleming
+                type = advisor
+                scope = THIS
+            }
         }
     }
 
     #We must support John.
     option = {
         name = wotl_eng.3.a
+        ai_chance = {
+            factor = 20
+        }
         custom_tooltip = wotl_eng_3a_will_cause_unrest
         set_country_flag = wotl_eng_supported_jti
         #Used in another event.
@@ -163,6 +168,9 @@ country_event = {
     #John has gone too far!
     option = {
         name = wotl_eng.3.b
+        ai_chance = {
+            factor = 80
+        }
         custom_tooltip = wotl_eng_3b_john_angry
         set_country_flag = wotl_eng_did_not_support_jti
         #Used in another event.
@@ -202,6 +210,9 @@ country_event = {
     #Does he not know who gave him his title?!
     option = {
         name = wotl_eng.4.a
+        ai_chance = {
+            factor = 80
+        }
         custom_tooltip = wotl_eng_4a_remove_jti
         hidden_effect = {
             random_list = {
@@ -243,8 +254,13 @@ country_event = {
     #John is more trouble than he's worth. He is on his own.
     option = {
         name = wotl_eng.4.b
+        ai_chance = {
+            factor = 20
+        }
         set_global_flag = wotl_eng_king_weak
-        grant_independence = FLA
+        FLA = {
+            grant_independence = yes
+        }
         add_prestige = -15
     }
 }
@@ -256,8 +272,6 @@ country_event = {
     desc = wotl_eng.5.desc
     picture = LIBERUM_VETO_eventPicture
 
-    fire_only_once = yes
-
     is_triggered_only = yes
 
     trigger = {
@@ -268,12 +282,18 @@ country_event = {
     option = {
         name = wotl_eng.5.a
         set_country_flag = wotl_eng_council_of_dukes_support_fla
+        ai_chance = {
+            factor = 50
+        }
     }
 
     #That's treason!
     option = {
         name = wotl_eng.5.b
         set_country_flag = wotl_eng_council_of_dukes_do_not_support_fla
+        ai_chance = {
+            factor = 50
+        }
     }
 }
 

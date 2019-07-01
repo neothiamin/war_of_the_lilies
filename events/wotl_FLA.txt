@@ -1,0 +1,201 @@
+########################################
+# WOTL events for England              #
+########################################
+
+namespace = wotl_fla
+
+
+#Unrest in Flanders
+country_event = {
+    id = wotl_fla.1
+    title = wotl_fla.1.t
+    desc = wotl_fla.1.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = FLA
+        has_ruler_flag = wotl_fla_jti_supported
+        has_ruler_flag = wotl_fla_john_the_invader
+        is_subject_of = ENG
+        is_at_war = no
+    }
+
+    #Worrying...
+    option = {
+        name = wotl_fla.1.a
+        custom_tooltip = wotl_fla_1a_flemish_revolt_imminent
+        set_ruler_flag = wotl_fla_flemish_revolt_possible
+        add_prestige = -10
+    }
+
+}
+
+#JTI questions [ENG.Monarch.GetName]
+country_event = {
+    id = wotl_fla.2
+    title = wotl_fla.2.t
+    desc = wotl_fla.2.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = FLA
+        has_ruler_flag = wotl_fla_jti_not_supported
+        has_ruler_flag = wotl_fla_john_the_invader
+        is_subject_of = ENG
+        is_at_war = no
+    }
+
+    immediate = {
+        set_global_flag = wotl_eng_legitimacy_questioned
+    }
+
+    #Well, what does he know anyways?
+    option = {
+        name = wotl_fla.2.a
+        custom_tooltip = wotl_fla_2a_question_legitimacy
+    }
+
+}
+
+#Flemish Revolt
+country_event = {
+    id = wotl_fla.3
+    title = wotl_fla.3.t
+    desc = wotl_fla.3.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = FLA
+        has_ruler_flag = wotl_fla_flemish_revolt_possible
+        has_ruler_flag = wotl_fla_john_the_invader
+        is_subject_of = ENG
+        is_at_war = no
+    }
+
+    immediate = {
+        set_global_flag = wotl_fla_flemish_revolt_happened
+        clr_global_flag = wotl_fla_flemish_revolt_possible        
+    }
+
+    #Crush them!
+    option = {
+        name = wotl_fla.3.a
+        capital_scope = {
+            spawn_rebels = {
+                size = 2
+                type = anti_tax_rebels
+                unrest = 8
+                culture = flemish                
+            }
+        }
+    }
+
+}
+
+#Duke John removed from power!
+country_event = {
+    id = wotl_fla.4
+    title = wotl_fla.4.t
+    desc = wotl_fla.4.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    is_triggered_only = yes
+
+    immediate = {
+        set_global_flag = wotl_fla_jti_removed
+    }
+
+    trigger = {
+        tag = FLA
+        has_ruler_flag = wotl_fla_john_the_invader
+        is_subject_of = ENG
+        is_at_war = no
+    }
+
+    #May God bless John's soul.
+    option = {
+        name = wotl_fla.4.a
+        custom_tooltip = wotl_fla_4a_new_ruler
+        hidden_effect = {
+            define_ruler = {
+                dynasty = ENG
+                culture = english
+                male = yes
+                claim = 70
+            }
+        }
+    }
+    
+}
+
+#Attempted Coup!
+country_event = {
+    id = wotl_fla.5
+    title = wotl_fla.5.t
+    desc = wotl_fla.5.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    is_triggered_only = yes
+
+    trigger = {
+        tag = FLA
+        has_ruler_flag = wotl_fla_john_the_invader
+        is_subject_of = ENG
+        is_at_war = no
+    }
+
+    #How dare he! This shall not stand!
+    option = {
+        name = wotl_fla.5.a
+        custom_tooltip = wotl_fla_5a_call_council
+        hidden_effect = {
+            every_country = {
+                limit = {
+                    is_subject_of = ENG
+                    NOT = {
+                        tag = ROOT
+                    }
+                }
+                country_event = {
+                    id = wotl_eng.5
+                    days = 60
+                    random = 5
+                }
+            }
+        }
+    }
+}
+
+#Attempted Coup! (Independence Declaration)
+country_event = {
+    id = wotl_fla.6
+    title = wotl_fla.6.t
+    desc = wotl_fla.6.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    is_triggered_only = yes
+
+    trigger = {
+        tag = FLA
+        has_ruler_flag = wotl_fla_john_the_invader
+        is_subject_of = ENG
+        is_at_war = no
+    }
+
+    #This is an outrage! To arms, men!
+    option = {
+        name = wotl_fla.6.a        
+        custom_tooltip = wotl_fla_6a_declare_independence
+        declare_war = ENG
+        add_country_modifier = {
+            name = "wotl_fla_jti_indep_modifier"
+            duration = -1
+        }
+    }
+}

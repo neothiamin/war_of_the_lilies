@@ -19,3 +19,8 @@ anf_no_louvre = {
     local_unrest = 4    
     local_tax_modifier = -0.1
 }
+
+wotl_fla_jti_indep_modifier = {
+    land_morale = 0.05
+    infantry_power = 0.05
+}

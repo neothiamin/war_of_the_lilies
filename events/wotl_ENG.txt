@@ -106,3 +106,174 @@ country_event = {
         }
     }
 }
+
+#Buckle up, here we go.
+#Real War of the Lilies starts now.
+
+#John the Invader executes Fleming for Conspiracy
+country_event = {
+    id = wotl_eng.3
+    title = wotl_eng.3.t
+    desc = wotl_eng.3.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    fire_only_once = yes
+
+    mean_time_to_happen = {
+        months = 4
+    }
+
+    trigger = {
+		normal_or_historical_nations = yes
+        tag = ENG
+        is_year = 1438
+        NOT = {
+            is_year = 1450
+        }
+        FLA = {
+            has_ruler_flag = wotl_fla_john_the_invader
+            is_subject_of = ENG
+            is_at_war = no
+        }
+    }
+
+    immediate = {
+        #set_global_flag = wotl_jti_execution_happened
+        set_saved_name = {
+            key = executed_fleming
+            type = advisor
+            scope = FLA
+        }
+    }
+
+    #We must support John.
+    option = {
+        name = wotl_eng.3.a
+        custom_tooltip = wotl_eng_3a_will_cause_unrest
+        set_country_flag = wotl_eng_supported_jti
+        #Used in another event.
+        FLA = {
+            set_ruler_flag = wotl_fla_jti_supported
+        }
+        hidden_effect = {
+            clear_saved_name = executed_fleming
+        }
+    }
+    
+    #John has gone too far!
+    option = {
+        name = wotl_eng.3.b
+        custom_tooltip = wotl_eng_3b_john_angry
+        set_country_flag = wotl_eng_did_not_support_jti
+        #Used in another event.
+        FLA = {
+            set_ruler_flag = wotl_fla_jti_not_supported
+        }
+        hidden_effect = {
+            clear_saved_name = executed_fleming
+        }
+    }
+}
+
+#John the Invader questions our legitimacy!
+country_event = {
+    id = wotl_eng.4
+    title = wotl_eng.4.t
+    desc = wotl_eng.4.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    fire_only_once = yes
+    
+    mean_time_to_happen = {
+        months = 4
+    }
+
+    trigger = {
+		normal_or_historical_nations = yes
+        tag = ENG
+        has_global_flag = wotl_eng_legitimacy_questioned
+        FLA = {
+            has_ruler_flag = wotl_fla_john_the_invader
+            is_subject_of = ENG
+            is_at_war = no
+        }
+    }
+
+    #Does he not know who gave him his title?!
+    option = {
+        name = wotl_eng.4.a
+        custom_tooltip = wotl_eng_4a_remove_jti
+        hidden_effect = {
+            random_list = {
+                #JTI declares independence.
+                50 = {
+                    FLA = {
+                        country_event = {
+                            id = wotl_fla.6
+                            days = 15
+                            random = 5
+                        }
+                    }
+                }
+                #JTI questions executive power.
+                35 = {
+                    FLA = {
+                        country_event = {
+                            id = wotl_fla.5
+                            days = 30
+                            random = 5
+                        }
+                    }
+                }
+                #JTI removed.
+                15 = {
+                    add_prestige = 15
+                    FLA = {
+                        country_event = {
+                            id = wotl_fla.4
+                            days = 60
+                            random = 15
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #John is more trouble than he's worth. He is on his own.
+    option = {
+        name = wotl_eng.4.b
+        set_global_flag = wotl_eng_king_weak
+        grant_independence = FLA
+        add_prestige = -15
+    }
+}
+
+#Council of Dukes (For other English subjects)
+country_event = {
+    id = wotl_eng.5
+    title = wotl_eng.5.t
+    desc = wotl_eng.5.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    fire_only_once = yes
+
+    is_triggered_only = yes
+
+    trigger = {
+		is_subject_of = ENG
+    }
+
+    #Pledge our support to John!
+    option = {
+        name = wotl_eng.5.a
+        set_country_flag = wotl_eng_council_of_dukes_support_fla
+    }
+
+    #That's treason!
+    option = {
+        name = wotl_eng.5.b
+        set_country_flag = wotl_eng_council_of_dukes_do_not_support_fla
+    }
+}
+

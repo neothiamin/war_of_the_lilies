@@ -1,0 +1,11 @@
+v0.2pre1
+
++ Added LORE folder! Read up!
+
++ Flemish Revolt Events! Play as England and stop John the Invader! Or play as Flanders and question England's legitimacy! Just be careful; foreign powers are always eager to step in...
+
+* Some tweaks to province and country history, including lore-accurate personalities for rulers!
+
+* Further increased severity of "Diplomacy Stretched Thin" modifier.
+
+- Removed ability for GBR to form the United Monarchies. To be fair, no country can form them yet...

@@ -46,7 +46,9 @@ province_event = {
                 duration = 5475
             }
         }
-        add_prestige = -15
+        owner = {
+            add_prestige = -15
+        }
     }
 }
 

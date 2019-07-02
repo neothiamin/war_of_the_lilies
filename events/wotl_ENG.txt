@@ -51,19 +51,19 @@ country_event = {
         months = 4
     }
 
-    #Available for Anglo-France or England/Great Britain if they either accepted the French or England before 1450
+    #Available for England/UnitedMonarchies if they either accepted the French or England before 1450
     trigger = {
         OR = {
             AND = {
                 tag = ENG
                 NOT = {
-                    is_year = 1450
+                    has_global_flag = wotl_war_started
                 }
             }
             AND = {
                 OR = {                    
                     tag = ENG
-                    tag = GBR
+                    tag = ANF
                 }                
                 has_country_flag = wotl_eng_accepted_french
             }

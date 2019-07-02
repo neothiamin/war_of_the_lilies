@@ -7,8 +7,7 @@ capital = 246	# Newcastle
 
 1421.7.25 = {
 	monarch = {
-		name = "Henry"        
-		monarch_name = "Henry III"
+		name = "Henry III"        
 		dynasty = "Percy"
 		birth_date = 1421.7.24
 		adm = 2

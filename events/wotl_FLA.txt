@@ -84,7 +84,7 @@ country_event = {
     
     immediate = {
         set_global_flag = wotl_fla_flemish_revolt_happened
-        clr_global_flag = wotl_fla_flemish_revolt_possible        
+        clr_ruler_flag = wotl_fla_flemish_revolt_possible        
     }
 
     #Crush them!

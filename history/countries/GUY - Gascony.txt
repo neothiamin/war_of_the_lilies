@@ -10,8 +10,7 @@ capital = 174 	# Bordeaux
 
 1429.1.1 = {
     monarch = {
-		name = "John"
-		monarch_name = "John IV"
+		name = "John IV"
         culture = gascon
 		dynasty = "de Armagnac"
 		birth_date = 1396.8.15

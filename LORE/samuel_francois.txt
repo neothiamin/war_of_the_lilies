@@ -1,3 +1,13 @@
 --------------
 Event outline for Samuel François (Saared)
 --------------
+
+The War of the Lilies is in full swing. French and English armies fight battles daily, and there is not yet a clear winner. However, there is a whole new class of soldiers in this war, a class whose participation is not found on the battlefield, but rather in the libraries of France.
+
+Historians and dynastic experts spend hours and hours every day poring over dusty old tomes, manuscripts, tapestries, anything that could be used as a historical record. Recently, one such historian has made a shocking discovery. His name is Samuel François, and he claims to have found information that distinctly ties the [ENG.Dynasty.GetName]s to the French throne, bolstering our cause's legitimacy. He says this information would lead to guaranteed victory for us, and he is more than willing to give it to us... for a price.
+
+a) Yes! We need everything we can get!
+
+b) What does some hobbled old bookworm know?
+
+c) He would be more useful as an advisor.

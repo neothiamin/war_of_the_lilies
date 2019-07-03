@@ -6,7 +6,6 @@ namespace = wotl_eng
 
 #The State of Affairs
 #This event is a brief rundown of the ongoing strife in France and the possibility of rebellion that may culminate in the War of the Lilies.
-#England gets a few choices: they can go it alone, seek help from either Burgundy or Provence, or begin to delegate power, giving various French duchies cores on Northern France.
 country_event = {
 
     id = wotl_eng.1
@@ -25,7 +24,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 4
+        months = 2
     }
 
     immediate = {
@@ -83,27 +82,21 @@ country_event = {
     option = {
         name = wotl_eng.2.a
         ai_chance = { factor = 50 }
-        hidden_effect = {
-            set_heir_culture = english
-        }
+        set_heir_culture = english
     }
 
     #[Root.Heir.GetSheHe] ought to know the fineries of life on the Continent.
     option = {
         name = wotl_eng.2.b
         ai_chance = { factor = 35 }
-        hidden_effect = {
-            set_heir_culture = cosmopolitan_french
-        }
+        set_heir_culture = cosmopolitan_french
     }
 
     #[Root.Heir.GetSheHe] will be raised in a way to mirror William the First!
     option = {
         name = wotl_eng.2.c
         ai_chance = { factor = 15 }
-        hidden_effect = {
-            set_heir_culture = normand
-        }
+        set_heir_culture = normand
     }
 }
 

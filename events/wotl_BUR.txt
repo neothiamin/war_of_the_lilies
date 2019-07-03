@@ -26,19 +26,10 @@ country_event = {
         ai_chance = {
             factor = 70
         }
-        hidden_effect = {
-            FLA = {                                
-                white_peace = BUR
-            }
-            remove_historical_friend = ENG
-            ENG = {
-                remove_historical_friend = BUR
-            }
-        }
-        declare_war_with_cb = {
+        create_alliance = FLA
+        reverse_add_opinion = {
             who = FLA
-            casus_belli = cb_bur_flemish_war
-            war_goal_province = 90
+            modifier = wotl_bur_allied_fla            
         }
     }
 

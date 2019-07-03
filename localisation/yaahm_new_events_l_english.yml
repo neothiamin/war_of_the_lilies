@@ -37,7 +37,7 @@
  wotl_fla.4.desc:0 "John the Invader of Beaufort has been assassinated! While he slept, agents on behalf of [ENG.Monarch.GetTitle] [ENG.Monarch.GetName] of England slept into his bedroom and slit his throat. In his stead, [ENG.Monarch.GetTitle] [ENG.Monarch.GetName] has sent a new duke, one [ENG.Monarch.GetSheHe] hopes will be more... acceptable to the local populace."
  wotl_fla.5.desc:0 "Your Highness!\n\nA plot has been discovered against you! A spy was discovered by palace guards last night and apprehended after he was found skulking around the palace. His intent, it appears, was to sow discontent amongst your guards, in the hopes they would rebel!"
  wotl_fla.6.desc:0 "Your Highness!\n\nA spy was discovered by palace guards last night and apprehended after he was found skulking around the palace. His intent, it appears, was nothing short of murder! After thorough interrogation, he said he was sent by [ENG.Monarch.GetTitle] [ENG.Monarch.GetName]!"
- wotl_bur.1.desc:0 "Word has reached the royal court of a revolt in Flanders! Peasants and nobles have taken to the streets calling for Duke John Beaufort, or \"The Invader\", to be executed!"
+ wotl_bur.1.desc:0 "Word has reached the royal court of a revolt in Flanders! Peasants and nobles have taken to the streets calling for Duke John Beaufort, or \"The Invader\", to be executed! Though supporting a madman may come back to bite us, the potential of acquiring Flanders for ourselves is attractive..."
 
  wotl_eng.3.a:0 "We must support John."
  wotl_eng.4.a:0 "Does he not know who gave him his title?!"

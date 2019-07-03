@@ -1,3 +1,5 @@
 ﻿l_english:
  anglo_french_nation_title:0 "Unify the Anglic and French Peoples"
  anglo_french_nation_desc:0 "For years, the people of Great Britain and France have seen each other as arch-enemies. It is time to facilitate a marriage between our two peoples, and put into law a royal decree unifying the Anglic and French peoples."
+ move_capital_to_paris_title:0 "Move Capital To Paris"
+ move_capital_to_paris_desc:0 "Paris, the ancestral home of the French Monarchy, has not housed a royal court for years. The Parisian people long for their [ROOT.Monarch.GetTitle] to come back home."

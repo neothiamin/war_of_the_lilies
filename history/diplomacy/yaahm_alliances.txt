@@ -1,10 +1,10 @@
 #Treaty of Troyes
-alliance = {
-	first = ENG
-	second = BUR
-	start_date = 1420.1.1
-	end_date = 1444.1.1
-}
+#alliance = {
+#	first = ENG
+#	second = BUR
+#	start_date = 1420.1.1
+#	end_date = 1444.1.1
+#}
 
 #Second Treaty of Bourges
 alliance = {

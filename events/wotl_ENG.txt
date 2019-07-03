@@ -284,6 +284,39 @@ country_event = {
         set_country_flag = wotl_eng_council_of_dukes_support_fla
         ai_chance = {
             factor = 50
+
+            modifier = {
+                factor = 2
+                NOT = {
+                    has_opinion = {
+                    	who = ENG
+                    	value = 25
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                has_opinion = {
+                	who = FLA
+                	value = 75
+                }
+            }
+            modifier = {
+                factor = 0.5
+                has_opinion = {
+                	who = ENG
+                	value = 50
+                }
+            }
+            modifier = {
+                factor = 0.5
+                NOT = {
+                    has_opinion = {
+                    	who = FLA
+                    	value = 50
+                    }
+                }
+            }
         }
     }
 

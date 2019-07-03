@@ -26,16 +26,19 @@ country_event = {
         ai_chance = {
             factor = 70
         }
-        declare_war_with_cb = {
-            who = FLA
-            casus_belli = cb_bur_flemish_war
-            war_goal_province = 90
-        }
-        hidden_effect = {            
+        hidden_effect = {
+            FLA = {                                
+                white_peace = BUR
+            }
             remove_historical_friend = ENG
             ENG = {
                 remove_historical_friend = BUR
             }
+        }
+        declare_war_with_cb = {
+            who = FLA
+            casus_belli = cb_bur_flemish_war
+            war_goal_province = 90
         }
     }
 

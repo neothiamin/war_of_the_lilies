@@ -196,7 +196,10 @@ country_event = {
     option = {
         name = wotl_fla.6.a        
         custom_tooltip = wotl_fla_6a_declare_independence
-        declare_war = ENG
+        declare_war_with_cb = {
+            casus_belli = cb_independence_war
+            who = ENG            
+        }
         add_country_modifier = {
             name = "wotl_fla_jti_indep_modifier"
             duration = -1

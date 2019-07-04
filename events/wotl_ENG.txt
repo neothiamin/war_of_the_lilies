@@ -117,10 +117,6 @@ country_event = {
     trigger = {
 		normal_or_historical_nations = yes
         tag = ENG
-        is_year = 1438
-        NOT = {
-            is_year = 1450
-        }
     }
 
     immediate = {
@@ -242,7 +238,24 @@ country_event = {
 country_event = {
     id = wotl_eng.5
     title = wotl_eng.5.t
-    desc = wotl_eng.5.desc
+    desc = {
+        trigger = {
+            FROM = {
+                tag = FLA
+            }
+        }
+        desc = wotl_eng.5.desc
+    }
+    desc = {
+        trigger = {
+            FROM = {
+                NOT = {
+                    tag = FLA
+                }
+            }
+        }
+        desc = wotl_eng.5.desc.b
+    }
     picture = LIBERUM_VETO_eventPicture
 
     is_triggered_only = yes
@@ -256,8 +269,7 @@ country_event = {
         name = wotl_eng.5.a
         set_country_flag = wotl_eng_council_of_dukes_support_fla
         ai_chance = {
-            factor = 50
-
+            factor = 60
             modifier = {
                 factor = 2
                 NOT = {
@@ -291,6 +303,14 @@ country_event = {
                 }
             }
         }
+        custom_tooltip = wotl_eng.5.a.tt
+        hidden_effect = {
+            FLA = {
+                country_event = {
+                    id = wotl_fla.11
+                }
+            }
+        }
     }
 
     #That's treason!
@@ -298,7 +318,149 @@ country_event = {
         name = wotl_eng.5.b
         set_country_flag = wotl_eng_council_of_dukes_do_not_support_fla
         ai_chance = {
-            factor = 50
+            factor = 40
         }
     }
+}
+
+#Council of Dukes demands greater domains!
+country_event = {
+    id = wotl_eng.6
+    title = wotl_eng.6.t
+    desc = wotl_eng.6.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    is_triggered_only = yes
+
+    #Our hands are tied.
+    option = {
+        name = wotl_eng.6.a
+        set_global_flag = wotl_eng_bends_to_council.6
+        #Picardy area
+        every_owned_province = {
+            limit = {
+                area = picardy_area
+                exists = FLA
+            }
+            cede_province = FLA
+        }
+        #Chester
+        4375 = {
+            if = {
+                limit = {
+                    owned_by = ENG
+                    exists = NOL
+                }
+                add_core = NOL
+                cede_province = NOL
+            }
+        }        
+        #Lancashire
+        244 = {
+            if = {
+                limit = {
+                    owned_by = ENG
+                    exists = NOL
+                }
+                add_core = NOL
+                cede_province = NOL
+            }
+        }
+        #Loire area
+        every_owned_province = {
+            limit = {
+                area = loire_area
+                exists = GUY
+            }
+            add_core = GUY
+            cede_province = GUY
+        }
+        #Poitou area
+        every_owned_province = {
+            limit = {
+                area = poitou_area
+                exists = GUY
+            }
+            add_core = GUY
+            cede_province = GUY
+        }
+        #Alencon
+        1879 = {
+            if = {
+                limit = {
+                    owned_by = ENG
+                    exists = PRO
+                }
+                add_core = PRO
+                cede_province = PRO
+            }
+        }
+    }
+
+    #Never! Our lands are rightfully ours!
+    option = {
+        name = wotl_eng.6.b
+        add_prestige = 10
+        hidden_effect = {
+            FLA = {
+                country_event = {
+                    id = wotl_fla.9
+                }
+            }
+        }
+    }
+
+}
+#Council of Dukes demands creation of a new vassal!
+country_event = {
+    id = wotl_eng.7
+    title = wotl_eng.7.t
+    desc = wotl_eng.7.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    is_triggered_only = yes
+
+    #We shall resurrect the Duchy of Normandy.
+    option = {
+        name = wotl_eng.7.a
+        ai_chance = {
+            factor = 20
+        }
+        set_global_flag = wotl_eng_bends_to_council.7
+    }
+
+    #We shall create a new duchy on the Loire.
+    option = {
+        name = wotl_eng.7.b
+        ai_chance = {
+            factor = 20
+        }
+        set_global_flag = wotl_eng_bends_to_council.7
+    }
+
+    #We shall create a new duchy in the rich lands of Champagne.
+    option = {
+        name = wotl_eng.7.c
+        ai_chance = {
+            factor = 20
+        }
+        set_global_flag = wotl_eng_bends_to_council.7
+    }
+
+    #Refuse!
+    option = {
+        name = wotl_eng.7.d
+        ai_chance = {
+            factor = 40
+        }
+        add_prestige = 10
+        hidden_effect = {
+            FLA = {
+                country_event = {
+                    id = wotl_fla.9
+                }
+            }
+        }
+    }
+    
 }

@@ -7,7 +7,7 @@ chateau_de_foix = {
 }
 
 eng_game_start_upkeep = {    
-    diplomatic_upkeep = 2
+    diplomatic_upkeep = 1
     diplomatic_reputation = -2
 }
 

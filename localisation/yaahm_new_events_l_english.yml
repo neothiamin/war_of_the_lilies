@@ -70,11 +70,11 @@
 
  wotl_eng.5.a.tt:0 "Inform the Flemish of our intent to attend."
  wotl_eng.6.t:0 "Council of Dukes demands greater domains!"
- wotl_eng.6.desc:0 "Your Highness!\n\nWe have received nothing short of an ultimatum from a council of our subjects! Evidently, the Duke of Flanders, after our attempt to remove him from his position, gathered quite a few of our other subjects together, and drafted a petition!\n\nThey have demanded a cession of our lands to them, including the granting of Calais to the Duchy of Flanders. Though these demands are steep, a refusal would almost certainly mean war."
+ wotl_eng.6.desc:0 "Your Highness!\n\nWe have received nothing short of an ultimatum from a council of our subjects! Evidently, the [FLA.Monarch.GetTitle] of Flanders, after our attempt to remove him from his position, gathered quite a few of our other subjects together, and drafted a petition!\n\nThey have demanded a cession of our lands to them, including the granting of Calais to the Duchy of Flanders. Though these demands are steep, a refusal would almost certainly mean war."
  wotl_eng.6.a:0 "Our hands are tied."
  wotl_eng.6.b:0 "Never! My lands are mine by right!"
  wotl_eng.7.t:0 "Council of Dukes demands creation of a new vassal!"
- wotl_eng.7.desc:0 "Your Highness!\n\nWe have received nothing short of an ultimatum from a council of our subjects! Evidently, the Duke of Flanders, after our attempt to remove him from his position, gathered quite a few of our other subjects together, and drafted a petition!\n\nThe petition calls for the creation of a new subject on the Continent. Luckily, the petition did not say what lands this subject will have, or who will be granted the title. Nevertheless, refusal would almost certainly mean war."
+ wotl_eng.7.desc:0 "Your Highness!\n\nWe have received nothing short of an ultimatum from a council of our subjects! Evidently, the [FLA.Monarch.GetTitle] of Flanders, after our attempt to remove him from his position, gathered quite a few of our other subjects together, and drafted a petition!\n\nThe petition calls for the creation of a new subject on the Continent. Luckily, the petition did not say what lands this subject will have, or who will be granted the title. Nevertheless, refusal would almost certainly mean war."
  wotl_eng.7.a:0 "We shall resurrect the Duchy of Normandy."
  wotl_eng.7.b:0 "We shall create a new duchy on the Loire."
  wotl_eng.7.c:0 "We shall create a new duchy in the rich lands of Champagne."

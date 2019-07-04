@@ -374,8 +374,8 @@ country_event = {
         tag = FLA
         has_global_flag = wotl_fla_council_of_dukes_called
         OR = {
-            has_global_flag = wotl_eng_bends_to_council.a
-            has_global_flag = wotl_eng_bends_to_council.b
+            has_global_flag = wotl_eng_bends_to_council.6
+            has_global_flag = wotl_eng_bends_to_council.7
         }
     }
 

@@ -59,10 +59,8 @@ country_event = {
                     has_global_flag = wotl_war_started
                 }
             }
-            AND = {
-                OR = {                    
-                    tag = ENG
-                }                
+            AND = {               
+                tag = ENG               
                 has_country_flag = wotl_eng_accepted_french
             }
             tag = ANF
@@ -337,62 +335,87 @@ country_event = {
         name = wotl_eng.6.a
         set_global_flag = wotl_eng_bends_to_council.6
         #Picardy area
-        every_owned_province = {
+        if = {
             limit = {
-                area = picardy_area
                 exists = FLA
             }
-            cede_province = FLA
+            every_owned_province = {
+                limit = {
+                    area = picardy_area
+                }
+                add_core = FLA
+                cede_province = FLA
+            }
         }
         #Chester
-        4375 = {
-            if = {
-                limit = {
-                    owned_by = ENG
-                    exists = NOL
-                }
-                add_core = NOL
-                cede_province = NOL
-            }
-        }        
-        #Lancashire
-        244 = {
-            if = {
-                limit = {
-                    owned_by = ENG
-                    exists = NOL
-                }
-                add_core = NOL
-                cede_province = NOL
-            }
-        }
-        #Loire area
-        every_owned_province = {
+        if = {
             limit = {
-                area = loire_area
+                exists = NOL
+            }
+            4375 = {
+                if = {
+                    limit = {
+                        owned_by = ENG
+                    }
+                    add_core = NOL
+                    cede_province = NOL
+                }
+            }  
+        }      
+        #Lancashire
+        if = {
+            limit = {
+                exists = NOL
+            }
+            244 = {
+                if = {
+                    limit = {
+                        owned_by = ENG
+                    }
+                    add_core = NOL
+                    cede_province = NOL
+                }
+            }  
+        } 
+        #Loire area
+        if = {
+            limit = {
                 exists = GUY
             }
-            add_core = GUY
-            cede_province = GUY
+            every_owned_province = {
+                limit = {
+                    area = loire_area
+                }
+                add_core = GUY
+                cede_province = GUY
+            }
         }
         #Poitou area
-        every_owned_province = {
+        if = {
             limit = {
-                area = poitou_area
                 exists = GUY
             }
-            add_core = GUY
-            cede_province = GUY
+            every_owned_province = {
+                limit = {
+                    area = poitou_area
+                }
+                add_core = GUY
+                cede_province = GUY
+            }
         }
         #Alencon
-        1879 = {
-            if = {
-                limit = {
-                    owned_by = ENG
-                    exists = PRO
+        if = {
+            limit = {
+                exists = PRO
+            }
+            1879 = {
+                if = {
+                    limit = {
+                        owned_by = ENG
+                    }
+                    add_core = PRO
+                    cede_province = PRO
                 }
-                add_core = PRO
-                cede_province = PRO
             }
         }
     }

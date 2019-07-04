@@ -62,10 +62,10 @@ country_event = {
             AND = {
                 OR = {                    
                     tag = ENG
-                    tag = ANF
                 }                
                 has_country_flag = wotl_eng_accepted_french
             }
+            tag = ANF
         }
         owns_core_province = 183
         has_heir = yes
@@ -112,9 +112,7 @@ country_event = {
 
     fire_only_once = yes
 
-    mean_time_to_happen = {
-        months = 4
-    }
+    is_triggered_only = yes
 
     trigger = {
 		normal_or_historical_nations = yes
@@ -123,22 +121,10 @@ country_event = {
         NOT = {
             is_year = 1450
         }
-        FLA = {
-            has_ruler_flag = wotl_fla_john_the_invader
-            is_subject_of = ENG
-            is_at_war = no
-        }
     }
 
     immediate = {
-        #set_global_flag = wotl_jti_execution_happened
-        FLA = {
-            set_saved_name = {
-                key = executed_fleming
-                type = advisor
-                scope = THIS
-            }
-        }
+        set_global_flag = wotl_jti_execution_happened
     }
 
     #We must support John.
@@ -153,9 +139,6 @@ country_event = {
         FLA = {
             set_ruler_flag = wotl_fla_jti_supported
         }
-        hidden_effect = {
-            clear_saved_name = executed_fleming
-        }
     }
     
     #John has gone too far!
@@ -169,9 +152,6 @@ country_event = {
         #Used in another event.
         FLA = {
             set_ruler_flag = wotl_fla_jti_not_supported
-        }
-        hidden_effect = {
-            clear_saved_name = executed_fleming
         }
     }
 }

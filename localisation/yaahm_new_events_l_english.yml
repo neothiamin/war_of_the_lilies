@@ -26,7 +26,8 @@
  wotl_fla.4.t:0 "Duke John removed from power!"
  wotl_fla.5.t:0 "[ENG.Monarch.GetTitle] [ENG.Monarch.GetName] attempts coup!"
  wotl_fla.6.t:0 "Attempted Assassination!"
- wotl_bur.1.t:0 "Revolt in Flanders"
+ wotl_bur.1.t:0 "Revolt in Flanders" 
+ wotl_fla.7.t:0 "Treasonous Merchant"
 
  wotl_eng.3.desc:0 "Your Majesty,\n\nYour cousin, Duke John of Beaufort, known as \"The Invader\" among his detractors and much of the peasantry in his domain of Flanders, has once again shown why he has been ascribed that moniker.\n\nJohn recently has been increasingly paranoid, fully aware of the fact that he, an Englishman, rules over a duchy of Flemings, and has begun fully exercising his right as chief \"executive\". This time, though, one too many heads have rolled.\n\nJohn has just executed a merchant, [FLA.executed_fleming.GetName], for \"treason and conspiracy against the Crown\"; however, it seems that, unlike with his previous victims, his court has been unable to find (or fabricate) a single shred of evidence. Word of this seemingly arbitrary and tyrannical execution has made its way from the throne room to the town square in Brugge, and word of rebellion is on the Flemings' lips..."
  wotl_eng.4.desc:0 "Your Majesty,\n\nWord has reached us that John of Beaufort has issued a formal decree stating his doubt in Your ability to rule effectively! He calls Your Majesty \"illegitimate\" and \"tryannical\", totally oblivious to the fact that he is the one who just executed an innocent merchant. Oh, sweet irony..."
@@ -38,6 +39,7 @@
  wotl_fla.5.desc:0 "Your Highness!\n\nA plot has been discovered against you! A spy was discovered by palace guards last night and apprehended after he was found skulking around the palace. His intent, it appears, was to sow discontent amongst your guards, in the hopes they would rebel!"
  wotl_fla.6.desc:0 "Your Highness!\n\nA spy was discovered by palace guards last night and apprehended after he was found skulking around the palace. His intent, it appears, was nothing short of murder! After thorough interrogation, he said he was sent by [ENG.Monarch.GetTitle] [ENG.Monarch.GetName]!"
  wotl_bur.1.desc:0 "Word has reached the royal court of a revolt in Flanders! Peasants and nobles have taken to the streets calling for Duke John Beaufort, or \"The Invader\", to be executed! Though supporting a madman may come back to bite us, the potential of acquiring Flanders for ourselves is attractive..."
+ wotl_fla.7.desc:0 "Your Highness,\n\nRoyal guards have apprehended a merchant suspected of treason and conspiracy against the state! His name is [FLA.executed_fleming.GetName], and while"
 
  wotl_eng.3.a:0 "We must support John."
  wotl_eng.4.a:0 "Does he not know who gave him his title?!"
@@ -49,6 +51,7 @@
  wotl_fla.5.a:0 "How dare he! This shall not stand!"
  wotl_fla.6.a:0 "This is an outrage! To arms, men!"
  wotl_bur.1.a:0 "We must step in."
+ wotl_fla.7.a:0 "Execute him!"
 
  wotl_eng.3.b:0 "John has gone too far!"
  wotl_eng.4.b:0 "John is more trouble than he's worth. He is on his own."

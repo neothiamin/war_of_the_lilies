@@ -1,0 +1,12 @@
+
+# province
+# root = location, from = winner country
+on_battle_lost_province = {
+    events = {
+        wotl_eng.10
+    }
+	random_events = {
+		1000 = 0
+		100 = tyw_events.22	# Capital Battle in Religious War
+	}
+}

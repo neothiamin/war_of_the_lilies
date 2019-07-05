@@ -181,10 +181,11 @@ country_event = {
             factor = 80
         }
         custom_tooltip = wotl_eng_4a_remove_jti
-        hidden_effect = {
-            random_list = {
-                #JTI declares independence.
-                50 = {
+        random_list = {
+            #JTI declares independence.
+            50 = {
+                custom_tooltip = wotl_eng_4a_jti_indep
+                hidden_effect = {
                     FLA = {
                         country_event = {
                             id = wotl_fla.6
@@ -193,8 +194,11 @@ country_event = {
                         }
                     }
                 }
-                #JTI questions executive power.
-                35 = {
+            }
+            #JTI questions executive power.
+            35 = {
+                custom_tooltip = wotl_eng_4a_jti_question
+                hidden_effect = {
                     FLA = {
                         country_event = {
                             id = wotl_fla.5
@@ -203,16 +207,19 @@ country_event = {
                         }
                     }
                 }
-                #JTI removed.
-                15 = {
+            }
+            #JTI removed.
+            15 = {
+                custom_tooltip = wotl_eng_4a_success
+                hidden_effect = {
                     add_prestige = 15
-                    FLA = {
-                        country_event = {
-                            id = wotl_fla.4
-                            days = 60
-                            random = 15
-                        }
+                FLA = {
+                    country_event = {
+                        id = wotl_fla.4
+                        days = 60
+                        random = 15
                     }
+                }
                 }
             }
         }
@@ -614,6 +621,107 @@ country_event = {
                     id = wotl_guy.3
                 }
             }
+        }
+    }
+}
+
+#War with Burgundy!
+country_event = {
+    id = wotl_eng.9
+    title = wotl_eng.9.t
+    desc = wotl_eng.9.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+        BUR = {
+            has_country_modifier = wotl_bur_flemish_war_modifier
+        }
+        war_with = BUR
+        war_with = FLA
+        FLA = {
+            has_country_flag = wotl_fla_independence
+        }
+    }
+
+    mean_time_to_happen = {
+        days = 15
+    }
+
+    #Damn them! They will pay for this!
+    option = {
+        name = wotl_eng.9.a        
+    }
+}
+
+#Defeat in [ROOT.GetName]!
+province_event = {
+    id = wotl_eng.10
+    title = wotl_eng.10.t
+    desc = wotl_eng.10.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    fire_only_once = yes
+
+    is_triggered_only = yes
+
+    trigger = {        
+        owned_by = ENG
+        FROM = {            
+            war_with = BUR
+            war_with = FLA
+        }
+        NOT = {
+            has_global_flag = wotl_eng_big_defeat
+        }
+        BUR = {
+            has_country_modifier = wotl_bur_flemish_war_modifier
+        }
+        FLA = {
+            has_country_flag = wotl_fla_independence
+        }
+    }    
+
+    immediate = {
+        set_global_flag = wotl_eng_big_defeat
+    }
+
+    #Blast! We must not let this phase us!
+    option = {
+        name = wotl_eng.10.a
+        FROM = {
+            remove_country_modifier = wotl_eng_flemish_revolt_bur
+            add_country_modifier = {
+                name = wotl_eng_big_defeat_effect
+                duration = -1
+            }
+        }
+    }
+}
+
+#John of Beaufort declares independence!
+country_event = {
+    id = wotl_eng.11
+    title = wotl_eng.11.t
+    desc = wotl_eng.11.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    #Reassert control!
+    option = {
+        name = wotl_eng.11.a
+        declare_war_with_cb = {
+            casus_belli = cb_annex
+            who = FLA
+        }
+        add_country_modifier = {
+            name = wotl_eng_flemish_revolt
+            duration = -1            
         }
     }
 }

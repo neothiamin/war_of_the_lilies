@@ -30,6 +30,15 @@ wotl_fla_flemish_revolt = {
 }
 
 wotl_bur_flemish_war_modifier = {
-    land_morale = 0.05    
-    infantry_power = 0.05
+    cavalry_power = 0.05
+    infantry_power = 0.1
+}
+
+wotl_eng_flemish_revolt_bur = {
+    land_morale = 0.05
+}
+
+wotl_eng_big_defeat_effect = {
+    war_exhaustion = 0.05
+    reinforce_speed = -0.1
 }

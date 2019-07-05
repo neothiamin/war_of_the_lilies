@@ -4,6 +4,7 @@
 
 namespace = wotl_bur
 
+#Flemish War (JTI Indep)
 country_event = {
     id = wotl_bur.1
     title = wotl_bur.1.t
@@ -12,30 +13,41 @@ country_event = {
 
     trigger = {
         tag = BUR
-        has_global_flag = wotl_fla_flemish_revolt_happened
+        #has_global_flag = wotl_fla_flemish_revolt_happened
+        FLA = {
+            has_country_flag = wotl_fla_independence
+        }
         is_at_war = no
     }
 
     fire_only_once = yes
 
     mean_time_to_happen = {
-        months = 2
+        days = 30
     }
 
     #We must step in.
     option = {
         name = wotl_bur.1.a
         ai_chance = {
-            factor = 70
+            factor = 75
         }
-        declare_war_with_cb = {
-            casus_belli = cb_annex
-            who = FLA
-            war_goal_province = 90            
-        }
+        #declare_war_with_cb = {
+        #    casus_belli = cb_annex
+        #    who = FLA
+        #    war_goal_province = 90            
+        #}
+        vassalize = FLA
         add_country_modifier = {
             name = wotl_bur_flemish_war_modifier
             duration = 3650            
+        }
+        reverse_add_opinion = {
+            who = FLA
+            modifier = wotl_bur_allied_fla
+        }
+        hidden_effect = {
+            add_historical_rival = ENG
         }
     }
 
@@ -43,7 +55,7 @@ country_event = {
     option = {
         name = wotl_bur.1.b
         ai_chance = {
-            factor = 30
+            factor = 25
         }
         reverse_add_opinion = {
             who = ENG

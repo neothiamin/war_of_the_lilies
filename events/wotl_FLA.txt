@@ -92,7 +92,7 @@ country_event = {
         name = wotl_fla.3.a
         capital_scope = {
             spawn_rebels = {
-                size = 3
+                size = 2
                 type = anti_tax_rebels
                 unrest = 8
                 culture = flemish                
@@ -214,13 +214,20 @@ country_event = {
         is_at_war = no
     }
 
-    #This is an outrage! To arms, men!
+    #This is an outrage!
     option = {
         name = wotl_fla.6.a        
         custom_tooltip = wotl_fla_6a_declare_independence
-        declare_war_with_cb = {
-            casus_belli = cb_independence_war
-            who = ENG            
+        set_country_flag = wotl_fla_independence
+        hidden_effect = {
+            grant_independence = yes
+            ENG = {
+                country_event = {
+                    id = wotl_eng.11
+                    days = 10
+                    random = 3
+                }
+            }
         }
         add_country_modifier = {
             name = "wotl_fla_jti_indep_modifier"

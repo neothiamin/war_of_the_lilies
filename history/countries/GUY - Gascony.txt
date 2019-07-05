@@ -18,7 +18,8 @@ capital = 174 	# Bordeaux
 		dip = 5
 		mil = 3
 	}
-	add_ruler_personality = intricate_web_weaver_personality
+	set_ruler_flag = wotl_guy_john_de_armagnac
+	add_ruler_personality = drunkard_personality
 	heir = {
 		name = "John V"
         culture = gascon

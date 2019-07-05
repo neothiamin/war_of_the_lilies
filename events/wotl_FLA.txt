@@ -1,5 +1,5 @@
 ########################################
-# WOTL events for England              #
+# WOTL events for Flanders             #
 ########################################
 
 namespace = wotl_fla
@@ -175,6 +175,7 @@ country_event = {
         name = wotl_fla.5.a
         custom_tooltip = wotl_fla_5a_call_council
         set_global_flag = wotl_fla_council_of_dukes_called
+        set_country_flag = wotl_called_council_of_dukes
         hidden_effect = {
             every_country = {
                 limit = {
@@ -361,6 +362,7 @@ country_event = {
     #It's war then!
     option = {
         name = wotl_fla.9.a
+        set_global_flag = wotl_war_started
         declare_war_with_cb = {
             casus_belli = cb_independence_war
             who = ENG            

@@ -50,7 +50,7 @@ country_event = {
         months = 4
     }
 
-    #Available for England/UnitedMonarchies if they either accepted the French or England before 1450
+    #Available for ENG before WOTL or after accepting French people, or the UM
     trigger = {
         OR = {
             AND = {
@@ -418,6 +418,24 @@ country_event = {
                 }
             }
         }
+        ai_chance = {
+            factor = 30
+
+            modifier = {
+                factor = 2
+                AND = {
+                    NOL = {
+                        has_country_flag = wotl_eng_council_of_dukes_support_fla
+                    }
+                    FLA = {
+                        has_country_flag = wotl_eng_council_of_dukes_support_fla
+                    }
+                    GUY = {
+                        has_country_flag = wotl_eng_council_of_dukes_support_fla
+                    }
+                }
+            }
+        }
     }
 
     #Never! Our lands are rightfully ours!
@@ -428,6 +446,23 @@ country_event = {
             FLA = {
                 country_event = {
                     id = wotl_fla.9
+                }
+            }
+        }
+        ai_chance = {
+            factor = 70
+            modifier = {
+                factor = 0.5
+                AND = {
+                    NOL = {
+                        has_country_flag = wotl_eng_council_of_dukes_support_fla
+                    }
+                    FLA = {
+                        has_country_flag = wotl_eng_council_of_dukes_support_fla
+                    }
+                    GUY = {
+                        has_country_flag = wotl_eng_council_of_dukes_support_fla
+                    }
                 }
             }
         }
@@ -448,6 +483,20 @@ country_event = {
         name = wotl_eng.7.a
         ai_chance = {
             factor = 20
+            modifier = {
+                factor = 3
+                AND = {
+                    NOL = {
+                        has_country_flag = wotl_eng_council_of_dukes_support_fla
+                    }
+                    FLA = {
+                        has_country_flag = wotl_eng_council_of_dukes_support_fla
+                    }
+                    GUY = {
+                        has_country_flag = wotl_eng_council_of_dukes_support_fla
+                    }
+                }
+            }
         }
         set_global_flag = wotl_eng_bends_to_council.7
     }
@@ -457,6 +506,20 @@ country_event = {
         name = wotl_eng.7.b
         ai_chance = {
             factor = 20
+            modifier = {
+                factor = 3
+                AND = {
+                    NOL = {
+                        has_country_flag = wotl_eng_council_of_dukes_support_fla
+                    }
+                    FLA = {
+                        has_country_flag = wotl_eng_council_of_dukes_support_fla
+                    }
+                    GUY = {
+                        has_country_flag = wotl_eng_council_of_dukes_support_fla
+                    }
+                }
+            }
         }
         set_global_flag = wotl_eng_bends_to_council.7
     }
@@ -466,6 +529,20 @@ country_event = {
         name = wotl_eng.7.c
         ai_chance = {
             factor = 20
+            modifier = {
+                factor = 3
+                AND = {
+                    NOL = {
+                        has_country_flag = wotl_eng_council_of_dukes_support_fla
+                    }
+                    FLA = {
+                        has_country_flag = wotl_eng_council_of_dukes_support_fla
+                    }
+                    GUY = {
+                        has_country_flag = wotl_eng_council_of_dukes_support_fla
+                    }
+                }
+            }
         }
         set_global_flag = wotl_eng_bends_to_council.7
     }
@@ -475,6 +552,20 @@ country_event = {
         name = wotl_eng.7.d
         ai_chance = {
             factor = 40
+            modifier = {
+                factor = 0.2
+                AND = {
+                    NOL = {
+                        has_country_flag = wotl_eng_council_of_dukes_support_fla
+                    }
+                    FLA = {
+                        has_country_flag = wotl_eng_council_of_dukes_support_fla
+                    }
+                    GUY = {
+                        has_country_flag = wotl_eng_council_of_dukes_support_fla
+                    }
+                }
+            }
         }
         add_prestige = 10
         hidden_effect = {
@@ -486,4 +577,43 @@ country_event = {
         }
     }
     
+}
+
+#John de Armagnac is Worried
+country_event = {
+    id = wotl_eng.8
+    title = wotl_eng.8.t
+    desc = wotl_eng.8.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    is_triggered_only = yes
+
+    #Assure him he is safe.
+    option = {
+        name = wotl_eng.8.a
+        ai_chance = {
+            factor = 30            
+        }
+        GUY = {
+            country_event = {
+                id = wotl_guy.2
+            }
+        }
+    }
+
+    #Demand loyalty.
+    option = {
+        name = wotl_eng.8.b
+        ai_chance = {
+            factor = 70            
+        }
+        custom_tooltip = wotl_eng.8.b.tt
+        hidden_effect = {
+            GUY = {
+                country_event = {
+                    id = wotl_guy.3
+                }
+            }
+        }
+    }
 }

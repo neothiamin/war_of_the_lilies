@@ -14,7 +14,6 @@ base_manpower = 4
 add_local_autonomy = 25
 estate = estate_nobles
 add_core = BOU
-add_core = ENG
 add_core = GUY
 discovered_by = eastern
 discovered_by = western

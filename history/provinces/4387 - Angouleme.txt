@@ -11,7 +11,6 @@ base_tax = 3
 base_production = 3
 trade_goods = livestock
 base_manpower = 2
-add_core = ENG
 add_core = GUY
 estate = estate_burghers
 discovered_by = eastern

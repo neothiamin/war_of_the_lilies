@@ -34,7 +34,7 @@ wotl_bur_flemish_war_modifier = {
     infantry_power = 0.1
 }
 
-wotl_eng_flemish_revolt_bur = {
+wotl_eng_flemish_revolt = {
     land_morale = 0.05
 }
 

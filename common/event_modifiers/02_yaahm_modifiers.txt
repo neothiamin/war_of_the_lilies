@@ -24,3 +24,12 @@ wotl_fla_jti_indep_modifier = {
     land_morale = 0.05
     infantry_power = 0.05
 }
+
+wotl_fla_flemish_revolt = {
+    local_unrest = 8
+}
+
+wotl_bur_flemish_war_modifier = {
+    land_morale = 0.05    
+    infantry_power = 0.05
+}

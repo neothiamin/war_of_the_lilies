@@ -1,3 +1,9 @@
+v0.2pre2
+
++ Added the Council of the Dukes! Gather all your ducal friends about and make demands of the King of England!
+
++ 
+
 v0.2pre1
 
 + Added LORE folder! Read up!

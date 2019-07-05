@@ -92,10 +92,26 @@ country_event = {
         name = wotl_fla.3.a
         capital_scope = {
             spawn_rebels = {
-                size = 2
+                size = 3
                 type = anti_tax_rebels
                 unrest = 8
                 culture = flemish                
+            }
+        }
+        1865 = {
+            spawn_rebels = {
+                size = 1
+                type = anti_tax_rebels
+                unrest = 8
+                culture = flemish                
+            }
+        }
+        hidden_effect = {
+            every_owned_province = {
+                add_province_modifier = {
+                    name = wotl_fla_flemish_revolt
+                    duration = 3650                    
+                }
             }
         }
     }

@@ -507,6 +507,14 @@ country_event = {
                 }
             }
         }
+        every_owned_province = {
+            limit = {
+                area = normandy_area
+            }
+            add_core = NRM
+            cede_province = NRM
+        }
+        vassalize = NRM
         set_global_flag = wotl_eng_bends_to_council.7
     }
 
@@ -530,6 +538,14 @@ country_event = {
                 }
             }
         }
+        every_owned_province = {
+            limit = {
+                area = loire_area
+            }
+            add_core = ORL
+            cede_province = ORL
+        }
+        vassalize = ORL
         set_global_flag = wotl_eng_bends_to_council.7
     }
 
@@ -553,6 +569,14 @@ country_event = {
                 }
             }
         }
+        every_owned_province = {
+            limit = {
+                area = champagne_area
+            }
+            add_core = CHP
+            cede_province = CHP
+        }
+        vassalize = CHP
         set_global_flag = wotl_eng_bends_to_council.7
     }
 

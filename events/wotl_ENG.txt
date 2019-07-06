@@ -110,6 +110,8 @@ country_event = {
 
     fire_only_once = yes
 
+    major = yes
+
     is_triggered_only = yes
 
     trigger = {
@@ -629,7 +631,27 @@ country_event = {
 country_event = {
     id = wotl_eng.9
     title = wotl_eng.9.t
-    desc = wotl_eng.9.desc
+    desc = {
+        trigger = {
+            AND = {
+                war_with = BUR
+                war_with = FLA
+                FLA = {
+                    has_country_flag = wotl_fla_independence
+                }
+            }
+        }
+        desc = wotl_eng.9.desc.a
+    }
+    desc = {
+        trigger = {
+            AND = {
+                war_with = BUR
+                has_country_flag = wotl_eng_supported_jti
+            }
+        }
+        desc = wotl_eng.9.desc.b
+    }
     picture = LIBERUM_VETO_eventPicture
 
     fire_only_once = yes
@@ -639,10 +661,18 @@ country_event = {
         BUR = {
             has_country_modifier = wotl_bur_flemish_war_modifier
         }
-        war_with = BUR
-        war_with = FLA
-        FLA = {
-            has_country_flag = wotl_fla_independence
+        OR = {
+            AND = {
+                war_with = BUR
+                war_with = FLA
+                FLA = {
+                    has_country_flag = wotl_fla_independence
+                }
+            }
+            AND = {
+                war_with = BUR
+                has_country_flag = wotl_eng_supported_jti
+            }
         }
     }
 
@@ -652,7 +682,18 @@ country_event = {
 
     #Damn them! They will pay for this!
     option = {
-        name = wotl_eng.9.a        
+        name = wotl_eng.9.a
+        if = {
+            limit = {
+                NOT = {
+                    has_country_modifier = wotl_eng_flemish_revolt
+                }
+            }
+            add_country_modifier = {
+                name = wotl_eng_flemish_revolt
+                duration = -1            
+            }
+        }
     }
 }
 
@@ -663,24 +704,31 @@ province_event = {
     desc = wotl_eng.10.desc
     picture = LIBERUM_VETO_eventPicture
 
-    fire_only_once = yes
-
     is_triggered_only = yes
 
-    trigger = {        
-        owned_by = ENG
-        FROM = {            
-            war_with = BUR
-            war_with = FLA
+    trigger = {
+        OR = {
+            owner = {
+                OR = {
+                    tag = BUR
+                    is_subject_of = BUR
+                }
+            }
+            owner = {
+                OR = {
+                    tag = ENG
+                    is_subject_of = ENG
+                }
+            }
+        }
+        FROM = {
+            tag = ENG
         }
         NOT = {
             has_global_flag = wotl_eng_big_defeat
         }
         BUR = {
             has_country_modifier = wotl_bur_flemish_war_modifier
-        }
-        FLA = {
-            has_country_flag = wotl_fla_independence
         }
     }    
 

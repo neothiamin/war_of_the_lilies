@@ -117,7 +117,8 @@
  wotl_eng.10.a:0 "To Hell with them! We WILL be victorious!"
  
  wotl_eng.9.t:0 "War with Burgundy!"
- wotl_eng.9.desc:0 "REPLACE_ME"
+ wotl_eng.9.desc.a:0 "Sire!\n\nThe Burgundians, pesky meddlers they are, have intervened in our affairs once more. This time, they have decided to support the rebellious John of Beaufort in his efforts against us!"
+ wotl_eng.9.desc.b:0 "Sire!\n\nThe Burgundians, pesky meddlers they are, have intervened in our affairs once more. This time, they have decided that we, in our support of John of Beaufort, have overstepped our boundaries! They have decided to go to war with us in what they see as a righteous cutting-down-to-size of a tyrannical power. Psh!"
  wotl_eng.9.a:0 "Damn them! They will pay for this!"
 
  wotl_eng_4a_jti_indep:0 "John declares independence!"
@@ -127,3 +128,7 @@
  wotl_eng.11.t:0 "John of Beaufort declares independence!"
  wotl_eng.11.desc:0 "John of Beaufort has declared independence from us! Surely he knows he stands no chance."
  wotl_eng.11.a:0 "Reassert control over Flanders!"
+
+ wotl_bur.2.t:0 "Revolt in Flanders!"
+ wotl_bur.2.desc:0 "Word has reached the royal court of a revolt in Flanders! Peasants and nobles have taken to the streets calling for Duke John Beaufort, or \"The Invader\", to be executed! And what's worse, the [ENG.Monarch.GetTitle] of England has supported John Beaufort! Clearly, the English web of vassals is not fit to rule over Flanders."
+ wotl_bur.2.a:0 "We must step in."

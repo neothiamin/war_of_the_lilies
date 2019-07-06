@@ -13,7 +13,6 @@ country_event = {
 
     trigger = {
         tag = BUR
-        #has_global_flag = wotl_fla_flemish_revolt_happened
         FLA = {
             has_country_flag = wotl_fla_independence
         }
@@ -63,4 +62,60 @@ country_event = {
         }
     }
     
+}
+
+
+#Flemish War (ENG supports JTI)
+country_event = {
+    id = wotl_bur.2
+    title = wotl_bur.2.t
+    desc = wotl_bur.2.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    trigger = {
+        tag = BUR
+        has_global_flag = wotl_fla_flemish_revolt_happened
+        is_at_war = no
+        FLA = {
+            has_ruler_flag = wotl_fla_jti_supported
+        }
+    }
+
+    fire_only_once = yes
+
+    mean_time_to_happen = {
+        days = 30
+    }
+
+    #We must step in.
+    option = {
+        name = wotl_bur.2.a
+        ai_chance = {
+            factor = 75
+        }
+        declare_war_with_cb = {
+            casus_belli = cb_annex
+            who = FLA
+            war_goal_province = 90            
+        }       
+        add_country_modifier = {
+            name = wotl_bur_flemish_war_modifier
+            duration = 3650            
+        } 
+        hidden_effect = {
+            add_historical_rival = ENG
+        }
+    }
+
+    #It is none of our concern.
+    option = {
+        name = wotl_bur.1.b
+        ai_chance = {
+            factor = 25
+        }
+        reverse_add_opinion = {
+            who = ENG
+            modifier = wotl_bur_non_interference
+        }
+    }
 }

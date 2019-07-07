@@ -277,38 +277,6 @@ country_event = {
         set_country_flag = wotl_eng_council_of_dukes_support_fla
         ai_chance = {
             factor = 60
-            modifier = {
-                factor = 2
-                NOT = {
-                    has_opinion = {
-                    	who = ENG
-                    	value = 25
-                    }
-                }
-            }
-            modifier = {
-                factor = 2
-                has_opinion = {
-                	who = FLA
-                	value = 75
-                }
-            }
-            modifier = {
-                factor = 0.5
-                has_opinion = {
-                	who = ENG
-                	value = 50
-                }
-            }
-            modifier = {
-                factor = 0.5
-                NOT = {
-                    has_opinion = {
-                    	who = FLA
-                    	value = 50
-                    }
-                }
-            }
         }
         custom_tooltip = wotl_eng.5.a.tt
         hidden_effect = {
@@ -758,6 +726,7 @@ province_event = {
 
     immediate = {
         set_global_flag = wotl_eng_big_defeat
+        save_global_event_target_as = wotl_eng_big_defeat_location
     }
 
     #Blast! We must not let this phase us!
@@ -768,6 +737,11 @@ province_event = {
             add_country_modifier = {
                 name = wotl_eng_big_defeat_effect
                 duration = -1
+            }
+        }
+        BUR = {
+            country_event = {
+                id = wotl_bur.3
             }
         }
     }

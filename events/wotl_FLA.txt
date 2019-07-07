@@ -409,7 +409,9 @@ country_event = {
         trigger = {
             has_global_flag = wotl_eng_bends_to_council.6
         }
-        desc = wotl_fla.10.desc.a
+        desc = wotl_fla.10.desc.a        
+    }
+    desc = {
         trigger = {
             has_global_flag = wotl_eng_bends_to_council.7
         }

@@ -119,3 +119,24 @@ country_event = {
         }
     }
 }
+
+#Victory over England!
+country_event = {
+    id = wotl_bur.3
+    title = wotl_bur.3.t
+    desc = wotl_bur.3.desc
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    #Hurrah! Death to [ENG.Monarch.GetName]!
+    option = {
+        name = wotl_bur.3.a
+        add_country_modifier = {
+            name = wotl_bur_big_win_effect
+            duration = 3650
+        }
+        clear_global_event_target = wotl_eng_big_defeat_location
+    }
+}

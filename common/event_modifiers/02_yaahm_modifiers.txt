@@ -46,3 +46,7 @@ wotl_eng_big_defeat_effect = {
 wotl_bur_big_win_effect = {
     land_morale = 0.025
 }
+
+wotl_flemish_war_jti_missing = {
+    war_exhaustion = -0.02
+}

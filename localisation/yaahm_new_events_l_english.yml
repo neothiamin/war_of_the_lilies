@@ -136,3 +136,8 @@
  wotl_bur.3.t:0 "Victory over England!"
  wotl_bur.3.desc:0 "My [ROOT.Monarch.GetTitle]!\n\nOur armies have delivered a decisive blow to the English forces at [wotl_eng_big_defeat_location.GetName]! The English armies were left retreating, tails between their legs. We must capitalize on this!"
  wotl_bur.3.a:0 "Hurrah! Death to [ENG.Monarch.GetName]!"
+
+ wotl_fla.12.t:0 "John of Beaufort missing!"
+ wotl_fla.12.desc.b:0 "Panic!\n\nBrugge has fallen! The enemy forces have taken our capital, and what's worse, Duke John of Beaufort is missing! No doubt he and his personal guard fled the castle after seeing the approaching forces, but where is he now? None know..."
+ wotl_fla.12.a:0 "God has forsaken us!"
+ wotl_fla.12.a.tt:0 "John of Beaufort and his family go missing! A noble council will rule the nation until they return."

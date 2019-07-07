@@ -46,7 +46,8 @@ country_event = {
             modifier = wotl_bur_allied_fla
         }
         hidden_effect = {
-            add_historical_rival = ENG
+            add_historical_rival = ENG            
+            set_country_flag = wotl_bur_flemish_war_friend_fla
         }
     }
 
@@ -104,6 +105,7 @@ country_event = {
         } 
         hidden_effect = {
             add_historical_rival = ENG
+            set_country_flag = wotl_bur_flemish_war_enemy_fla
         }
     }
 
@@ -124,7 +126,8 @@ country_event = {
 country_event = {
     id = wotl_bur.3
     title = wotl_bur.3.t
-    desc = wotl_bur.3.desc
+    desc = wotl_bur.3.desc    
+    picture = LIBERUM_VETO_eventPicture
 
     is_triggered_only = yes
 

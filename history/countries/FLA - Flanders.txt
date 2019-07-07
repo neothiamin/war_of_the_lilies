@@ -8,7 +8,7 @@ capital = 90	# Brugge
 
 1430.6.6 = { #Thomas I gives his cousin, John Beaufort, 1st Duke of Somerset, permission to invade Flanders
 	monarch = {
-		name = "John I \"the Invader\""
+		name = "John I the Invader"
         culture = english
 		dynasty = "Beaufort"
 		birth_date = 1403.3.25
@@ -18,7 +18,9 @@ capital = 90	# Brugge
 	}
 	add_ruler_personality = cruel_personality
 	set_ruler_flag = wotl_fla_john_the_invader
-    queen = {
+}
+1431.6.6 = {
+	queen = {
 		name = "Margaret Beauchamp"
         culture = english
         country_of_origin = ENG

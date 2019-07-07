@@ -451,3 +451,80 @@ country_event = {
         name = wotl_fla.11.a
     }
 }
+
+#John of Beaufort Missing!
+#triggered by on_siege_lost_country
+country_event = {
+    id = wotl_fla.12
+    title = wotl_fla.12.t
+    desc = wotl_fla.12.desc.b
+    picture = LIBERUM_VETO_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    trigger = {
+        FROM = {
+            province_id = 90
+        }
+        tag = FLA
+        has_ruler_flag = wotl_fla_john_the_invader
+        OR = {
+            has_country_flag = wotl_fla_independence
+            ENG = {
+                has_country_flag = wotl_eng_supported_jti
+            }
+        }
+    }
+
+    immediate = {
+        set_country_flag = wotl_fla_jti_missing
+    }
+
+    #God has forsaken us!
+    option = {
+        name = wotl_fla.12.a
+        add_stability = -1
+        add_war_exhaustion = 5
+        custom_tooltip = wotl_fla.12.a.tt        
+        exile_heir_as = wotl_flemish_war_fla_heir
+        exile_ruler_as = wotl_flemish_war_fla_ruler
+        define_ruler = {
+            name = "Noble Council"
+            adm = 1
+            dip = 1
+            mil = 1
+            fixed = yes
+            culture = flemish
+            regency = yes
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+                    war_with = ENG
+                }
+                ENG = {
+                    add_country_modifier = {
+                        name = wotl_flemish_war_jti_missing
+                        duration = -1
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    war_with = BUR
+                    NOT = {
+                        war_with = ENG
+                    }
+                }
+                BUR = {
+                    add_country_modifier = {
+                        name = wotl_flemish_war_jti_missing
+                        duration = -1
+                    }
+                }
+            }
+        }
+    }
+}

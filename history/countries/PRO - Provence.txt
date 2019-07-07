@@ -57,7 +57,7 @@ capital = 201 # Aix-en-Provence
 	}
 }
 
-1433.11.16 = {
+1428.1.1 = {
 	monarch = {
 		name = "René I"
 		dynasty = "de Anjou"
@@ -82,7 +82,8 @@ capital = 201 # Aix-en-Provence
 		name = "John"
 		monarch_name = "John II"
 		dynasty = "de Anjou"
-		birth_date = 1420.8.24
+		birth_date = 1420.8.24		
+		death_date = 1444.8.24
 		claim = 90
 		adm = 5
 		dip = 2

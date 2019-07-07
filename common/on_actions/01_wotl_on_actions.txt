@@ -10,3 +10,12 @@ on_battle_won_province = {
 		100 = war_of_the_roses.6	# WotR - Rebel Leaders Captured
 	}
 }
+
+# country
+# root = losing country, from = location
+on_siege_lost_country = {
+	random_events = {
+		500 = 0
+		100 = wotl_fla.12
+	}
+}

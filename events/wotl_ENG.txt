@@ -698,6 +698,8 @@ province_event = {
 
     is_triggered_only = yes
 
+    hidden = yes
+
     trigger = {
         OR = {
             owner = {
@@ -727,23 +729,16 @@ province_event = {
     immediate = {
         set_global_flag = wotl_eng_big_defeat
         save_global_event_target_as = wotl_eng_big_defeat_location
+        ENG = {
+            country_event = {
+                id = wotl_eng.12
+            }
+        }
     }
 
     #Blast! We must not let this phase us!
     option = {
         name = wotl_eng.10.a
-        FROM = {
-            remove_country_modifier = wotl_eng_flemish_revolt
-            add_country_modifier = {
-                name = wotl_eng_big_defeat_effect
-                duration = -1
-            }
-        }
-        BUR = {
-            country_event = {
-                id = wotl_bur.3
-            }
-        }
     }
 }
 
@@ -768,6 +763,33 @@ country_event = {
         add_country_modifier = {
             name = wotl_eng_flemish_revolt
             duration = -1            
+        }
+    }
+}
+
+#Defeat in [wotl_eng_big_defeat_location.GetName]!
+country_event = {
+    id = wotl_eng.12
+    title = wotl_eng.12.t
+    desc = wotl_eng.12.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    #Blast! We must not let this phase us!
+    option = {
+        name = wotl_eng.12.a
+        remove_country_modifier = wotl_eng_flemish_revolt
+            add_country_modifier = {
+                name = wotl_eng_big_defeat_effect
+                duration = -1
+            }
+        BUR = {
+            country_event = {
+                id = wotl_bur.3
+            }
         }
     }
 }

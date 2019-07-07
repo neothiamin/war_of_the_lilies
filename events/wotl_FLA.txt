@@ -272,12 +272,12 @@ country_event = {
         months = 24
 
         modifier = {
-            factor = 0.8
+            factor = 0.9
             is_year = 1442
         }
 
         modifier = {
-            factor = 0.8
+            factor = 0.9
             is_year = 1444
         }
     }

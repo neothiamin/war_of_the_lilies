@@ -141,3 +141,7 @@
  wotl_fla.12.desc.b:0 "Panic!\n\nBrugge has fallen! The enemy forces have taken our capital, and what's worse, Duke John of Beaufort is missing! No doubt he and his personal guard fled the castle after seeing the approaching forces, but where is he now? None know..."
  wotl_fla.12.a:0 "God has forsaken us!"
  wotl_fla.12.a.tt:0 "John of Beaufort and his family go missing! A noble council will rule the nation until they return."
+
+ wotl_eng.12.t:0 "Defeat in [wotl_eng_big_defeat_location.GetName]!"
+ wotl_eng.12.desc:0 "Sire...\n\nI approach you with grave news. As you know, the Burgundians have intervened in our little squabble with John the Rebel. Though our forces are clearly superior, sometimes the enemy gets the better of them.\n\nSuch was the case in [ROOT.GetName] recently. The enemy managed to rout our forces and server us a crippling defeat. Though our faith in you is unphased, some others have started to doubt your ability..."
+ wotl_eng.12.a:0 "To Hell with them! We WILL be victorious!"

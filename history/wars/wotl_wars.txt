@@ -1,0 +1,15 @@
+name = "Anglo-Burgundian Quarrel"
+war_goal = {
+    casus_belli = cb_humiliate
+    type = humiliate
+}
+
+1434.7.14 = {
+    add_attacker = BUR
+    add_defender = ENG
+}
+
+1434.12.3 = {
+    rem_attacker = BUR
+    rem_defender = ENG
+}

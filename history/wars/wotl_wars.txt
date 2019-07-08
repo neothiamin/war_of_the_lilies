@@ -4,12 +4,12 @@ war_goal = {
     type = humiliate
 }
 
-1434.7.14 = {
+1433.7.14 = {
     add_attacker = BUR
     add_defender = ENG
 }
 
-1434.12.3 = {
+1433.12.3 = {
     rem_attacker = BUR
     rem_defender = ENG
 }

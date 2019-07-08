@@ -1,0 +1,65 @@
+########################################
+# WOTL events for other Countries      #
+########################################
+
+namespace = wotl_misc
+
+#Provence help
+country_event = {
+    id = wotl_misc.1
+    title = wotl_misc.1.t
+    desc = wotl_misc.1.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    is_triggered_only = yes
+
+    #Support [FROM.GetName] in their efforts.
+    option = {
+
+    }
+
+    #They are on their own.
+    option = {
+
+    }
+}
+
+#Castile help
+country_event = {
+    id = wotl_misc.2
+    title = wotl_misc.2.t
+    desc = wotl_misc.2.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    is_triggered_only = yes
+
+    #Support [FROM.GetName] in their efforts.
+    option = {
+
+    }
+
+    #They are on their own.
+    option = {
+        
+    }
+}
+
+#HREmperor help
+country_event = {
+    id = wotl_misc.3
+    title = wotl_misc.3.t
+    desc = wotl_misc.3.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    is_triggered_only = yes
+
+    #Support [FROM.GetName] in their efforts.
+    option = {
+
+    }
+
+    #They are on their own.
+    option = {
+        
+    }
+}

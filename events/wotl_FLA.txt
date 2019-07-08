@@ -258,18 +258,16 @@ country_event = {
         tag = FLA
         has_ruler_flag = wotl_fla_john_the_invader
         is_subject_of = ENG
-        is_at_war = no
         ENG = {
             has_country_flag = wotl_eng_state_of_affairs_happened
         }
-        is_year = 1437
         NOT = {
             is_year = 1446
         }
     }
 
     mean_time_to_happen = {
-        months = 60
+        months = 48
 
         modifier = {
             factor = 0.9

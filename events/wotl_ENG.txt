@@ -696,6 +696,7 @@ country_event = {
                 duration = -1            
             }
         }
+        set_country_flag = wotl_eng_flemish_war_active
     }
 }
 
@@ -733,6 +734,9 @@ province_event = {
         }
         BUR = {
             has_country_modifier = wotl_bur_flemish_war_modifier
+        }
+        ENG = {
+            has_country_flag = wotl_eng_flemish_war_active
         }
     }    
 
@@ -799,6 +803,17 @@ country_event = {
         BUR = {
             country_event = {
                 id = wotl_bur.3
+            }
+        }
+        every_country = {
+            limit = {
+                is_subject_of = ENG
+                NOT = {
+                    tag = FLA
+                }
+            }
+            country_event = {
+                id = wotl_eng.15                
             }
         }
     }
@@ -887,6 +902,91 @@ province_event = {
         add_province_modifier = {
             name = wotl_eng_french_brigands
             duration = 730
+        }
+    }
+}
+
+#Flemish War: Righteous or Foolish?
+country_event = {
+    id = wotl_eng.15
+    title = wotl_eng.15.t
+    desc = wotl_eng.15.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    is_triggered_only = yes
+
+    trigger = {
+        is_subject_of = ENG
+    }
+
+    #We must wait and see how the war pans out.
+    option = {
+        name = wotl_eng.15.a
+        set_country_flag = wotl_eng_subject_waiting
+    }
+
+    #Perhaps we ought to seek outside assistance...
+    option = {
+        name = wotl_eng.15.a
+        set_country_flag = wotl_eng_subject_assistance
+        country_event = {
+            id = wotl_eng.16
+        }
+    }
+}
+
+#Flemish War: Righteous or Foolish?
+country_event = {
+    id = wotl_eng.16
+    title = wotl_eng.16.t
+    desc = wotl_eng.16.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    is_triggered_only = yes
+
+    #We should look to Provence.
+    option = {
+        name = wotl_eng.16.a
+        trigger = {
+            exists = PRO
+            PRO = {
+                NOT = {
+                    alliance_with = ENG
+                }
+            }
+        }
+        PRO = {
+            country_event = {
+                id = wotl_misc.1
+            }
+        }
+    }
+
+    #We should look to Castile.
+    option = {
+        name = wotl_eng.16.b
+        trigger = {
+            exists = CAS
+            CAS = {
+                NOT = {
+                    alliance_with = ENG
+                }
+            }
+        }
+        CAS = {
+            country_event = {
+                id = wotl_misc.2
+            }
+        }
+    }
+
+    #We should look to the Holy Roman Emperor.
+    option = {
+        name = wotl_eng.16.c
+        emperor = {
+            country_event = {
+                id = wotl_misc.3
+            }
         }
     }
 }

@@ -1,16 +1,16 @@
-v0.2pre2
-
-+ Added the Council of the Dukes! Gather all your ducal friends about and make demands of the King of England!
-
-+ 
-
 v0.2pre1
 
 + Added LORE folder! Read up!
 
 + Flemish Revolt Events! Play as England and stop John the Invader! Or play as Flanders and question England's legitimacy! Just be careful; foreign powers are always eager to step in...
 
-* Some tweaks to province and country history, including lore-accurate personalities for rulers!
++ Subsequently, added the Flemish War! Sometimes, things get a little heated.
+
++ Added the Council of the Dukes! Gather all your ducal friends about and make demands of the King of England!
+
++ Brigandry runs rampant in France!
+
+* Some tweaks to province and country history, including lore-accurate personalities for (some) rulers!
 
 * Further increased severity of "Diplomacy Stretched Thin" modifier.
 

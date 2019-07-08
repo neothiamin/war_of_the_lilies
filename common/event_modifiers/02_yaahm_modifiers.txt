@@ -50,3 +50,9 @@ wotl_bur_big_win_effect = {
 wotl_flemish_war_jti_missing = {
     war_exhaustion = -0.02
 }
+
+wotl_eng_french_brigands = {
+    local_unrest = 4
+    local_defensiveness = -0.1
+    province_trade_power_modifier = -0.05
+}

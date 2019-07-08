@@ -269,7 +269,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 24
+        months = 60
 
         modifier = {
             factor = 0.9
@@ -293,6 +293,9 @@ country_event = {
     #Execute him!
     option = {
         name = wotl_fla.7.a
+        ai_chance = {
+            factor = 85
+        }
         hidden_effect = {
             ENG = {
                 country_event = {
@@ -300,7 +303,18 @@ country_event = {
                 }
             }
         }
-        add_prestige = -5
+    }
+
+    #Execute him!
+    option = {
+        name = wotl_fla.7.b
+        ai_chance = {
+            factor = 15
+        }
+        hidden_effect = {
+            set_country_flag = wotl_fla_jti_spared_merchant
+        }
+        add_prestige = -20
     }
 }
 

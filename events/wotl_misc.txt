@@ -15,51 +15,72 @@ country_event = {
 
     #Support [FROM.GetName] in their efforts.
     option = {
-
+        name = wotl_misc.1.a
+        FROM = {
+            add_liberty_desire = 25
+            add_opinion = {
+                modifier = wotl_misc_vassal_helped
+                who = ROOT
+            }
+        }
     }
 
     #They are on their own.
     option = {
-
+        name = wotl_misc.1.b
     }
 }
 
 #Castile help
 country_event = {
     id = wotl_misc.2
-    title = wotl_misc.2.t
-    desc = wotl_misc.2.desc
+    title = wotl_misc.1.t
+    desc = wotl_misc.1.desc
     picture = LIBERUM_VETO_eventPicture
 
     is_triggered_only = yes
 
     #Support [FROM.GetName] in their efforts.
     option = {
-
+        name = wotl_misc.1.a
+        FROM = {
+            add_liberty_desire = 25
+            add_opinion = {
+                modifier = wotl_misc_vassal_helped
+                who = ROOT
+            }
+        }
     }
 
     #They are on their own.
     option = {
-        
+        name = wotl_misc.1.b
     }
 }
 
 #HREmperor help
 country_event = {
     id = wotl_misc.3
-    title = wotl_misc.3.t
-    desc = wotl_misc.3.desc
+    title = wotl_misc.1.t
+    desc = wotl_misc.1.desc
     picture = LIBERUM_VETO_eventPicture
 
     is_triggered_only = yes
 
     #Support [FROM.GetName] in their efforts.
     option = {
-
+        name = wotl_misc.1.a
+        FROM = {
+            add_liberty_desire = 25
+            add_opinion = {
+                modifier = wotl_misc_vassal_helped
+                who = ROOT
+            }
+        }
     }
 
     #They are on their own.
     option = {
-        
+        name = wotl_misc.1.b        
     }
 }

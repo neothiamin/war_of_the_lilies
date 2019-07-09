@@ -871,12 +871,14 @@ province_event = {
         }
         region = france_region
         NOT = {
-            has_province_modifier = wotl_eng_french_brigands
+            any_province_in_state = {
+                has_province_modifier = wotl_eng_french_brigands
+            }
         }
     }
 
     mean_time_to_happen = {
-        months = 30
+        months = 36
         modifier = {
             factor = 0.85
             NOT = {
@@ -901,7 +903,7 @@ province_event = {
         name = wotl_eng.14.a
         add_province_modifier = {
             name = wotl_eng_french_brigands
-            duration = 730
+            duration = 1825
         }
     }
 }
@@ -923,19 +925,25 @@ country_event = {
     option = {
         name = wotl_eng.15.a
         set_country_flag = wotl_eng_subject_waiting
+        ai_chance = {
+            factor = 60
+        }
     }
 
     #Perhaps we ought to seek outside assistance...
     option = {
-        name = wotl_eng.15.a
+        name = wotl_eng.15.b
         set_country_flag = wotl_eng_subject_assistance
         country_event = {
             id = wotl_eng.16
         }
+        ai_chance = {
+            factor = 40
+        }
     }
 }
 
-#Flemish War: Righteous or Foolish?
+#Foreign Aid
 country_event = {
     id = wotl_eng.16
     title = wotl_eng.16.t

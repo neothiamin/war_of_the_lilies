@@ -1,0 +1,40 @@
+country_decisions = {
+
+    wotl_eng_curb_brigandry = {
+        major = yes
+        potential = {
+            normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+            capital_scope = {
+				region = british_isles_region
+            }
+            tag = ENG
+            has_country_flag = wotl_eng_brigands_active
+        }
+
+        allow = {
+            is_at_war = no
+			is_free_or_tributary_trigger = yes
+            is_nomad = no
+            stability = 2
+            adm_power = 100
+        }
+
+        effect = {
+            every_province = {
+                limit = {
+                    has_province_modifier = wotl_eng_french_brigands
+                }
+                remove_province_modifier = wotl_eng_french_brigands
+                add_unrest = 4
+            }
+            clr_country_flag = wotl_eng_brigands_active
+            set_country_flag = wotl_eng_no_brigands
+        }
+
+        ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 40
+    }
+}

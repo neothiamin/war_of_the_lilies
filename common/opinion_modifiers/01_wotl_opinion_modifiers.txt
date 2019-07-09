@@ -12,3 +12,8 @@ wotl_guy_loyal = {
     opinion = 50
     yearly_decay = 8
 }
+
+wotl_misc_vassal_helped = {
+    opinion = 75
+    yearly_decay = 10
+}

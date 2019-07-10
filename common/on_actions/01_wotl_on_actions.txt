@@ -19,3 +19,11 @@ on_siege_lost_country = {
 		100 = wotl_fla.12
 	}
 }
+
+# country
+# root = loser country, from = winner country
+on_war_lost = {
+	ROOT = { country_event = { id = flavor_cri.6 } }
+	ROOT = { country_event = { id = tributary_events.32 } }
+	ROOT = { country_event = { id = wotl_eng.17 } }
+}

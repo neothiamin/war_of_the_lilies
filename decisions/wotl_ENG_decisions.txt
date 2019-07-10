@@ -4,23 +4,26 @@ country_decisions = {
         major = yes
         potential = {
             normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
-            capital_scope = {
-				region = british_isles_region
-            }
             tag = ENG
             has_country_flag = wotl_eng_brigands_active
+            is_free_or_tributary_trigger = yes
+            is_nomad = no
+            NOT = {                
+                is_year = 1444
+            }
         }
 
         allow = {
+            NOT = {                
+                is_year = 1444
+            }
             is_at_war = no
-			is_free_or_tributary_trigger = yes
-            is_nomad = no
             stability = 2
             adm_power = 100
         }
 
         effect = {
+            add_adm_power = -100
             every_province = {
                 limit = {
                     has_province_modifier = wotl_eng_french_brigands
@@ -32,6 +35,54 @@ country_decisions = {
             set_country_flag = wotl_eng_no_brigands
         }
 
+        ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 40
+    }
+
+    wotl_eng_enlist_general = {
+        major = yes
+        potential = {
+            normal_or_historical_nations = yes
+            tag = ENG
+            has_country_flag = wotl_eng_brigands_active
+            is_free_or_tributary_trigger = yes
+            is_nomad = no
+            is_year = 1444
+            NOT = {
+                has_country_flag = wotl_eng_brigands_general_hired
+            }
+        }
+
+        allow = {            
+            is_year = 1444
+            is_at_war = no
+            mil_power = 100
+        }
+
+        effect = {
+            FRA = {
+                save_global_event_target_as = wotl_eng_france_fallback
+            }
+            set_saved_name = {
+                key = wotl_eng_french_general
+                type = advisor
+                scope = event_target:wotl_eng_france_fallback
+            }
+            add_mil_power = -100            
+            custom_tooltip = wotl_eng_enlist_general.tt
+            hidden_effect = {
+                define_general = {
+                    shock = 2
+                    fire = 1
+                    manuever = 3
+                    siege = 1
+                    name = wotl_eng_french_general
+                }
+            }
+            set_country_flag = wotl_eng_brigands_general_hired
+        }
         ai_will_do = {
 			factor = 1
 		}

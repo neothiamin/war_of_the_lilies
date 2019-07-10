@@ -1,3 +1,16 @@
+v0.2pre2
+
++ Added the Caporal events!
+
++ Added more flavor in general for the French brigands.
+
+* Tweaked some MTTHs and effects in general
+
+* Fixed HungaHRE. (HRHungary? I don't know...)
+
+* Probably other shit too I just can't remember since it's been a few days since a decent commit and I don't wanna look back at the things i changed ahasdhjkashkdjahjsd
+
+
 v0.2pre1
 
 + Added LORE folder! Read up!

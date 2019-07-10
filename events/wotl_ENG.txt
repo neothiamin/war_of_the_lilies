@@ -243,7 +243,7 @@ country_event = {
         ai_chance = {
             factor = 20
         }
-        set_global_flag = wotl_eng_king_weak
+        set_ruler_flag = wotl_eng_king_weak
         FLA = {
             grant_independence = yes
         }
@@ -879,23 +879,6 @@ province_event = {
 
     mean_time_to_happen = {
         months = 36
-        modifier = {
-            factor = 0.85
-            NOT = {
-                OR = {
-                    any_neighbor_province = {
-                        fort_level = 1
-                    }
-                    fort_level = 1
-                }
-            }
-        }
-        modifier = {
-            factor = 0.9
-            any_neighbor_province = {
-                has_province_modifier = wotl_eng_french_brigands
-            }
-        }
     }
 
     #Blast!
@@ -904,6 +887,23 @@ province_event = {
         add_province_modifier = {
             name = wotl_eng_french_brigands
             duration = 1825
+        }
+    }
+
+    #Send in a Caporal
+    option = {
+        name = wotl_eng.14.b
+        ENG = {
+            add_mil_power = -10
+        }
+        add_province_modifier = {
+            name = wotl_eng_caporal_sent
+            duration = 1095
+        }
+        trigger = {
+            ENG = {
+                has_country_flag = wotl_eng_brigands_general_hired
+            }
         }
     }
 }
@@ -995,6 +995,141 @@ country_event = {
             country_event = {
                 id = wotl_misc.3
             }
+        }
+    }
+}
+
+#England loses war
+country_event = {
+    id = wotl_eng.17
+    title = wotl_eng.17.t
+    desc = wotl_eng.17.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+        NOT = {
+            has_country_flag = wotl_eng_flemish_war_active
+            FLA = {
+                has_country_flag = wotl_fla_independence
+            }
+            is_year = 1465
+        }
+    }
+
+    #We are still just as strong has we have ever been!
+    option = {
+        name = wotl_eng.17.a
+        custom_tooltip = wotl_eng.17.a.tt
+        set_ruler_flag = wotl_eng_king_weak
+        add_prestige = -5
+    }
+}
+
+#Benefactor or Burden?
+#For English vassals
+country_event = {
+    id = wotl_eng.18
+    title = wotl_eng.18.t
+    desc = wotl_eng.18.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    trigger = {
+        is_subject_of = ENG
+        is_at_war = no
+        ENG = {
+            has_ruler_flag = wotl_eng_king_weak
+        }
+        NOT = {
+            has_country_flag = wotl_eng_benefactor_or_burden
+        }
+        NOT = {
+            tag = GUY
+        }
+    }
+
+    immediate = {
+        set_country_flag = wotl_eng_benefactor_or_burden
+    }
+
+    mean_time_to_happen = {
+        months = 6
+    }
+
+    #We should begin pursuing other diplomatic options.
+    option = {
+        name = wotl_eng.18.a
+        add_liberty_desire = 20
+        custom_tooltip = wotl_eng.18.a.tt
+        set_country_flag = wotl_eng_vassal_rebellious
+    }
+
+    #We have an obligation to England!
+    option = {
+        name = wotl_eng.18.b
+        add_liberty_desire = -10
+        add_opinion = {
+            who = ENG
+            modifier = wotl_eng_vassal_loyal_effect
+        }
+    }
+}
+
+#Benefactor or Burden?
+#For Aquitaine
+country_event = {
+    id = wotl_eng.19
+    title = wotl_eng.19.t
+    desc = wotl_eng.19.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    trigger = {
+        is_subject_of = ENG
+        is_at_war = no
+        ENG = {
+            has_ruler_flag = wotl_eng_king_weak
+        }
+        NOT = {
+            has_country_flag = wotl_eng_benefactor_or_burden_guy
+        }
+        tag = GUY
+    }
+
+    immediate = {
+        set_country_flag = wotl_eng_benefactor_or_burden_guy
+    }
+
+    mean_time_to_happen = {
+        months = 6
+    }
+
+    #We should begin pursuing other diplomatic options.
+    option = {
+        name = wotl_eng.19.a
+        add_liberty_desire = 10
+        custom_tooltip = wotl_eng.18.a.tt
+        set_country_flag = wotl_eng_vassal_rebellious
+    }
+
+    #Perhaps... England is not the right nation to rule France.
+    option = {
+        name = wotl_eng.19.b
+        add_liberty_desire = 25
+        custom_tooltip = wotl_eng.19.b.tt
+        set_country_flag = wotl_eng_benefactor_or_burden_guy_rebel
+    }
+
+    #We have an obligation to England!
+    option = {
+        name = wotl_eng.19.c
+        add_liberty_desire = -10
+        add_opinion = {
+            who = ENG
+            modifier = wotl_eng_vassal_loyal_effect
         }
     }
 }

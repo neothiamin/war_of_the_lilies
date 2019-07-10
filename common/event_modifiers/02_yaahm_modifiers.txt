@@ -56,3 +56,8 @@ wotl_eng_french_brigands = {
     local_unrest = 4
     local_defensiveness = -0.1
 }
+
+wotl_eng_caporal_sent = {
+    local_unrest = -2
+    local_tax_modifier = 0.05
+}

@@ -29,6 +29,11 @@ country_event = {
 
     immediate = {
         set_country_flag = wotl_eng_state_of_affairs_happened
+        hidden_effect = {
+            FRA = {
+                save_global_event_target_as = wotl_eng_france_fallback
+            }
+        }
     }
 
     #God is with us.
@@ -879,6 +884,13 @@ province_event = {
 
     mean_time_to_happen = {
         months = 36
+
+        modifier = {
+            factor = 1.2
+            owner = {
+                has_country_flag = wotl_eng_brigands_general_hired
+            }
+        }
     }
 
     #Blast!
@@ -896,10 +908,32 @@ province_event = {
         ENG = {
             add_mil_power = -10
         }
-        add_province_modifier = {
-            name = wotl_eng_caporal_sent
-            duration = 1095
+        if = {
+            limit = {
+                owner = {
+                    has_country_flag = wotl_eng_caporals_popular
+                }
+            }
+            custom_tooltip = wotl_eng.14.b.tt
+            add_province_modifier = {
+                name = wotl_eng_caporal_sent
+                duration = -1
+            }
         }
+        if = {
+            limit = {
+                owner = {
+                    NOT = {
+                        has_country_flag = wotl_eng_caporals_popular
+                    }
+                }
+            }
+            add_province_modifier = {
+                name = wotl_eng_caporal_sent
+                duration = 1095
+            }
+        }
+        set_province_flag = wotl_eng_caporal_flag
         trigger = {
             ENG = {
                 has_country_flag = wotl_eng_brigands_general_hired
@@ -1130,6 +1164,110 @@ country_event = {
         add_opinion = {
             who = ENG
             modifier = wotl_eng_vassal_loyal_effect
+        }
+    }
+}
+
+#Popularity of Caporals
+country_event = {
+    id = wotl_eng.20
+    title = wotl_eng.20.t
+    desc = wotl_eng.20.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+        has_country_flag = wotl_eng_brigands_general_hired
+        has_country_flag = wotl_eng_brigands_active
+        any_owned_province = {
+            has_province_flag = wotl_eng_caporal_flag
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 48
+    }
+
+    immediate = {
+        set_country_flag = wotl_eng_caporals_popular
+        set_saved_name = {
+            key = wotl_eng_popular_caporal
+            type = advisor
+            scope = event_target:wotl_eng_france_fallback            
+        }
+    }
+
+    #As long as they remember THEY serve US, not the other way around.
+    option = {
+        name = wotl_eng.20.a
+        every_province = {
+            limit = {
+                has_province_flag = wotl_eng_caporal_flag
+            }
+            add_province_modifier = {
+                name = wotl_eng_possible_rebellion
+                duration = -1
+            }
+        }
+    }
+}
+
+#Flemish War Over
+country_event = {
+    id = wotl_eng.21
+    title = wotl_eng.21.t
+    desc = wotl_eng.21.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+        has_country_modifier = wotl_eng_flemish_revolt
+        is_at_war = no
+        OR = {
+            FLA = {
+                is_subject_of = ENG
+            }
+            owns_core_province = 90
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    #Hurrah!
+    option = {
+        name = wotl_eng.21.a
+        remove_country_modifier = wotl_eng_flemish_revolt
+    }
+}
+
+#Caporals in [Root.GetName]
+province_event = {
+    id = wotl_eng.22
+    title = wotl_eng.22.t
+    desc = wotl_eng.22.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    trigger = {
+        owned_by = ENG
+        has_province_flag = wotl_eng_caporal_flag
+    }
+
+    mean_time_to_happen = {
+        months = 6
+    }
+
+    #It will be fiiiiine...
+    option = {
+        name = wotl_eng.22.a
+        add_province_modifier = {
+            name = wotl_eng_possible_rebellion
+            duration = -1
         }
     }
 }

@@ -61,10 +61,7 @@ country_decisions = {
             mil_power = 100
         }
 
-        effect = {
-            FRA = {
-                save_global_event_target_as = wotl_eng_france_fallback
-            }
+        effect = {            
             set_saved_name = {
                 key = wotl_eng_french_general
                 type = advisor

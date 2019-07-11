@@ -61,3 +61,8 @@ wotl_eng_caporal_sent = {
     local_unrest = -2
     local_tax_modifier = 0.05
 }
+
+wotl_eng_possible_rebellion = {
+    local_manpower_modifier = 0.15
+    local_hostile_attrition = 0.5
+}

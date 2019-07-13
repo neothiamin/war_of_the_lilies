@@ -490,6 +490,11 @@ country_event = {
                 }
             }
         }
+        trigger = {
+            NOT = {
+                exists = NRM
+            }
+        }
         every_owned_province = {
             limit = {
                 area = normandy_area
@@ -521,6 +526,11 @@ country_event = {
                 }
             }
         }
+        trigger = {
+            NOT = {
+                exists = ORL
+            }
+        }
         every_owned_province = {
             limit = {
                 area = loire_area
@@ -550,6 +560,11 @@ country_event = {
                         has_country_flag = wotl_eng_council_of_dukes_support_fla
                     }
                 }
+            }
+        }
+        trigger = {
+            NOT = {
+                exists = CHP
             }
         }
         every_owned_province = {
@@ -879,6 +894,8 @@ province_event = {
             any_province_in_state = {
                 has_province_modifier = wotl_eng_french_brigands
             }
+            has_province_modifier = wotl_eng_possible_rebellion
+            province_id = 87
         }
     }
 
@@ -1059,7 +1076,7 @@ country_event = {
     option = {
         name = wotl_eng.17.a
         custom_tooltip = wotl_eng.17.a.tt
-        set_ruler_flag = wotl_eng_king_weak
+        set_ruler_flag = wotl_eng_war_lost
         add_prestige = -5
     }
 }
@@ -1076,7 +1093,7 @@ country_event = {
         is_subject_of = ENG
         is_at_war = no
         ENG = {
-            has_ruler_flag = wotl_eng_king_weak
+            has_ruler_flag = wotl_eng_war_lost
         }
         NOT = {
             has_country_flag = wotl_eng_benefactor_or_burden
@@ -1125,7 +1142,7 @@ country_event = {
         is_subject_of = ENG
         is_at_war = no
         ENG = {
-            has_ruler_flag = wotl_eng_king_weak
+            has_ruler_flag = wotl_eng_war_lost
         }
         NOT = {
             has_country_flag = wotl_eng_benefactor_or_burden_guy
@@ -1256,6 +1273,9 @@ province_event = {
     trigger = {
         owned_by = ENG
         has_province_flag = wotl_eng_caporal_flag
+        NOT = {
+            has_province_modifier = wotl_eng_possible_rebellion
+        }
     }
 
     mean_time_to_happen = {

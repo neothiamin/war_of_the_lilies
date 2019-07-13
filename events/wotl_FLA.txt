@@ -262,12 +262,12 @@ country_event = {
             has_country_flag = wotl_eng_state_of_affairs_happened
         }
         NOT = {
-            is_year = 1450
+            is_year = 1455
         }
     }
 
     mean_time_to_happen = {
-        months = 36
+        months = 42
 
         modifier = {
             factor = 0.9

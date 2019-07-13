@@ -9,12 +9,9 @@ bookmark =
 	
 	country = ENG
 	country = BUR
-	country = SCO
+	country = FLA
 	country = PRO
-	country = CAS
-	country = HAB
 
 	easy_country = ENG
 	easy_country = BUR
-	easy_country = SCO
 }

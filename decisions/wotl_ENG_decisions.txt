@@ -19,11 +19,11 @@ country_decisions = {
             }
             is_at_war = no
             stability = 2
-            adm_power = 100
+            adm_power = 200
         }
 
         effect = {
-            add_adm_power = -100
+            add_adm_power = -150
             every_province = {
                 limit = {
                     has_province_modifier = wotl_eng_french_brigands

@@ -196,3 +196,8 @@
  wotl_eng.22.t:0 "Caporal Sympathies in [Root.GetName]"
  wotl_eng.22.desc:0 "The people of [Root.GetName] have developed a deep affection for their local Caporals."
  wotl_eng.22.a:0 "All will be well."
+
+ wotl_guy.4.t:0 "Death of John IV"
+ wotl_guy.4.desc:0 "John IV de Armagnac, known to some as a puppet and to others as the savior of the legacy of Aquitaine, has passed away.\n\nJohn IV was always a polarizing figure in life. The Duchy of Aquitaine was granted to him by the English after their victory in the War of Restoration as a reward for his endeavors in the French Civil War, which was instrumental in weaking the French crown. However, with John IV's death, new troubles arise.\n\nLocal Gascon nobles were never fond of John IV, and were constantly worried that he would focus more on his ties to England than his own people. Now, nobles have approached the newly-crowned [Root.Monarch.GetName], and have demanded serious governmental reform, including the granting of more rights to local lords to remind [Root.Monarch.GetName] of the importance of local nobility. If their demands are not met, they say, open revolt is imminent."
+ wotl_guy.4.a:0 "Promise reform."
+ wotl_guy.4.b:0 "We must not renege on our obligations to England."

@@ -49,8 +49,7 @@ capital = 174 	# Bordeaux
 }
 
 1435.1.12 = {
-	add_country_modifier = {
+	add_ruler_modifier = {
 		name = "guy_subject_of_england"
-		duration = 1825
 	}
 }

@@ -89,3 +89,57 @@ country_event = {
     }
 
 }
+
+#When JDA dies, Nobles revolt
+#This event is based around the notion that John de Armagnac was a puppet of the highest degree. Hell, his entire country was given to him by the English! The Old Guard want a new dynasty.
+#The new ruler can either promise reform, or face rebellion.
+country_event = {
+    id = wotl_guy.4
+    title = wotl_guy.4.t
+    desc = wotl_guy.4.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    fire_only_once = yes
+
+    is_triggered_only = yes
+    
+    trigger = {
+        tag = GUY
+        is_subject_of = ENG
+    }
+
+    #Promise reform.
+    option = {
+        name = wotl_guy.4.a
+        add_ruler_modifier = {
+            name = wotl_guy_jda_successor_reform            
+        }
+        add_estate_influence_modifier = {
+            estate = estate_nobles
+            desc = wotl_guy_jda_successor_reform_modifier
+            influence = 15
+            duration = 3650
+        }
+    }
+
+    #We will never betray England!
+    option = {
+        name = wotl_guy.4.b
+        add_ruler_modifier = {
+            name = wotl_guy_jda_successor_loyal            
+        }
+        add_estate_loyalty_modifier = {
+            estate = estate_nobles
+            desc = wotl_guy_jda_successor_no_reform_modifier
+            loyalty = 10
+            duration = 3650
+        }
+        random_owned_province = {
+            spawn_rebels = {
+                size = 2
+                type = noble_rebels
+                win = yes
+            }
+        }
+    }
+}

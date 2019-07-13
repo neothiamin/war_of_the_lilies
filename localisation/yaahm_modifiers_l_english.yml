@@ -25,3 +25,7 @@
  wotl_eng_vassal_loyal_effect:0 "Loyalty in Hard Times"
  wotl_eng_caporal_sent:0 "Caporal Sent"
  wotl_eng_possible_rebellion:0 "Caporal Sympathies"
+ wotl_guy_jda_successor_reform_modifier:0 "Reform Promised"
+ wotl_guy_jda_successor_no_reform_modifier:0 "Nobility Scorned"
+ wotl_guy_jda_successor_reform:0 "Reformer"
+ wotl_guy_jda_successor_loyal:0 "Loyal to England"

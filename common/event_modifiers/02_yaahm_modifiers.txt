@@ -71,7 +71,20 @@ wotl_guy_jda_successor_reform = {
     global_unrest = 2
     global_manpower_modifier = 0.1    
 }
+
 wotl_guy_jda_successor_loyal = {
     global_manpower_modifier = -0.1
     prestige = -0.5
+}
+
+wotl_bur_4_a_effect = {
+    prestige = 0.5
+    infantry_power = 0.05
+    diplomatic_reputation = 1
+}
+
+wotl_eng_lost_war_effect = {
+    war_exhaustion = 0.05
+    prestige = -1
+    land_morale = -0.05
 }

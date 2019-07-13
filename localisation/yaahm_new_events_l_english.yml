@@ -175,7 +175,7 @@
  wotl_eng.17.t:0 "Grand Defeat"
  wotl_eng.17.desc:0 "My Liege!\n\nAs you know, we have recently suffered a loss at the hands of [From.GetName]. Though we all know that this was a mere fluke, I fear others may not agree."
  wotl_eng.17.a:0 "We are every bit as strong as we were before!"
- wotl_eng.17.a.tt:0 "Our vassals may begin to question our rule."
+ wotl_eng.17.a.tt:0 "Trust in our ability to rule wavers..."
  wotl_eng.18.t:0 "Benefactor... or Burden?"
  wotl_eng.18.desc:0 "After our overlord England's military defeat, many in our court have begun questioning how fit [ENG.Monarch.GetName] is to rule over England, let alone over vassals such as ourselves. Granted, England was the one who established our Duchy and put us in power..."
  wotl_eng.18.a:0 "We should begin pursuing other diplomatic options."
@@ -201,3 +201,8 @@
  wotl_guy.4.desc:0 "John IV de Armagnac, known to some as a puppet and to others as the savior of the legacy of Aquitaine, has passed away.\n\nJohn IV was always a polarizing figure in life. The Duchy of Aquitaine was granted to him by the English after their victory in the War of Restoration as a reward for his endeavors in the French Civil War, which was instrumental in weaking the French crown. However, with John IV's death, new troubles arise.\n\nLocal Gascon nobles were never fond of John IV, and were constantly worried that he would focus more on his ties to England than his own people. Now, nobles have approached the newly-crowned [Root.Monarch.GetName], and have demanded serious governmental reform, including the granting of more rights to local lords to remind [Root.Monarch.GetName] of the importance of local nobility. If their demands are not met, they say, open revolt is imminent."
  wotl_guy.4.a:0 "Promise reform."
  wotl_guy.4.b:0 "We must not renege on our obligations to England."
+
+ wotl_bur.4.t:0 "Our Claim to France"
+ wotl_bur.4.desc:0 "My [Root.Monarch.GetTitle]!\n\nAs you surely know, your family possesses the strongest claim to the old throne of France. The House of Valois-Bourgogne was founded by Philip the Bold after being granted the Duchy of Burgundy by his father, Jean le Bon, and has ruled these lands for decades. Now, it appears it may be time to remind Europe of our lineage.\n\nThe unjust [ENG.Monarch.GetTitle] of England, [ENG.Monarch.GetName], has once again shown that [ENG.Monarch.GetSheHe] is unfit to rule [ENG.Monarch.GetHerHis] own nation, much less the people of France, by failing to defend [ENG.Monarch.GetHerHis] domain against another nation.\n\nMy [Root.Monarch.GetTitle], behind you is the support of your subjects and Europeans across the continent. In front of you, the most prestigious title since the Roman Empire. It is time to strike."
+ wotl_bur.4.a:0 "Gentlemen, prepare for war. To Paris! Vive le Duché!"
+ wotl_bur.4.b:0 "The pen truly is mightier than the sword. We will bide our time for now."

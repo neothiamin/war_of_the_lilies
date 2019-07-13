@@ -143,3 +143,53 @@ country_event = {
         clear_global_event_target = wotl_eng_big_defeat_location
     }
 }
+
+#Our Claim to France
+country_event = {
+    id = wotl_bur.4
+    title = wotl_bur.4.t
+    desc = wotl_bur.4.desc    
+    picture = LIBERUM_VETO_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = BUR
+        ENG = {
+            has_ruler_flag = wotl_eng_war_lost
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 16
+    }
+
+    #Stake a claim to the French throne!
+    option = {
+        name = wotl_bur.4.a
+        set_country_flag = wotl_bur_claimed_france
+        add_country_modifier = {
+            name = wotl_bur_4_a_effect
+            duration = 3650
+        }
+        ile_de_france_area = {
+            add_claim = ROOT
+        }
+        champagne_area = {
+            add_claim = ROOT
+        }
+        ai_chance = {
+            factor = 90
+        }
+    }
+
+    #The pen is mightier than the sword.
+    option = {
+        name = wotl_bur.4.b
+        set_country_flag = wotl_bur_no_claim
+        add_prestige = 15
+        ai_chance = {
+            factor = 10
+        }
+    }
+}

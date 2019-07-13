@@ -1064,10 +1064,6 @@ country_event = {
     trigger = {
         tag = ENG
         NOT = {
-            has_country_flag = wotl_eng_flemish_war_active
-            FLA = {
-                has_country_flag = wotl_fla_independence
-            }
             is_year = 1465
         }
     }
@@ -1077,6 +1073,9 @@ country_event = {
         name = wotl_eng.17.a
         custom_tooltip = wotl_eng.17.a.tt
         set_ruler_flag = wotl_eng_war_lost
+        add_ruler_modifier = {
+            name = wotl_eng_lost_war_effect
+        }
         add_prestige = -5
     }
 }

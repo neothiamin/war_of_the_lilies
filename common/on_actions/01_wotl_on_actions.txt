@@ -51,5 +51,6 @@ on_monarch_death = {
 		flavor_wal.1 # Vlad the Impaler. So that he doesn't try to usurp his father.
 		flavor_nav.4 # Navarra succession event
 		wotl_guy.4 #Death of John IV
+		wotl_eng.24
 	}
 }

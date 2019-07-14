@@ -3,11 +3,10 @@ add_government_reform = english_monarchy
 mercantilism = 25
 technology_group = western
 primary_culture = english
-add_accepted_culture = cosmopolitan_french
+#add_accepted_culture = cosmopolitan_french
 add_accepted_culture = normand
 religion = catholic
 capital = 236 # London
-add_historical_friend = PRO
 add_historical_rival = BUR
 
 1422.12.4 = { #Henry V dies
@@ -41,6 +40,7 @@ add_historical_rival = BUR
 		dip = 1
 		mil = 5
 	}
+	set_ruler_flag = wotl_eng_henry_vi
 	add_ruler_personality = naive_personality
 	add_country_modifier = {
 		name = "eng_game_start_upkeep"

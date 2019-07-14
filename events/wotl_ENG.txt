@@ -1306,8 +1306,7 @@ province_event = {
     }
 }
 
-#If England has an English heir after 1455, a few things may happen
-#First, general French rebellion
+#Generic French rebellion
 country_event = {
     id = wotl_eng.23
     title = wotl_eng.23.t
@@ -1318,7 +1317,6 @@ country_event = {
 
     trigger = {
         tag = ENG
-        is_year = 1455
         any_owned_province = {
             OR = {
                 culture = cosmopolitan_french
@@ -1326,11 +1324,17 @@ country_event = {
                 culture = gascon
             }
         }
-        is_at_war = no
+        NOT = {
+            has_ruler_flag = wotl_eng_henry_vi
+        }
     }
 
     mean_time_to_happen = {
-        years = 3
+        months = 18
+        modifier = {
+            factor = 0.5
+            is_at_war = no
+        }
     }
     
     immediate = {        
@@ -1357,6 +1361,62 @@ country_event = {
                 friend = FRA
                 win = yes
             }
+        }
+    }
+}
+
+#Death of Henry VI
+country_event = {
+    id = wotl_eng.24
+    title = wotl_eng.24.t
+    desc = wotl_eng.24.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    fire_only_once = yes
+
+    is_triggered_only = yes
+
+    trigger = {
+        tag = ENG
+    }
+
+    #The fate of the nation sits with [Root.Monarch.GetName] now.
+    option = {
+        name = wotl_eng.24.a
+    }
+}
+
+#Peasant revolt
+#Caporals got too popular
+province_event = {
+    id = wotl_eng.25
+    title = wotl_eng.25.t
+    desc = wotl_eng.25.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    trigger = {
+        owned_by = ENG
+        has_province_modifier = wotl_eng_possible_rebellion
+        region = france_region
+    }
+
+    mean_time_to_happen = {
+        months = 30
+        modifier = {
+            factor = 0.7
+            owner = {
+                is_at_war = yes
+            }
+        }
+    }
+
+    #Crush them!
+    option = {
+        name = wotl_eng.25.a
+        spawn_rebels = {
+            size = 1
+            type = anti_tax_rebels
+            friend = FRA
         }
     }
 }

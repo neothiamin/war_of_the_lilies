@@ -206,3 +206,11 @@
  wotl_bur.4.desc:0 "My [Root.Monarch.GetTitle]!\n\nAs you surely know, your family possesses the strongest claim to the old throne of France. The House of Valois-Bourgogne was founded by Philip the Bold after being granted the Duchy of Burgundy by his father, Jean le Bon, and has ruled these lands for decades. Now, it appears it may be time to remind Europe of our lineage.\n\nThe unjust [ENG.Monarch.GetTitle] of England, [ENG.Monarch.GetName], has once again shown that [ENG.Monarch.GetSheHe] is unfit to rule [ENG.Monarch.GetHerHis] own nation, much less the people of France, by failing to defend [ENG.Monarch.GetHerHis] domain against another nation.\n\nMy [Root.Monarch.GetTitle], behind you is the support of your subjects and Europeans across the continent. In front of you, the most prestigious title since the Roman Empire. It is time to strike."
  wotl_bur.4.a:0 "Gentlemen, prepare for war. To Paris! Vive le Duché!"
  wotl_bur.4.b:0 "The pen truly is mightier than the sword. We will bide our time for now."
+
+ wotl_pro.1.t:0 "Our Claim to France"
+ wotl_pro.1.desc:0 "My [Root.Monarch.GetTitle],\n\nAs you know, your family descends from the House of Valois-Anjou, descended from the same family as the last king of France. Now, with England shaken, the throne of France is up for grabs more now than ever before."
+ wotl_pro.1.a:0 "For the House d'Anjou!"
+ wotl_pro.1.b:0 "The pen truly is mightier than the sword. We will bide our time for now."
+ wotl_eng.23.t:0 "French Revolt"
+ wotl_eng.23.desc:0 "The people of [wotl_eng_23_target.GetName] have taken up arms in rebellion! Their reason is unclear; we are wonderful rulers!"
+ wotl_eng.23.a:0 "Damn them!"

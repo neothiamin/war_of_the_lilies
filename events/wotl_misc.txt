@@ -84,3 +84,18 @@ country_event = {
         name = wotl_misc.1.b        
     }
 }
+
+#Vulnerability of England
+country_event = {
+    id = wotl_misc.4
+    title = wotl_misc.4.t
+    desc = wotl_misc.4.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    is_triggered_only = yes
+
+    #Interesting. The Lion may not lead the pack before long.
+    option = {
+        name = wotl_misc.4.a
+    }
+}

@@ -158,10 +158,15 @@ country_event = {
         ENG = {
             has_ruler_flag = wotl_eng_war_lost
         }
+        NOT = {
+            alliance_with = ENG
+            truce_with = ENG
+        }
+        dynasty = "de Valois-Bourgogne"
     }
 
     mean_time_to_happen = {
-        months = 16
+        months = 24
     }
 
     #Stake a claim to the French throne!

@@ -88,3 +88,14 @@ wotl_eng_lost_war_effect = {
     prestige = -1
     land_morale = -0.05
 }
+
+wotl_pro_1_a_effect = {
+    prestige = 0.5
+    infantry_power = 0.05
+    diplomatic_reputation = 1
+}
+
+wotl_eng_23_general_french_revolt = {
+    local_tax_modifier = -0.15
+    local_unrest = 2
+}

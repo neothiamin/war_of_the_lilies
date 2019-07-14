@@ -1076,6 +1076,21 @@ country_event = {
         add_ruler_modifier = {
             name = wotl_eng_lost_war_effect
         }
+
+        #Provence and Brittany both get events letting them know that England is vulnerable
+        hidden_effect = {
+            PRO = {
+                country_event = {
+                    id = wotl_misc.4                    
+                }
+            }
+            BUR = {
+                country_event = {
+                    id = wotl_misc.4                    
+                }
+            }
+
+        }
         add_prestige = -5
     }
 }
@@ -1287,6 +1302,61 @@ province_event = {
         add_province_modifier = {
             name = wotl_eng_possible_rebellion
             duration = -1
+        }
+    }
+}
+
+#If England has an English heir after 1455, a few things may happen
+#First, general French rebellion
+country_event = {
+    id = wotl_eng.23
+    title = wotl_eng.23.t
+    desc = wotl_eng.23.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+        is_year = 1455
+        any_owned_province = {
+            OR = {
+                culture = cosmopolitan_french
+                culture = normand
+                culture = gascon
+            }
+        }
+        is_at_war = no
+    }
+
+    mean_time_to_happen = {
+        years = 3
+    }
+    
+    immediate = {        
+        set_country_flag = wotl_eng_french_revolt
+    }
+
+    #Blast!
+    option = {
+        name = wotl_eng.23.a
+        random_province = {
+            limit = {
+                region = france_region
+            }
+            save_event_target_as = wotl_eng_23_target
+            every_province_in_state = {
+                add_province_modifier = {
+                    name = wotl_eng_23_general_french_revolt
+                    duration = 1825
+                }
+            }
+            spawn_rebels = {
+                size = 2
+                type = nationalist_rebels
+                friend = FRA
+                win = yes
+            }
         }
     }
 }

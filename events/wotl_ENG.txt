@@ -291,7 +291,7 @@ country_event = {
         name = wotl_eng.5.a
         set_country_flag = wotl_eng_council_of_dukes_support_fla
         ai_chance = {
-            factor = 60
+            factor = 70
         }
         custom_tooltip = wotl_eng.5.a.tt
         hidden_effect = {
@@ -308,7 +308,7 @@ country_event = {
         name = wotl_eng.5.b
         set_country_flag = wotl_eng_council_of_dukes_do_not_support_fla
         ai_chance = {
-            factor = 40
+            factor = 30
         }
     }
 }
@@ -1333,7 +1333,7 @@ country_event = {
         months = 18
         modifier = {
             factor = 0.5
-            is_at_war = no
+            is_at_war = yes
         }
     }
     
@@ -1347,6 +1347,7 @@ country_event = {
         random_province = {
             limit = {
                 region = france_region
+                controlled_by = ENG
             }
             save_event_target_as = wotl_eng_23_target
             every_province_in_state = {
@@ -1398,16 +1399,30 @@ province_event = {
         owned_by = ENG
         has_province_modifier = wotl_eng_possible_rebellion
         region = france_region
+        OR = {
+            NOT = {
+                has_province_flag = wotl_eng_25_flag
+            }
+            had_province_flag = {
+                flag = wotl_eng_25_flag
+                days = 1825 
+                
+            }
+        }
     }
 
     mean_time_to_happen = {
-        months = 30
+        months = 48
         modifier = {
             factor = 0.7
             owner = {
                 is_at_war = yes
             }
         }
+    }
+
+    immediate = {
+        set_province_flag = wotl_eng_25_flag
     }
 
     #Crush them!

@@ -53,7 +53,7 @@ wotl_flemish_war_jti_missing = {
 
 wotl_eng_french_brigands = {
     province_trade_power_modifier = -0.05
-    local_unrest = 4
+    local_unrest = 8
     local_defensiveness = -0.1
 }
 

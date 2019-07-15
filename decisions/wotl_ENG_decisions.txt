@@ -23,6 +23,7 @@ country_decisions = {
         }
 
         effect = {
+            custom_tooltip = wotl_eng_no_more_brigands
             add_adm_power = -150
             every_province = {
                 limit = {

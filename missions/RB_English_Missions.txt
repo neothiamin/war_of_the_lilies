@@ -381,6 +381,7 @@ eng_rb_stability = {
 	eng_rb_empire_status = {
 		icon = mission_rb_empire
 		required_missions = { eng_rb_control_state_religion }
+		position = 3
 		
 		trigger = {
 			if = {

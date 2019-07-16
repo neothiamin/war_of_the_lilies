@@ -857,7 +857,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 6
+        months = 12
     }
 
     #We must restore order!
@@ -1267,7 +1267,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 1
+        days = 15
     }
 
     #Hurrah!
@@ -1293,7 +1293,7 @@ province_event = {
     }
 
     mean_time_to_happen = {
-        months = 6
+        months = 12
     }
 
     #It will be fiiiiine...
@@ -1318,11 +1318,7 @@ country_event = {
     trigger = {
         tag = ENG
         any_owned_province = {
-            OR = {
-                culture = cosmopolitan_french
-                culture = normand
-                culture = gascon
-            }
+            is_core = FRA
         }
         NOT = {
             has_ruler_flag = wotl_eng_henry_vi
@@ -1330,7 +1326,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 18
+        months = 24
         modifier = {
             factor = 0.5
             is_at_war = yes
@@ -1346,7 +1342,10 @@ country_event = {
         name = wotl_eng.23.a
         random_province = {
             limit = {
-                region = france_region
+                OR = {
+                    is_core = FRA
+                    is_core = ORL
+                }
                 controlled_by = ENG
             }
             save_event_target_as = wotl_eng_23_target
@@ -1406,7 +1405,6 @@ province_event = {
             had_province_flag = {
                 flag = wotl_eng_25_flag
                 days = 1825 
-                
             }
         }
     }
@@ -1435,3 +1433,22 @@ province_event = {
         }
     }
 }
+
+#Caporals form Confederacy, demand independence
+#country_event = {
+#    id = wotl_eng.26
+#    title = wotl_eng.26.t
+#    desc = wotl_eng.26.desc
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    fire_only_once = yes
+#
+#    trigger = {
+#        tag = ENG
+#        num_of_owned_provinces_with = {
+#            value = 6
+#            has_province_flag = wotl_eng_25_flag
+#        }
+#        has_country_flag = 
+#    }
+#}

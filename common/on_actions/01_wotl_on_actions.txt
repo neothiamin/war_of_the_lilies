@@ -15,8 +15,8 @@ on_battle_won_province = {
 # root = losing country, from = location
 on_siege_lost_country = {
 	random_events = {
-		500 = 0
-		100 = wotl_fla.12
+		250 = 0
+		250 = wotl_fla.12
 	}
 }
 

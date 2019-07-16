@@ -1,7 +1,7 @@
 # 174 Gascogne - Principal cities: Bordeaux
 
-owner = GUY
-controller = GUY
+owner = ENG
+controller = ENG
 capital = "Bordeaux"
 is_city = yes
 culture = gascon

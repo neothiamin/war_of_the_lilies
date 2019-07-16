@@ -1,7 +1,9 @@
 # 89 Picardie - Principal cities: Amiens
 
-owner = FRA
-controller = FRA
+owner = ENG
+controller = ENG
+add_core = ENG
+add_core = BUR
 add_core = FRA
 capital = "Amiens"
 is_city = yes
@@ -20,13 +22,6 @@ discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
 
-
-1435.1.1 = {
-	owner = BUR
-	controller = BUR
-	add_core = BUR
-	remove_core = FRA
-} # Treaty of Arras
 1463.1.1 = {
 	owner = FRA
 	controller = FRA

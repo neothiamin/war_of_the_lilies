@@ -1,7 +1,7 @@
 # 196 Toulouse - Principal cities: Toulouse
 
-owner = PRO
-controller = PRO
+owner = TOU
+controller = TOU
 capital = "Toulouse"
 is_city = yes
 culture = occitain
@@ -11,9 +11,8 @@ base_tax = 5
 base_production = 5
 trade_goods = wine
 base_manpower = 4
-add_core = PRO
 add_core = TOU
-add_core = GUY
+add_core = FRA
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim

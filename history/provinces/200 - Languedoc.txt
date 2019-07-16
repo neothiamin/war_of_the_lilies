@@ -1,7 +1,7 @@
 # 200 Languedoc - Principal cities: Montpellier
 
-owner = PRO
-controller = PRO
+owner = TOU
+controller = TOU
 capital = "Montpellier"
 is_city = yes
 culture = occitain
@@ -11,8 +11,8 @@ base_tax = 6
 base_production = 6
 trade_goods = cloth
 base_manpower = 5
-add_core = PRO
 add_core = TOU
+add_core = FRA
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim

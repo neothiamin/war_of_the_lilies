@@ -1,7 +1,7 @@
 # 183 Île-de-France - Principal cities: Paris
 
-owner = ENG
-controller = ENG
+owner = FRA
+controller = FRA
 capital = "Paris"
 is_city = yes
 culture = cosmopolitan_french
@@ -11,7 +11,6 @@ base_tax = 7
 base_production = 6
 trade_goods = grain
 base_manpower = 5
-add_core = ENG
 add_core = FRA
 discovered_by = eastern
 discovered_by = western

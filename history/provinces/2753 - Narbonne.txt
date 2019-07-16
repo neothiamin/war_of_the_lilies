@@ -1,7 +1,7 @@
 # Narbonne - Principal cities: Narbonne
 
-owner = PRO
-controller = PRO
+owner = TOU
+controller = TOU
 capital = "Narbonne"
 is_city = yes
 culture = occitain
@@ -11,8 +11,8 @@ base_tax = 5
 base_production = 5
 trade_goods = wine
 base_manpower = 3
-add_core = PRO
 add_core = TOU
+add_core = FRA
 fort_15th = yes
 
 

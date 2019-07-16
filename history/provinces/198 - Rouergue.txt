@@ -1,7 +1,7 @@
 # 198 Rouergue - Principal cities: Rodez
 
-owner = PRO
-controller = PRO
+owner = TOU
+controller = TOU
 capital = "Rodez"
 is_city = yes
 culture = occitain
@@ -15,7 +15,7 @@ add_local_autonomy = 25
 estate = estate_nobles
 add_core = GUY
 add_core = TOU
-add_core = PRO
+add_core = FRA
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim

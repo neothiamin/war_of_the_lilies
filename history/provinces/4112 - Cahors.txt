@@ -1,7 +1,7 @@
 # 4112 - Cahors
 
-owner = GUY
-controller = GUY
+owner = ENG
+controller = ENG
 capital = "Cahors"
 is_city = yes
 culture = gascon
@@ -12,6 +12,7 @@ base_production = 3
 trade_goods = wine
 base_manpower = 3
 add_core = GUY
+add_core = ENG
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim

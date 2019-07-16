@@ -1,7 +1,7 @@
 # 175 Armagnac - Principal cities: Auch
 
-owner = GUY
-controller = GUY
+owner = ENG
+controller = ENG
 capital = "Auch"
 is_city = yes
 culture = gascon

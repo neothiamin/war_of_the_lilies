@@ -1,7 +1,7 @@
 # 4111 - Saintonge and Aunis
 
-owner = GUY
-controller = GUY
+owner = FRA
+controller = FRA
 capital = "Saintes"
 is_city = yes
 culture = cosmopolitan_french
@@ -11,7 +11,7 @@ base_tax = 4
 base_production = 4
 trade_goods = grain
 base_manpower = 2
-add_core = GUY
+add_core = FRA
 estate = estate_burghers
 discovered_by = eastern
 discovered_by = western

@@ -7,12 +7,12 @@
 #}
 
 #Second Treaty of Bourges
-alliance = {
-	first = ENG
-	second = PRO
-	start_date = 1428.1.1
-	end_date = 1444.1.1
-}
+#alliance = {
+#	first = ENG
+#	second = PRO
+#	start_date = 1428.1.1
+#	end_date = 1444.1.1
+#}
 
 #Burgundy swears an oath of non-interference in Flanders after the Second Treaty of Bourges, allowing England to move in in 1430.
 vassal = {
@@ -23,19 +23,19 @@ vassal = {
 }
 
 #John IV of Armagnac is granted the Duchy of Aquitaine
-vassal = {
-	first = ENG
-	second = GUY
-	start_date = 1428.1.1	
-	end_date = 2000.1.1	
-}
+#vassal = {
+#	first = ENG
+#	second = GUY
+#	start_date = 1428.1.1	
+#	end_date = 2000.1.1	
+#}
 
-vassal = { #MORE DECENTRALIZATION
-	first = ENG
-	second = NOL
-	start_date = 1000.1.1
-	end_date = 2000.1.1	
-}
+#vassal = { #MORE DECENTRALIZATION
+#	first = ENG
+#	second = NOL
+#	start_date = 1000.1.1
+#	end_date = 2000.1.1	
+#}
 
 # Kalmar Union
 union = {
@@ -57,4 +57,12 @@ vassal = { #Silesia
 	second = SIL
 	start_date = 1000.1.1
 	end_date = 2000.1.1	
+}
+
+#Lore rework
+union = {
+	first = ENG
+	second = FRA
+	start_date = 1428.1.1
+	end_date = 2000.1.1
 }

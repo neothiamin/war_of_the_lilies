@@ -1,7 +1,7 @@
 #4368 - Yorkshire - North Riding
 
-owner = NOL
-controller = NOL
+owner = ENG
+controller = ENG
 culture = english
 religion = catholic
 hre = no

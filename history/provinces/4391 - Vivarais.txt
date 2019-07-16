@@ -1,7 +1,7 @@
 # 4391 Vivarais
 
-owner = PRO
-controller = PRO
+owner = TOU
+controller = TOU
 capital = "Viviers"
 is_city = yes
 culture = occitain
@@ -11,8 +11,10 @@ base_tax = 4
 base_production = 4
 trade_goods = wine
 base_manpower = 2
-add_core = PRO
+add_core = DAU
+add_core = AUV
 add_core = TOU
+add_core = FRA
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim

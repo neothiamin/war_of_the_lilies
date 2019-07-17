@@ -51,13 +51,14 @@ capital = 199	# Clermont
 		name = "Bertrand"
 		monarch_name = "Bertrand II"
 		dynasty = "de la Tour"
-		birth_date = 1390.1.1
+		birth_date = 1400.1.1
 		death_date = 1461.3.22
 		claim = 95
 		adm = 2
 		dip = 3
 		mil = 1
 	}
+	set_heir_flag = wotl_auv_bertrand
 }
 
 1437.8.7 = {

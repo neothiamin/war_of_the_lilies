@@ -16,6 +16,7 @@ capital = 204	# Grenoble
         mil = 5
     }
     add_ruler_personality = righteous_personality
+    set_ruler_flag = wotl_dau_xdl
 }
 
 1515.1.1 = { government = monarchy

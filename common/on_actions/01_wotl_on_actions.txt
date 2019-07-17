@@ -1,24 +1,24 @@
 
 # province
 # root = location, from = loser country
-on_battle_won_province = {
-	events = {
-		wotl_eng.10
-	}
-	random_events = {
-		1000 = 0
-		100 = war_of_the_roses.6	# WotR - Rebel Leaders Captured
-	}
-}
+#on_battle_won_province = {
+#	events = {
+#		wotl_eng.10
+#	}
+#	random_events = {
+#		1000 = 0
+#		100 = war_of_the_roses.6	# WotR - Rebel Leaders Captured
+#	}
+#}
 
 # country
 # root = losing country, from = location
-on_siege_lost_country = {
-	random_events = {
-		250 = 0
-		250 = wotl_fla.12
-	}
-}
+#on_siege_lost_country = {
+#	random_events = {
+#		250 = 0
+#		250 = wotl_fla.12
+#	}
+#}
 
 # country
 # root = loser country, from = winner country
@@ -29,28 +29,28 @@ on_war_lost = {
 }
 
 # country
-on_monarch_death = {
-	if = {
-		limit = {
-			tag = ANS
-			BRA = {
-				has_country_flag = albrecht_achilles_flag
-			}
-		}
-		BRA = {
-			clr_country_flag = albrecht_achilles_flag #Just to be sure
-			kill_heir = yes #If Albrecht Achilles dies in Ansbach he will also be dead in Brandenburg, will appear as normal death of heir to BRA.
-		}
-	}
-	if = {
-		limit = { has_country_modifier = sought_after_bachelor }
-		remove_country_modifier = sought_after_bachelor
-	}
-	events = {
-		flavor_tus.16 #Savanorola Leaves This World
-		flavor_wal.1 # Vlad the Impaler. So that he doesn't try to usurp his father.
-		flavor_nav.4 # Navarra succession event
-		wotl_guy.4 #Death of John IV
-		wotl_eng.24
-	}
-}
+#on_monarch_death = {
+#	if = {
+#		limit = {
+#			tag = ANS
+#			BRA = {
+#				has_country_flag = albrecht_achilles_flag
+#			}
+#		}
+#		BRA = {
+#			clr_country_flag = albrecht_achilles_flag #Just to be sure
+#			kill_heir = yes #If Albrecht Achilles dies in Ansbach he will also be dead in Brandenburg, will appear as normal death of heir to BRA.
+#		}
+#	}
+#	if = {
+#		limit = { has_country_modifier = sought_after_bachelor }
+#		remove_country_modifier = sought_after_bachelor
+#	}
+#	events = {
+#		flavor_tus.16 #Savanorola Leaves This World
+#		flavor_wal.1 # Vlad the Impaler. So that he doesn't try to usurp his father.
+#		flavor_nav.4 # Navarra succession event
+#		wotl_guy.4 #Death of John IV
+#		wotl_eng.24
+#	}
+#}

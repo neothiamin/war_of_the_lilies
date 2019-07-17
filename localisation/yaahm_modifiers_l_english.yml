@@ -33,3 +33,5 @@
  wotl_eng_lost_war_effect:0 "Crushing Defeat"
  wotl_pro_1_a_effect:0 "Provençal Claim to France"
  wotl_eng_23_general_french_revolt:0 "French Revolt"
+ wotl_fra_rebellious:0 "Scars of War"
+ desc_wotl_fra_rebellious:0 "The memories of the War of Usurpation are fresh in the mind of the French people."

@@ -13,7 +13,7 @@ add_historical_rival = BUR
 	monarch = {
 		name = "Thomas, 1st Duke of Clarence"
 		dynasty = "Lancaster"
-		birth_date = 1421.12.6
+		birth_date = 1387.10.6
 		adm = 2
 		dip = 1
 		mil = 5
@@ -22,17 +22,17 @@ add_historical_rival = BUR
 
 1428.12.4 = { #Thomas splits regency duties with John, Duke of Bedford. John runs the show for a while.
 	monarch = {
-		name = "John, 1st Duke of Bedford"
-		dynasty = "Lancaster"
-		birth_date = 1421.12.6
+		name = "John, Duke of Bedford"
+		birth_date = 1389.6.20
 		adm = 2
 		dip = 4
 		mil = 3
+		regent = yes
 	}
 }
 
-1434.12.4 = { #Coronation
-	monarch = {
+1428.12.5 = { #Coronation
+	heir = {
 		name = "Henry VI"
 		dynasty = "Lancaster"
 		birth_date = 1421.12.6
@@ -40,10 +40,13 @@ add_historical_rival = BUR
 		dip = 1
 		mil = 5
 	}
-	set_ruler_flag = wotl_eng_henry_vi
-	add_ruler_personality = naive_personality
-	add_country_modifier = {
-		name = "eng_game_start_upkeep"
-		duration = 5475
-	}
+	add_heir_personality = naive_personality
+	set_heir_flag = wotl_eng_heir_culture_event_fired
 }
+
+#1435.1.12 = {
+#	add_country_modifier = {
+#		name = "eng_game_start_upkeep"
+#		duration = 5475
+#	}
+#}

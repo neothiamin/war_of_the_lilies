@@ -5,97 +5,97 @@
 namespace = wotl_misc
 
 #Provence help
-country_event = {
-    id = wotl_misc.1
-    title = wotl_misc.1.t
-    desc = wotl_misc.1.desc
-    picture = LIBERUM_VETO_eventPicture
-
-    is_triggered_only = yes
-
-    #Support [FROM.GetName] in their efforts.
-    option = {
-        name = wotl_misc.1.a
-        FROM = {
-            add_liberty_desire = 25
-            add_opinion = {
-                modifier = wotl_misc_vassal_helped
-                who = ROOT
-            }
-        }
-    }
-
-    #They are on their own.
-    option = {
-        name = wotl_misc.1.b
-    }
-}
-
-#Castile help
-country_event = {
-    id = wotl_misc.2
-    title = wotl_misc.1.t
-    desc = wotl_misc.1.desc
-    picture = LIBERUM_VETO_eventPicture
-
-    is_triggered_only = yes
-
-    #Support [FROM.GetName] in their efforts.
-    option = {
-        name = wotl_misc.1.a
-        FROM = {
-            add_liberty_desire = 25
-            add_opinion = {
-                modifier = wotl_misc_vassal_helped
-                who = ROOT
-            }
-        }
-    }
-
-    #They are on their own.
-    option = {
-        name = wotl_misc.1.b
-    }
-}
-
-#HREmperor help
-country_event = {
-    id = wotl_misc.3
-    title = wotl_misc.1.t
-    desc = wotl_misc.1.desc
-    picture = LIBERUM_VETO_eventPicture
-
-    is_triggered_only = yes
-
-    #Support [FROM.GetName] in their efforts.
-    option = {
-        name = wotl_misc.1.a
-        FROM = {
-            add_liberty_desire = 25
-            add_opinion = {
-                modifier = wotl_misc_vassal_helped
-                who = ROOT
-            }
-        }
-    }
-
-    #They are on their own.
-    option = {
-        name = wotl_misc.1.b        
-    }
-}
-
-#Vulnerability of England
-country_event = {
-    id = wotl_misc.4
-    title = wotl_misc.4.t
-    desc = wotl_misc.4.desc
-    picture = LIBERUM_VETO_eventPicture
-
-    is_triggered_only = yes
-
-    #Interesting. The Lion may not lead the pack before long.
-    option = {
-        name = wotl_misc.4.a
-    }
-}
+#country_event = {
+#    id = wotl_misc.1
+#    title = wotl_misc.1.t
+#    desc = wotl_misc.1.desc
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    is_triggered_only = yes
+#
+#    #Support [FROM.GetName] in their efforts.
+#    option = {
+#        name = wotl_misc.1.a
+#        FROM = {
+#            add_liberty_desire = 25
+#            add_opinion = {
+#                modifier = wotl_misc_vassal_helped
+#                who = ROOT
+#            }
+#        }
+#    }
+#
+#    #They are on their own.
+#    option = {
+#        name = wotl_misc.1.b
+#    }
+#}
+#
+##Castile help
+#country_event = {
+#    id = wotl_misc.2
+#    title = wotl_misc.1.t
+#    desc = wotl_misc.1.desc
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    is_triggered_only = yes
+#
+#    #Support [FROM.GetName] in their efforts.
+#    option = {
+#        name = wotl_misc.1.a
+#        FROM = {
+#            add_liberty_desire = 25
+#            add_opinion = {
+#                modifier = wotl_misc_vassal_helped
+#                who = ROOT
+#            }
+#        }
+#    }
+#
+#    #They are on their own.
+#    option = {
+#        name = wotl_misc.1.b
+#    }
+#}
+#
+##HREmperor help
+#country_event = {
+#    id = wotl_misc.3
+#    title = wotl_misc.1.t
+#    desc = wotl_misc.1.desc
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    is_triggered_only = yes
+#
+#    #Support [FROM.GetName] in their efforts.
+#    option = {
+#        name = wotl_misc.1.a
+#        FROM = {
+#            add_liberty_desire = 25
+#            add_opinion = {
+#                modifier = wotl_misc_vassal_helped
+#                who = ROOT
+#            }
+#        }
+#    }
+#
+#    #They are on their own.
+#    option = {
+#        name = wotl_misc.1.b        
+#    }
+#}
+#
+##Vulnerability of England
+#country_event = {
+#    id = wotl_misc.4
+#    title = wotl_misc.4.t
+#    desc = wotl_misc.4.desc
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    is_triggered_only = yes
+#
+#    #Interesting. The Lion may not lead the pack before long.
+#    option = {
+#        name = wotl_misc.4.a
+#    }
+#}

@@ -6,6 +6,17 @@ religion = catholic
 primary_culture = occitain
 capital = 204	# Grenoble
 
+1427.1.1 = {
+    monarch = {
+        name = "Xavier"
+        dynasty = "de Lyon"
+        birth_date = 1400.1.1
+        adm = 3
+        dip = 1
+        mil = 5
+    }
+    add_ruler_personality = righteous_personality
+}
 
 1515.1.1 = { government = monarchy
 add_government_reform = autocracy_reform }

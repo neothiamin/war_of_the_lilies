@@ -35,7 +35,7 @@ vassal = {
 	first = BUR
 	second = NEV
 	start_date = 1420.1.1
-	end_date = 1465.1.1
+	end_date = 1427.1.1
 }
 
 # Hainaut and Holland

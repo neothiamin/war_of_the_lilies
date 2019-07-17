@@ -8,6 +8,19 @@ technology_group = western
 capital = 196	# Toulouse
 fixed_capital = 196 # Cannot move capital away from this province & no power cost to move to it
 
+1427.1.1 = {
+    monarch = {
+        name = "Raymond I"
+        dynasty = "de Tolosa"
+        birth_date = 1388.10.5
+        adm = 4
+        dip = 1
+        mil = 3
+    }
+    add_ruler_personality = zealot_personality
+    add_ruler_personality = infertile_personality
+}
+
 1515.1.1 = { government = monarchy
 add_government_reform = autocracy_reform }
 

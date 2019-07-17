@@ -6,539 +6,539 @@ namespace = wotl_fla
 
 
 #Unrest in Flanders
-country_event = {
-    id = wotl_fla.1
-    title = wotl_fla.1.t
-    desc = wotl_fla.1.desc
-    picture = LIBERUM_VETO_eventPicture
-
-    fire_only_once = yes
-
-    trigger = {
-        tag = FLA
-        has_ruler_flag = wotl_fla_jti_supported
-        has_ruler_flag = wotl_fla_john_the_invader
-        is_subject_of = ENG
-        is_at_war = no
-    }
-
-    mean_time_to_happen = {
-        months = 6
-    }
-
-    #Worrying...
-    option = {
-        name = wotl_fla.1.a
-        custom_tooltip = wotl_fla_1a_flemish_revolt_imminent
-        set_ruler_flag = wotl_fla_flemish_revolt_possible
-        add_prestige = -10
-    }
-
-}
-
-#JTI questions [ENG.Monarch.GetName]
-country_event = {
-    id = wotl_fla.2
-    title = wotl_fla.2.t
-    desc = wotl_fla.2.desc
-    picture = LIBERUM_VETO_eventPicture
-
-    fire_only_once = yes
-
-    trigger = {
-        tag = FLA
-        has_ruler_flag = wotl_fla_jti_not_supported
-        has_ruler_flag = wotl_fla_john_the_invader
-        is_subject_of = ENG
-        is_at_war = no
-    }
-
-    mean_time_to_happen = {
-        months = 6
-    }
-
-    immediate = {
-        set_global_flag = wotl_eng_legitimacy_questioned
-    }
-
-    #Well, what does he know anyways?
-    option = {
-        name = wotl_fla.2.a
-        custom_tooltip = wotl_fla_2a_question_legitimacy
-    }
-
-}
-
-#Flemish Revolt
-country_event = {
-    id = wotl_fla.3
-    title = wotl_fla.3.t
-    desc = wotl_fla.3.desc
-    picture = LIBERUM_VETO_eventPicture
-
-    fire_only_once = yes
-
-    trigger = {
-        tag = FLA
-        has_ruler_flag = wotl_fla_flemish_revolt_possible
-        has_ruler_flag = wotl_fla_john_the_invader
-        is_subject_of = ENG
-        is_at_war = no
-    }
-
-    mean_time_to_happen = {
-        months = 2
-    }
-    
-    immediate = {
-        set_global_flag = wotl_fla_flemish_revolt_happened
-        clr_ruler_flag = wotl_fla_flemish_revolt_possible        
-    }
-
-    #Crush them!
-    option = {
-        name = wotl_fla.3.a
-        capital_scope = {
-            spawn_rebels = {
-                size = 3
-                type = anti_tax_rebels
-                unrest = 8
-                culture = flemish                
-            }
-        }
-        1865 = {
-            spawn_rebels = {
-                size = 2
-                type = anti_tax_rebels
-                unrest = 8
-                culture = flemish                
-            }
-        }
-        hidden_effect = {
-            every_owned_province = {
-                add_province_modifier = {
-                    name = wotl_fla_flemish_revolt
-                    duration = 3650                    
-                }
-            }
-        }
-    }
-
-}
-
-#Duke John removed from power!
-country_event = {
-    id = wotl_fla.4
-    title = wotl_fla.4.t
-    desc = wotl_fla.4.desc
-    picture = LIBERUM_VETO_eventPicture
-
-    is_triggered_only = yes
-
-    immediate = {
-        set_global_flag = wotl_fla_jti_removed
-    }
-
-    trigger = {
-        tag = FLA
-        has_ruler_flag = wotl_fla_john_the_invader
-        is_subject_of = ENG
-        is_at_war = no
-    }
-
-    #May God bless John's soul.
-    option = {
-        name = wotl_fla.4.a
-        custom_tooltip = wotl_fla_4a_new_ruler
-        hidden_effect = {
-            define_ruler = {
-                dynasty = ENG
-                culture = english
-                male = yes
-                claim = 70
-            }
-        }
-    }
-    
-}
-
-#Attempted Coup!
-country_event = {
-    id = wotl_fla.5
-    title = wotl_fla.5.t
-    desc = wotl_fla.5.desc
-    picture = LIBERUM_VETO_eventPicture
-
-    is_triggered_only = yes
-
-    trigger = {
-        tag = FLA
-        has_ruler_flag = wotl_fla_john_the_invader
-        is_subject_of = ENG
-        is_at_war = no
-    }
-
-    #How dare he! This shall not stand!
-    option = {
-        name = wotl_fla.5.a
-        custom_tooltip = wotl_fla_5a_call_council
-        set_global_flag = wotl_fla_council_of_dukes_called
-        set_country_flag = wotl_called_council_of_dukes
-        hidden_effect = {
-            every_country = {
-                limit = {
-                    OR = {
-                        AND = {
-                            is_subject_of = ENG
-                            NOT = {
-                                tag = ROOT
-                            }
-                        }
-                        tag = PRO
-                        tag = BRI
-                    }
-                }
-                country_event = {
-                    id = wotl_eng.5
-                }
-            }
-        }
-    }
-}
-
-#Attempted Coup! (Independence Declaration)
-country_event = {
-    id = wotl_fla.6
-    title = wotl_fla.6.t
-    desc = wotl_fla.6.desc
-    picture = LIBERUM_VETO_eventPicture
-
-    is_triggered_only = yes
-
-    trigger = {
-        tag = FLA
-        has_ruler_flag = wotl_fla_john_the_invader
-        is_subject_of = ENG
-        is_at_war = no
-    }
-
-    #This is an outrage!
-    option = {
-        name = wotl_fla.6.a        
-        custom_tooltip = wotl_fla_6a_declare_independence
-        set_country_flag = wotl_fla_independence
-        hidden_effect = {
-            grant_independence = yes
-            ENG = {
-                country_event = {
-                    id = wotl_eng.11
-                    days = 10
-                    random = 3
-                }
-            }
-        }
-        add_country_modifier = {
-            name = "wotl_fla_jti_indep_modifier"
-            duration = -1
-        }
-    }
-}
-
-#Treasonous Merchant
-country_event = {
-    id = wotl_fla.7
-    title = wotl_fla.7.t
-    desc = wotl_fla.7.desc
-    picture = LIBERUM_VETO_eventPicture
-
-    fire_only_once = yes
-
-    major = yes
-    
-    trigger = {
-        normal_or_historical_nations = yes
-        tag = FLA
-        has_ruler_flag = wotl_fla_john_the_invader
-        is_subject_of = ENG
-        ENG = {
-            has_country_flag = wotl_eng_state_of_affairs_happened
-        }
-        NOT = {
-            is_year = 1455
-        }
-    }
-
-    mean_time_to_happen = {
-        months = 60
-
-        modifier = {
-            factor = 0.85
-            is_year = 1442
-        }
-
-        modifier = {
-            factor = 0.8
-            is_year = 1444
-        }
-    }
-
-    immediate = {
-        set_saved_name = {
-            key = executed_fleming
-            type = advisor
-            scope = ROOT
-        }
-    }
-
-    #Execute him!
-    option = {
-        name = wotl_fla.7.a
-        ai_chance = {
-            factor = 85
-        }
-        hidden_effect = {
-            ENG = {
-                country_event = {
-                    id = wotl_eng.3                    
-                }
-            }
-        }
-    }
-
-    #Spare him.
-    option = {
-        name = wotl_fla.7.b
-        ai_chance = {
-            factor = 15
-        }
-        hidden_effect = {
-            set_country_flag = wotl_fla_jti_spared_merchant
-        }
-        add_prestige = -20
-    }
-}
-
-#Council of Dukes
-#Flanders gets to choose the demands of the Council.
-country_event = {    
-    id = wotl_fla.8
-    title = wotl_fla.8.t
-    desc = wotl_fla.8.desc
-    picture = LIBERUM_VETO_eventPicture
-
-    fire_only_once = yes
-
-    mean_time_to_happen = {
-        months = 4
-    }
-
-    trigger = {
-        had_global_flag = {
-            flag = wotl_fla_council_of_dukes_called
-            days = 90
-        }
-        tag = FLA
-        has_ruler_flag = wotl_fla_john_the_invader
-        is_subject_of = ENG
-        is_at_war = no
-        any_country = {
-            is_subject_of = ENG
-            NOT = {
-                tag = FLA
-            }
-            has_country_flag = wotl_eng_council_of_dukes_support_fla
-        }
-    }
-
-    #The [ENG.Monarch.GetTitle] must relinquish some of [ENG.Monarch.GetHerHis] land to us, [ENG.Monarch.GetHerHis] loyal vassals!
-    option = {
-        name = wotl_fla.8.a
-        ai_chance = {
-            factor = 70
-        }
-        hidden_effect = {
-            ENG = {
-                country_event = {
-                    id = wotl_eng.7
-                    days = 15                
-                }
-            }
-        }
-    }
-
-    #The [ENG.Monarch.GetTitle] must release a new vassal, as a check to [ENG.Monarch.GetHerHis] power!
-    option = {
-        name = wotl_fla.8.b
-        ai_chance = {
-            factor = 30
-        }
-        hidden_effect = {
-            ENG = {
-                country_event = {
-                    id = wotl_eng.6
-                    days = 15                
-                }
-            }
-        }
-    }
-}
-
-#King of England refuses demands!
-country_event = {    
-    id = wotl_fla.9
-    title = wotl_fla.9.t
-    desc = wotl_fla.9.desc
-    picture = LIBERUM_VETO_eventPicture
-
-    is_triggered_only = yes
-
-    immediate = {
-        hidden_effect = {
-            every_country = {
-                limit = {
-                    has_country_flag = wotl_eng_council_of_dukes_support_fla
-                }
-                create_alliance = FLA
-            }
-        }
-    }
-
-    #It's war then!
-    option = {
-        name = wotl_fla.9.a
-        set_global_flag = wotl_war_started
-        declare_war_with_cb = {
-            casus_belli = cb_independence_war
-            who = ENG            
-        }
-    }
-
-}
-
-#King of England bows to the Council's will!
-country_event = {    
-    id = wotl_fla.10
-    title = wotl_fla.10.t
-    desc = {
-        trigger = {
-            has_global_flag = wotl_eng_bends_to_council.6
-        }
-        desc = wotl_fla.10.desc.a        
-    }
-    desc = {
-        trigger = {
-            has_global_flag = wotl_eng_bends_to_council.7
-        }
-        desc = wotl_fla.10.desc.b
-    }
-
-    picture = LIBERUM_VETO_eventPicture
-
-    trigger = {
-        tag = FLA
-        has_global_flag = wotl_fla_council_of_dukes_called
-        OR = {
-            has_global_flag = wotl_eng_bends_to_council.6
-            has_global_flag = wotl_eng_bends_to_council.7
-        }
-    }
-
-    #Hurrah!
-    option = {
-        name = wotl_fla.10.a
-        add_prestige = 25
-    }
-
-}
-
-#[FROM.Monarch.GetName] of [FROM.GetName] will attend the Council!
-country_event = {
-    id = wotl_fla.11
-    title = wotl_fla.11.t
-    desc = wotl_fla.11.desc.b
-    picture = LIBERUM_VETO_eventPicture
-
-    is_triggered_only = yes
-
-    #Ok.
-    option = {
-        name = wotl_fla.11.a
-    }
-}
-
-#John of Beaufort Missing!
-#triggered by on_siege_lost_country
-country_event = {
-    id = wotl_fla.12
-    title = wotl_fla.12.t
-    desc = wotl_fla.12.desc.b
-    picture = LIBERUM_VETO_eventPicture
-
-    is_triggered_only = yes
-
-    fire_only_once = yes
-
-    trigger = {
-        FROM = {
-            province_id = 90
-        }
-        tag = FLA
-        has_ruler_flag = wotl_fla_john_the_invader
-        OR = {
-            has_country_flag = wotl_fla_independence
-            ENG = {
-                has_country_flag = wotl_eng_supported_jti
-            }
-        }
-    }
-
-    immediate = {
-        set_country_flag = wotl_fla_jti_missing
-    }
-
-    #God has forsaken us!
-    option = {
-        name = wotl_fla.12.a
-        add_stability = -1
-        add_war_exhaustion = 5
-        custom_tooltip = wotl_fla.12.a.tt        
-        exile_heir_as = wotl_flemish_war_fla_heir
-        exile_ruler_as = wotl_flemish_war_fla_ruler
-        define_ruler = {
-            name = "Noble Council"
-            adm = 1
-            dip = 1
-            mil = 1
-            fixed = yes
-            culture = flemish
-            regency = yes
-        }
-        hidden_effect = {
-            if = {
-                limit = {
-                    war_with = ENG
-                }
-                ENG = {
-                    add_country_modifier = {
-                        name = wotl_flemish_war_jti_missing
-                        duration = -1
-                    }
-                }
-            }
-            if = {
-                limit = {
-                    war_with = BUR
-                    NOT = {
-                        war_with = ENG
-                    }
-                }
-                BUR = {
-                    add_country_modifier = {
-                        name = wotl_flemish_war_jti_missing
-                        duration = -1
-                    }
-                }
-            }
-        }
-    }
-}
+#country_event = {
+#    id = wotl_fla.1
+#    title = wotl_fla.1.t
+#    desc = wotl_fla.1.desc
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    fire_only_once = yes
+#
+#    trigger = {
+#        tag = FLA
+#        has_ruler_flag = wotl_fla_jti_supported
+#        has_ruler_flag = wotl_fla_john_the_invader
+#        is_subject_of = ENG
+#        is_at_war = no
+#    }
+#
+#    mean_time_to_happen = {
+#        months = 6
+#    }
+#
+#    #Worrying...
+#    option = {
+#        name = wotl_fla.1.a
+#        custom_tooltip = wotl_fla_1a_flemish_revolt_imminent
+#        set_ruler_flag = wotl_fla_flemish_revolt_possible
+#        add_prestige = -10
+#    }
+#
+#}
+#
+##JTI questions [ENG.Monarch.GetName]
+#country_event = {
+#    id = wotl_fla.2
+#    title = wotl_fla.2.t
+#    desc = wotl_fla.2.desc
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    fire_only_once = yes
+#
+#    trigger = {
+#        tag = FLA
+#        has_ruler_flag = wotl_fla_jti_not_supported
+#        has_ruler_flag = wotl_fla_john_the_invader
+#        is_subject_of = ENG
+#        is_at_war = no
+#    }
+#
+#    mean_time_to_happen = {
+#        months = 6
+#    }
+#
+#    immediate = {
+#        set_global_flag = wotl_eng_legitimacy_questioned
+#    }
+#
+#    #Well, what does he know anyways?
+#    option = {
+#        name = wotl_fla.2.a
+#        custom_tooltip = wotl_fla_2a_question_legitimacy
+#    }
+#
+#}
+#
+##Flemish Revolt
+#country_event = {
+#    id = wotl_fla.3
+#    title = wotl_fla.3.t
+#    desc = wotl_fla.3.desc
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    fire_only_once = yes
+#
+#    trigger = {
+#        tag = FLA
+#        has_ruler_flag = wotl_fla_flemish_revolt_possible
+#        has_ruler_flag = wotl_fla_john_the_invader
+#        is_subject_of = ENG
+#        is_at_war = no
+#    }
+#
+#    mean_time_to_happen = {
+#        months = 2
+#    }
+#    
+#    immediate = {
+#        set_global_flag = wotl_fla_flemish_revolt_happened
+#        clr_ruler_flag = wotl_fla_flemish_revolt_possible        
+#    }
+#
+#    #Crush them!
+#    option = {
+#        name = wotl_fla.3.a
+#        capital_scope = {
+#            spawn_rebels = {
+#                size = 3
+#                type = anti_tax_rebels
+#                unrest = 8
+#                culture = flemish                
+#            }
+#        }
+#        1865 = {
+#            spawn_rebels = {
+#                size = 2
+#                type = anti_tax_rebels
+#                unrest = 8
+#                culture = flemish                
+#            }
+#        }
+#        hidden_effect = {
+#            every_owned_province = {
+#                add_province_modifier = {
+#                    name = wotl_fla_flemish_revolt
+#                    duration = 3650                    
+#                }
+#            }
+#        }
+#    }
+#
+#}
+#
+##Duke John removed from power!
+#country_event = {
+#    id = wotl_fla.4
+#    title = wotl_fla.4.t
+#    desc = wotl_fla.4.desc
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    is_triggered_only = yes
+#
+#    immediate = {
+#        set_global_flag = wotl_fla_jti_removed
+#    }
+#
+#    trigger = {
+#        tag = FLA
+#        has_ruler_flag = wotl_fla_john_the_invader
+#        is_subject_of = ENG
+#        is_at_war = no
+#    }
+#
+#    #May God bless John's soul.
+#    option = {
+#        name = wotl_fla.4.a
+#        custom_tooltip = wotl_fla_4a_new_ruler
+#        hidden_effect = {
+#            define_ruler = {
+#                dynasty = ENG
+#                culture = english
+#                male = yes
+#                claim = 70
+#            }
+#        }
+#    }
+#    
+#}
+#
+##Attempted Coup!
+#country_event = {
+#    id = wotl_fla.5
+#    title = wotl_fla.5.t
+#    desc = wotl_fla.5.desc
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    is_triggered_only = yes
+#
+#    trigger = {
+#        tag = FLA
+#        has_ruler_flag = wotl_fla_john_the_invader
+#        is_subject_of = ENG
+#        is_at_war = no
+#    }
+#
+#    #How dare he! This shall not stand!
+#    option = {
+#        name = wotl_fla.5.a
+#        custom_tooltip = wotl_fla_5a_call_council
+#        set_global_flag = wotl_fla_council_of_dukes_called
+#        set_country_flag = wotl_called_council_of_dukes
+#        hidden_effect = {
+#            every_country = {
+#                limit = {
+#                    OR = {
+#                        AND = {
+#                            is_subject_of = ENG
+#                            NOT = {
+#                                tag = ROOT
+#                            }
+#                        }
+#                        tag = PRO
+#                        tag = BRI
+#                    }
+#                }
+#                country_event = {
+#                    id = wotl_eng.5
+#                }
+#            }
+#        }
+#    }
+#}
+#
+##Attempted Coup! (Independence Declaration)
+#country_event = {
+#    id = wotl_fla.6
+#    title = wotl_fla.6.t
+#    desc = wotl_fla.6.desc
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    is_triggered_only = yes
+#
+#    trigger = {
+#        tag = FLA
+#        has_ruler_flag = wotl_fla_john_the_invader
+#        is_subject_of = ENG
+#        is_at_war = no
+#    }
+#
+#    #This is an outrage!
+#    option = {
+#        name = wotl_fla.6.a        
+#        custom_tooltip = wotl_fla_6a_declare_independence
+#        set_country_flag = wotl_fla_independence
+#        hidden_effect = {
+#            grant_independence = yes
+#            ENG = {
+#                country_event = {
+#                    id = wotl_eng.11
+#                    days = 10
+#                    random = 3
+#                }
+#            }
+#        }
+#        add_country_modifier = {
+#            name = "wotl_fla_jti_indep_modifier"
+#            duration = -1
+#        }
+#    }
+#}
+#
+##Treasonous Merchant
+#country_event = {
+#    id = wotl_fla.7
+#    title = wotl_fla.7.t
+#    desc = wotl_fla.7.desc
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    fire_only_once = yes
+#
+#    major = yes
+#    
+#    trigger = {
+#        normal_or_historical_nations = yes
+#        tag = FLA
+#        has_ruler_flag = wotl_fla_john_the_invader
+#        is_subject_of = ENG
+#        ENG = {
+#            has_country_flag = wotl_eng_state_of_affairs_happened
+#        }
+#        NOT = {
+#            is_year = 1455
+#        }
+#    }
+#
+#    mean_time_to_happen = {
+#        months = 60
+#
+#        modifier = {
+#            factor = 0.85
+#            is_year = 1442
+#        }
+#
+#        modifier = {
+#            factor = 0.8
+#            is_year = 1444
+#        }
+#    }
+#
+#    immediate = {
+#        set_saved_name = {
+#            key = executed_fleming
+#            type = advisor
+#            scope = ROOT
+#        }
+#    }
+#
+#    #Execute him!
+#    option = {
+#        name = wotl_fla.7.a
+#        ai_chance = {
+#            factor = 85
+#        }
+#        hidden_effect = {
+#            ENG = {
+#                country_event = {
+#                    id = wotl_eng.3                    
+#                }
+#            }
+#        }
+#    }
+#
+#    #Spare him.
+#    option = {
+#        name = wotl_fla.7.b
+#        ai_chance = {
+#            factor = 15
+#        }
+#        hidden_effect = {
+#            set_country_flag = wotl_fla_jti_spared_merchant
+#        }
+#        add_prestige = -20
+#    }
+#}
+#
+##Council of Dukes
+##Flanders gets to choose the demands of the Council.
+#country_event = {    
+#    id = wotl_fla.8
+#    title = wotl_fla.8.t
+#    desc = wotl_fla.8.desc
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    fire_only_once = yes
+#
+#    mean_time_to_happen = {
+#        months = 4
+#    }
+#
+#    trigger = {
+#        had_global_flag = {
+#            flag = wotl_fla_council_of_dukes_called
+#            days = 90
+#        }
+#        tag = FLA
+#        has_ruler_flag = wotl_fla_john_the_invader
+#        is_subject_of = ENG
+#        is_at_war = no
+#        any_country = {
+#            is_subject_of = ENG
+#            NOT = {
+#                tag = FLA
+#            }
+#            has_country_flag = wotl_eng_council_of_dukes_support_fla
+#        }
+#    }
+#
+#    #The [ENG.Monarch.GetTitle] must relinquish some of [ENG.Monarch.GetHerHis] land to us, [ENG.Monarch.GetHerHis] loyal vassals!
+#    option = {
+#        name = wotl_fla.8.a
+#        ai_chance = {
+#            factor = 70
+#        }
+#        hidden_effect = {
+#            ENG = {
+#                country_event = {
+#                    id = wotl_eng.7
+#                    days = 15                
+#                }
+#            }
+#        }
+#    }
+#
+#    #The [ENG.Monarch.GetTitle] must release a new vassal, as a check to [ENG.Monarch.GetHerHis] power!
+#    option = {
+#        name = wotl_fla.8.b
+#        ai_chance = {
+#            factor = 30
+#        }
+#        hidden_effect = {
+#            ENG = {
+#                country_event = {
+#                    id = wotl_eng.6
+#                    days = 15                
+#                }
+#            }
+#        }
+#    }
+#}
+#
+##King of England refuses demands!
+#country_event = {    
+#    id = wotl_fla.9
+#    title = wotl_fla.9.t
+#    desc = wotl_fla.9.desc
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    is_triggered_only = yes
+#
+#    immediate = {
+#        hidden_effect = {
+#            every_country = {
+#                limit = {
+#                    has_country_flag = wotl_eng_council_of_dukes_support_fla
+#                }
+#                create_alliance = FLA
+#            }
+#        }
+#    }
+#
+#    #It's war then!
+#    option = {
+#        name = wotl_fla.9.a
+#        set_global_flag = wotl_war_started
+#        declare_war_with_cb = {
+#            casus_belli = cb_independence_war
+#            who = ENG            
+#        }
+#    }
+#
+#}
+#
+##King of England bows to the Council's will!
+#country_event = {    
+#    id = wotl_fla.10
+#    title = wotl_fla.10.t
+#    desc = {
+#        trigger = {
+#            has_global_flag = wotl_eng_bends_to_council.6
+#        }
+#        desc = wotl_fla.10.desc.a        
+#    }
+#    desc = {
+#        trigger = {
+#            has_global_flag = wotl_eng_bends_to_council.7
+#        }
+#        desc = wotl_fla.10.desc.b
+#    }
+#
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    trigger = {
+#        tag = FLA
+#        has_global_flag = wotl_fla_council_of_dukes_called
+#        OR = {
+#            has_global_flag = wotl_eng_bends_to_council.6
+#            has_global_flag = wotl_eng_bends_to_council.7
+#        }
+#    }
+#
+#    #Hurrah!
+#    option = {
+#        name = wotl_fla.10.a
+#        add_prestige = 25
+#    }
+#
+#}
+#
+##[FROM.Monarch.GetName] of [FROM.GetName] will attend the Council!
+#country_event = {
+#    id = wotl_fla.11
+#    title = wotl_fla.11.t
+#    desc = wotl_fla.11.desc.b
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    is_triggered_only = yes
+#
+#    #Ok.
+#    option = {
+#        name = wotl_fla.11.a
+#    }
+#}
+#
+##John of Beaufort Missing!
+##triggered by on_siege_lost_country
+#country_event = {
+#    id = wotl_fla.12
+#    title = wotl_fla.12.t
+#    desc = wotl_fla.12.desc.b
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    is_triggered_only = yes
+#
+#    fire_only_once = yes
+#
+#    trigger = {
+#        FROM = {
+#            province_id = 90
+#        }
+#        tag = FLA
+#        has_ruler_flag = wotl_fla_john_the_invader
+#        OR = {
+#            has_country_flag = wotl_fla_independence
+#            ENG = {
+#                has_country_flag = wotl_eng_supported_jti
+#            }
+#        }
+#    }
+#
+#    immediate = {
+#        set_country_flag = wotl_fla_jti_missing
+#    }
+#
+#    #God has forsaken us!
+#    option = {
+#        name = wotl_fla.12.a
+#        add_stability = -1
+#        add_war_exhaustion = 5
+#        custom_tooltip = wotl_fla.12.a.tt        
+#        exile_heir_as = wotl_flemish_war_fla_heir
+#        exile_ruler_as = wotl_flemish_war_fla_ruler
+#        define_ruler = {
+#            name = "Noble Council"
+#            adm = 1
+#            dip = 1
+#            mil = 1
+#            fixed = yes
+#            culture = flemish
+#            regency = yes
+#        }
+#        hidden_effect = {
+#            if = {
+#                limit = {
+#                    war_with = ENG
+#                }
+#                ENG = {
+#                    add_country_modifier = {
+#                        name = wotl_flemish_war_jti_missing
+#                        duration = -1
+#                    }
+#                }
+#            }
+#            if = {
+#                limit = {
+#                    war_with = BUR
+#                    NOT = {
+#                        war_with = ENG
+#                    }
+#                }
+#                BUR = {
+#                    add_country_modifier = {
+#                        name = wotl_flemish_war_jti_missing
+#                        duration = -1
+#                    }
+#                }
+#            }
+#        }
+#    }
+#}

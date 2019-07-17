@@ -36,9 +36,20 @@ fixed_capital = 184 # Cannot move capital away from this province & no power cos
 		name = "Charles"
 		dynasty = "de Valois"
 		birth_date = 1394.11.24
+		death_date = 1426.10.5
 		adm = 1
-		dip = 3
+		dip = 1
 		mil = 0
+	}
+}
+
+1426.10.6 = {
+	monarch = {
+		name = "Interrègne"
+		adm = 0
+		dip = 0
+		mil = 0
+		regent = yes
 	}
 }
 

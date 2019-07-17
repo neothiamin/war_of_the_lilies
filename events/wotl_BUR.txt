@@ -5,144 +5,144 @@
 namespace = wotl_bur
 
 #Flemish War (JTI Indep)
-country_event = {
-    id = wotl_bur.1
-    title = wotl_bur.1.t
-    desc = wotl_bur.1.desc
-    picture = LIBERUM_VETO_eventPicture
-
-    trigger = {
-        tag = BUR
-        FLA = {
-            has_country_flag = wotl_fla_independence
-        }
-        is_at_war = no
-    }
-
-    fire_only_once = yes
-
-    mean_time_to_happen = {
-        days = 30
-    }
-
-    #We must step in.
-    option = {
-        name = wotl_bur.1.a
-        ai_chance = {
-            factor = 75
-        }
-        #declare_war_with_cb = {
-        #    casus_belli = cb_annex
-        #    who = FLA
-        #    war_goal_province = 90            
-        #}
-        vassalize = FLA
-        add_country_modifier = {
-            name = wotl_bur_flemish_war_modifier
-            duration = 3650            
-        }
-        reverse_add_opinion = {
-            who = FLA
-            modifier = wotl_bur_allied_fla
-        }
-        hidden_effect = {
-            add_historical_rival = ENG            
-            set_country_flag = wotl_bur_flemish_war_friend_fla
-        }
-    }
-
-    #It is none of our concern.
-    option = {
-        name = wotl_bur.1.b
-        ai_chance = {
-            factor = 25
-        }
-        reverse_add_opinion = {
-            who = ENG
-            modifier = wotl_bur_non_interference
-        }
-    }
-    
-}
-
-
-#Flemish War (ENG supports JTI)
-country_event = {
-    id = wotl_bur.2
-    title = wotl_bur.2.t
-    desc = wotl_bur.2.desc
-    picture = LIBERUM_VETO_eventPicture
-
-    trigger = {
-        tag = BUR
-        has_global_flag = wotl_fla_flemish_revolt_happened
-        is_at_war = no
-        FLA = {
-            has_ruler_flag = wotl_fla_jti_supported
-        }
-    }
-
-    fire_only_once = yes
-
-    mean_time_to_happen = {
-        days = 30
-    }
-
-    #We must step in.
-    option = {
-        name = wotl_bur.2.a
-        ai_chance = {
-            factor = 75
-        }
-        declare_war_with_cb = {
-            casus_belli = cb_annex
-            who = FLA
-            war_goal_province = 90            
-        }       
-        add_country_modifier = {
-            name = wotl_bur_flemish_war_modifier
-            duration = 3650            
-        } 
-        hidden_effect = {
-            add_historical_rival = ENG
-            set_country_flag = wotl_bur_flemish_war_enemy_fla
-        }
-    }
-
-    #It is none of our concern.
-    option = {
-        name = wotl_bur.1.b
-        ai_chance = {
-            factor = 25
-        }
-        reverse_add_opinion = {
-            who = ENG
-            modifier = wotl_bur_non_interference
-        }
-    }
-}
+#country_event = {
+#    id = wotl_bur.1
+#    title = wotl_bur.1.t
+#    desc = wotl_bur.1.desc
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    trigger = {
+#        tag = BUR
+#        FLA = {
+#            has_country_flag = wotl_fla_independence
+#        }
+#        is_at_war = no
+#    }
+#
+#    fire_only_once = yes
+#
+#    mean_time_to_happen = {
+#        days = 30
+#    }
+#
+#    #We must step in.
+#    option = {
+#        name = wotl_bur.1.a
+#        ai_chance = {
+#            factor = 75
+#        }
+#        #declare_war_with_cb = {
+#        #    casus_belli = cb_annex
+#        #    who = FLA
+#        #    war_goal_province = 90            
+#        #}
+#        vassalize = FLA
+#        add_country_modifier = {
+#            name = wotl_bur_flemish_war_modifier
+#            duration = 3650            
+#        }
+#        reverse_add_opinion = {
+#            who = FLA
+#            modifier = wotl_bur_allied_fla
+#        }
+#        hidden_effect = {
+#            add_historical_rival = ENG            
+#            set_country_flag = wotl_bur_flemish_war_friend_fla
+#        }
+#    }
+#
+#    #It is none of our concern.
+#    option = {
+#        name = wotl_bur.1.b
+#        ai_chance = {
+#            factor = 25
+#        }
+#        reverse_add_opinion = {
+#            who = ENG
+#            modifier = wotl_bur_non_interference
+#        }
+#    }
+#    
+#}
+#
+#
+##Flemish War (ENG supports JTI)
+#country_event = {
+#    id = wotl_bur.2
+#    title = wotl_bur.2.t
+#    desc = wotl_bur.2.desc
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    trigger = {
+#        tag = BUR
+#        has_global_flag = wotl_fla_flemish_revolt_happened
+#        is_at_war = no
+#        FLA = {
+#            has_ruler_flag = wotl_fla_jti_supported
+#        }
+#    }
+#
+#    fire_only_once = yes
+#
+#    mean_time_to_happen = {
+#        days = 30
+#    }
+#
+#    #We must step in.
+#    option = {
+#        name = wotl_bur.2.a
+#        ai_chance = {
+#            factor = 75
+#        }
+#        declare_war_with_cb = {
+#            casus_belli = cb_annex
+#            who = FLA
+#            war_goal_province = 90            
+#        }       
+#        add_country_modifier = {
+#            name = wotl_bur_flemish_war_modifier
+#            duration = 3650            
+#        } 
+#        hidden_effect = {
+#            add_historical_rival = ENG
+#            set_country_flag = wotl_bur_flemish_war_enemy_fla
+#        }
+#    }
+#
+#    #It is none of our concern.
+#    option = {
+#        name = wotl_bur.1.b
+#        ai_chance = {
+#            factor = 25
+#        }
+#        reverse_add_opinion = {
+#            who = ENG
+#            modifier = wotl_bur_non_interference
+#        }
+#    }
+#}
 
 #Victory over England!
-country_event = {
-    id = wotl_bur.3
-    title = wotl_bur.3.t
-    desc = wotl_bur.3.desc    
-    picture = LIBERUM_VETO_eventPicture
-
-    is_triggered_only = yes
-
-    fire_only_once = yes
-
-    #Hurrah! Death to [ENG.Monarch.GetName]!
-    option = {
-        name = wotl_bur.3.a
-        add_country_modifier = {
-            name = wotl_bur_big_win_effect
-            duration = 3650
-        }
-        clear_global_event_target = wotl_eng_big_defeat_location
-    }
-}
+#country_event = {
+#    id = wotl_bur.3
+#    title = wotl_bur.3.t
+#    desc = wotl_bur.3.desc    
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    is_triggered_only = yes
+#
+#    fire_only_once = yes
+#
+#    #Hurrah! Death to [ENG.Monarch.GetName]!
+#    option = {
+#        name = wotl_bur.3.a
+#        add_country_modifier = {
+#            name = wotl_bur_big_win_effect
+#            duration = 3650
+#        }
+#        clear_global_event_target = wotl_eng_big_defeat_location
+#    }
+#}
 
 #Our Claim to France
 country_event = {

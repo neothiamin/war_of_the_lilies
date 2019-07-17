@@ -8,7 +8,6 @@ technology_group = western
 capital = 183 # Paris
 national_focus = DIP
 historical_rival = BUR
-historical_rival = ENG
 
 1380.9.16 = {
 	monarch = {
@@ -72,24 +71,9 @@ historical_rival = ENG
 	}
 }
 
-1426.1.3 = {
-	monarch = {
-		name = "John, 1st Duke of Bedford"
-		dynasty = "Lancaster"
-		birth_date = 1389.7.14
-		adm = 2
-		dip = 2
-		mil = 5
-	}
-}
-
-1428.1.1 = {
-	monarch = {
-		name = "Louis III"
-		dynasty = "de Anjou"
-		birth_date = 1403.7.25
-		adm = 1
-		dip = 4
-		mil = 2
+1435.1.13 = {
+	add_country_modifier = {
+		name = wotl_fra_rebellious
+		duration = 3650
 	}
 }

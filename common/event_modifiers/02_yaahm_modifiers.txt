@@ -99,3 +99,7 @@ wotl_eng_23_general_french_revolt = {
     local_tax_modifier = -0.15
     local_unrest = 2
 }
+
+wotl_fra_rebellious = {
+    liberty_desire = 30
+}

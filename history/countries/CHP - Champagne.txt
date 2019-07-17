@@ -1,11 +1,23 @@
-government = monarchy
-add_government_reform = feudalism_reform
+government = republic
+add_government_reform = oligarchy_reform
 government_rank = 1
 technology_group = western
 religion = catholic
 primary_culture = cosmopolitan_french
 capital = 4390	# Troyes
 #fixed_capital = 186 # Cannot move capital away from this province & no power cost to move to it
+
+
+1434.1.1 = {
+    monarch = {
+        name = "Godefroi"
+        birth_date = 1400.8.17
+        adm = 4
+        dip = 5
+        mil = 1
+    }
+    add_ruler_personality = architectural_visionary_personality
+}
 
 1515.1.1 = { government = monarchy
 add_government_reform = autocracy_reform }

@@ -16,7 +16,7 @@ capital = 4390	# Troyes
         dip = 5
         mil = 1
     }
-    add_ruler_personality = architectural_visionary_personality
+    add_ruler_personality = silver_tongue_personality
 }
 
 1515.1.1 = { government = monarchy

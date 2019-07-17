@@ -54,10 +54,11 @@ capital = 199	# Clermont
 		birth_date = 1390.1.1
 		death_date = 1461.3.22
 		claim = 95
-		adm = 2
-		dip = 3
-		mil = 1
+		adm = 1
+		dip = 0
+		mil = 0
 	}
+	add_heir_personality = babbling_buffoon_personality
 }
 
 1437.8.7 = {

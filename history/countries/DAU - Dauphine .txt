@@ -15,7 +15,8 @@ capital = 204	# Grenoble
         dip = 1
         mil = 5
     }
-    add_ruler_personality = righteous_personality
+    add_ruler_personality = midas_touched_personality
+    add_ruler_personality = embezzler_personality
 }
 
 1515.1.1 = { government = monarchy

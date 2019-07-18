@@ -103,3 +103,8 @@ wotl_eng_23_general_french_revolt = {
 wotl_fra_rebellious = {
     liberty_desire = 30
 }
+
+wotl_crowned_in_reims = {
+    prestige = 0.5
+    papal_influence = 1
+}

@@ -9,7 +9,7 @@ orl_council_reform = {
 
     icon = "politician"
     allow_normal_conversion = no
-    legacy_equivalent = oligarchic_republic
+    legacy_equivalent = noble_republic
     valid_for_nation_designer = no
     allow_convert = no
     fixed_rank = 1

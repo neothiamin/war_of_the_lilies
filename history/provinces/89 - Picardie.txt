@@ -1,8 +1,7 @@
 # 89 Picardie - Principal cities: Amiens
 
-owner = ENG
-controller = ENG
-add_core = ENG
+owner = FRA
+controller = FRA
 add_core = BUR
 add_core = FRA
 capital = "Amiens"

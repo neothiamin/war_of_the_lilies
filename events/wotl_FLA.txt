@@ -4,7 +4,6 @@
 
 namespace = wotl_fla
 
-
 #Unrest in Flanders
 #country_event = {
 #    id = wotl_fla.1

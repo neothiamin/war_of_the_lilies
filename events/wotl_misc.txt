@@ -99,3 +99,157 @@ namespace = wotl_misc
 #        name = wotl_misc.4.a
 #    }
 #}
+
+#Coronation at Reims?
+country_event = {
+    id = wotl_misc.5
+    title = wotl_misc.5.t
+    desc = wotl_misc.5.desc
+    picture = CATHOLIC_RULERS_PRAYING_eventPicture
+
+    is_triggered_only = yes
+
+    trigger = {
+        culture_group = french
+        NOT = {
+            primary_culture = wallonian
+        }
+        government = monarchy
+        is_subject = no
+        NOT = {
+            OR = {
+                tag = FRA
+                any_country = {
+                    has_ruler_modifier = wotl_crowned_in_reims
+                }
+            }
+        }
+        186 = {
+            owner = {
+                tag = CHP
+                NOT = {
+                    is_subject = yes
+                }
+                government = theocracy
+            }
+        }
+    }
+
+    #Send a delegation!
+    option = {
+        name = wotl_misc.5.a
+        custom_tooltip = wotl_misc.5.a.tt
+        hidden_effect = {
+            CHP = {
+                country_event = {
+                    id = wotl_misc.6
+                    days = 15
+                }
+            }
+        }
+    }
+
+    #We are fine as is.
+    option = {
+        name = wotl_misc.5.b
+        add_prestige = -5
+    }
+}
+
+#Coronation of [From.Monarch.GetName]
+country_event = {
+    id = wotl_misc.6
+    title = wotl_misc.6.t
+    desc = wotl_misc.6.desc
+    picture = CATHOLIC_RULERS_PRAYING_eventPicture
+
+    is_triggered_only = yes
+
+    trigger = {
+        tag = CHP
+        NOT = {
+            is_subject = yes
+        }
+        government = theocracy
+        NOT = {
+            any_country = {
+                has_ruler_modifier = wotl_crowned_in_reims
+            }
+        }
+    }
+
+    #Crown [From.Monarch.GetName] in the French tradition.
+    option = {
+        name = wotl_misc.6.a
+        FROM = {
+            country_event = {
+                id = wotl_misc.7
+            }
+        }
+        ai_chance = {
+            factor = 35
+            modifier = {
+                factor = 3
+                has_opinion = {
+                    who = FROM
+                    value = 75
+                }
+            }
+            
+        }
+    }
+
+    #Such a ceremony is reserved for the TRUE King of France!
+    option = {
+        name = wotl_misc.6.b
+        FROM = {
+            country_event = {
+                id = wotl_misc.8
+                days = 10
+            }
+        }
+        ai_chance = {
+            factor = 65
+        }
+    }
+}
+
+#[Root.Monarch.GetName] crowned in Reims!
+country_event = {
+    id = wotl_misc.7
+    title = wotl_misc.7.t
+    desc = wotl_misc.7.desc
+    picture = CATHOLIC_RULERS_PRAYING_eventPicture
+
+    is_triggered_only = yes
+
+    #Huzzah!
+    option = {
+        name = wotl_misc.7.a
+        add_treasury = -75
+        CHP = {
+            add_treasury = 75
+        }
+        add_ruler_modifier = {
+            name = wotl_crowned_in_reims
+        }
+    }
+
+}
+
+#Archbishop of Reims denies request!
+country_event = {
+    id = wotl_misc.8
+    title = wotl_misc.8.t
+    desc = wotl_misc.8.desc
+    picture = CATHOLIC_RULERS_PRAYING_eventPicture
+
+    is_triggered_only = yes
+
+    #Blast!
+    option = {
+        name = wotl_misc.8.a
+        add_adm_power = -50
+        add_prestige = -10
+    }
+}

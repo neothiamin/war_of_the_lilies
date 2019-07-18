@@ -6,6 +6,7 @@ primary_culture = occitain
 religion = catholic
 capital = 199	# Clermont
 #fixed_capital = 199 # Cannot move capital away from this province & no power cost to move to it
+add_historical_rival = ENG
 
 
 1394.1.1 = {

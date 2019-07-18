@@ -6,6 +6,7 @@ religion = catholic
 primary_culture = cosmopolitan_french
 capital = 186	# Reims
 #fixed_capital = 186 # Cannot move capital away from this province & no power cost to move to it
+add_historical_rival = ENG
 
 
 1434.1.1 = {

@@ -1,0 +1,24 @@
+
+
+orl_council_reform_names = {
+    rank = {
+        1 = COUNCIL
+        2 = COUNCIL
+        3 = COUNCIL
+    }
+
+    ruler_male = {
+        1 = PORTEPAROLE
+        2 = PORTEPAROLE
+        3 = PORTEPAROLE
+    }
+
+    ruler_female = {
+        1 = PORTEPAROLE
+        2 = PORTEPAROLE
+        3 = PORTEPAROLE
+    }
+    trigger = {
+        has_reform = orl_council_reform
+    }
+}

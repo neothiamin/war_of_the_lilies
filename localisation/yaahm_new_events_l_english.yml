@@ -29,7 +29,7 @@
  wotl_bur.1.t:0 "Revolt in Flanders" 
  wotl_fla.7.t:0 "Treasonous Merchant"
 
- wotl_eng.3.desc:0 "Your Majesty,\n\nYour cousin, Duke John of Beaufort, known as \"The Invader\" among his detractors and much of the peasantry in his domain of Flanders, has once again shown why he has been ascribed that moniker.\n\nJohn recently has been increasingly paranoid, fully aware of the fact that he, an Englishman, rules over a duchy of Flemings, and has begun fully exercising his right as chief \"executive\". This time, though, one too many heads have rolled.\n\nJohn has just executed a merchant, [FLA.executed_fleming.GetName], for \"treason and conspiracy against the Crown\"; however, it seems that, unlike with his previous victims, his court has been unable to find (or fabricate) a single shred of evidence. Word of this seemingly arbitrary and tyrannical execution has made its way from the throne room to the town square in Brugge, and word of rebellion is on the Flemings' lips..."
+ #wotl_eng.3.desc:0 "Your Majesty,\n\nYour cousin, Duke John of Beaufort, known as \"The Invader\" among his detractors and much of the peasantry in his domain of Flanders, has once again shown why he has been ascribed that moniker.\n\nJohn recently has been increasingly paranoid, fully aware of the fact that he, an Englishman, rules over a duchy of Flemings, and has begun fully exercising his right as chief \"executive\". This time, though, one too many heads have rolled.\n\nJohn has just executed a merchant, [FLA.executed_fleming.GetName], for \"treason and conspiracy against the Crown\"; however, it seems that, unlike with his previous victims, his court has been unable to find (or fabricate) a single shred of evidence. Word of this seemingly arbitrary and tyrannical execution has made its way from the throne room to the town square in Brugge, and word of rebellion is on the Flemings' lips..."
  wotl_eng.4.desc:0 "Your Majesty,\n\nWord has reached us that John of Beaufort has issued a formal decree stating his doubt in Your ability to rule effectively! He calls Your Majesty \"illegitimate\" and \"tryannical\", totally oblivious to the fact that he is the one who just executed an innocent merchant. Oh, sweet irony..."
  wotl_eng.5.desc:0 "Your Majesty\n\nWe have just received a letter, sealed with the official seal of the House of Beaufort, from Duke John of Flanders! He is seeking our presence at a council that is to meet in the near future, at which he promises a majority of other vassals of the English Crown, along with the Dukes of Provence and Brittany, will be present. One can assume that John does not wish to sit and discuss the weather; indeed, his reason is most likely one far more sinister..."
  wotl_eng.5.desc.b:0 "Your Majesty \n\nWe have just received a letter from [From.Monarch.GetTitle] [From.Monarch.GetName] of [From.GetName]! [From.Monarch.GetSheHe] is seeking our presence at a council that is to meet in the near future, at which [From.Monarch.GetSheHe] promises a majority of other vassals of the English Crown, along with the Dukes of Provence and Brittany, will be present. One can assume that [From.Monarch.GetSheHe] does not wish to sit and discuss the weather; indeed, [From.Monarch.GetHerHis] reason is most likely one far more sinister..."
@@ -40,7 +40,7 @@
  wotl_fla.5.desc:0 "Your Highness!\n\nA plot has been discovered against you! A spy was discovered by palace guards last night and apprehended after he was found skulking around the palace. His intent, it appears, was to sow discontent amongst your guards, in the hopes they would rebel!"
  wotl_fla.6.desc:0 "Your Highness!\n\nA spy was discovered by palace guards last night and apprehended after he was found skulking around the palace. His intent, it appears, was nothing short of murder! After thorough interrogation, he said he was sent by [ENG.Monarch.GetTitle] [ENG.Monarch.GetName]!"
  wotl_bur.1.desc:0 "Word has reached the royal court of a revolt in Flanders! Peasants and nobles have taken to the streets calling for Duke John Beaufort, or \"The Invader\", to be executed! Though supporting a madman may come back to bite us, the potential of acquiring Flanders for ourselves is attractive..."
- wotl_fla.7.desc:0 "Your Highness,\n\nRoyal guards have apprehended a merchant suspected of treason and conspiracy against the state! His name is [FLA.executed_fleming.GetName], and while we do not have any concrete evidence against him, he is nonetheless perceived to be dangerous."
+ #wotl_fla.7.desc:0 "Your Highness,\n\nRoyal guards have apprehended a merchant suspected of treason and conspiracy against the state! His name is [FLA.executed_fleming.GetName], and while we do not have any concrete evidence against him, he is nonetheless perceived to be dangerous."
 
  wotl_eng.3.a:0 "We must support John."
  wotl_eng.4.a:0 "Does he not know who gave him his title?!"
@@ -135,7 +135,7 @@
  wotl_bur.2.a:0 "We must step in."
 
  wotl_bur.3.t:0 "Victory over England!"
- wotl_bur.3.desc:0 "My [Root.Monarch.GetTitle]!\n\nOur armies have delivered a decisive blow to the English forces at [wotl_eng_big_defeat_location.GetName]! The English armies were left retreating, tails between their legs. We must capitalize on this!"
+ #wotl_bur.3.desc:0 "My [Root.Monarch.GetTitle]!\n\nOur armies have delivered a decisive blow to the English forces at [wotl_eng_big_defeat_location.GetName]! The English armies were left retreating, tails between their legs. We must capitalize on this!"
  wotl_bur.3.a:0 "Hurrah! Death to [ENG.Monarch.GetName]!"
 
  wotl_fla.12.t:0 "John of Beaufort missing!"
@@ -143,7 +143,7 @@
  wotl_fla.12.a:0 "God has forsaken us!"
  wotl_fla.12.a.tt:0 "John of Beaufort and his family go missing! A noble council will rule the nation until they return."
 
- wotl_eng.12.t:0 "Defeat in [wotl_eng_big_defeat_location.GetName]!"
+ #wotl_eng.12.t:0 "Defeat in [Root.GetName]!"
  wotl_eng.12.desc:0 "Your Highness...\n\nI approach you with grave news. As you know, the Burgundians have intervened in our little squabble with John the Rebel. Though our forces are clearly superior, sometimes the enemy gets the better of them.\n\nSuch was the case in [Root.GetName] recently. The enemy managed to rout our forces and server us a crippling defeat. Though our faith in you is unphased, some others have started to doubt your ability..."
  wotl_eng.12.a:0 "To Hell with them! We WILL be victorious!"
 
@@ -158,7 +158,7 @@
  wotl_eng.14.b.tt:0 "The people of [Root.GetName] develop a fondness for the Caporal."
 
  wotl_eng.15.t:0 "Flemish War: Righteous or Foolish?"
- wotl_eng.15.desc:0 "The Flemish War has taken a turn for the worse it seems. After the crushing defeat of the English at [wotl_eng_big_defeat_location.GetName], many in our court have been thinking... perhaps the rebels are right. Perhaps England IS unfit to rule over such a large swath of land! Perhaps... we ought to look for a new ally..."
+ #wotl_eng.15.desc:0 "The Flemish War has taken a turn for the worse it seems. After the crushing defeat of the English at [wotl_eng_big_defeat_location.GetName], many in our court have been thinking... perhaps the rebels are right. Perhaps England IS unfit to rule over such a large swath of land! Perhaps... we ought to look for a new ally..."
  wotl_eng.15.a:0 "We must stand by England!"
  wotl_eng.15.b:0 "We ought to look for some new friends."
  wotl_eng.16.t:0 "Foreign Aid"
@@ -212,7 +212,7 @@
  wotl_pro.1.a:0 "For the House d'Anjou!"
  wotl_pro.1.b:0 "The pen truly is mightier than the sword. We will bide our time for now."
  wotl_eng.23.t:0 "French Revolt"
- wotl_eng.23.desc:0 "The people of [wotl_eng_23_target.GetName] have taken up arms in rebellion! Their reason is unclear; we are wonderful rulers!"
+ #wotl_eng.23.desc:0 "The people of [wotl_eng_23_target.GetName] have taken up arms in rebellion! Their reason is unclear; we are wonderful rulers!"
  wotl_eng.23.a:0 "Damn them!"
  wotl_eng.24.t:0 "Death of Henry VI"
  wotl_eng.24.desc:0 "His Majesty, the Gracious and Good Henry VI has passed. May His soul rest in peace."

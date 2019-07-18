@@ -1,7 +1,7 @@
 # 4390 - Troyes
 
-owner = CHP
-controller = CHP
+owner = FRA
+controller = FRA
 capital = "Troyes"
 is_city = yes
 culture = cosmopolitan_french

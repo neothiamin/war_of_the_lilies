@@ -6,36 +6,36 @@ namespace = wotl_eng
 
 #The State of Affairs
 #This event is a brief rundown of the ongoing strife in France and the possibility of rebellion that may culminate in the War of the Lilies.
-country_event = {
-
-    id = wotl_eng.1
-    title = wotl_eng.1.t
-    desc = wotl_eng.1.desc
-    picture = LIBERUM_VETO_eventPicture
-
-    fire_only_once = yes
-
-    trigger = {
-        tag = ENG
-        NOT = {
-            is_year = 1445
-        }
-        owns_core_province = 183
-    }
-
-    mean_time_to_happen = {
-        months = 2
-    }
-
-    immediate = {
-        set_country_flag = wotl_eng_state_of_affairs_happened
-    }
-
-    #God is with us.
-    option = {
-        name = wotl_eng.1.a
-    }
-}
+#country_event = {
+#
+#    id = wotl_eng.1
+#    title = wotl_eng.1.t
+#    desc = wotl_eng.1.desc
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    fire_only_once = yes
+#
+#    trigger = {
+#        tag = ENG
+#        NOT = {
+#            is_year = 1445
+#        }
+#        owns_core_province = 183
+#    }
+#
+#    mean_time_to_happen = {
+#        months = 2
+#    }
+#
+#    immediate = {
+#        set_country_flag = wotl_eng_state_of_affairs_happened
+#    }
+#
+#    #God is with us.
+#    option = {
+#        name = wotl_eng.1.a
+#    }
+#}
 
 #Heir's Culture
 #Had to do some hacky stuff for this one since the on_action doesn't work. :rage:
@@ -1046,34 +1046,34 @@ country_event = {
 #
 
 ##England loses war
-country_event = {
-    id = wotl_eng.17
-    title = wotl_eng.17.t
-    desc = wotl_eng.17.desc
-    picture = LIBERUM_VETO_eventPicture
-
-    is_triggered_only = yes
-
-    fire_only_once = yes
-
-    trigger = {
-        tag = ENG
-        NOT = {
-            is_year = 1465
-        }
-    }
-
-    #We are still just as strong has we have ever been!
-    option = {
-        name = wotl_eng.17.a
-        custom_tooltip = wotl_eng.17.a.tt
-        set_ruler_flag = wotl_eng_war_lost
-        add_ruler_modifier = {
-            name = wotl_eng_lost_war_effect
-        }
-        add_prestige = -5
-    }
-}
+#country_event = {
+#    id = wotl_eng.17
+#    title = wotl_eng.17.t
+#    desc = wotl_eng.17.desc
+#    picture = LIBERUM_VETO_eventPicture
+#
+#    is_triggered_only = yes
+#
+#    fire_only_once = yes
+#
+#    trigger = {
+#        tag = ENG
+#        NOT = {
+#            is_year = 1465
+#        }
+#    }
+#
+#    #We are still just as strong has we have ever been!
+#    option = {
+#        name = wotl_eng.17.a
+#        custom_tooltip = wotl_eng.17.a.tt
+#        set_ruler_flag = wotl_eng_war_lost
+#        add_ruler_modifier = {
+#            name = wotl_eng_lost_war_effect
+#        }
+#        add_prestige = -5
+#    }
+#}
 #
 ##Benefactor or Burden?
 ##For English vassals

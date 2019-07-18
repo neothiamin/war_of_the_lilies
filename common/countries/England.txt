@@ -163,7 +163,7 @@ ship_names = {
 }
 
 army_names = {
-	"Royal Army" "Army of Scotland" "Army of Ireland" "Army of France" "Army of Flanders" "Army of East Anglia" "Army of Wales"
+	"Royal Army" "Army of Scotland" "Army of Ireland" "Army of France" "Army of Flanders" "Army of East Anglia" "Army of Wales" "Army of Normandy" "Army of Aquitaine" "Army of $PROVINCE$"
 }
 
 fleet_names = {

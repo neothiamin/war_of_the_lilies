@@ -1,0 +1,56 @@
+########################################
+# WOTL events for Orleans              #
+########################################
+
+namespace = wotl_orl
+
+#Peasant Rule in Orleans
+
+country_event = {
+    id = wotl_orl.1
+    title = wotl_orl.1.t
+    desc = wotl_orl.1.desc
+    picture = CITY_DEVELOPMENT_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ORL
+        has_reform = orl_council_reform
+        controls = 184
+    }
+
+    mean_time_to_happen = {
+        months = 90
+    }
+
+    #Crack down on this autonomy.
+    option = {
+        name = wotl_orl.1.a
+        184 = {
+            add_province_modifier = {
+                name = wotl_orl_cracked_down
+                duration = 3650
+            }
+        }
+        add_country_modifier = {
+            name = wotl_orl_cracked_down_country
+            duration = 3650
+        }
+    }
+
+    #Let the peasantry go about their lives.
+    option = {
+        name = wotl_orl.1.b
+        184 = {
+            add_province_modifier = {
+                name = wotl_orl_autonomy
+                duration = 3650
+            }
+        }
+        add_country_modifier = {
+            name = wotl_orl_autonomy_country
+            duration = 3650
+        }
+    }
+}

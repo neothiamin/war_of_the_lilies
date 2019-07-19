@@ -2,9 +2,6 @@ orl_council_reform = {
 
     potential = {
         tag = ORL
-        NOT = {
-            has_country_flag = wotl_orl_heir_found
-        }
     }
 
     icon = "politician"
@@ -13,7 +10,7 @@ orl_council_reform = {
     valid_for_nation_designer = no
     allow_convert = no
     fixed_rank = 1
-    duration = 1
+    duration = 2
 
     modifiers = {
         global_unrest = 2

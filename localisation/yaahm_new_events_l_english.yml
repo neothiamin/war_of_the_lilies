@@ -236,3 +236,25 @@
  wotl_misc.8.t:0 "Archbishop of Reims Denies Our Request"
  wotl_misc.8.desc:0 "The Archbishop of Reims has rejected our request for an elegant coronation ceremony! They claim we are not \"legitimate\" enough to be compared to the King of France in any way."
  wotl_misc.8.a:0 "To Hell with them!"
+
+ wotl_orl.1.t:0 "Peasant Rule in Orleans"
+ wotl_orl.1.desc:0 "Recently, the peasantry in Orleanais have been taking advantage of the lack of central authority in our country. Bartering is on the rise, merchants have been holding out on their taxes, and unlicensed trade guilds are becoming more popular. While we have more pressing concerns, undoubtedly, we shouldn't allow the commonfolk too much freedom. A controlled peasantry is a happy peasantry, after all!"
+ wotl_orl.1.a:0 "Crack down on this autonomy."
+ wotl_orl.1.b:0 "The peasantry are of no concern to us."
+
+ wotl_orl_election.desc:0 "The term is up for $MONARCH$. Due to the nature of the Conseil, [Root.Monarch.GetSheHe] is not permitted to seek office again. Who shall replace [Root.Monarch.GetHerHim]?"
+
+ wotl_tou.1.t:0 "Alliance with the Pope?"
+ wotl_tou.1.desc:0 "My [Root.Monarch.GetTitle],\n\nYour piety is undeniable, your devotion to your faith infallible. Perhaps it would be wise to propose a military alliance with the Bishop of Rome, [PAP.Monarch.GetTitle]?"
+ wotl_tou.1.a:0 "His Holiness would make a great ally!"
+ wotl_tou.1.b:0 "We must not place trust in the words of mere men."
+ wotl_tou.2.t:0 "Pope [PAP.Monarch.GetName] Rejects Alliance Offer"
+ wotl_tou.2.desc:0 "The Pope, [PAP.Monarch.GetName], has sent us a missive \"politely\" declining our offer of an alliance."
+ wotl_tou.2.a:0 "Ah, well..."
+ wotl_tou.2.b:0 "Blasted pope! What power does the See have anyways?"
+ wotl_tou.2.b.tt:0 "We will not forget this wrongdoing."
+
+ wotl_pap.1.t:0 "Alliance with [TOU.Monarch.GetTitle] [TOU.Monarch.GetName] of Toulouse?"
+ wotl_pap.1.desc:0 "Your Holiness,\n\nWe have received a letter with the Royal Seal of the House of [Tou.Monarch.Dynasty.GetName]. They propose an alliance between our two nations."
+ wotl_pap.1.a:0 "Of course! [TOU.Monarch.GetName] is truly a pious [TOU.Monarch.GetWomanMan]."
+ wotl_pap.1.b:0 "Toulouse is not worth our time."

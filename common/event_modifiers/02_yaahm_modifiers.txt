@@ -108,3 +108,22 @@ wotl_crowned_in_reims = {
     prestige = 0.5
     papal_influence = 1
 }
+
+wotl_orl_cracked_down = {
+    local_unrest = 5
+    local_tax_modifier = 0.05
+    province_trade_power_modifier = 0.05
+}
+
+wotl_orl_cracked_down_country = {
+    stability_cost_modifier = 0.1
+}
+
+wotl_orl_autonomy = {
+    local_unrest = -3
+    local_tax_modifier = -0.2
+}
+
+wotl_orl_autonomy_country = {
+    yearly_corruption = -0.05
+}

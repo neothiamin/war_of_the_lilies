@@ -1,3 +1,9 @@
 ﻿l_english:
  cb_bur_flemish_war:0 "Flemish War"
  cb_bur_flemish_war_desc:0 "Assert our control over the Duchy of Flanders"
+ monarchist_demand_desc:0 "The Monarchists demand we install a monarch."
+ monarchist_name:0 "Monarchist"
+ monarchist_title:0 "$COUNTRY$ Monarchists"
+ monarchist_desc:0 "Monarchists desire the installation of a monarchy to replace the ruling governmental system. They desire a strong central figure and to limit the influence of merchants and, to some extent, the clergy."
+ monarchist_army:0 "Monarchist Guard"
+ monarchist_demand:0 "Install Monarchy"

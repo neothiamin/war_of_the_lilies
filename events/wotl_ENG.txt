@@ -68,7 +68,6 @@ country_event = {
         FRA = {
             is_subject_of = ENG
         }
-        owns_core_province = 183
         has_heir = yes
         NOT = {
             has_heir_flag = wotl_eng_heir_culture_event_fired

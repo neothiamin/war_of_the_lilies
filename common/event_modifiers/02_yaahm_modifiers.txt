@@ -110,7 +110,7 @@ wotl_crowned_in_reims = {
 }
 
 wotl_orl_cracked_down = {
-    local_unrest = 5
+    local_unrest = 6
     local_tax_modifier = 0.05
     province_trade_power_modifier = 0.05
 }
@@ -126,4 +126,9 @@ wotl_orl_autonomy = {
 
 wotl_orl_autonomy_country = {
     yearly_corruption = -0.05
+}
+
+wotl_orl_consolidated_power = {
+    election_cycle = 2
+    republican_tradition = -1
 }

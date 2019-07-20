@@ -30,7 +30,7 @@ country_event = {
         184 = {
             add_province_modifier = {
                 name = wotl_orl_cracked_down
-                duration = 3650
+                duration = 7130
             }
         }
         add_country_modifier = {
@@ -45,12 +45,186 @@ country_event = {
         184 = {
             add_province_modifier = {
                 name = wotl_orl_autonomy
-                duration = 3650
+                duration = 7130
             }
         }
         add_country_modifier = {
             name = wotl_orl_autonomy_country
             duration = 3650
         }
+    }
+}
+
+#Conseil Rule Breaking Down
+country_event = {
+    id = wotl_orl.2
+    title = wotl_orl.2.t
+    desc = wotl_orl.2.desc
+    picture = OVEREXTENSION_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ORL
+        is_subject = no
+        has_reform = orl_council_reform
+        is_year = 1440
+    }
+
+    mean_time_to_happen = {
+        months = 90
+        modifier = {
+            factor = 0.8
+            is_at_war = yes
+        }
+    }
+
+    #Arrange a grand parade celebrating the Conseil.
+    option = {
+        name = wotl_orl.2.a
+        add_years_of_income = -0.5
+        random_list = {
+            50 = {
+                custom_tooltip = wotl_orl.2.a.1.tt
+                hidden_effect = {
+                    country_event = {
+                        id = wotl_orl.3
+                        days = 30
+                    }
+                }
+            }
+            50 = {
+                custom_tooltip = wotl_orl.2.a.2.tt
+                hidden_effect = {
+                    country_event = {
+                        id = wotl_orl.4
+                        days = 30
+                    }
+                }
+            }
+        }
+        ai_chance = {
+            factor = 25
+        }
+    }
+
+    #Reassure the populace that the system is stable.
+    option = {
+        name = wotl_orl.2.b
+        add_prestige = -10
+        capital_scope = {
+            add_unrest = 4
+        }
+        set_country_flag = wotl_orl_reassure
+        ai_chance = {
+            factor = 40
+        }
+    }
+
+    #What hogwash! Don't they know that the Conseil rules, not the peasantry?
+    option = {
+        name = wotl_orl.2.c
+        capital_scope = {
+            add_unrest = 8
+        }
+        ai_chance = {
+            factor = 25
+        }
+        set_country_flag = wotl_orl_ignored_peasants
+    }
+
+    #Consolidate central power.
+    option = {
+        name = wotl_orl.2.d
+        add_adm_power = -100
+        add_country_modifier = {
+            name = wotl_orl_consolidated_power
+            duration = -1
+        }
+        ai_chance = {
+            factor = 10
+        }
+    }
+}
+
+#Successful Parade
+country_event = {
+    id = wotl_orl.3
+    title = wotl_orl.3.t
+    desc = wotl_orl.3.desc
+    picture = CULTURE_eventPicture
+
+    is_triggered_only = yes
+
+    #See? All is well.
+    option = {
+        name = wotl_orl.3.a
+        add_prestige = 15
+        add_adm_power = 100
+    }
+}
+
+#Unsuccessful Parade
+country_event = {
+    id = wotl_orl.4
+    title = wotl_orl.4.t
+    desc = wotl_orl.4.desc
+    picture = ANGRY_MOB_eventPicture
+
+    is_triggered_only = yes
+
+    #Oh well, how bad could it b- wait... is that smoke?
+    option = {
+        name = wotl_orl.4.a
+        capital_scope = {
+            spawn_rebels = {
+                size = 2
+                type = particularist_rebels
+            }
+        }
+    }
+}
+
+#Monarchist Rebellion
+country_event = {
+    id = wotl_orl.5
+    title = wotl_orl.5.t
+    desc = wotl_orl.5
+    picture = ANGRY_MOB_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ORL
+        has_reform = orl_council_reform
+        is_subject = no
+        had_country_flag = {
+            flag = wotl_orl_reassure
+            days = 3650
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 60
+    }
+
+    #The republic must live on!
+    option = {
+        name = wotl_orl.5.a
+        capital_scope = {
+            spawn_rebels = {
+                size = 2
+                type = monarchist
+            }
+        }
+        add_stability = -1
+    }
+
+    #Crown [Root.Monarch.GetName] as King.
+    option = {
+        name = wotl_orl.5.b
+        change_government = monarchy
+        add_stability = -1
+        set_government_rank = 2
     }
 }

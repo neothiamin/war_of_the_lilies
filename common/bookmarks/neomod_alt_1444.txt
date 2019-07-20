@@ -8,12 +8,11 @@ bookmark =
 	default = yes
 	
 	country = ENG
-	country = BUR
 	country = FRA
+	country = BUR
 	country = PRO
 	country = FLA
 
 	easy_country = ENG
-	easy_country = BUR	
 	easy_country = FRA
 }

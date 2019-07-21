@@ -283,3 +283,8 @@
  wotl_chp.1.a:0 "Build the fortress, double time!"
  wotl_chp.1.b:0 "Build the fortress at a regular pace."
  wotl_chp.1.c:0 "The only protection we need is His."
+
+ wotl_orl.6.t:0 "Legitimate Ruler Found!"
+ wotl_orl.6.desc:0 "By God, we have been blessed! A momentous day!\n\nAt long last, after years and years of prayer and waiting, God has given us a legitimate ruler! One who may truly be called King! We received word from one of our envoys out in the wilderness that there is, indeed, a living descendant of Hugh Capet, a Capetian, someone with a legitimate claim to the French throne!"
+ wotl_orl.6.a:0 "At long last! A king!"
+ wotl_orl.6.b:0 "To hell with kings! The Porte-Parole rules in Orleans!"

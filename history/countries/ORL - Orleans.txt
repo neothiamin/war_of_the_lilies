@@ -1,5 +1,5 @@
-government = republic
-add_government_reform = orl_council_reform
+government = monarchy
+add_government_reform = feudalism_reform
 government_rank = 1
 primary_culture = cosmopolitan_french
 religion = catholic
@@ -43,6 +43,8 @@ fixed_capital = 184 # Cannot move capital away from this province & no power cos
 }
 
 1426.10.6 = {
+	government = republic
+	add_government_reform = orl_council_reform
 	monarch = {
 		name = "Noble Council"
 		adm = 0

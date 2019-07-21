@@ -76,7 +76,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 90
+        months = 120
         modifier = {
             factor = 0.8
             is_at_war = yes
@@ -88,7 +88,7 @@ country_event = {
         name = wotl_orl.2.a
         add_years_of_income = -0.5
         random_list = {
-            50 = {
+            25 = {
                 custom_tooltip = wotl_orl.2.a.1.tt
                 hidden_effect = {
                     country_event = {
@@ -97,7 +97,7 @@ country_event = {
                     }
                 }
             }
-            50 = {
+            75 = {
                 custom_tooltip = wotl_orl.2.a.2.tt
                 hidden_effect = {
                     country_event = {
@@ -209,7 +209,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 60
+        months = 90
     }
 
     #The republic must live on!
@@ -230,5 +230,85 @@ country_event = {
         change_government = monarchy
         add_stability = -1
         set_government_rank = 2
+    }
+}
+
+#Potential Ruler Found
+country_event = {
+    id = wotl_orl.6
+    title = wotl_orl.6.t
+    desc = wotl_orl.6.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    fire_only_once = yes
+
+    major = yes
+
+    trigger = {
+        tag = ORL
+        has_reform = orl_council_reform
+        is_subject = no
+    }
+
+    mean_time_to_happen = {
+        months = 300
+    }
+
+    #Crown him, quick!
+    option = {
+        name = wotl_orl.6.a
+        ai_chance = {
+            factor = 95
+        }
+        change_government = monarchy
+        set_government_rank = 2
+        hidden_effect = {
+            random_list = {
+                22 = {
+                    define_ruler = {
+                        dynasty = "de Évreux"
+                        male = yes
+                    }
+                }
+                22 = {
+                    define_ruler = {
+                        dynasty = "de Orléans"
+                        male = yes
+                    }
+                }
+                22 = {
+                    define_ruler = {
+                        dynasty = "de Vermandois"
+                        male = yes
+                    }
+                }
+                22 = {
+                    define_ruler = {
+                        dynasty = "de Bourbon"
+                        male = yes
+                    }
+                }
+                8 = {
+                    define_ruler = {
+                        dynasty = "Capet"
+                        male = yes
+                    }
+                }
+            }
+        }
+    }
+
+    #To hell with kings! The Porte-Parole rules in Orleans!
+    option = {
+        name = wotl_orl.6.b
+        set_country_flag = wotl_orl_empower_porte_parole
+        add_stability = -2
+        ai_chance = {
+            factor = 5
+        }
+        add_country_modifier = {
+            name = wotl_orl_consolidated_power
+            duration = -1
+        }
     }
 }

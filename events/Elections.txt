@@ -44,8 +44,14 @@ country_event = {
 		trigger = {
 			has_regency = no
 			NOT = { has_ruler_flag = leader_has_been_pushed_out }
-			NOT = {
-				has_reform = orl_council_reform
+			if = {
+				limit = {
+					has_reform = orl_council_reform
+				}
+				OR = {
+					has_country_modifier = wotl_orl_consolidated_power
+					has_country_flag = wotl_orl_empower_porte_parole
+				}
 			}
 		}
 		ai_chance = { 

@@ -130,5 +130,5 @@ wotl_orl_autonomy_country = {
 
 wotl_orl_consolidated_power = {
     election_cycle = 2
-    republican_tradition = -1
+    republican_tradition = -2
 }

@@ -26,6 +26,8 @@ country_event = {
         religion = catholic
     }
 
+    fire_only_once = yes
+
     mean_time_to_happen = {
         months = 180
         modifier = {

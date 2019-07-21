@@ -277,3 +277,9 @@
  wotl_orl.5:0 "The republican experiment is over. It is clear that our hopes of crowning a Valois were in vain, for none has come, and at this point it is nigh impossible that one will appear."
  wotl_orl.5.a:0 "The republic must live on!"
  wotl_orl.5.b:0 "Crown [Root.Monarch.GetName] as King."
+
+ wotl_chp.1.t:0 "Fortress of Reims?"
+ wotl_chp.1.desc:0 "The city of Reims is known for its famed cathedral, site of French coronations for hundreds of years. However, with the recent independence of our nation, some of our military advisors have proposed the construction of a fortress on the banks of the Vesle to protect the city against potential invasion by the pretender English."
+ wotl_chp.1.a:0 "Build the fortress, double time!"
+ wotl_chp.1.b:0 "Build the fortress at a regular pace."
+ wotl_chp.1.c:0 "The only protection we need is His."

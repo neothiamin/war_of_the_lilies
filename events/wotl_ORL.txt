@@ -71,6 +71,10 @@ country_event = {
         is_year = 1440
     }
 
+    immediate = {
+        set_country_flag = orl_conseil_breakdown
+    }
+
     mean_time_to_happen = {
         months = 90
         modifier = {
@@ -199,7 +203,7 @@ country_event = {
         has_reform = orl_council_reform
         is_subject = no
         had_country_flag = {
-            flag = wotl_orl_reassure
+            flag = orl_conseil_breakdown
             days = 3650
         }
     }

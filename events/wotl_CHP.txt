@@ -20,6 +20,7 @@ country_event = {
         }
         tag = CHP
         owns_core_province = 186
+        treasury = 100
         NOT = {
             has_country_flag = wotl_chp_built_fortress
         }

@@ -186,6 +186,9 @@ country_event = {
                 id = wotl_misc.7
             }
         }
+        tooltip = {
+            add_treasury = 75
+        }
         ai_chance = {
             factor = 35
             modifier = {
@@ -195,7 +198,6 @@ country_event = {
                     value = 75
                 }
             }
-            
         }
     }
 
@@ -251,5 +253,113 @@ country_event = {
         name = wotl_misc.8.a
         add_adm_power = -50
         add_prestige = -10
+    }
+}
+
+#[Root.GetName], Imperial Prince?
+country_event = {
+    id = wotl_misc.9
+    title = wotl_misc.9.t
+    desc = wotl_misc.9.desc
+    picture = HRE_eventPicture
+
+    trigger = {
+        OR = {
+            tag = CHP
+            tag = DAU
+        }
+        is_part_of_hre = no
+        is_subject = no
+        reverse_has_opinion = {
+            who = EMPEROR
+            value = 75
+        }
+        NOT = {
+            has_country_flag = wotl_misc_hre_event_fired
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 30
+    }
+
+    immediate = {
+        set_country_flag = wotl_misc_hre_event_fired
+    }
+
+    #We are strong enough on our own.
+    option = {
+        name = wotl_misc.9.a
+        add_prestige = 10
+        ai_chance = {
+            factor = 75
+        }
+    }
+
+    #Petition the Emperor for admission into the Empire.
+    option = {
+        name = wotl_misc.9.b
+        ai_chance = {
+            factor = 25
+        }
+        custom_tooltip = wotl_misc.9.b.tt
+        emperor = {
+            country_event = {
+                id = wotl_misc.10
+            }
+        }
+    }
+}
+
+#[From.GetName] petitions for admission into the Empire.
+country_event = {
+    id = wotl_misc.10
+    title = wotl_misc.10.t
+    desc = wotl_misc.10.desc
+    picture = HRE_eventPicture
+
+    is_triggered_only = yes
+
+    #Accept their request, in exchange for a 10-year due.
+    option = {
+        name = wotl_misc.10.a
+        FROM = {
+            country_event = {
+                id = wotl_misc.11
+            }
+        }
+    }
+
+    #Deny their request.
+    option = {
+        name = wotl_misc.10.b
+    }
+}
+
+#[Emperor.GetName] accepts our petition!
+country_event = {
+    id = wotl_misc.11
+    title = wotl_misc.11.t
+    desc = wotl_misc.11.desc
+    picture = HRE_eventPicture
+
+    is_triggered_only = yes
+
+    #Glory to us!
+    option = {
+        name = wotl_misc.11.a
+        emperor = {
+            add_country_modifier = {
+                name = wotl_misc_10_emperor
+                duration = 3650
+            }
+        }
+        ROOT = {
+            add_country_modifier = {
+                name = wotl_misc_10_root
+                duration = 3650
+            }
+            set_in_empire = yes
+        }
     }
 }

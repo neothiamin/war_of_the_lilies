@@ -1,0 +1,10 @@
+
+is_french_breakaway_state = {
+    OR = {
+        tag = CHP
+        tag = ORL
+        tag = DAU
+        tag = TOU
+        tag = AUV
+    }
+}

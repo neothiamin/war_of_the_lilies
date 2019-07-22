@@ -15,8 +15,8 @@ add_historical_rival = ENG
         dynasty = "de Tolosa"
         birth_date = 1388.10.5
         adm = 4
-        dip = 1
-        mil = 3
+        dip = 3
+        mil = 1
     }
     add_ruler_personality = zealot_personality
     add_ruler_personality = infertile_personality

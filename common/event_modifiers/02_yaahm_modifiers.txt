@@ -132,3 +132,10 @@ wotl_orl_consolidated_power = {
     election_cycle = 2
     republican_tradition = -2
 }
+
+wotl_misc_10_emperor = {
+    tax_income = 0.5
+}
+wotl_misc_10_root = {
+    tax_income = -0.5
+}

@@ -9,9 +9,6 @@ bookmark =
 	
 	country = ENG
 	country = FRA
-	country = BUR
-	country = PRO
-	country = FLA
 
 	easy_country = ENG
 	easy_country = FRA

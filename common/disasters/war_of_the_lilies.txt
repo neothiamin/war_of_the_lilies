@@ -1,0 +1,63 @@
+war_of_the_lilies_disaster = {
+    potential = {
+        tag = ENG
+        religion_group = christian
+        NOT = {
+            has_global_flag = wotl_war_over
+        }
+        normal_or_historical_nations = yes
+    }
+    
+    can_start = {
+        current_age = age_of_discovery
+        OR = {
+            FRA = {
+                is_subject_of = ENG
+            }
+            owns_core_province = 183
+        }
+        has_any_disaster = no
+    }
+
+    can_stop = {
+        has_any_disaster = yes
+    }
+
+    can_end = {
+        custom_trigger_tooltip = {
+            tooltip = wotl_disaster_can_end
+            OR = {
+                FRA = {
+                    has_country_flag = wotl_fra_won
+                }
+                has_global_flag = wotl_war_over
+            }
+        }
+    }
+
+    progress = {
+        modifier = {
+            factor = 0.5
+            OR = {
+                heir_culture = english
+                ruler_culture = english
+            }
+        }
+        modifier = {
+            factor = 0.25
+            OR = {
+                heir_culture = normand
+                ruler_culture = normand
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = { heir_culture = normand }
+            NOT = { heir_culture = english }
+            NOT = { heir_culture = cosmopolitan_french }
+        }
+    }
+
+    on_start = wotl_proper.1
+    on_end = wotl_proper.100
+}

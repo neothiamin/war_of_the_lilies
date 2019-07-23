@@ -1,0 +1,131 @@
+###########################################
+# Events for the actual War of the Lilies #
+###########################################
+
+namespace = wotl_proper
+
+#War of the Lilies!
+country_event = {
+    id = wotl_proper.1
+    title = wotl_proper.1.t
+    desc = wotl_proper.1.desc
+    picture = ANGRY_MOB_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+        religion_group = christian
+        NOT = {
+            has_global_flag = wotl_war_over
+        }
+        normal_or_historical_nations = yes
+    }
+
+    #Dig in! We will win this!
+    option = {
+        name = wotl_proper.1.a
+        set_global_flag = wotl_war_active
+        add_stability = -1
+        FRA = {
+            country_event = {
+                id = wotl_proper.2
+            }
+        }
+    }
+}
+
+#War of the Lilies! (French)
+country_event = {
+    id = wotl_proper.2
+    title = wotl_proper.2.t
+    desc = wotl_proper.2.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    #Aux armes! Down with the English! France for the French!
+    option = {
+        name = wotl_proper.2.a
+        declare_war_with_cb = {
+            casus_belli = cb_independence_war
+            who = ENG
+        }
+        if = {
+            limit = {
+                exists = ORL
+                ORL = {
+                    has_country_flag = wotl_orl_found_heir
+                }
+            }
+            ORL = {
+                country_event = {
+                    id = wotl_proper.3
+                }
+            }
+        }
+    }
+}
+
+#[ORL.Monarch.GetName], King of France?
+country_event = {
+    id = wotl_proper.3
+    title = wotl_proper.3.t
+    desc = wotl_proper.3.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    #Approach the rebels and propose that [Root.Monarch.GetName] take the throne.
+    option = {
+        name = wotl_proper.3.a
+        FRA = {
+            country_event = {
+                id = wotl_proper.4
+            }
+        }
+    }
+
+}
+
+#[ORL.Monarch.GetName], King of France?
+country_event = {
+    id = wotl_proper.4
+    title = wotl_proper.4.t
+    desc = wotl_proper.4.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    #Accept.
+    option = {
+        name = wotl_proper.4.a
+        ai_chance = {
+            factor = 75
+        }
+        hidden_effect = {
+            ORL = {
+                exile_ruler_as = wotl_orl_king_of_france
+            }
+        }
+        set_ruler = wotl_orl_king_of_france
+        create_union = ORL
+    }
+
+    #Decline.
+    option = {
+        name = wotl_proper.4.b
+        ORL = {
+            add_prestige = -10
+        }
+    }
+
+}

@@ -260,6 +260,7 @@ country_event = {
         ai_chance = {
             factor = 95
         }
+        set_country_flag = wotl_orl_found_heir
         change_government = monarchy
         set_government_rank = 2
         hidden_effect = {

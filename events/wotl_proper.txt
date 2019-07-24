@@ -65,6 +65,8 @@ country_event = {
             ORL = {
                 country_event = {
                     id = wotl_proper.3
+                    days = 15
+                    random = 5
                 }
             }
         }
@@ -88,6 +90,8 @@ country_event = {
         FRA = {
             country_event = {
                 id = wotl_proper.4
+                days = 15
+                random = 5
             }
         }
     }
@@ -130,6 +134,8 @@ country_event = {
             ORL = {
                 country_event = {
                     id = wotl_proper.5
+                    days = 15
+                    random = 5
                 }
             }
         }
@@ -189,11 +195,77 @@ country_event = {
     option = {
         name = wotl_proper.6.a
         vassalize = FROM
+        ai_chance = {
+            factor = 75
+        }
     }
 
     #They are irredeemable.
     option = {
         name = wotl_proper.6.b
         add_prestige = 5
+        ai_chance = {
+            factor = 25
+        }
+    }
+}
+
+#Walloon Support!
+country_event = {
+    id = wotl_proper.7
+    title = wotl_proper.7.t
+    desc = wotl_proper.7.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    trigger = {
+        tag = FRA
+        has_global_flag = wotl_war_active
+        any_owned_province = {
+            culture = wallonian
+            controlled_by = ROOT
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 18
+    }
+
+    #We welcome them as brothers in arms!
+    option = {
+        name = wotl_proper.7.a
+        set_country_flag = wotl_fra_walloon_support_yes
+        custom_tooltip = wotl_proper.7.a.tt
+        set_saved_name = {
+            key = fra_walloon_general
+            type = advisor
+            scope = HAI
+        }
+        random_owned_province = {
+            limit = {
+                culture = wallonian
+                controlled_by = ROOT
+            }
+            infantry = 5
+            cavalry = 3
+        }
+        define_general = {
+            shock = 3
+            fire = 1
+            manuever = 2
+            siege = 1
+            trait = master_of_arms_personality
+            name = fra_walloon_general
+        }
+    }
+
+    #We would love to, but we don't need their help.
+    option = {
+        name = wotl_proper.7.b
+        every_owned_province = {
+            limit = {
+                culture = wallonian
+            }
+            add_unrest = 4
+        }
     }
 }

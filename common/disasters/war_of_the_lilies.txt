@@ -11,11 +11,8 @@ war_of_the_lilies_disaster = {
     
     can_start = {
         current_age = age_of_discovery
-        OR = {
-            FRA = {
-                is_subject_of = ENG
-            }
-            owns_core_province = 183
+        FRA = {
+            is_subject_of = ENG
         }
         has_any_disaster = no
     }

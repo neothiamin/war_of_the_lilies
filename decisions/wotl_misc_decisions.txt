@@ -8,6 +8,9 @@ country_decisions = {
             FRA = {
                 is_subject = no
             }
+            NOT = {
+                has_country_flag = wotl_attempted_to_rejoin_france
+            }
         }
 
         allow = {
@@ -23,6 +26,7 @@ country_decisions = {
         }
 
         effect = {
+            set_country_flag = wotl_attempted_to_rejoin_france
             custom_tooltip = wotl_french_minor_join_france.tt
             hidden_effect = {
                 FRA = {

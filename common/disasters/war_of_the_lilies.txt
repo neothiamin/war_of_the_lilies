@@ -33,21 +33,26 @@ war_of_the_lilies_disaster = {
         }
     }
 
+    modifier = {
+        diplomatic_reputation = -1
+        manpower_recovery_speed = -0.1
+    }
+
     progress = {
         modifier = {
-            factor = 0.75
+            factor = 0.25
             heir_culture = english
         }
         modifier = {
-            factor = 0.5
+            factor = 0.25
             ruler_culture = english
         }
         modifier = {
-            factor = 0.5
+            factor = 0.15
             heir_culture = normand
         }
         modifier = {
-            factor = 0.25            
+            factor = 0.15            
             ruler_culture = normand
         }
         modifier = {
@@ -60,4 +65,17 @@ war_of_the_lilies_disaster = {
 
     on_start = wotl_proper.1
     on_end = wotl_proper.100
+
+    on_monthly = {
+        events = {
+
+        }
+        random_events = {
+            1000 = 0
+            100 = wotl_proper.8
+            100 = wotl_proper.9
+            50 = wotl_proper.10
+            50 = wotl_proper.11
+        }
+    }
 }

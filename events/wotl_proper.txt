@@ -210,7 +210,7 @@ country_event = {
     }
 }
 
-#Walloon Support!
+#FRA - Walloon Support!
 country_event = {
     id = wotl_proper.7
     title = wotl_proper.7.t
@@ -238,7 +238,6 @@ country_event = {
         set_saved_name = {
             key = fra_walloon_general
             type = advisor
-            scope = HAI
         }
         random_owned_province = {
             limit = {
@@ -266,6 +265,184 @@ country_event = {
                 culture = wallonian
             }
             add_unrest = 4
+        }
+    }
+}
+
+#ENG - Support Among the Normans
+country_event = {
+    id = wotl_proper.8
+    title = wotl_proper.8.t
+    desc = wotl_proper.8.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+        has_disaster = war_of_the_lilies_disaster
+        NOT = {
+            has_country_flag = wotl_eng_norman_support
+            has_country_flag = wotl_eng_norman_rebellion
+        }
+    }
+
+    immediate = {
+        set_country_flag = wotl_eng_norman_support
+    }
+
+    #Glory to us!
+    option = {
+        name = wotl_proper.8.a
+        random_owned_province = {
+            limit = {
+                area = normandy_area
+                controlled_by = ROOT
+            }
+            infantry = 3
+            cavalry = 1
+        }
+        normandy_area = {
+            add_province_modifier = {
+                name = wotl_eng_norman_support_effect
+                duration = 1825
+            }
+        }
+    }    
+}
+
+#ENG - Support Among the Gascons
+country_event = {
+    id = wotl_proper.9
+    title = wotl_proper.9.t
+    desc = wotl_proper.9.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+        has_disaster = war_of_the_lilies_disaster
+        NOT = {
+            has_country_flag = wotl_eng_gascon_support
+            has_country_flag = wotl_eng_gascon_rebellion
+        }
+    }
+
+    immediate = {
+        set_country_flag = wotl_eng_gascon_support
+    }
+
+    #Glory to us!
+    option = {
+        name = wotl_proper.9.a
+        random_owned_province = {
+            limit = {
+                area = pyrenees_area
+                controlled_by = ROOT
+            }
+            infantry = 3
+            cavalry = 1
+        }
+        pyrenees_area = {
+            add_province_modifier = {
+                name = wotl_eng_gascon_support_effect
+                duration = 1825
+            }
+        }
+    }    
+}
+
+#ENG - Rebellion in Normandy!
+country_event = {
+    id = wotl_proper.10
+    title = wotl_proper.10.t
+    desc = wotl_proper.10.desc
+    picture = BAD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+        has_disaster = war_of_the_lilies_disaster        
+        NOT = {
+            has_country_flag = wotl_eng_norman_support
+            has_country_flag = wotl_eng_norman_rebellion
+        }
+    }
+
+    immediate = {
+        set_country_flag = wotl_eng_norman_rebellion
+    }
+
+    #Damn them!
+    option = {
+        name = wotl_proper.10.a
+        random_owned_province = {
+            limit = {
+                culture = normand
+            }
+            spawn_rebels = {
+                type = nationalist_rebels
+                size = 1
+            }
+        }
+        normandy_area = {
+            add_province_modifier = {
+                name = wotl_eng_norman_rebellion_effect
+                duration = 1825
+            }
+        }
+    }    
+}
+
+#ENG - Rebellion in the Aquitaine!
+country_event = {
+    id = wotl_proper.11
+    title = wotl_proper.11.t
+    desc = wotl_proper.11.desc
+    picture = BAD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+        has_disaster = war_of_the_lilies_disaster        
+        NOT = {
+            has_country_flag = wotl_eng_gascon_support
+            has_country_flag = wotl_eng_gascon_rebellion
+        }
+    }
+
+    immediate = {
+        set_country_flag = wotl_eng_gascon_rebellion
+    }
+
+    #Damn them!
+    option = {
+        name = wotl_proper.11.a
+        random_owned_province = {
+            limit = {
+                culture = gascon
+            }
+            spawn_rebels = {
+                type = nationalist_rebels
+                size = 1
+            }
+        }
+        pyrenees_area = {
+            add_province_modifier = {
+                name = wotl_eng_gascon_rebellion_effect
+                duration = 1825
+            }
         }
     }
 }

@@ -139,3 +139,20 @@ wotl_misc_10_emperor = {
 wotl_misc_10_root = {
     tax_income = -0.5
 }
+
+wotl_eng_norman_support_effect = { 
+    local_unrest = -4
+    local_manpower_modifier = 0.1
+}
+wotl_eng_gascon_support_effect = { 
+    local_unrest = -4
+    local_manpower_modifier = 0.1
+}
+wotl_eng_norman_rebellion_effect = { 
+    local_unrest = 4
+    local_manpower_modifier = -0.1
+}
+wotl_eng_gascon_rebellion_effect = { 
+    local_unrest = 4
+    local_manpower_modifier = -0.1
+}

@@ -6,36 +6,32 @@ namespace = wotl_eng
 
 #The State of Affairs
 #This event is a brief rundown of the ongoing strife in France and the possibility of rebellion that may culminate in the War of the Lilies.
-#country_event = {
-#
-#    id = wotl_eng.1
-#    title = wotl_eng.1.t
-#    desc = wotl_eng.1.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    fire_only_once = yes
-#
-#    trigger = {
-#        tag = ENG
-#        NOT = {
-#            is_year = 1445
-#        }
-#        owns_core_province = 183
-#    }
-#
-#    mean_time_to_happen = {
-#        months = 2
-#    }
-#
-#    immediate = {
-#        set_country_flag = wotl_eng_state_of_affairs_happened
-#    }
-#
-#    #God is with us.
-#    option = {
-#        name = wotl_eng.1.a
-#    }
-#}
+country_event = {
+
+    id = wotl_eng.1
+    title = wotl_eng.1.t
+    desc = wotl_eng.1.desc
+    picture = LIBERUM_VETO_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+    }
+
+    mean_time_to_happen = {
+        months = 2
+    }
+
+    immediate = {
+        set_country_flag = wotl_eng_state_of_affairs_happened
+    }
+
+    #God is with us.
+    option = {
+        name = wotl_eng.1.a
+    }
+}
 
 #Heir's Culture
 #Had to do some hacky stuff for this one since the on_action doesn't work. :rage:

@@ -1,0 +1,41 @@
+country_decisions = {
+
+    wotl_french_minor_join_france = {
+        major = yes
+        potential = {
+            has_global_flag = wotl_war_active
+            is_french_breakaway_state = yes
+            FRA = {
+                is_subject = no
+            }
+        }
+
+        allow = {
+            OR = {
+                is_subject = no
+                is_subject_of_type = vassal
+            }
+            reverse_has_opinion = {
+                who = FRA
+                value = 100
+            }
+            is_part_of_hre = no
+        }
+
+        effect = {
+            custom_tooltip = wotl_french_minor_join_france.tt
+            hidden_effect = {
+                FRA = {
+                    country_event = {
+                        id = wotl_proper.6
+                        days = 10
+                    }
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        ai_importance = 20
+    }
+}

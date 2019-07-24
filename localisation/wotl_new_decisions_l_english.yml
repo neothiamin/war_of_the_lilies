@@ -9,3 +9,6 @@
  wotl_eng_enlist_general_desc:0 "The situation in France regarding the rampant brigandry has reached the point where we alone are unable to crack down on it. Perhaps we should create a force of local military men to assist us?"
  wotl_eng_enlist_general.tt:0 "French soldiers, or \"Caporals\", will be hired from among the lower ranks to lead the fight against brigandry."
  wotl_eng_no_more_brigands:0 "Brigands will stop appearing in our French provinces."
+ wotl_french_minor_join_france_title:0 "Attempt to Rejoin France"
+ wotl_french_minor_join_france_desc:0 "With the French throne once again freestanding, perhaps we ought to rejoin the French fold."
+ wotl_french_minor_join_france.tt:0 "We offer a promise of fealty to France."

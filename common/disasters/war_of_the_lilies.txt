@@ -6,6 +6,7 @@ war_of_the_lilies_disaster = {
             has_global_flag = wotl_war_over
         }
         normal_or_historical_nations = yes
+        has_country_flag = wotl_eng_state_of_affairs_happened
     }
     
     can_start = {
@@ -28,27 +29,29 @@ war_of_the_lilies_disaster = {
             tooltip = wotl_disaster_can_end
             OR = {
                 FRA = {
-                    has_country_flag = wotl_fra_won
+                    has_country_flag = wotl_fra_won_war
                 }
-                has_global_flag = wotl_war_over
+                has_country_flag = wotl_eng_won_war
             }
         }
     }
 
     progress = {
         modifier = {
-            factor = 0.5
-            OR = {
-                heir_culture = english
-                ruler_culture = english
-            }
+            factor = 0.75
+            heir_culture = english
         }
         modifier = {
-            factor = 0.25
-            OR = {
-                heir_culture = normand
-                ruler_culture = normand
-            }
+            factor = 0.5
+            ruler_culture = english
+        }
+        modifier = {
+            factor = 0.5
+            heir_culture = normand
+        }
+        modifier = {
+            factor = 0.25            
+            ruler_culture = normand
         }
         modifier = {
             factor = 0.75

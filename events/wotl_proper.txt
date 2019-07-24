@@ -116,8 +116,23 @@ country_event = {
                 exile_ruler_as = wotl_orl_king_of_france
             }
         }
+        change_adm = 1
+        change_dip = 1
+        change_mil = 1
         set_ruler = wotl_orl_king_of_france
         create_union = ORL
+        if = {
+            limit = {
+                ORL = {
+                    ai = no
+                }
+            }
+            ORL = {
+                country_event = {
+                    id = wotl_proper.5
+                }
+            }
+        }
     }
 
     #Decline.
@@ -128,4 +143,57 @@ country_event = {
         }
     }
 
+}
+
+#[ORL.Monarch.GetName], King of France?
+country_event = {
+    id = wotl_proper.5
+    title = wotl_proper.5.t
+    desc = wotl_proper.5.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+
+    trigger = {
+        tag = ORL
+        ai = no
+    }
+
+    #Vive le France!
+    option = {
+        name = wotl_proper.5.a
+        change_tag = FRA
+    }
+
+    #We are fine as is.
+    option = {
+        name = wotl_proper.5.b
+    }
+}
+
+#[From.GetName] Offers Vassalage
+country_event = {
+    id = wotl_proper.6
+    title = wotl_proper.6.t
+    desc = wotl_proper.6.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+
+    trigger = {
+        tag = FRA
+        has_global_flag = wotl_war_active
+    }
+
+    #Yes.
+    option = {
+        name = wotl_proper.6.a
+        vassalize = FROM
+    }
+
+    #They are irredeemable.
+    option = {
+        name = wotl_proper.6.b
+        add_prestige = 5
+    }
 }

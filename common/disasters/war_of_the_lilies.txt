@@ -6,7 +6,6 @@ war_of_the_lilies_disaster = {
             has_global_flag = wotl_war_over
         }
         normal_or_historical_nations = yes
-        has_country_flag = wotl_eng_state_of_affairs_happened
     }
     
     can_start = {
@@ -15,6 +14,7 @@ war_of_the_lilies_disaster = {
             is_subject_of = ENG
         }
         has_any_disaster = no
+        is_at_war = no
     }
 
     can_stop = {
@@ -40,15 +40,17 @@ war_of_the_lilies_disaster = {
 
     progress = {
         modifier = {
-            factor = 0.25
+            factor = 0.3
+            has_heir = yes
             heir_culture = english
         }
         modifier = {
-            factor = 0.25
+            factor = 0.3
             ruler_culture = english
         }
         modifier = {
             factor = 0.15
+            has_heir = yes
             heir_culture = normand
         }
         modifier = {
@@ -57,9 +59,35 @@ war_of_the_lilies_disaster = {
         }
         modifier = {
             factor = 0.75
+            has_heir = yes
             NOT = { heir_culture = normand }
             NOT = { heir_culture = english }
             NOT = { heir_culture = cosmopolitan_french }
+        }
+        modifier = {
+            factor = 0.15
+            exists = CHP
+        }
+        modifier = {
+            factor = 0.15
+            exists = ORL
+        }
+        modifier = {
+            factor = 0.2
+            FRA = {
+                liberty_desire = 30
+            }
+        }
+        modifier = {
+            factor = 0.5
+            FRA = {
+                NOT = {
+                    has_opinion = {
+                        who = ROOT
+                        value = 100
+                    }
+                }
+            }
         }
     }
 

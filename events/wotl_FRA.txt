@@ -4,18 +4,55 @@
 
 namespace = wotl_fra
 
-#country_event = {
-#    id = wotl_fra.1
-#    title = wotl_fra.1.t
-#    desc = wotl_fra.1.desc
-#    picture = COURT_eventPicture
-#
-#    fire_only_once = yes
-#
-#    trigger = {
-#        tag = FRA
-#        is_subject_of = ENG
-#    }
-#
-#    
-#}
+#Agitation in Poitou
+country_event = {
+    id = wotl_fra.1
+    title = wotl_fra.1.t
+    desc = wotl_fra.1.desc
+    picture = COURT_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = FRA
+        is_subject_of = ENG
+        any_owned_province = {
+            area = poitou_area
+        }
+        NOT = {
+            ENG = {
+                has_disaster = war_of_the_lilies_disaster
+            }
+            has_global_flag = wotl_war_over
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 60
+    }
+
+    #Crack down on this.
+    option = {
+        name = wotl_fra.1.a
+        random_owned_province = {
+            limit = {
+                area = poitou_area
+            }
+            spawn_rebels = {
+                size = 2
+                type = noble_rebels
+            }
+        }
+    }
+
+    #They have a point, you know.
+    option = {
+        name = wotl_fra.1.b
+        add_prestige = -5
+        add_liberty_desire = 10
+        add_opinion = {
+            who = ENG
+            modifier = wotl_fra_agitation
+        }
+    }
+}

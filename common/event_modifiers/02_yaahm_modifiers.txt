@@ -144,15 +144,24 @@ wotl_eng_norman_support_effect = {
     local_unrest = -4
     local_manpower_modifier = 0.1
 }
+
 wotl_eng_gascon_support_effect = { 
     local_unrest = -4
     local_manpower_modifier = 0.1
 }
+
 wotl_eng_norman_rebellion_effect = { 
     local_unrest = 4
     local_manpower_modifier = -0.1
 }
+
 wotl_eng_gascon_rebellion_effect = { 
     local_unrest = 4
     local_manpower_modifier = -0.1
+}
+
+wotl_fra_independence = {
+    war_exhaustion_cost = -0.25
+    global_unrest = -2
+    land_morale = 0.075
 }

@@ -29,9 +29,18 @@ country_event = {
         name = wotl_proper.1.a
         set_global_flag = wotl_war_active
         add_stability = -1
-        FRA = {
-            country_event = {
-                id = wotl_proper.2
+        if = {
+            limit = {
+                FRA = {
+                    NOT = {
+                        war_with = ENG
+                    }
+                }
+            }
+            FRA = {
+                country_event = {
+                    id = wotl_proper.2
+                }
             }
         }
     }
@@ -55,6 +64,10 @@ country_event = {
             casus_belli = cb_independence_war
             who = ENG
         }
+        add_country_modifier = {
+            name = wotl_fra_independence
+            duration = 3650
+        }
         if = {
             limit = {
                 exists = ORL
@@ -69,6 +82,19 @@ country_event = {
                     random = 5
                 }
             }
+        }
+    }
+
+    #We must not provoke our overlord.
+    option = {
+        name = wotl_proper.2.b
+        trigger = {
+            ai = no
+        }
+        add_prestige = -5
+        custom_tooltip = wotl_proper.2.b.tt
+        ENG = {
+            set_country_flag = wotl_eng_won_war
         }
     }
 }
@@ -442,6 +468,59 @@ country_event = {
             add_province_modifier = {
                 name = wotl_eng_gascon_rebellion_effect
                 duration = 1825
+            }
+        }
+    }
+}
+
+#If France declares an independence war before the WOTL happens, this event makes the disaster fire for England
+country_event = {
+    id = wotl_proper.12
+    title = wotl_proper.2.t
+    desc = wotl_proper.2.desc
+    picture = ANGRY_MOB_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = FRA
+        war_with = ENG
+        NOT = {
+            has_global_flag = wotl_war_active
+            has_global_flag = wotl_war_over
+        }
+    }
+
+    mean_time_to_happen = {
+        days = 5
+    }
+
+    #Aux armes! Down with the English! France for the French!
+    option = {
+        name = wotl_proper.2.a
+        ENG = {
+            add_disaster_progress = {
+                value = 100
+                disaster = war_of_the_lilies_disaster
+            }
+        }
+        add_country_modifier = {
+            name = wotl_fra_independence
+            duration = 3650
+        }
+        if = {
+            limit = {
+                exists = ORL
+                ORL = {
+                    has_country_flag = wotl_orl_found_heir
+                }
+            }
+            ORL = {
+                country_event = {
+                    id = wotl_proper.3
+                    days = 15
+                    random = 5
+                }
             }
         }
     }

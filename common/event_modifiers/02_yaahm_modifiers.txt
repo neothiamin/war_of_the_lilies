@@ -101,7 +101,7 @@ wotl_eng_23_general_french_revolt = {
 }
 
 wotl_fra_rebellious = {
-    liberty_desire = 30
+    liberty_desire = 40
 }
 
 wotl_crowned_in_reims = {
@@ -136,6 +136,7 @@ wotl_orl_consolidated_power = {
 wotl_misc_10_emperor = {
     tax_income = 0.5
 }
+
 wotl_misc_10_root = {
     tax_income = -0.5
 }

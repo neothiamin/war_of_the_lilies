@@ -256,22 +256,32 @@ country_event = {
         months = 18
     }
 
+    immediate = {
+        set_saved_name = {
+            key = fra_walloon_general
+            type = advisor
+            scope = ROOT
+        }
+    }
+
     #We welcome them as brothers in arms!
     option = {
         name = wotl_proper.7.a
         set_country_flag = wotl_fra_walloon_support_yes
         custom_tooltip = wotl_proper.7.a.tt
-        set_saved_name = {
-            key = fra_walloon_general
-            type = advisor
-        }
         random_owned_province = {
             limit = {
                 culture = wallonian
                 controlled_by = ROOT
             }
-            infantry = 5
-            cavalry = 3
+            infantry = THIS
+            infantry = THIS
+            infantry = THIS
+            infantry = THIS
+            infantry = THIS
+            cavalry = THIS
+            cavalry = THIS
+            cavalry = THIS
         }
         define_general = {
             shock = 3
@@ -327,8 +337,10 @@ country_event = {
                 area = normandy_area
                 controlled_by = ROOT
             }
-            infantry = 3
-            cavalry = 1
+            infantry = THIS
+            infantry = THIS
+            infantry = THIS
+            cavalry = THIS
         }
         normandy_area = {
             add_province_modifier = {
@@ -371,8 +383,10 @@ country_event = {
                 area = pyrenees_area
                 controlled_by = ROOT
             }
-            infantry = 3
-            cavalry = 1
+            infantry = THIS
+            infantry = THIS
+            infantry = THIS
+            cavalry = THIS
         }
         pyrenees_area = {
             add_province_modifier = {

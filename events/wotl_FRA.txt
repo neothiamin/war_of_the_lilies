@@ -34,6 +34,9 @@ country_event = {
     #Crack down on this.
     option = {
         name = wotl_fra.1.a
+        ai_chance = {
+            factor = 45
+        }
         random_owned_province = {
             limit = {
                 area = poitou_area
@@ -48,6 +51,9 @@ country_event = {
     #They have a point, you know.
     option = {
         name = wotl_fra.1.b
+        ai_chance = {
+            factor = 55
+        }
         add_prestige = -5
         add_liberty_desire = 10
         add_opinion = {

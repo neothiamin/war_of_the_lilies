@@ -40,22 +40,24 @@ war_of_the_lilies_disaster = {
 
     progress = {
         modifier = {
-            factor = 0.3
-            has_heir = yes
-            heir_culture = english
+            factor = 0.6
+            OR = {
+                AND = {
+                    has_heir = yes
+                    heir_culture = english
+                }
+                ruler_culture = english
+            }
         }
         modifier = {
-            factor = 0.3
-            ruler_culture = english
-        }
-        modifier = {
-            factor = 0.15
-            has_heir = yes
-            heir_culture = normand
-        }
-        modifier = {
-            factor = 0.15            
-            ruler_culture = normand
+            factor = 0.4
+            OR = {
+                AND = {
+                    has_heir = yes
+                    heir_culture = normand
+                }
+                ruler_culture = normand
+            }
         }
         modifier = {
             factor = 0.75
@@ -65,17 +67,17 @@ war_of_the_lilies_disaster = {
             NOT = { heir_culture = cosmopolitan_french }
         }
         modifier = {
-            factor = 0.15
+            factor = 0.2
             exists = CHP
         }
         modifier = {
-            factor = 0.15
+            factor = 0.2
             exists = ORL
         }
         modifier = {
             factor = 0.2
             FRA = {
-                liberty_desire = 30
+                liberty_desire = 40
             }
         }
         modifier = {
@@ -83,12 +85,49 @@ war_of_the_lilies_disaster = {
             FRA = {
                 NOT = {
                     has_opinion = {
-                        who = ROOT
+                        who = ENG
                         value = 100
                     }
                 }
             }
         }
+        modifier = {
+            factor = -0.2
+            NOT = {
+                FRA = {
+                    liberty_desire = 20
+                }
+            }
+        }
+        #modifier = {
+        #    factor = -0.4
+        #    FRA = {
+        #        has_opinion = {
+        #            who = ENG
+        #            value = 175
+        #        }
+        #    }
+        #}
+        modifier = {
+            factor = 0.2
+            custom_trigger_tooltip = {
+                tooltip = wotl_eng_no_concessions
+                has_country_flag = wotl_eng_concessions
+                NOT = {
+                    has_country_flag = wotl_eng_appeased_fra
+                }
+            }
+        }
+        modifier = {
+            factor = 0.2
+            custom_trigger_tooltip = {
+                tooltip = wotl_fra_has_scars
+                FRA = {
+                    has_country_modifier = wotl_fra_rebellious
+                }
+            }
+        }
+
     }
 
     on_start = wotl_proper.1

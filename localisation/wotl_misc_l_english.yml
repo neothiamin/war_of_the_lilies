@@ -10,3 +10,5 @@
  war_of_the_lilies_disaster:0 "War of the Lilies"
  wotl_disaster_can_end:0 "Either English rule has been cemented, or France has defeated the English and solidified their independence."
  wotl_revolts_begun.tt:0 "Rebellions in France have begun."
+ wotl_eng_no_concessions:0 "Spurned French request for concessions."
+ wotl_fra_has_scars:0 "France has the §YScars of War§! modifier."

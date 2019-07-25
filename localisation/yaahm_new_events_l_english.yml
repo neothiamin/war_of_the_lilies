@@ -347,3 +347,9 @@
  wotl_fra.1.desc:0 "The people of Poitou have a history of being fairweather friends. They seem now to be unhappy, discontent with being ruled by a foreign ruler."
  wotl_fra.1.a:0 "Crack down on this."
  wotl_fra.1.b:0 "You know, they have a point..."
+
+ wotl_eng.27.t:0 "Concessions to France?"
+ wotl_eng.27.desc:0 "With diplomacy between our government and many of the local French lords breaking down, it is clear that if we do not act quickly, war will be here sooner than we think. The French are getting uppity, my [Root.Monarch.GetName]..."
+ wotl_eng.27.a:0 "Grant them some of our possessions."
+ wotl_eng.27.b:0 "The Gauls are weak. We have this under control."
+ wotl_eng.27.c:0 "Invest in their lands."

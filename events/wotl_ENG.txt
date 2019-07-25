@@ -1428,3 +1428,113 @@ country_event = {
 #        has_country_flag = 
 #    }
 #}
+
+#Concessions to France
+country_event = {
+    id = wotl_eng.27
+    title = wotl_eng.27.t
+    desc = wotl_eng.27.desc
+    picture = OVEREXTENSION_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+        has_disaster_progress = {
+            disaster = war_of_the_lilies_disaster
+            value = 75
+        }
+        FRA = {
+            is_subject_of = ENG
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 30
+    }
+
+    immediate = {
+        set_country_flag = wotl_eng_concessions
+    }
+
+    #Give them control of some land, quick!
+    option = {
+        name = wotl_eng.27.a
+        ai_chance = {
+            factor = 20
+        }
+        add_disaster_progress = {
+            disaster = war_of_the_lilies_disaster
+            value = -10
+        }
+        set_country_flag = wotl_eng_appeased_fra
+        if = {
+            limit = {
+                owns_core_province = 194
+            }
+            194 = {
+                cede_province = FRA
+            }
+        }
+        if = {
+            limit = {
+                owns_core_province = 4112
+            }
+            4112 = {
+                cede_province = FRA
+            }
+        }
+        if = {
+            limit = {
+                owns_core_province = 177
+            }
+            177 = {
+                cede_province = FRA
+            }
+        }
+        FRA = {            
+            add_liberty_desire = -10
+        }
+    }
+
+    #All will be well. We have the Gauls under control.
+    option = {
+        name = wotl_eng.27.b
+        ai_chance = {
+            factor = 60
+        }
+        add_disaster_progress = {
+            disaster = war_of_the_lilies_disaster
+            value = 5
+        }
+    }
+
+    #Invest in their lands.
+    option = {
+        name = wotl_eng.27.c
+        add_adm_power = -75
+        add_dip_power = -75
+        add_mil_power = -75
+        ai_chance = {
+            factor = 20
+        }
+        add_disaster_progress = {
+            disaster = war_of_the_lilies_disaster
+            value = -10
+        }
+        set_country_flag = wotl_eng_appeased_fra
+        FRA = {
+            random_owned_province = {
+                add_base_manpower = 1
+            }
+            random_owned_province = {
+                add_base_tax = 1
+            }
+            random_owned_province = {
+                add_base_production = 1
+            }
+            add_liberty_desire = -10
+        }
+    }
+
+}

@@ -68,7 +68,7 @@ country_event = {
         tag = ORL
         is_subject = no
         has_reform = orl_council_reform
-        is_year = 1440
+        is_year = 1438
     }
 
     immediate = {
@@ -251,7 +251,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 300
+        months = 200
     }
 
     #Crown him, quick!

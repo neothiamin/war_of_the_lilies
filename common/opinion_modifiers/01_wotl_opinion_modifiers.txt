@@ -37,3 +37,7 @@ wotl_fra_agitation = {
     opinion = -50
     yearly_decay = 10
 }
+
+wotl_france_minor_admiration = {
+    opinion = 50
+}

@@ -21,10 +21,20 @@
 #}
 
 # country
-# root = loser country, from = winner country
-on_war_lost = {
-	ROOT = { country_event = { id = flavor_cri.6 } }
+# root = winning country, from = loser country
+on_war_won = {
+	FROM = { country_event = { id = flavor_cri.6 } }
 	ROOT = { country_event = { id = tributary_events.32 } }
+	if = {
+		limit = {
+			has_global_flag = wotl_war_active
+			OR = {
+				tag = ENG
+				tag = FRA
+			}
+		}
+		ROOT = { country_event = { id = wotl_proper.99 } }
+	}
 }
 
 # country

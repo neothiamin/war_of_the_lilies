@@ -1536,5 +1536,36 @@ country_event = {
             add_liberty_desire = -10
         }
     }
+}
 
+#France fanning flames of war!
+
+country_event = {
+    id = wotl_eng.28
+    title = wotl_eng.28.t
+    desc = wotl_eng.28.desc
+    picture = BAD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+        has_disaster_progress = {
+            disaster = war_of_the_lilies_disaster
+            value = 80
+        }
+    }
+
+    #Egads!
+    option = {
+        name = wotl_proper.28.a
+        tooltip = {
+            add_disaster_progress = {
+                value = 5
+                disaster = war_of_the_lilies_disaster
+            }
+        }
+    }
 }

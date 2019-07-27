@@ -62,4 +62,12 @@
  wotl_france_minor_admiration:0 "Cultural Brothers"
  wotl_won_wotl:0 "Legitimate Rulers of France"
  desc_wotl_won_wotl:0 "Our victory in the War of the Lilies has emboldened our people as the effort to rebuild begins."
+ wotl_eng_integrating_france_effect:0 "Integration of France"
+ desc_wotl_eng_integrating_france_effect:0 "Our bureaucracy has begun the slow and steady process of integrating France into our realm properly."
+ wotl_fra_new_nobles:0 "New Nobles"
+ desc_wotl_fra_new_nobles:0 "England has appointed new nobles to rule our various duchies and counties."
+ wotl_fra_equal_to_eng:0 "Anglo-French Equality"
+ wotl_eng_integrating_area:0 "Integration Underway"
+ wotl_eng_freed_us:0 "English Sympathies"
+ desc_wotl_eng_integrating_area:0 "This province is being actively integrated into the English domain. Bureaucracts speaking English and English flags are common sights."
 

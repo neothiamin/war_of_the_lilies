@@ -1569,3 +1569,188 @@ country_event = {
         }
     }
 }
+
+#Post-WOTL: Fate of France
+country_event = {
+    id = wotl_eng.29
+    title = wotl_eng.29.t
+    desc = wotl_eng.29.desc
+    picture = COURT_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+        has_country_flag = wotl_eng_won_war
+        has_global_flag = wotl_war_over
+        FRA = {
+            is_subject_of = ROOT
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 30
+    }
+
+    #Begin the process of integration.
+    option = {
+        name = wotl_eng.29.a
+        set_country_flag = wotl_eng_integrating_france
+        add_country_modifier = {
+            name = wotl_eng_integrating_france_effect
+            duration = 3650
+        }
+        FRA = {
+            random_owned_province = {
+                limit = {
+                    NOT = {
+                        area = ile_de_france_area
+                    }
+                    any_neighbor_province = {
+                        owned_by = ENG
+                    }
+                }
+                every_province_in_state = {
+                    add_province_modifier = {
+                        name = wotl_eng_integrating_area
+                        duration = -1
+                    }
+                    set_province_flag = wotl_integration_in_progress
+                }
+            }
+        }
+    }
+
+    #Appoint new nobles to local French territories.
+    option = {
+        name = wotl_eng.29.b
+        france_region = {
+            limit = {
+                owned_by = FRA
+            }
+            add_unrest = 8
+        }
+        FRA = {
+            add_country_modifier = {
+                name = wotl_fra_new_nobles
+                duration = 7125
+            }
+        }
+    }
+
+    #A divided France will be easier to rule.
+    option = {
+        name = wotl_eng.29.c
+        balkanize_france_effect = yes
+    }
+
+    #Continue treating France as an equal to England.
+    option = {
+        name = wotl_eng.29.d
+        add_prestige = 10
+        FRA = {
+            add_opinion = {
+                who = ROOT
+                modifier = wotl_fra_equal_to_eng
+            }
+        }
+    }
+}
+
+#Event to facilitate French Balkanization
+country_event = {
+    id = wotl_eng.30
+    title = wotl_eng.30.t
+    desc = wotl_eng.30.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    immediate = {
+        every_country = {
+            limit = {
+                is_subject_of = FRA
+            }
+            grant_independence = yes
+            ENG = {
+                vassalize = PREV
+            }
+            remove_historical_rival = ENG
+            add_opinion = {
+                who = ENG
+                modifier = wotl_eng_freed_us
+            }
+        }
+    }
+
+    #Ok.
+    option = {
+        ai_chance = {
+            factor = 100
+        }
+        name = wotl_eng.30.a
+    }
+
+}
+
+#Integration Complete!
+country_event = {
+    id = wotl_eng.31
+    title = wotl_eng.31.t
+    desc = wotl_eng.31.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    trigger = {
+        any_province = {
+            had_province_flag = {
+                flag = wotl_integration_in_progress
+                days = 1825
+            }
+            owned_by = FRA
+        }
+        tag = ENG
+        FRA = {
+            exists = yes
+            is_subject_of = ENG
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 30
+    }
+
+    #Hurrah!
+    option = {
+        name = wotl_eng.31.a
+        FRA = {
+            random_owned_area = {
+                limit = {
+                    any_province_in_state = {
+                        has_province_modifier = wotl_eng_integrating_area
+                    }
+                }
+                cede_province = ENG
+            }
+            random_owned_province = {
+                limit = {
+                    NOT = {
+                        area = ile_de_france_area
+                    }
+                    any_neighbor_province = {
+                        owned_by = ENG
+                    }
+                }
+                every_province_in_state = {
+                    add_province_modifier = {
+                        name = wotl_eng_integrating_area
+                        duration = -1
+                    }
+                    set_province_flag = wotl_integration_in_progress
+                }
+            }
+        }
+    }
+}
+

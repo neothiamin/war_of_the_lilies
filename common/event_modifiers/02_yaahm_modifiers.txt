@@ -171,3 +171,18 @@ wotl_won_wotl = {
     development_cost = -0.05
     global_unrest = -2
 }
+
+wotl_eng_integrating_france_effect = {
+    diplomatic_upkeep = -1
+    diplomatic_reputation = -1
+}
+
+wotl_fra_new_nobles = {
+    liberty_desire = -50
+}
+
+wotl_eng_integrating_area = {
+    local_unrest = 6
+    local_tax_modifier = -0.25
+    local_culture_conversion_cost = -0.2
+}

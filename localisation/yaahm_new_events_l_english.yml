@@ -377,3 +377,19 @@
  wotl_proper.13.t:0 "Inspiring Speech in [Root.GetName]"
  wotl_proper.13.desc:0 "A commoner in [Root.GetName] has delivered an impromptu speech in the town square advocating for the independence of France!"
  wotl_proper.13.a:0 "Damn them! Bloody rebels..."
+
+ wotl_eng.29.t:0 "The Fate of France"
+ wotl_eng.29.desc:0 "With the War of the Lilies over and our forces successful, lords and burghers are unsure what the royal policy towards France will be from this point on. Many fear that treating France as England's equal will only sow the seeds for another war, while others argue that harsh punishment of France will only bring about sympathy towards France from our rivals. What do we do?"
+ wotl_eng.29.a:0 "Begin the process of integration."
+ wotl_eng.29.b:0 "Appoint new nobles to the French lands."
+ wotl_eng.29.c:0 "A divided France will be easier to rule."
+ wotl_eng.29.d:0 "Continue with our treatment of France as equal to England."
+ wotl_balkanize_france_effect.tt:0 "The lands of France will be divided, and the resulting countries will become vassals of us."
+
+ wotl_eng.30.t:0 "French Division Complete"
+ wotl_eng.30.desc:0 "The division of French lands is complete."
+ wotl_eng.30.a:0 "Ok."
+
+ wotl_eng.31.t:0 "Integration of French Lands Complete!"
+ wotl_eng.31.desc:0 "My [Root.Monarch.GetTitle]!\n\nOur efforts to integrate the French domains into our own realm are going incredibly well! In fact, our integration of one area in particular has just been wrapped up! The local nobility have signed a treaty of fealty to the English crown, and the lands are now ours!"
+ wotl_eng.31.a:0 "Hurrah!"

@@ -13,7 +13,7 @@ country_decisions = {
 			NOT = { exists = ANF }
             tag = ENG
             ROOT = {
-                has_country_flag = anf_eligible
+                has_country_flag = wotl_eng_won_war
             }
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }

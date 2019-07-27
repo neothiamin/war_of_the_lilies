@@ -41,3 +41,12 @@ wotl_fra_agitation = {
 wotl_france_minor_admiration = {
     opinion = 50
 }
+
+wotl_fra_equal_to_eng = {
+    opinion = 100
+}
+
+wotl_eng_freed_us = {
+    opinion = 75
+    yearly_decay = 3
+}

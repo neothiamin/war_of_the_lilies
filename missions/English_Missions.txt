@@ -7,6 +7,7 @@ eng_british_conquest = {
 	potential = {
 		OR = {
 			tag = ENG
+			tag = ANF
 			tag = GBR
 		}
 		NOT = { map_setup = map_setup_random }
@@ -105,6 +106,7 @@ eng_british_conquest_ire = {
 	potential = {
 		OR = {
 			tag = ENG
+			tag = ANF
 			tag = GBR
 		}
 		NOT = { map_setup = map_setup_random }
@@ -186,6 +188,7 @@ eng_british_conquest_scotland = {
 	potential = {
 		OR = {
 			tag = ENG
+			tag = ANF
 			tag = GBR
 		}
 		NOT = { map_setup = map_setup_random }
@@ -282,6 +285,7 @@ eng_french_conquest = {
 	potential = {
 		OR = {
 			tag = ENG
+			tag = ANF
 			tag = GBR
 		}
 		NOT = { map_setup = map_setup_random }
@@ -300,6 +304,7 @@ eng_exploration_americas = {
 	potential = {
 		OR = {
 			tag = ENG
+			tag = ANF
 			tag = GBR
 		}
 		is_random_new_world = no
@@ -400,6 +405,7 @@ eng_chesapeake_dominance = {
 	potential = {
 		OR = {
 			tag = ENG
+			tag = ANF
 			tag = GBR
 		}
 		is_random_new_world = no
@@ -453,6 +459,7 @@ yaahm_english_missions_5 = {
 	potential = {
 		OR = {
 			tag = ENG
+			tag = ANF
 			tag = GBR
 		}
 		is_random_new_world = no
@@ -479,6 +486,7 @@ eng_indian_ocean_exploration = {
 	potential = {
 		OR = {
 			tag = ENG
+			tag = ANF
 			tag = GBR
 		}
 		NOT = { map_setup = map_setup_random }
@@ -566,6 +574,7 @@ eng_indian_cot_dominance = {
 	potential = {
 		OR = {
 			tag = ENG
+			tag = ANF
 			tag = GBR
 		}
 		NOT = {
@@ -625,6 +634,7 @@ eng_british_cot_dominance = {
 	potential = {
 		OR = {
 			tag = ENG
+			tag = ANF
 			tag = GBR
 		}
 		NOT = {

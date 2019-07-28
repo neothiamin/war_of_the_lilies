@@ -1,30 +1,19 @@
-v0.2pre2
+v0.2.1
 
-+ Added the Caporal events!
+* Fixed the event "Victory for England/France!" not firing for France, and also firing when it shouldn't be.
 
-+ Added more flavor in general for the French brigands.
+* Fixed the "Walloon Support" event firing multiple times.
 
-* Tweaked some MTTHs and effects in general
+* Fixed the "Perhaps our dreams of an Anglic France are over..." event option bugging out and making France S T R O N K.
 
-* Fixed HungaHRE. (HRHungary? I don't know...)
+* Fixed modifier sticking around after the WOTL ends.
 
-* Probably other shit too I just can't remember since it's been a few days since a decent commit and I don't wanna look back at the things i changed ahasdhjkashkdjahjsd
+* Gave Normandy a core in Cotentin.
 
+* Events meant for the WOTL should not fire when the WOTL is over anymore.
 
-v0.2pre1
+v0.2
 
-+ Added LORE folder! Read up!
++ Added War of the Lilies!
 
-+ Flemish Revolt Events! Play as England and stop John the Invader! Or play as Flanders and question England's legitimacy! Just be careful; foreign powers are always eager to step in...
-
-+ Subsequently, added the Flemish War! Sometimes, things get a little heated.
-
-+ Added the Council of the Dukes! Gather all your ducal friends about and make demands of the King of England!
-
-+ Brigandry runs rampant in France!
-
-* Some tweaks to province and country history, including lore-accurate personalities for (some) rulers!
-
-* Further increased severity of "Diplomacy Stretched Thin" modifier.
-
-- Removed ability for GBR to form the United Monarchies. To be fair, no country can form them yet...
++ Lots of other shit

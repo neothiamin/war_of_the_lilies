@@ -28,12 +28,8 @@ on_war_won = {
 	if = {
 		limit = {
 			has_global_flag = wotl_war_active
-			OR = {
-				tag = ENG
-				tag = FRA
-			}
 		}
-		ROOT = { country_event = { id = wotl_proper.99 } }
+		country_event = { id = wotl_proper.99 }
 	}
 }
 

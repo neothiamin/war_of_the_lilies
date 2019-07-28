@@ -327,7 +327,7 @@
  wotl_proper.6.a:0 "The past is the past."
  wotl_proper.6.b:0 "They are irredeemable."
  wotl_proper.7.t:0 "Walloon Support"
- wotl_proper.7.desc:0 "My [Root.Monarch.GetName],\n\n as you know, a significant portion of our population are Walloon. They speak a language similar to that of the Picards, and live in a land called Wallonia, in the Low Countries. All of this is secondary, however, to the fact that Walloon soldiers are incredibly fierce. Their skill as cavalrymen is unparalleled, and many a Walloon force has held its own against a larger or better-trained opponent.\n\nRecently, a group of Walloons willing to pledge their support to us in our conflict against the English have approached the Royal Court. They will fight for us, in exchange for greater autonomy for their people should we succeed."
+ wotl_proper.7.desc:0 "My [Root.Monarch.GetTitle],\n\n as you know, a significant portion of our population are Walloon. They speak a language similar to that of the Picards, and live in a land called Wallonia, in the Low Countries. All of this is secondary, however, to the fact that Walloon soldiers are incredibly fierce. Their skill as cavalrymen is unparalleled, and many a Walloon force has held its own against a larger or better-trained opponent.\n\nRecently, a group of Walloons willing to pledge their support to us in our conflict against the English have approached the Royal Court. They will fight for us, in exchange for greater autonomy for their people should we succeed."
  wotl_proper.7.a:0 "We welcome them as brothers-in-arms!"
  wotl_proper.7.a.tt:0 "The Walloons in our nation will expect some sort of repayment."
  wotl_proper.7.b:0 "We are fine without their help."

@@ -1733,6 +1733,7 @@ country_event = {
                 }
                 cede_province = ENG
                 add_core = ENG
+                clr_province_flag = wotl_integration_in_progress
             }
             random_owned_province = {
                 limit = {

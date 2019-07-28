@@ -68,6 +68,7 @@ country_event = {
             name = wotl_fra_independence
             duration = 3650
         }
+        remove_country_modifier = wotl_fra_rebellious
         add_historical_rival = ENG
         hidden_effect = {
             every_known_country = {
@@ -247,6 +248,17 @@ country_event = {
             white_peace = FROM
         }
         vassalize = FROM
+        if = {
+            limit = {
+                FROM = {
+                    tag = ORL
+                    has_reform = orl_council_reform
+                }
+            }
+            FROM = {
+                change_government = monarchy
+            }
+        }
         ai_chance = {
             factor = 75
         }
@@ -277,6 +289,8 @@ country_event = {
             controlled_by = ROOT
         }
     }
+
+    fire_only_once = yes
 
     mean_time_to_happen = {
         months = 18
@@ -616,16 +630,36 @@ country_event = {
     picture = CONQUEST_eventPicture
 
     trigger = {
-        OR = {
-            tag = ENG
-            tag = FRA
+        ROOT = {
+            OR = {
+                tag = ENG
+                tag = FRA
+            }
+        }
+        FROM = {
+            OR = {
+                tag = ENG
+                tag = FRA
+            }
         }
         has_global_flag = wotl_war_active
+    }
+
+    immediate = {
+        clr_global_flag = wotl_war_active
     }
 
     fire_only_once = yes
 
     is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            FRA = {
+                remove_country_modifier = wotl_fra_independence
+            }
+        }
+    }
 
     #Hurrah! Glory to [Root.GetName]!
     option = {
@@ -704,7 +738,7 @@ country_event = {
     option = {
         name = wotl_proper.100.c
         ai_chance = {
-            factor = 75
+            factor = 25
         }
         trigger = {
             FRA = {
@@ -712,12 +746,9 @@ country_event = {
             }
         }
         add_prestige = -50
-        every_province = {
+        every_owned_province = {
             limit = {
                 region = france_region
-                NOT = {
-                    owned_by = ENG
-                }
             }
             remove_core = ENG
             cede_province = FRA

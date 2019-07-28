@@ -1732,6 +1732,7 @@ country_event = {
                     }
                 }
                 cede_province = ENG
+                add_core = ENG
             }
             random_owned_province = {
                 limit = {

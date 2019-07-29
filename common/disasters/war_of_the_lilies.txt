@@ -22,16 +22,13 @@ war_of_the_lilies_disaster = {
     }
 
     can_end = {
-        OR = {
-            is_year = 1455
-            custom_trigger_tooltip = {
-                tooltip = wotl_disaster_can_end
-                OR = {
-                    FRA = {
-                        has_country_flag = wotl_fra_won_war
-                    }
-                    has_country_flag = wotl_eng_won_war
+        custom_trigger_tooltip = {
+            tooltip = wotl_disaster_can_end
+            OR = {
+                FRA = {
+                    has_country_flag = wotl_fra_won_war
                 }
+                has_country_flag = wotl_eng_won_war
             }
         }
     }

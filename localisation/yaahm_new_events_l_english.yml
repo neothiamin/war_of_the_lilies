@@ -393,3 +393,6 @@
  wotl_eng.31.t:0 "Integration of French Lands Complete!"
  wotl_eng.31.desc:0 "My [Root.Monarch.GetTitle]!\n\nOur efforts to integrate the French domains into our own realm are going incredibly well! In fact, our integration of one area in particular has just been wrapped up! The local nobility have signed a treaty of fealty to the English crown, and the lands are now ours!"
  wotl_eng.31.a:0 "Hurrah!"
+
+ wotl_proper.101.t:0 "War of the Lilies Avoided"
+ wotl_proper.101.desc:0 "The risk of a war with France has finally been dissolved. We are the rightful rulers of France."

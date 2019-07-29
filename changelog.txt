@@ -1,5 +1,15 @@
 v0.2.1
 
++ Added some new progress modifiers for the WOTL disaster, so that the disaster can actually progress down now! It won't be easy, though...
+
++ Added the ability to avoid the War of the Lilies disaster altogether. If England gets to 1455 without the disaster firing, it won't fire at all.
+
+* Reduced duration of the "Scars of War" modifier for France.
+
+* Slightly altered the "Inspiring Speech" event for England so that it may only fire once per area.
+
+* Slight tweak to the "Attempt to Rejoin France" decision requirements.
+
 * Fixed the event "Victory for England/France!" not firing for France, and also firing when it shouldn't be.
 
 * Fixed the "Walloon Support" event firing multiple times.
@@ -11,6 +21,10 @@ v0.2.1
 * Gave Normandy a core in Cotentin.
 
 * Events meant for the WOTL should not fire when the WOTL is over anymore.
+
+* Some slight tweaks to existing progress modifiers for the War of the Lilies disaster.
+
+
 
 v0.2
 

@@ -22,13 +22,16 @@ war_of_the_lilies_disaster = {
     }
 
     can_end = {
-        custom_trigger_tooltip = {
-            tooltip = wotl_disaster_can_end
-            OR = {
-                FRA = {
-                    has_country_flag = wotl_fra_won_war
+        OR = {
+            is_year = 1455
+            custom_trigger_tooltip = {
+                tooltip = wotl_disaster_can_end
+                OR = {
+                    FRA = {
+                        has_country_flag = wotl_fra_won_war
+                    }
+                    has_country_flag = wotl_eng_won_war
                 }
-                has_country_flag = wotl_eng_won_war
             }
         }
     }
@@ -150,6 +153,21 @@ war_of_the_lilies_disaster = {
                 tooltip = wotl_fra_has_scars
                 FRA = {
                     has_country_modifier = wotl_fra_rebellious
+                }
+            }
+        }
+        modifier = {
+            factor = -0.1
+            massif_central_area = {
+                type = all
+                country_or_non_sovereign_subject_holds = ENG
+            }
+        }
+        modifier = {
+            factor = -0.5
+            FRA = {
+                all_core_province = {
+                    country_or_non_sovereign_subject_holds = ENG
                 }
             }
         }

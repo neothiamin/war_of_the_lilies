@@ -773,7 +773,9 @@ province_event = {
             }
         }
         NOT = {
-            has_province_flag = wotl_inspiring_speech
+            any_province_in_state = {
+                has_province_flag = wotl_inspiring_speech
+            }
         }
     }
 

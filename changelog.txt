@@ -1,3 +1,7 @@
+v0.2.2
+
+* Ok, NOW you can avoid the WOTL disaster. Am dumbo, sorry.
+
 v0.2.1
 
 + Added some new progress modifiers for the WOTL disaster, so that the disaster can actually progress down now! It won't be easy, though...

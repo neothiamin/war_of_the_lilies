@@ -1,0 +1,41 @@
+########################################
+# WOTL events for Provence             #
+########################################
+
+namespace = wotl_pro
+
+#Demand from Naples!
+country_event = {
+    id = wotl_pro.1
+    title = wotl_pro.1.t
+    desc = wotl_pro.1.desc
+    picture = COURT_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    #Ha! They're playing hard to get!
+    option = {
+        name = wotl_pro.1.a
+        ai_chance = {
+            factor = 70
+        }
+        add_opinion = {
+            who = NAP
+            modifier = wotl_pro_laughed_at_nap
+        }
+    }
+
+    #Perhaps they are right.
+    option = {
+        name = wotl_pro.1.b
+        trigger = {
+            ai = yes
+        }
+        remove_casus_belli = {
+            type = cb_restore_personal_union
+            target = NAP
+        }
+    }
+}

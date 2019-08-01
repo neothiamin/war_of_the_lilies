@@ -186,3 +186,7 @@ wotl_eng_integrating_area = {
     local_tax_modifier = -0.25
     local_culture_conversion_cost = -0.2
 }
+
+wotl_eng_norman_defenses = {
+    local_defensiveness = 0.3
+}

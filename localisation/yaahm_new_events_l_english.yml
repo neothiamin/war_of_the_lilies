@@ -207,10 +207,6 @@
  wotl_bur.4.a:0 "Gentlemen, prepare for war. To Paris! Vive le Duché!"
  wotl_bur.4.b:0 "The pen truly is mightier than the sword. We will bide our time for now."
 
- wotl_pro.1.t:0 "Our Claim to France"
- wotl_pro.1.desc:0 "My [Root.Monarch.GetTitle],\n\nAs you know, your family descends from the House of Valois-Anjou, descended from the same family as the last king of France. Now, with England shaken, the throne of France is up for grabs more now than ever before."
- wotl_pro.1.a:0 "For the House d'Anjou!"
- wotl_pro.1.b:0 "The pen truly is mightier than the sword. We will bide our time for now."
  wotl_eng.23.t:0 "French Revolt"
  #wotl_eng.23.desc:0 "The people of [wotl_eng_23_target.GetName] have taken up arms in rebellion! Their reason is unclear; we are wonderful rulers!"
  wotl_eng.23.a:0 "Damn them!"
@@ -255,7 +251,7 @@
  wotl_tou.2.b.tt:0 "We will not forget this wrongdoing."
 
  wotl_pap.1.t:0 "Alliance with [TOU.Monarch.GetTitle] [TOU.Monarch.GetName] of Toulouse?"
- wotl_pap.1.desc:0 "Your Holiness,\n\nWe have received a letter with the Royal Seal of the House of [Tou.Monarch.Dynasty.GetName]. They propose an alliance between our two nations."
+ wotl_pap.1.desc:0 "Your Holiness,\n\nWe have received a letter with the Royal Seal of the House of [TOU.Monarch.Dynasty.GetName]. They propose an alliance between our two nations."
  wotl_pap.1.a:0 "Of course! [TOU.Monarch.GetName] is truly a pious [TOU.Monarch.GetWomanMan]."
  wotl_pap.1.b:0 "Toulouse is not worth our time."
 
@@ -396,3 +392,18 @@
 
  wotl_proper.101.t:0 "War of the Lilies Avoided"
  wotl_proper.101.desc:0 "The risk of a war with France has finally been dissolved. We are the rightful rulers of France."
+
+ wotl_nap.1.t:0 "Death of Giovanna II"
+ wotl_nap.1.desc:0 "Giovanna II of Anjou, the last remnant of the old Capetian House of Anjou, sole remaining vestige of the Angevin dynasty's reach over Europe, Queen of Naples, Sicily, and Jerusalem, has died. She lived well over 60 years and guided Naples, almost entirely alone, through times of turmoil and peace alike. She will be missed."
+ wotl_nap.1.a:0 "The Queen dies, and all of Italy weeps."
+ wotl_nap.2.t:0 "Throne claimed by Provence!"
+ wotl_nap.2.desc:0 "My [Root.Monarch.GetTitle]!\n\nThe imposters in Provence have staked a claim to our throne! They claim that, through their shared Angevin lineage with the late Giovanna II, they are the rightful rulers of Naples!"
+ wotl_nap.2.a:0 "Demand that [PRO.Monarch.GetName] [PRO.Monarch.Dynasty.GetName] drop [PRO.Monarch.GetHerHis] claim."
+ wotl_nap.2.b:0 "Disregard this claim. Provence is weak."
+ wotl_nap.2.c:0 "Try to foster better relations for the future."
+
+ wotl_pro.1.t:0 "The Neapolitan Demand"
+ wotl_pro.1.desc:0 "Following our claim to the Neapolitan throne, the pretender [NAP.Monarch.GetName] has demanded that we rescind our claim. What, and deny ourselves our birthright?"
+ wotl_pro.1.a:0 "They are simply playing hard to get!"
+ wotl_pro_laughed_at_nap:0 "Claim to Naples Reassured"
+ wotl_pro.1.b:0 "Perhaps it is for the best."

@@ -12,3 +12,6 @@
  wotl_french_minor_join_france_title:0 "Attempt to Rejoin France"
  wotl_french_minor_join_france_desc:0 "With the French throne once again freestanding, perhaps we ought to rejoin the French fold."
  wotl_french_minor_join_france.tt:0 "We offer a promise of fealty to France."
+ wotl_pro_claim_naples_title:0 "Claim Neapolitan Throne"
+ wotl_pro_claim_naples_desc:0 "Through our shared Angevin lineage, we are rightful heirs to the Kingdom of Naples, now that Giovanna II de Anjou has passed away. Stake a claim!"
+ wotl_pro_claim_naples_decision_1:0 "Giovanna II of Naples has died"

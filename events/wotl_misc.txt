@@ -270,9 +270,11 @@ country_event = {
         }
         is_part_of_hre = no
         is_subject = no
-        reverse_has_opinion = {
-            who = EMPEROR
-            value = 75
+        emperor = {
+            has_opinion = {
+                who = ROOT
+                value = 75
+            }
         }
         NOT = {
             has_country_flag = wotl_misc_hre_event_fired

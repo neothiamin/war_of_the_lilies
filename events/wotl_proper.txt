@@ -645,10 +645,6 @@ country_event = {
         has_global_flag = wotl_war_active
     }
 
-    immediate = {
-        clr_global_flag = wotl_war_active
-    }
-
     fire_only_once = yes
 
     is_triggered_only = yes
@@ -659,6 +655,7 @@ country_event = {
                 remove_country_modifier = wotl_fra_independence
             }
         }
+        clr_global_flag = wotl_war_active
     }
 
     #Hurrah! Glory to [Root.GetName]!
@@ -696,6 +693,8 @@ country_event = {
     is_triggered_only = yes
 
     fire_only_once = yes
+
+    major = yes
 
     immediate = {
         set_global_flag = wotl_war_over

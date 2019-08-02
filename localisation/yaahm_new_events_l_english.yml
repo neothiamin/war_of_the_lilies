@@ -407,3 +407,8 @@
  wotl_pro.1.a:0 "They are simply playing hard to get!"
  wotl_pro_laughed_at_nap:0 "Claim to Naples Reassured"
  wotl_pro.1.b:0 "Perhaps it is for the best."
+ 
+ wotl_nap.3.t:0 "Provence Requests Protection"
+ wotl_nap.3.desc:0 "It would seem that our French cousins, in their infinite inadequacy, are unable to defend their own lands against foreign threats. The [PRO.Monarch.GetTitle] of Provence, [PRO.Monarch.GetName], is requesting our aid in their war in exchange for their fealty to us."
+ wotl_nap.3.a:0 "What an interesting proposal... we accept!"
+ wotl_nap.3.b:0 "And why on God's green earth would we do that?"

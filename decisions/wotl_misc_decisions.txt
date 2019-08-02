@@ -85,4 +85,47 @@ country_decisions = {
 
         ai_importance = 5
     }
+
+    wotl_pro_flee_to_naples = {
+        potential = {
+            tag = PRO
+            NOT = {
+                has_country_flag = wotl_pro_attempted_to_flee
+                has_country_flag = wotl_pro_claimed_nap
+            }
+        }
+
+        allow = {
+            dynasty = NAP
+            is_at_war = yes
+            OR = {
+                NOT = {
+                    war_score = -20
+                }
+                NOT = {
+                    controls = 201
+                }
+            }
+            NAP = {
+                has_opinion = {
+                    who = ROOT
+                    value = 50
+                }
+            }
+        }
+
+        effect = {
+            set_country_flag = wotl_pro_attempted_to_flee
+            NAP = {
+                country_event = {
+                    id = wotl_nap.3
+                }
+            }
+            custom_tooltip = wotl_pro_flee_to_naples.tt
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
 }

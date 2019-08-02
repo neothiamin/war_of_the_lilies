@@ -15,3 +15,7 @@
  wotl_pro_claim_naples_title:0 "Claim Neapolitan Throne"
  wotl_pro_claim_naples_desc:0 "Through our shared Angevin lineage, we are rightful heirs to the Kingdom of Naples, now that Giovanna II de Anjou has passed away. Stake a claim!"
  wotl_pro_claim_naples_decision_1:0 "Giovanna II of Naples has died"
+
+ wotl_pro_flee_to_naples_title:0 "Neapolitan Protection"
+ wotl_pro_flee_to_naples_desc:0 "This war is more than we can handle on our own, and the enemy is bearing down on the royal palace. Let us seek aid from our dynastic cousins!"
+ wotl_pro_flee_to_naples.tt:0 "Naples may become our overlord."

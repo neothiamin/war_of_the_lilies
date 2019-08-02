@@ -101,6 +101,26 @@ balkanize_france_effect = {
                 vassalize = BAR
             }
         }
+        if = {
+            limit = {
+                PIC = {
+                    OR = {
+                        exists = no
+                        is_subject_of = FRA
+                    }
+                }
+            }
+            every_province = {
+                limit = {
+                    is_core = PIC
+                    owned_by = FRA
+                }
+                cede_province = PIC
+            }
+            FRA = {
+                vassalize = PIC
+            }
+        }
         ENG = {
             country_event = {
                 id = wotl_eng.30

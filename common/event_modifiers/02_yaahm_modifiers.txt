@@ -190,3 +190,7 @@ wotl_eng_integrating_area = {
 wotl_eng_norman_defenses = {
     local_defensiveness = 0.3
 }
+
+wotl_pro_naples_protection = {
+    prestige = -0.5
+}

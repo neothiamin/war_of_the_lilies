@@ -40,7 +40,6 @@ country_decisions = {
                 province_id = 183		# Paris
 				province_id = 236		# London
 				province_id = 184		# Orleans
-				province_id = 234		# Wessex
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -48,15 +47,14 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 12
+			adm_tech = 11
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
-			owns_core_province = 186		# Reims
-			owns_core_province = 183		# Paris
 			owns_core_province = 236		# London
-			owns_core_province = 184		# Orleans
-			owns_core_province = 234		# Wessex
+			owns_or_non_sovereign_subject_of = 186		# Reims
+			owns_or_non_sovereign_subject_of = 183		# Paris
+			owns_or_non_sovereign_subject_of = 184		# Orleans
 		}
 		effect = {
 			change_tag = ANF

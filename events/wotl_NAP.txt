@@ -93,3 +93,39 @@ country_event = {
         }
     }
 }
+
+#Provençal Court Requests Protection
+country_event = {
+    id = wotl_nap.3
+    title = wotl_nap.3.t
+    desc = wotl_nap.3.desc
+    picture = COURT_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    #Grant them our protection.
+    option = {
+        name = wotl_nap.3.a
+        vassalize = PRO
+        add_prestige = 10
+        ai_chance = {
+            factor = 65
+        }
+        PRO = {
+            add_country_modifier = {
+                name = wotl_pro_naples_protection
+                duration = 3650
+            }
+        }
+    }
+
+    #And why would we do that?
+    option = {
+        name = wotl_nap.3.b
+        ai_chance = {
+            factor = 35
+        }
+    }
+}

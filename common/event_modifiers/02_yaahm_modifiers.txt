@@ -194,3 +194,25 @@ wotl_eng_norman_defenses = {
 wotl_pro_naples_protection = {
     prestige = -0.5
 }
+
+wotl_por_henrique = {
+    global_tax_income = -1.5
+    range = 0.3
+    trade_efficiency = -0.2
+}
+
+wotl_por_starved_ceuta = {
+    local_tax_modifier = -0.25
+    local_unrest = 6
+    province_trade_power_modifier = -0.25
+}
+
+wotl_por_3_b_effect = {
+    local_unrest = 4
+    local_build_cost = -0.2
+}
+
+wotl_por_3_c_effect = {
+    local_unrest = 8
+    local_missionary_strength = 0.02
+}

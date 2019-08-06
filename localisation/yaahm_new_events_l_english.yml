@@ -412,3 +412,18 @@
  wotl_nap.3.desc:0 "It would seem that our French cousins, in their infinite inadequacy, are unable to defend their own lands against foreign threats. The [PRO.Monarch.GetTitle] of Provence, [PRO.Monarch.GetName], is requesting our aid in their war in exchange for their fealty to us."
  wotl_nap.3.a:0 "What an interesting proposal... we accept!"
  wotl_nap.3.b:0 "And why on God's green earth would we do that?"
+
+ wotl_por.1.t:0 "Infante Dom Henrique"
+ wotl_por.1.desc:0 "Infante Dom Henrique of Portugal, Duke of Viseu, is the brother of King Duarte and the fourth son of João I o Bom. Being fourth in line to the throne, Henrique knew he stood little chance of ever being King of Portugal; thus, he devoted his time to the general betterment of the realm. However, Henrique has a rather... unique interest: the sea.\n\nMore precisely, what lies beyond it, and how man may better traverse it. At the age of 21, Henrique aided his father and brothers in the Portuguese conquest of the port city of Ceuta, in North Africa. Despite his injury in the conquest of Ceuta, Henrique spent a great deal of time in Ceuta learning about Saharan trade routes, and became fascinated with Africa, especially the legend of Prester John.\n\nNow, Henrique is requesting funding from the Crown to pursue his interests. He desires coin and a commitment from the King that the Crown will be wholly supportive of this project."
+ wotl_por.1.a:0 "Grant Henrique whatever he may need!"
+ wotl_por.1.b:0 "Henrique can prove himself first."
+
+ wotl_por.2.t:0 "Starved Ceuta"
+ wotl_por.2.desc:0 "Ever since the capture of Ceuta by King João in 1415, the North African city has suffered greatly. Saharan caravans which used to trade in the city square (and whose goods were the primary reason for the conquest of the city) have instead started to meet at nearby Tangier, severely impoverishing the city and its people. Anti-Portuguese sentiment is growing, and the Moroccans to the south would surely be welcomed with open arms by the Ceutan people should they decide to invade. If we wish to keep hold of the city of Ceuta, something must be done."
+ wotl_por.2.a:0 "Explore ways to alleviate the city's suffering."
+ wotl_por.2.b:0 "The people of Ceuta are secondary to the people of Portugal."
+ wotl_por.3.t:0 "Ceuta's Suffering"
+ wotl_por.3.desc:0 "The Crown has decided to pursue ways to alleviate the suffering of the people of Ceuta. Many different ideas are swirling around the Royal Court, but at the end of the day, only one path may be taken."
+ wotl_por.3.a:0 "By capturing Tangiers, we can monopolize trade in Northern Morocco."
+ wotl_por.3.b:0 "By investing in infrastructure in Ceuta, we can turn the people towards us."
+ wotl_por.3.c:0 "By launching a religious inquisition, we can tell the people of Ceuta the Good News."

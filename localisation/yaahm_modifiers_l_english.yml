@@ -78,5 +78,6 @@
  desc_wotl_por_starved_ceuta:0 "The people of Ceuta are suffering; famine is widespread, guard patrols are rare, and crime is rampant."
  wotl_por_3_b_effect:0 "Developmental Focus"
  wotl_por_3_c_effect:0 "Conversion Efforts"
- desc_wotl_por_3_b_effect:0 "The Crown has allocated funds towards the construction of buildings in Ceuta."
- desc_wotl_por_3_c_effect:0 "The Crown has launched an inquisition in Ceuta to convert the native Moroccans."
+ desc_wotl_por_3_b_effect:0 "The Crown has allocated funds towards the construction of buildings in Ceuta.\n\nWill be removed via event when a non-fort building has been constructed and development is greater than 12."
+ desc_wotl_por_3_c_effect:0 "The Crown has launched an inquisition in Ceuta to convert the native Moroccans.\n\nWill be removed via event when Ceuta follows the True Faith."
+ wotl_bur_no_hre:0 "Scorned Empire"

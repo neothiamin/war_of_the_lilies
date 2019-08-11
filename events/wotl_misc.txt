@@ -365,3 +365,74 @@ country_event = {
         }
     }
 }
+
+#The County and Duchy of Burgundy
+country_event = {
+    id = wotl_misc.12
+    title = wotl_misc.12.t
+    desc = wotl_misc.12.desc
+    picture = HRE_eventPicture
+
+    is_triggered_only = yes
+
+    #Accept their oath of fealty.
+    option = {
+        name = wotl_misc.12.a
+        ai_chance = {
+            factor = 40
+            modifier = {
+                factor = 3
+                has_opinion = {
+                    who = BUR
+                    value = 125
+                }
+            }
+        }
+        BUR = {
+            set_in_empire = yes
+            country_event = {
+                id = wotl_bur.2
+            }
+        }
+    }
+
+    #Accept their offer, and name the [BUR.Monarch.GetName] of Burgundy an Elector.
+    option = {
+        name = wotl_misc.12.b
+        ai_chance = {
+            factor = 60
+            modifier = {
+                factor = 3
+                has_opinion = {
+                    who = BUR
+                    value = 125
+                }
+            }
+        }
+        trigger = {
+            NOT = {
+                num_of_electors = 7
+            }
+        }
+        BUR = {
+            set_in_empire = yes
+            country_event = {
+                id = wotl_bur.2
+            }
+            elector = yes
+        }
+    }
+
+    #Reject their offer.
+    option = {
+        name = wotl_misc.12.c
+        ai_chance = {
+            factor = 60
+        }
+        BUR = {
+            country_event = {
+                id = wotl_bur.3
+            }
+        }
+    }
+}

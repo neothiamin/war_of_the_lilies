@@ -60,3 +60,8 @@ wotl_nap_good_relations_with_pro = {
     opinion = 50
     yearly_decay = 5
 }
+
+wotl_bur_no_hre = {
+    opinion = -50
+    yearly_decay = 5
+}

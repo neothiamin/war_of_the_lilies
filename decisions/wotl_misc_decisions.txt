@@ -20,7 +20,7 @@ country_decisions = {
             }
             reverse_has_opinion = {
                 who = FRA
-                value = 50
+                value = 100
             }
             is_part_of_hre = no
         }

@@ -112,7 +112,10 @@ country_event = {
         tag = ORL
         has_country_flag = wotl_orl_found_heir
         FRA = {
-            has_country_modifier = wotl_fra_independence
+            OR = {
+                has_country_modifier = wotl_fra_independence
+                has_country_flag = wotl_fra_won_war
+            }
         }
     }
 
@@ -593,21 +596,21 @@ country_event = {
             name = wotl_fra_independence
             duration = 3650
         }
-        if = {
-            limit = {
-                exists = ORL
-                ORL = {
-                    has_country_flag = wotl_orl_found_heir
-                }
-            }
-            ORL = {
-                country_event = {
-                    id = wotl_proper.3
-                    days = 15
-                    random = 5
-                }
-            }
-        }
+        #if = {
+        #    limit = {
+        #        exists = ORL
+        #        ORL = {
+        #            has_country_flag = wotl_orl_found_heir
+        #        }
+        #    }
+        #    ORL = {
+        #        country_event = {
+        #            id = wotl_proper.3
+        #            days = 15
+        #            random = 5
+        #        }
+        #    }
+        #}
     }
 }
 
@@ -750,6 +753,7 @@ country_event = {
                 region = france_region
             }
             remove_core = ENG
+            add_core = FRA
             cede_province = FRA
         }
     }

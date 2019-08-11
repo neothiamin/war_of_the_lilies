@@ -216,3 +216,7 @@ wotl_por_3_c_effect = {
     local_unrest = 8
     local_missionary_strength = 0.02
 }
+
+wotl_por_tangiers_conquered = {
+    province_trade_power_modifier = 0.2
+}

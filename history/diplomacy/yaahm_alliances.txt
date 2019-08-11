@@ -68,3 +68,19 @@ union = {
 	start_date = 1428.1.1
 	end_date = 2000.1.1
 }
+
+#Venetian Ionian Islands
+vassal = {
+	first = VEN
+	second = CEP
+	start_date = 1363.1.1
+	end_date = 2000.1.1
+}
+
+#Duchy of the Archipelago
+vassal = {
+	first = VEN
+	second = NAX
+	start_date = 1201.1.1
+	end_date = 2000.1.1
+}

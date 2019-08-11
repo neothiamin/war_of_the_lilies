@@ -26,7 +26,6 @@
  wotl_fla.4.t:0 "Duke John removed from power!"
  wotl_fla.5.t:0 "[ENG.Monarch.GetTitle] [ENG.Monarch.GetName] attempts coup!"
  wotl_fla.6.t:0 "Attempted Assassination!"
- wotl_bur.1.t:0 "Revolt in Flanders" 
  wotl_fla.7.t:0 "Treasonous Merchant"
 
  #wotl_eng.3.desc:0 "Your Majesty,\n\nYour cousin, Duke John of Beaufort, known as \"The Invader\" among his detractors and much of the peasantry in his domain of Flanders, has once again shown why he has been ascribed that moniker.\n\nJohn recently has been increasingly paranoid, fully aware of the fact that he, an Englishman, rules over a duchy of Flemings, and has begun fully exercising his right as chief \"executive\". This time, though, one too many heads have rolled.\n\nJohn has just executed a merchant, [FLA.executed_fleming.GetName], for \"treason and conspiracy against the Crown\"; however, it seems that, unlike with his previous victims, his court has been unable to find (or fabricate) a single shred of evidence. Word of this seemingly arbitrary and tyrannical execution has made its way from the throne room to the town square in Brugge, and word of rebellion is on the Flemings' lips..."
@@ -39,7 +38,6 @@
  wotl_fla.4.desc:0 "John the Invader of Beaufort has been assassinated! While he slept, agents on behalf of [ENG.Monarch.GetTitle] [ENG.Monarch.GetName] of England slept into his bedroom and slit his throat. In his stead, [ENG.Monarch.GetTitle] [ENG.Monarch.GetName] has sent a new duke, one [ENG.Monarch.GetSheHe] hopes will be more... acceptable to the local populace."
  wotl_fla.5.desc:0 "Your Highness!\n\nA plot has been discovered against you! A spy was discovered by palace guards last night and apprehended after he was found skulking around the palace. His intent, it appears, was to sow discontent amongst your guards, in the hopes they would rebel!"
  wotl_fla.6.desc:0 "Your Highness!\n\nA spy was discovered by palace guards last night and apprehended after he was found skulking around the palace. His intent, it appears, was nothing short of murder! After thorough interrogation, he said he was sent by [ENG.Monarch.GetTitle] [ENG.Monarch.GetName]!"
- wotl_bur.1.desc:0 "Word has reached the royal court of a revolt in Flanders! Peasants and nobles have taken to the streets calling for Duke John Beaufort, or \"The Invader\", to be executed! Though supporting a madman may come back to bite us, the potential of acquiring Flanders for ourselves is attractive..."
  #wotl_fla.7.desc:0 "Your Highness,\n\nRoyal guards have apprehended a merchant suspected of treason and conspiracy against the state! His name is [FLA.executed_fleming.GetName], and while we do not have any concrete evidence against him, he is nonetheless perceived to be dangerous."
 
  wotl_eng.3.a:0 "We must support John."
@@ -51,14 +49,12 @@
  wotl_fla.4.a:0 "May God bless John's soul."
  wotl_fla.5.a:0 "How dare he! This shall not stand!"
  wotl_fla.6.a:0 "This is an outrage! To arms, men!"
- wotl_bur.1.a:0 "We must step in."
  wotl_fla.7.a:0 "Execute him!"
 
  wotl_eng.3.b:0 "John has gone too far!"
  wotl_eng.4.b:0 "John is more trouble than he's worth. He is on his own."
  wotl_eng.5.b:0 "John is much too suspicious. We shall not attend."
  wotl_fla.7.b:0 "Spare him."
- wotl_bur.1.b:0 "It is none of our business."
 
  wotl_eng_3a_will_cause_unrest:0 "May cause unrest in Flanders!"
  wotl_eng_3b_john_angry:0 "Will upset John of Flanders!"
@@ -130,14 +126,6 @@
  wotl_eng.11.desc:0 "John of Beaufort has declared independence from us! Surely he knows he stands no chance."
  wotl_eng.11.a:0 "Reassert control over Flanders!"
 
- wotl_bur.2.t:0 "Revolt in Flanders!"
- wotl_bur.2.desc:0 "Word has reached the royal court of a revolt in Flanders! Peasants and nobles have taken to the streets calling for Duke John Beaufort, or \"The Invader\", to be executed! And what's worse, the [ENG.Monarch.GetTitle] of England has supported John Beaufort! Clearly, the English web of vassals is not fit to rule over Flanders."
- wotl_bur.2.a:0 "We must step in."
-
- wotl_bur.3.t:0 "Victory over England!"
- #wotl_bur.3.desc:0 "My [Root.Monarch.GetTitle]!\n\nOur armies have delivered a decisive blow to the English forces at [wotl_eng_big_defeat_location.GetName]! The English armies were left retreating, tails between their legs. We must capitalize on this!"
- wotl_bur.3.a:0 "Hurrah! Death to [ENG.Monarch.GetName]!"
-
  wotl_fla.12.t:0 "John of Beaufort missing!"
  wotl_fla.12.desc.b:0 "Panic!\n\nBrugge has fallen! The enemy forces have taken our capital, and what's worse, Duke John of Beaufort is missing! No doubt he and his personal guard fled the castle after seeing the approaching forces, but where is he now? None know..."
  wotl_fla.12.a:0 "God has forsaken us!"
@@ -201,11 +189,6 @@
  wotl_guy.4.desc:0 "John IV de Armagnac, known to some as a puppet and to others as the savior of the legacy of Aquitaine, has passed away.\n\nJohn IV was always a polarizing figure in life. The Duchy of Aquitaine was granted to him by the English after their victory in the War of Restoration as a reward for his endeavors in the French Civil War, which was instrumental in weaking the French crown. However, with John IV's death, new troubles arise.\n\nLocal Gascon nobles were never fond of John IV, and were constantly worried that he would focus more on his ties to England than his own people. Now, nobles have approached the newly-crowned [Root.Monarch.GetName], and have demanded serious governmental reform, including the granting of more rights to local lords to remind [Root.Monarch.GetName] of the importance of local nobility. If their demands are not met, they say, open revolt is imminent."
  wotl_guy.4.a:0 "Promise reform."
  wotl_guy.4.b:0 "We must not renege on our obligations to England."
-
- wotl_bur.4.t:0 "Our Claim to France"
- wotl_bur.4.desc:0 "My [Root.Monarch.GetTitle]!\n\nAs you surely know, your family possesses the strongest claim to the old throne of France. The House of Valois-Bourgogne was founded by Philip the Bold after being granted the Duchy of Burgundy by his father, Jean le Bon, and has ruled these lands for decades. Now, it appears it may be time to remind Europe of our lineage.\n\nThe unjust [ENG.Monarch.GetTitle] of England, [ENG.Monarch.GetName], has once again shown that [ENG.Monarch.GetSheHe] is unfit to rule [ENG.Monarch.GetHerHis] own nation, much less the people of France, by failing to defend [ENG.Monarch.GetHerHis] domain against another nation.\n\nMy [Root.Monarch.GetTitle], behind you is the support of your subjects and Europeans across the continent. In front of you, the most prestigious title since the Roman Empire. It is time to strike."
- wotl_bur.4.a:0 "Gentlemen, prepare for war. To Paris! Vive le Duché!"
- wotl_bur.4.b:0 "The pen truly is mightier than the sword. We will bide our time for now."
 
  wotl_eng.23.t:0 "French Revolt"
  #wotl_eng.23.desc:0 "The people of [wotl_eng_23_target.GetName] have taken up arms in rebellion! Their reason is unclear; we are wonderful rulers!"
@@ -427,3 +410,31 @@
  wotl_por.3.a:0 "By capturing Tangiers, we can monopolize trade in Northern Morocco."
  wotl_por.3.b:0 "By investing in infrastructure in Ceuta, we can turn the people towards us."
  wotl_por.3.c:0 "By launching a religious inquisition, we can tell the people of Ceuta the Good News."
+
+ wotl_por.4.t:0 "Tangiers Conquered!"
+ wotl_por.4.desc:0 "Through our sheer military might, we have conquered the port city of Tangiers. Trade will surely boom."
+ wotl_por.4.a:0 "Glory to us!"
+ wotl_por_tangiers_conquered:0 "Portuguese Tangiers"
+ wotl_por.5.t:0 "Ceuta Developed!"
+ wotl_por.5.desc:0 "Through our good administration, Ceuta has been built up to a might and rich city."
+ wotl_por.5.a:0 "Glory to us!"
+ wotl_por.6.t:0 "Ceuta Shown The Light!"
+ wotl_por.6.desc:0 "Through God's Will, we have converted the heathens of Ceuta!"
+ wotl_por.6.a:0 "Glory to us!"
+
+ wotl_bur.1.t:0 "Imperial Relations"
+ wotl_bur.1.desc:0 "Our relationship with the Holy Roman Empire has always been... interesting. The lands of Burgundy are actually comprised of  two separate titles: the County of Burgundy, an Imperial possession, and the Duchy of Burgundy, a non-Imperial title. The County was inherited by John the Fearless, Duke of Burgundy, in 1405, and have been ruled in personal union since then. Although many would consider the County's consolidation into the Duchy impending, others have a different idea. No one denies that the Duchy is weaker than it was before the English Usurpation, and the threat of a powerhouse, be it English, French, or some abomination of the two together, has many questioning if membership in the Holy Roman Empire would be advantageous for the realm as a whole."
+ wotl_bur.1.a:0 "Submit an offer of fealty to the Emperor."
+ wotl_bur.1.b:0 "No foreign yoke shall lie 'round our necks!"
+ wotl_bur.2.t:0 "Admission to the Empire!"
+ wotl_bur.2.desc:0 "Glory to us! The Holy Roman Emperor, seeing the mutual benefit of our realm being a part of the Empire, has agreed to accept us into the Imperial fold!"
+ wotl_bur.2.a:0 "Wonderful news!"
+ wotl_bur.3.t:0 "Imperial Membership Rejected!"
+ wotl_bur.3.desc:0 "Blast!\n\nThe Holy Roman Emperor has rejected our offer of fealty!"
+ wotl_bur.3.a:0 "We would be better off on our own anyways..."
+
+ wotl_misc.12.t:0 "The County and Duchy of Burgundy"
+ wotl_misc.12.desc:0 "My [Root.Monarch.GetTitle], I approach you with an... interesting proposition.\n\nIt would seem that the [BUR.Monarch.GetName] of Burgundy has penned an offer to us. They wish to strike a deal: in exchange for their fealty and participation in Imperial affairs, they ask for the protection of the Empire against \"any and all foreign threats, be they English, French, or some bastardization of the two.\" What say you?"
+ wotl_misc.12.a:0 "Accept their offer."
+ wotl_misc.12.b:0 "Accept their offer, and elevate the [BUR.Monarch.GetName] of Burgundy to Elector."
+ wotl_misc.12.c:0 "A French prince? What next, flying hogs?"

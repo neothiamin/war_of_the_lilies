@@ -251,14 +251,14 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 200
+        months = 300
     }
 
     #Crown him, quick!
     option = {
         name = wotl_orl.6.a
         ai_chance = {
-            factor = 95
+            factor = 80
         }
         set_country_flag = wotl_orl_found_heir
         change_government = monarchy
@@ -305,7 +305,7 @@ country_event = {
         set_country_flag = wotl_orl_empower_porte_parole
         add_stability = -2
         ai_chance = {
-            factor = 5
+            factor = 20
         }
         add_country_modifier = {
             name = wotl_orl_consolidated_power

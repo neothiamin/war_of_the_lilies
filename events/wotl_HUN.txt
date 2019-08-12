@@ -4,4 +4,12 @@
 
 namespace = wotl_hun
 
-#
+#Death of Sigismund
+country_event = {
+    id = wotl_hun.1
+    title = wotl_hun.1.t
+    desc = wotl_hun.1.desc
+    picture = DEATH_OF_HEIR_eventPicture
+
+    is_triggered_only = yes
+}

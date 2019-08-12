@@ -7,7 +7,6 @@ add_accepted_culture = cosmopolitan_french
 add_accepted_culture = normand
 religion = catholic
 capital = 236 # London
-add_historical_rival = BUR
 
 #Henry V dies
 1422.12.4 = { 

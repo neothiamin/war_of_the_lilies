@@ -84,3 +84,11 @@ vassal = {
 	start_date = 1201.1.1
 	end_date = 2000.1.1
 }
+
+#Jacqueline de Wittelsbach
+union = {
+	first = HOL
+	second = HAI
+	start_date = 1420.1.1
+	end_date = 1477.1.5
+}

@@ -1,0 +1,20 @@
+########################################
+# WOTL events for Milan                #
+########################################
+
+namespace = wotl_mlo
+
+#Lombard Wars
+country_event = {
+	id = wotl_mlo.1
+	title = wotl_mlo.1.t
+	desc = wotl_mlo.1.desc
+	picture = BATTLE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = MLO
+		
+	}
+}

@@ -3,13 +3,13 @@ add_government_reform = english_monarchy
 mercantilism = 25
 technology_group = western
 primary_culture = english
-#add_accepted_culture = cosmopolitan_french
+add_accepted_culture = cosmopolitan_french
 add_accepted_culture = normand
 religion = catholic
 capital = 236 # London
-add_historical_rival = BUR
 
-1422.12.4 = { #Henry V dies
+#Henry V dies
+1422.12.4 = { 
 	monarch = {
 		name = "Thomas, 1st Duke of Clarence"
 		dynasty = "Lancaster"
@@ -20,10 +20,10 @@ add_historical_rival = BUR
 	}
 }
 
-1428.12.4 = { #Thomas splits regency duties with John, Duke of Bedford. John runs the show for a while.
+#Thomas splits regency duties with John, Duke of Bedford. John runs the show for a while.
+1428.12.5 = { 
 	monarch = {
-		name = "John, Duke of Bedford"
-		birth_date = 1389.6.20
+		name = "John of Bedford"
 		adm = 2
 		dip = 4
 		mil = 3
@@ -31,11 +31,14 @@ add_historical_rival = BUR
 	}
 }
 
-1428.12.5 = { #Coronation
+1435.1.13 = {
 	heir = {
-		name = "Henry VI"
+		name = "Henry"
+		monarch_name = "Henry VI"
+		claim = 100
 		dynasty = "Lancaster"
-		birth_date = 1421.12.6
+		birth_date = 1421.12.5
+		death_date = 1470.1.1
 		adm = 4
 		dip = 1
 		mil = 5
@@ -43,10 +46,3 @@ add_historical_rival = BUR
 	add_heir_personality = naive_personality
 	set_heir_flag = wotl_eng_heir_culture_event_fired
 }
-
-#1435.1.12 = {
-#	add_country_modifier = {
-#		name = "eng_game_start_upkeep"
-#		duration = 5475
-#	}
-#}

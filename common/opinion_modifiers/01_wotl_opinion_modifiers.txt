@@ -22,3 +22,46 @@ wotl_eng_vassal_loyal_effect = {
     opinion = 50
     yearly_decay = 10
 }
+
+wotl_tou_mad_at_pope = {
+    opinion = -100
+    yearly_decay = 5
+}
+
+wotl_tou_pap_alliance = {
+    opinion = 75
+    yearly_decay = 7.5
+}
+
+wotl_fra_agitation = {
+    opinion = -50
+    yearly_decay = 10
+}
+
+wotl_france_minor_admiration = {
+    opinion = 50
+}
+
+wotl_fra_equal_to_eng = {
+    opinion = 100
+}
+
+wotl_eng_freed_us = {
+    opinion = 75
+    yearly_decay = 3
+}
+
+wotl_pro_laughed_at_nap = {
+    opinion = -75
+    yearly_decay = 5
+}
+
+wotl_nap_good_relations_with_pro = {
+    opinion = 50
+    yearly_decay = 5
+}
+
+wotl_bur_no_hre = {
+    opinion = -50
+    yearly_decay = 5
+}

@@ -1,30 +1,37 @@
-v0.2pre2
+v0.2.2
 
-+ Added the Caporal events!
+* Ok, NOW you can avoid the WOTL disaster. Am dumbo, sorry.
 
-+ Added more flavor in general for the French brigands.
+v0.2.1
 
-* Tweaked some MTTHs and effects in general
++ Added some new progress modifiers for the WOTL disaster, so that the disaster can actually progress down now! It won't be easy, though...
 
-* Fixed HungaHRE. (HRHungary? I don't know...)
++ Added the ability to avoid the War of the Lilies disaster altogether. If England gets to 1455 without the disaster firing, it won't fire at all.
 
-* Probably other shit too I just can't remember since it's been a few days since a decent commit and I don't wanna look back at the things i changed ahasdhjkashkdjahjsd
+* Reduced duration of the "Scars of War" modifier for France.
+
+* Slightly altered the "Inspiring Speech" event for England so that it may only fire once per area.
+
+* Slight tweak to the "Attempt to Rejoin France" decision requirements.
+
+* Fixed the event "Victory for England/France!" not firing for France, and also firing when it shouldn't be.
+
+* Fixed the "Walloon Support" event firing multiple times.
+
+* Fixed the "Perhaps our dreams of an Anglic France are over..." event option bugging out and making France S T R O N K.
+
+* Fixed modifier sticking around after the WOTL ends.
+
+* Gave Normandy a core in Cotentin.
+
+* Events meant for the WOTL should not fire when the WOTL is over anymore.
+
+* Some slight tweaks to existing progress modifiers for the War of the Lilies disaster.
 
 
-v0.2pre1
 
-+ Added LORE folder! Read up!
+v0.2
 
-+ Flemish Revolt Events! Play as England and stop John the Invader! Or play as Flanders and question England's legitimacy! Just be careful; foreign powers are always eager to step in...
++ Added War of the Lilies!
 
-+ Subsequently, added the Flemish War! Sometimes, things get a little heated.
-
-+ Added the Council of the Dukes! Gather all your ducal friends about and make demands of the King of England!
-
-+ Brigandry runs rampant in France!
-
-* Some tweaks to province and country history, including lore-accurate personalities for (some) rulers!
-
-* Further increased severity of "Diplomacy Stretched Thin" modifier.
-
-- Removed ability for GBR to form the United Monarchies. To be fair, no country can form them yet...
++ Lots of other shit

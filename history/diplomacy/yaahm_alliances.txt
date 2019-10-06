@@ -44,6 +44,7 @@ union = {
 	start_date = 1397.6.17
 	end_date = 1448.6.20
 }
+
 # Denmark-Norway
 union = {
 	first = DAN
@@ -52,7 +53,8 @@ union = {
 	end_date = 1449.11.20
 }
 
-vassal = { #Silesia
+#Silesia
+vassal = {
 	first = BOH
 	second = SIL
 	start_date = 1000.1.1
@@ -65,4 +67,28 @@ union = {
 	second = FRA
 	start_date = 1428.1.1
 	end_date = 2000.1.1
+}
+
+#Venetian Ionian Islands
+vassal = {
+	first = VEN
+	second = CEP
+	start_date = 1363.1.1
+	end_date = 2000.1.1
+}
+
+#Duchy of the Archipelago
+vassal = {
+	first = VEN
+	second = NAX
+	start_date = 1201.1.1
+	end_date = 2000.1.1
+}
+
+#Jacqueline de Wittelsbach
+union = {
+	first = HOL
+	second = HAI
+	start_date = 1420.1.1
+	end_date = 1477.1.5
 }

@@ -99,3 +99,340 @@ namespace = wotl_misc
 #        name = wotl_misc.4.a
 #    }
 #}
+
+#Coronation at Reims?
+country_event = {
+    id = wotl_misc.5
+    title = wotl_misc.5.t
+    desc = wotl_misc.5.desc
+    picture = CATHOLIC_RULERS_PRAYING_eventPicture
+
+    is_triggered_only = yes
+
+    trigger = {
+        culture_group = french
+        NOT = {
+            primary_culture = wallonian
+        }
+        government = monarchy
+        is_subject = no
+        NOT = {
+            OR = {
+                tag = FRA
+                any_country = {
+                    has_ruler_modifier = wotl_crowned_in_reims
+                }
+            }
+        }
+        186 = {
+            owner = {
+                tag = CHP
+                NOT = {
+                    is_subject = yes
+                }
+                government = theocracy
+            }
+        }
+    }
+
+    #Send a delegation!
+    option = {
+        name = wotl_misc.5.a
+        custom_tooltip = wotl_misc.5.a.tt
+        hidden_effect = {
+            CHP = {
+                country_event = {
+                    id = wotl_misc.6
+                    days = 15
+                }
+            }
+        }
+    }
+
+    #We are fine as is.
+    option = {
+        name = wotl_misc.5.b
+        add_prestige = -5
+    }
+}
+
+#Coronation of [From.Monarch.GetName]
+country_event = {
+    id = wotl_misc.6
+    title = wotl_misc.6.t
+    desc = wotl_misc.6.desc
+    picture = CATHOLIC_RULERS_PRAYING_eventPicture
+
+    is_triggered_only = yes
+
+    trigger = {
+        tag = CHP
+        NOT = {
+            is_subject = yes
+        }
+        government = theocracy
+        NOT = {
+            any_country = {
+                has_ruler_modifier = wotl_crowned_in_reims
+            }
+        }
+    }
+
+    #Crown [From.Monarch.GetName] in the French tradition.
+    option = {
+        name = wotl_misc.6.a
+        FROM = {
+            country_event = {
+                id = wotl_misc.7
+            }
+        }
+        tooltip = {
+            add_treasury = 75
+        }
+        ai_chance = {
+            factor = 35
+            modifier = {
+                factor = 3
+                has_opinion = {
+                    who = FROM
+                    value = 75
+                }
+            }
+        }
+    }
+
+    #Such a ceremony is reserved for the TRUE King of France!
+    option = {
+        name = wotl_misc.6.b
+        FROM = {
+            country_event = {
+                id = wotl_misc.8
+                days = 10
+            }
+        }
+        ai_chance = {
+            factor = 65
+        }
+    }
+}
+
+#[Root.Monarch.GetName] crowned in Reims!
+country_event = {
+    id = wotl_misc.7
+    title = wotl_misc.7.t
+    desc = wotl_misc.7.desc
+    picture = CATHOLIC_RULERS_PRAYING_eventPicture
+
+    is_triggered_only = yes
+
+    #Huzzah!
+    option = {
+        name = wotl_misc.7.a
+        add_treasury = -75
+        CHP = {
+            add_treasury = 75
+        }
+        add_ruler_modifier = {
+            name = wotl_crowned_in_reims
+        }
+    }
+
+}
+
+#Archbishop of Reims denies request!
+country_event = {
+    id = wotl_misc.8
+    title = wotl_misc.8.t
+    desc = wotl_misc.8.desc
+    picture = CATHOLIC_RULERS_PRAYING_eventPicture
+
+    is_triggered_only = yes
+
+    #Blast!
+    option = {
+        name = wotl_misc.8.a
+        add_adm_power = -50
+        add_prestige = -10
+    }
+}
+
+#[Root.GetName], Imperial Prince?
+country_event = {
+    id = wotl_misc.9
+    title = wotl_misc.9.t
+    desc = wotl_misc.9.desc
+    picture = HRE_eventPicture
+
+    trigger = {
+        OR = {
+            tag = CHP
+            tag = DAU
+        }
+        is_part_of_hre = no
+        is_subject = no
+        emperor = {
+            has_opinion = {
+                who = ROOT
+                value = 75
+            }
+        }
+        NOT = {
+            has_country_flag = wotl_misc_hre_event_fired
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 30
+    }
+
+    immediate = {
+        set_country_flag = wotl_misc_hre_event_fired
+    }
+
+    #We are strong enough on our own.
+    option = {
+        name = wotl_misc.9.a
+        add_prestige = 10
+        ai_chance = {
+            factor = 75
+        }
+    }
+
+    #Petition the Emperor for admission into the Empire.
+    option = {
+        name = wotl_misc.9.b
+        ai_chance = {
+            factor = 25
+        }
+        custom_tooltip = wotl_misc.9.b.tt
+        emperor = {
+            country_event = {
+                id = wotl_misc.10
+            }
+        }
+    }
+}
+
+#[From.GetName] petitions for admission into the Empire.
+country_event = {
+    id = wotl_misc.10
+    title = wotl_misc.10.t
+    desc = wotl_misc.10.desc
+    picture = HRE_eventPicture
+
+    is_triggered_only = yes
+
+    #Accept their request, in exchange for a 10-year due.
+    option = {
+        name = wotl_misc.10.a
+        FROM = {
+            country_event = {
+                id = wotl_misc.11
+            }
+        }
+    }
+
+    #Deny their request.
+    option = {
+        name = wotl_misc.10.b
+    }
+}
+
+#[Emperor.GetName] accepts our petition!
+country_event = {
+    id = wotl_misc.11
+    title = wotl_misc.11.t
+    desc = wotl_misc.11.desc
+    picture = HRE_eventPicture
+
+    is_triggered_only = yes
+
+    #Glory to us!
+    option = {
+        name = wotl_misc.11.a
+        emperor = {
+            add_country_modifier = {
+                name = wotl_misc_10_emperor
+                duration = 3650
+            }
+        }
+        ROOT = {
+            add_country_modifier = {
+                name = wotl_misc_10_root
+                duration = 3650
+            }
+            set_in_empire = yes
+        }
+    }
+}
+
+#The County and Duchy of Burgundy
+country_event = {
+    id = wotl_misc.12
+    title = wotl_misc.12.t
+    desc = wotl_misc.12.desc
+    picture = HRE_eventPicture
+
+    is_triggered_only = yes
+
+    #Accept their oath of fealty.
+    option = {
+        name = wotl_misc.12.a
+        ai_chance = {
+            factor = 40
+            modifier = {
+                factor = 3
+                has_opinion = {
+                    who = BUR
+                    value = 125
+                }
+            }
+        }
+        BUR = {
+            set_in_empire = yes
+            country_event = {
+                id = wotl_bur.2
+            }
+        }
+    }
+
+    #Accept their offer, and name the [BUR.Monarch.GetName] of Burgundy an Elector.
+    option = {
+        name = wotl_misc.12.b
+        ai_chance = {
+            factor = 60
+            modifier = {
+                factor = 3
+                has_opinion = {
+                    who = BUR
+                    value = 125
+                }
+            }
+        }
+        trigger = {
+            NOT = {
+                num_of_electors = 7
+            }
+        }
+        BUR = {
+            set_in_empire = yes
+            country_event = {
+                id = wotl_bur.2
+            }
+            elector = yes
+        }
+    }
+
+    #Reject their offer.
+    option = {
+        name = wotl_misc.12.c
+        ai_chance = {
+            factor = 60
+        }
+        BUR = {
+            country_event = {
+                id = wotl_bur.3
+            }
+        }
+    }
+}

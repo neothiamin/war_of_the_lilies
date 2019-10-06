@@ -6,7 +6,6 @@ add_accepted_culture = occitain
 religion = catholic
 technology_group = western
 capital = 183 # Paris
-national_focus = DIP
 historical_rival = BUR
 
 1380.9.16 = {
@@ -60,20 +59,9 @@ historical_rival = BUR
 	}
 }
 
-1422.10.22 = {
-	monarch = {
-		name = "Charles VII"
-		dynasty = "de Valois"
-		birth_date = 1403.2.22
-		adm = 4
-		dip = 2
-		mil = 4
-	}
-}
-
 1435.1.13 = {
 	add_country_modifier = {
 		name = wotl_fra_rebellious
-		duration = 3650
+		duration = 5475
 	}
 }

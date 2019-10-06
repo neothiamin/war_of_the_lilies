@@ -4,6 +4,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
+			always = no
 			NOT = { has_country_flag = formed_great_britain_flag }
 			was_never_end_game_tag_trigger = yes
 			OR = {
@@ -156,6 +157,7 @@ country_decisions = {
 	british_nation_diplomatically = {
 		major = yes
 		potential = {
+			always = no
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = { exists = GBR }

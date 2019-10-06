@@ -1,0 +1,22 @@
+name = "War of Lombardy - Third Campaign"
+
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 107 # Brescia
+}
+
+1431.5.4 = {
+	add_attacker = MLO
+	add_defender = VEN
+	add_defender = CEP
+	add_defender = NAX
+}
+
+# Third Campaign Ends - Peace of Ferrara
+1433.11.20 = {
+	rem_attacker = MLO
+	rem_defender = VEN
+	rem_defender = CEP
+	rem_defender = NAX
+}

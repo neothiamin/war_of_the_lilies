@@ -1,0 +1,15 @@
+name = "Burgundian War"
+war_goal = {
+    casus_belli = cb_humiliate
+    type = humiliate
+}
+
+1429.7.14 = {
+    add_attacker = BUR
+    add_defender = ENG
+}
+
+1433.12.3 = {
+    rem_attacker = BUR
+    rem_defender = ENG
+}

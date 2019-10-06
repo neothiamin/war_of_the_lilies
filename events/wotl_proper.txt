@@ -1,0 +1,839 @@
+###########################################
+# Events for the actual War of the Lilies #
+###########################################
+
+namespace = wotl_proper
+
+#War of the Lilies!
+country_event = {
+    id = wotl_proper.1
+    title = wotl_proper.1.t
+    desc = wotl_proper.1.desc
+    picture = ANGRY_MOB_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+        religion_group = christian
+        NOT = {
+            has_global_flag = wotl_war_over
+        }
+        normal_or_historical_nations = yes
+    }
+
+    #Dig in! We will win this!
+    option = {
+        name = wotl_proper.1.a
+        set_global_flag = wotl_war_active
+        add_stability = -1
+        if = {
+            limit = {
+                FRA = {
+                    NOT = {
+                        war_with = ENG
+                    }
+                }
+            }
+            FRA = {
+                country_event = {
+                    id = wotl_proper.2
+                }
+            }
+        }
+    }
+}
+
+#War of the Lilies! (French)
+country_event = {
+    id = wotl_proper.2
+    title = wotl_proper.2.t
+    desc = wotl_proper.2.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    #Aux armes! Down with the English! France for the French!
+    option = {
+        name = wotl_proper.2.a
+        declare_war_with_cb = {
+            casus_belli = cb_independence_war
+            who = ENG
+        }
+        add_country_modifier = {
+            name = wotl_fra_independence
+            duration = 3650
+        }
+        remove_country_modifier = wotl_fra_rebellious
+        add_historical_rival = ENG
+        hidden_effect = {
+            every_known_country = {
+                limit = {
+                    is_french_breakaway_state = yes
+                }
+                add_opinion = {
+                    who = FRA
+                    modifier = wotl_france_minor_admiration
+                }
+                reverse_add_opinion = {
+                    who = FRA
+                    modifier = wotl_france_minor_admiration
+                }
+            }
+        }
+    }
+
+    #We must not provoke our overlord.
+    option = {
+        name = wotl_proper.2.b
+        trigger = {
+            ai = no
+        }
+        add_prestige = -5
+        custom_tooltip = wotl_proper.2.b.tt
+        ENG = {
+            set_country_flag = wotl_eng_won_war
+        }
+    }
+}
+
+#[ORL.Monarch.GetName], King of France?
+country_event = {
+    id = wotl_proper.3
+    title = wotl_proper.3.t
+    desc = wotl_proper.3.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+    
+    trigger = {
+        tag = ORL
+        has_country_flag = wotl_orl_found_heir
+        FRA = {
+            OR = {
+                has_country_modifier = wotl_fra_independence
+                has_country_flag = wotl_fra_won_war
+            }
+        }
+    }
+
+    fire_only_once = yes
+
+    mean_time_to_happen = {
+        months = 6
+    }
+
+    #Approach the rebels and propose that [Root.Monarch.GetName] take the throne.
+    option = {
+        name = wotl_proper.3.a
+        FRA = {
+            country_event = {
+                id = wotl_proper.4
+                days = 15
+                random = 5
+            }
+        }
+    }
+
+    #We must stand alone now.
+    option = {
+        name = wotl_proper.3.b
+        add_prestige = 15
+    }
+
+}
+
+#[ORL.Monarch.GetName], King of France?
+country_event = {
+    id = wotl_proper.4
+    title = wotl_proper.4.t
+    desc = wotl_proper.4.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    #Accept.
+    option = {
+        name = wotl_proper.4.a
+        ai_chance = {
+            factor = 75
+        }
+        hidden_effect = {
+            ORL = {
+                exile_ruler_as = wotl_orl_king_of_france
+            }
+        }
+        change_adm = 1
+        change_dip = 1
+        change_mil = 1
+        set_ruler = wotl_orl_king_of_france
+        create_union = ORL
+        if = {
+            limit = {
+                ORL = {
+                    ai = no
+                }
+            }
+            ORL = {
+                country_event = {
+                    id = wotl_proper.5
+                    days = 15
+                    random = 5
+                }
+            }
+        }
+    }
+
+    #Decline.
+    option = {
+        name = wotl_proper.4.b
+        ai_chance = {
+            factor = 25
+        }
+        ORL = {
+            add_prestige = -10
+        }
+    }
+
+}
+
+#[ORL.Monarch.GetName], King of France?
+country_event = {
+    id = wotl_proper.5
+    title = wotl_proper.5.t
+    desc = wotl_proper.5.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+
+    trigger = {
+        tag = ORL
+        ai = no
+    }
+
+    #Vive le France!
+    option = {
+        name = wotl_proper.5.a
+        change_tag = FRA
+    }
+
+    #We are fine as is.
+    option = {
+        name = wotl_proper.5.b
+    }
+}
+
+#[From.GetName] Offers Vassalage
+country_event = {
+    id = wotl_proper.6
+    title = wotl_proper.6.t
+    desc = wotl_proper.6.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+
+    trigger = {
+        tag = FRA
+        has_global_flag = wotl_war_active
+    }
+
+    #Yes.
+    option = {
+        name = wotl_proper.6.a
+        every_country = {
+            limit = {
+                war_with = FROM
+            }
+            white_peace = FROM
+        }
+        vassalize = FROM
+        if = {
+            limit = {
+                FROM = {
+                    tag = ORL
+                    has_reform = orl_council_reform
+                }
+            }
+            FROM = {
+                change_government = monarchy
+            }
+        }
+        ai_chance = {
+            factor = 75
+        }
+    }
+
+    #They are irredeemable.
+    option = {
+        name = wotl_proper.6.b
+        add_prestige = 5
+        ai_chance = {
+            factor = 25
+        }
+    }
+}
+
+#FRA - Walloon Support!
+country_event = {
+    id = wotl_proper.7
+    title = wotl_proper.7.t
+    desc = wotl_proper.7.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    trigger = {
+        tag = FRA
+        has_global_flag = wotl_war_active
+        any_owned_province = {
+            culture = wallonian
+            controlled_by = ROOT
+        }
+    }
+
+    fire_only_once = yes
+
+    mean_time_to_happen = {
+        months = 18
+    }
+
+    immediate = {
+        set_saved_name = {
+            key = fra_walloon_general
+            type = advisor
+            scope = ROOT
+        }
+    }
+
+    #We welcome them as brothers in arms!
+    option = {
+        name = wotl_proper.7.a
+        ai_chance = {
+            factor = 45
+            modifier = {
+                factor = 2
+                accepted_culture = wallonian
+            }
+        }
+        set_country_flag = wotl_fra_walloon_support_yes
+        custom_tooltip = wotl_proper.7.a.tt
+        random_owned_province = {
+            limit = {
+                culture = wallonian
+                controlled_by = ROOT
+            }
+            infantry = THIS
+            infantry = THIS
+            infantry = THIS
+            infantry = THIS
+            cavalry = THIS
+            cavalry = THIS
+            if = {
+                limit = {
+                    ROOT = {
+                        accepted_culture = wallonian
+                    }
+                }
+                infantry = THIS
+                infantry = THIS
+                cavalry = THIS
+            }
+        }
+        define_general = {
+            shock = 3
+            fire = 1
+            manuever = 2
+            siege = 1
+            trait = master_of_arms_personality
+            name = fra_walloon_general
+        }
+    }
+
+    #We would love to, but we don't need their help.
+    option = {
+        name = wotl_proper.7.b
+        ai_chance = {
+            factor = 55
+        }
+        every_owned_province = {
+            limit = {
+                culture = wallonian
+            }
+            add_unrest = 4
+        }
+    }
+}
+
+#ENG - Support Among the Normans
+country_event = {
+    id = wotl_proper.8
+    title = wotl_proper.8.t
+    desc = wotl_proper.8.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+        has_disaster = war_of_the_lilies_disaster
+        NOT = {
+            has_country_flag = wotl_eng_norman_support
+            has_country_flag = wotl_eng_norman_rebellion
+        }
+    }
+
+    immediate = {
+        set_country_flag = wotl_eng_norman_support
+    }
+
+    #Glory to us!
+    option = {
+        name = wotl_proper.8.a
+        random_owned_province = {
+            limit = {
+                area = normandy_area
+                controlled_by = ROOT
+            }
+            infantry = THIS
+            infantry = THIS
+            infantry = THIS
+            cavalry = THIS
+        }
+        normandy_area = {
+            add_province_modifier = {
+                name = wotl_eng_norman_support_effect
+                duration = 1825
+            }
+        }
+    }    
+}
+
+#ENG - Support Among the Gascons
+country_event = {
+    id = wotl_proper.9
+    title = wotl_proper.9.t
+    desc = wotl_proper.9.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+        has_disaster = war_of_the_lilies_disaster
+        NOT = {
+            has_country_flag = wotl_eng_gascon_support
+            has_country_flag = wotl_eng_gascon_rebellion
+        }
+    }
+
+    immediate = {
+        set_country_flag = wotl_eng_gascon_support
+    }
+
+    #Glory to us!
+    option = {
+        name = wotl_proper.9.a
+        random_owned_province = {
+            limit = {
+                area = pyrenees_area
+                controlled_by = ROOT
+            }
+            infantry = THIS
+            infantry = THIS
+            infantry = THIS
+            cavalry = THIS
+            if = {
+                limit = {
+                    ROOT = {
+                        accepted_culture = gascon
+                    }
+                }
+                infantry = THIS
+                cavalry = THIS
+            }
+        }
+        pyrenees_area = {
+            add_province_modifier = {
+                name = wotl_eng_gascon_support_effect
+                duration = 1825
+            }
+        }
+    }    
+}
+
+#ENG - Rebellion in Normandy!
+country_event = {
+    id = wotl_proper.10
+    title = wotl_proper.10.t
+    desc = wotl_proper.10.desc
+    picture = BAD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+        has_disaster = war_of_the_lilies_disaster        
+        NOT = {
+            has_country_flag = wotl_eng_norman_support
+            has_country_flag = wotl_eng_norman_rebellion
+        }
+    }
+
+    immediate = {
+        set_country_flag = wotl_eng_norman_rebellion
+    }
+
+    #Damn them!
+    option = {
+        name = wotl_proper.10.a
+        random_owned_province = {
+            limit = {
+                culture = normand
+            }
+            spawn_rebels = {
+                type = nationalist_rebels
+                size = 2
+                win = yes
+                friend = FRA
+            }
+        }
+        normandy_area = {
+            add_province_modifier = {
+                name = wotl_eng_norman_rebellion_effect
+                duration = 1825
+            }
+        }
+    }    
+}
+
+#ENG - Rebellion in the Aquitaine!
+country_event = {
+    id = wotl_proper.11
+    title = wotl_proper.11.t
+    desc = wotl_proper.11.desc
+    picture = BAD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+        has_disaster = war_of_the_lilies_disaster        
+        NOT = {
+            has_country_flag = wotl_eng_gascon_support
+            has_country_flag = wotl_eng_gascon_rebellion
+        }
+    }
+
+    immediate = {
+        set_country_flag = wotl_eng_gascon_rebellion
+    }
+
+    #Damn them!
+    option = {
+        name = wotl_proper.11.a
+        random_owned_province = {
+            limit = {
+                culture = gascon
+            }
+            spawn_rebels = {
+                type = nationalist_rebels
+                size = 2
+                win = yes
+                friend = FRA
+            }
+        }
+        pyrenees_area = {
+            add_province_modifier = {
+                name = wotl_eng_gascon_rebellion_effect
+                duration = 1825
+            }
+        }
+    }
+}
+
+#If France declares an independence war before the WOTL happens, this event makes the disaster fire for England
+country_event = {
+    id = wotl_proper.12
+    title = wotl_proper.2.t
+    desc = wotl_proper.2.desc
+    picture = ANGRY_MOB_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = FRA
+        war_with = ENG
+        NOT = {
+            has_global_flag = wotl_war_active
+            has_global_flag = wotl_war_over
+        }
+    }
+
+    mean_time_to_happen = {
+        days = 5
+    }
+
+    #Aux armes! Down with the English! France for the French!
+    option = {
+        name = wotl_proper.2.a
+        ENG = {
+            add_disaster_progress = {
+                value = 100
+                disaster = war_of_the_lilies_disaster
+            }
+        }
+        add_country_modifier = {
+            name = wotl_fra_independence
+            duration = 3650
+        }
+        #if = {
+        #    limit = {
+        #        exists = ORL
+        #        ORL = {
+        #            has_country_flag = wotl_orl_found_heir
+        #        }
+        #    }
+        #    ORL = {
+        #        country_event = {
+        #            id = wotl_proper.3
+        #            days = 15
+        #            random = 5
+        #        }
+        #    }
+        #}
+    }
+}
+
+#War of the Lilies Won
+country_event = {
+    id = wotl_proper.99
+    title = wotl_proper.99.t
+    desc = {
+        trigger = {
+            tag = FRA
+        }
+        desc = wotl_proper.99.desc.fra
+    }
+    desc = {
+        trigger = {
+            tag = ENG
+        }
+        desc = wotl_proper.99.desc.eng
+    }
+    picture = CONQUEST_eventPicture
+
+    trigger = {
+        ROOT = {
+            OR = {
+                tag = ENG
+                tag = FRA
+            }
+        }
+        FROM = {
+            OR = {
+                tag = ENG
+                tag = FRA
+            }
+        }
+        has_global_flag = wotl_war_active
+    }
+
+    fire_only_once = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            FRA = {
+                remove_country_modifier = wotl_fra_independence
+            }
+        }
+        clr_global_flag = wotl_war_active
+    }
+
+    #Hurrah! Glory to [Root.GetName]!
+    option = {
+        name = wotl_proper.99.a
+        if = {
+            limit = {
+                tag = FRA
+            }
+            add_prestige = 50
+            add_stability_or_adm_power = yes
+            set_country_flag = wotl_fra_won_war
+            add_country_modifier = {
+                name = wotl_won_wotl
+                duration = 3650
+            }
+        }
+        if = {
+            limit = {
+                tag = ENG
+            }
+            set_country_flag = wotl_eng_won_war
+        }
+    }
+
+}
+
+#WOTL Recap
+country_event = {
+    id = wotl_proper.100
+    title = wotl_proper.100.t
+    desc = wotl_proper.100.desc
+    picture = COURT_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    major = yes
+
+    immediate = {
+        set_global_flag = wotl_war_over
+    }
+
+    #We will not forget this...
+    option = {
+        name = wotl_proper.100.a
+        ai_chance = {
+            factor = 75
+        }
+        trigger = {
+            FRA = {
+                has_country_flag = wotl_fra_won_war
+            }
+        }
+        add_prestige = -25
+
+    }
+
+    #Now, we must rebuild.
+    option = {
+        name = wotl_proper.100.b
+        add_prestige = 50
+        trigger = {
+            has_country_flag = wotl_eng_won_war
+        }
+        add_country_modifier = {
+            name = wotl_won_wotl
+            duration = 3650
+        }
+        FRA = {
+            remove_historical_rival = ENG
+            remove_country_modifier = wotl_fra_independence
+            remove_country_modifier = wotl_fra_rebellious
+        }
+    }
+
+    #Perhaps our dream of an Anglic France is over.
+    option = {
+        name = wotl_proper.100.c
+        ai_chance = {
+            factor = 25
+        }
+        trigger = {
+            FRA = {
+                has_country_flag = wotl_fra_won_war
+            }
+        }
+        add_prestige = -50
+        every_owned_province = {
+            limit = {
+                region = france_region
+            }
+            remove_core = ENG
+            add_core = FRA
+            cede_province = FRA
+        }
+    }
+}
+
+#Inspiring Speech in [Root.GetName]
+province_event = {
+    id = wotl_proper.13
+    title = wotl_proper.13.t
+    desc = wotl_proper.13.desc
+    picture = ANGRY_MOB_eventPicture
+
+    trigger = {
+        owned_by = ENG
+        region = france_region
+        ENG = {
+            has_disaster_progress = {
+                disaster = war_of_the_lilies_disaster
+                value = 50
+            }
+        }
+        NOT = {
+            any_province_in_state = {
+                has_province_flag = wotl_inspiring_speech
+            }
+        }
+    }
+
+    immediate = {
+        set_province_flag = wotl_inspiring_speech
+    }
+
+    #Damn them! Bloody rebels...
+    option = {
+        name = wotl_proper.13.a
+        add_unrest = 6
+        owner = {
+            add_disaster_progress = {
+                value = 2
+                disaster = war_of_the_lilies_disaster
+            }
+        }
+    }
+}
+
+#Alt WOTL End
+country_event = {
+    id = wotl_proper.101
+    title = wotl_proper.101.t
+    desc = wotl_proper.101.desc
+    picture = COURT_eventPicture
+
+    trigger = {
+        tag = ENG
+        is_year = 1455
+        NOT = {
+            has_global_flag = wotl_war_active
+            has_global_flag = wotl_war_over
+        }
+    }
+
+    immediate = {
+        clr_global_flag = wotl_war_active
+        set_global_flag = wotl_war_over
+    }
+
+    fire_only_once = yes
+
+    #Now, we must rebuild.
+    option = {
+        name = wotl_proper.100.b
+        add_prestige = 50
+        add_country_modifier = {
+            name = wotl_won_wotl
+            duration = 3650
+        }
+        FRA = {
+            remove_historical_rival = ENG
+            remove_country_modifier = wotl_fra_independence
+            remove_country_modifier = wotl_fra_rebellious
+        }
+    }
+}

@@ -1,0 +1,131 @@
+balkanize_france_effect = {
+    custom_tooltip = wotl_balkanize_france_effect.tt
+    hidden_effect = {
+        if = {
+            limit = {
+                CHP = {
+                    OR = {
+                        exists = no
+                        is_subject_of = FRA
+                    }
+                }
+            }
+            every_province = {
+                limit = {
+                    is_core = CHP
+                    owned_by = FRA
+                }
+                cede_province = CHP
+            }
+            FRA = {
+                vassalize = CHP
+            }
+        }
+        if = {
+            limit = {
+                AUV = {
+                    OR = {
+                        exists = no
+                        is_subject_of = FRA
+                    }
+                }
+            }
+            every_province = {
+                limit = {
+                    is_core = AUV
+                    owned_by = FRA
+                }
+                cede_province = AUV
+            }
+            FRA = {
+                vassalize = AUV
+            }
+        }
+        if = {
+            limit = {
+                TOU = {
+                    OR = {
+                        exists = no
+                        is_subject_of = FRA
+                    }
+                }
+            }
+            every_province = {
+                limit = {
+                    is_core = TOU
+                    owned_by = FRA
+                }
+                cede_province = TOU
+            }
+            FRA = {
+                vassalize = TOU
+            }
+        }
+        if = {
+            limit = {
+                DAU = {
+                    OR = {
+                        exists = no
+                        is_subject_of = FRA
+                    }
+                }
+            }
+            every_province = {
+                limit = {
+                    is_core = DAU
+                    owned_by = FRA
+                }
+                cede_province = DAU
+            }
+            FRA = {
+                vassalize = DAU
+            }
+        }
+        if = {
+            limit = {
+                BAR = {
+                    OR = {
+                        exists = no
+                        is_subject_of = FRA
+                    }
+                }
+            }
+            every_province = {
+                limit = {
+                    is_core = BAR
+                    owned_by = FRA
+                }
+                cede_province = BAR
+            }
+            FRA = {
+                vassalize = BAR
+            }
+        }
+        if = {
+            limit = {
+                PIC = {
+                    OR = {
+                        exists = no
+                        is_subject_of = FRA
+                    }
+                }
+            }
+            every_province = {
+                limit = {
+                    is_core = PIC
+                    owned_by = FRA
+                }
+                cede_province = PIC
+            }
+            FRA = {
+                vassalize = PIC
+            }
+        }
+        ENG = {
+            country_event = {
+                id = wotl_eng.30
+                days = 5
+            }
+        }
+    }
+}

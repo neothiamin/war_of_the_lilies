@@ -1,0 +1,126 @@
+########################################
+# WOTL events for France               #
+########################################
+
+namespace = wotl_fra
+
+#Agitation in Poitou
+country_event = {
+    id = wotl_fra.1
+    title = wotl_fra.1.t
+    desc = wotl_fra.1.desc
+    picture = COURT_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = FRA
+        is_subject_of = ENG
+        any_owned_province = {
+            area = poitou_area
+        }
+        NOT = {
+            ENG = {
+                has_disaster = war_of_the_lilies_disaster
+            }
+            has_global_flag = wotl_war_over
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 60
+    }
+
+    #Crack down on this.
+    option = {
+        name = wotl_fra.1.a
+        ai_chance = {
+            factor = 35
+            modifier = {
+                factor = 2
+                NOT = {
+                    liberty_desire = 30
+                }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                area = poitou_area
+            }
+            spawn_rebels = {
+                size = 2
+                type = noble_rebels
+            }
+        }
+    }
+
+    #They have a point, you know.
+    option = {
+        name = wotl_fra.1.b
+        ai_chance = {
+            factor = 65
+            modifier = {
+                factor = 2
+                liberty_desire = 60
+            }
+        }
+        add_prestige = -5
+        add_liberty_desire = 20
+        add_opinion = {
+            who = ENG
+            modifier = wotl_fra_agitation
+        }
+    }
+}
+
+#War of the Lilies Impending
+country_event = {
+    id = wotl_fra.2
+    title = wotl_fra.2.t
+    desc = wotl_fra.2.desc
+    picture = COURT_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = FRA
+        ENG = {
+            has_disaster_progress = {
+                disaster = war_of_the_lilies_disaster
+                value = 80
+            }
+        }
+        is_subject_of = ENG
+    }
+
+    #Fan the flames of war!
+    option = {
+        name = wotl_fra.2.a
+        add_liberty_desire = 10
+        add_prestige = -25
+        ENG = {
+            add_disaster_progress = {
+                value = 5
+                disaster = war_of_the_lilies_disaster
+            }
+        }
+        hidden_effect = {
+            ENG = {
+                country_event = {
+                    id = wotl_eng.28
+                    days = 5
+                }
+            }
+        }
+    }
+
+    #Try and keep a lid on it.
+    option = {
+        name = wotl_fra.2.b
+        add_prestige = 5
+        add_liberty_desire = -5
+        random_owned_province = {
+            add_unrest = 6
+        }
+    }
+}

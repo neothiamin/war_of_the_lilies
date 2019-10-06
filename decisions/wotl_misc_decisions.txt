@@ -1,0 +1,131 @@
+country_decisions = {
+
+    wotl_french_minor_join_france = {
+        major = yes
+        potential = {
+            has_global_flag = wotl_war_active
+            is_french_breakaway_state = yes
+            FRA = {
+                is_subject = no
+            }
+            NOT = {
+                has_country_flag = wotl_attempted_to_rejoin_france
+            }
+        }
+
+        allow = {
+            OR = {
+                is_subject = no
+                is_subject_of_type = vassal
+            }
+            reverse_has_opinion = {
+                who = FRA
+                value = 100
+            }
+            is_part_of_hre = no
+        }
+
+        effect = {
+            set_country_flag = wotl_attempted_to_rejoin_france
+            custom_tooltip = wotl_french_minor_join_france.tt
+            hidden_effect = {
+                FRA = {
+                    country_event = {
+                        id = wotl_proper.6
+                        days = 10
+                    }
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        ai_importance = 20
+    }
+
+    wotl_pro_claim_naples = {
+        major = yes
+        potential = {
+            tag = PRO
+            dynasty = "de Anjou"
+            NOT = {
+                has_country_flag = wotl_pro_claimed_nap
+            }
+        }
+
+        allow = {
+            custom_trigger_tooltip = {
+                tooltip = wotl_pro_claim_naples_decision_1
+                NAP = {
+                    has_country_flag = wotl_nap_giovanna_2_dead
+                }
+            }
+            prestige = 0
+            OR = {
+                legitimacy = NAP
+                legitimacy = 80
+            }
+        }
+
+        effect = {
+            add_casus_belli = {
+                type = cb_restore_personal_union
+                target = NAP
+            }
+            add_prestige = 10
+            set_country_flag = wotl_pro_claimed_nap
+            NAP = {
+                set_country_flag = wotl_nap_pro_claimed_throne
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        ai_importance = 5
+    }
+
+    wotl_pro_flee_to_naples = {
+        potential = {
+            tag = PRO
+            NOT = {
+                has_country_flag = wotl_pro_attempted_to_flee
+                has_country_flag = wotl_pro_claimed_nap
+            }
+        }
+
+        allow = {
+            dynasty = NAP
+            is_at_war = yes
+            OR = {
+                NOT = {
+                    war_score = -20
+                }
+                NOT = {
+                    controls = 201
+                }
+            }
+            NAP = {
+                has_opinion = {
+                    who = ROOT
+                    value = 50
+                }
+            }
+        }
+
+        effect = {
+            set_country_flag = wotl_pro_attempted_to_flee
+            NAP = {
+                country_event = {
+                    id = wotl_nap.3
+                }
+            }
+            custom_tooltip = wotl_pro_flee_to_naples.tt
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}

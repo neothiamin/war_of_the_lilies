@@ -1,0 +1,188 @@
+war_of_the_lilies_disaster = {
+    potential = {
+        tag = ENG
+        religion_group = christian
+        NOT = {
+            has_global_flag = wotl_war_over
+        }
+        normal_or_historical_nations = yes
+    }
+    
+    can_start = {
+        current_age = age_of_discovery
+        FRA = {
+            is_subject_of = ENG
+        }
+        has_any_disaster = no
+        is_at_war = no
+    }
+
+    can_stop = {
+        has_any_disaster = yes
+    }
+
+    can_end = {
+        custom_trigger_tooltip = {
+            tooltip = wotl_disaster_can_end
+            OR = {
+                FRA = {
+                    has_country_flag = wotl_fra_won_war
+                }
+                has_country_flag = wotl_eng_won_war
+            }
+        }
+    }
+
+    modifier = {
+        diplomatic_reputation = -2
+        manpower_recovery_speed = -0.1
+        war_exhaustion = 0.05
+    }
+
+    progress = {
+        modifier = {
+            factor = 0.25
+            AND = {
+                has_heir = yes
+                heir_culture = english
+            }
+        }
+        modifier = {
+            factor = 0.25
+            ruler_culture = english
+        }
+        modifier = {
+            factor = 0.3
+            OR = {
+                AND = {
+                    has_heir = yes
+                    heir_culture = normand
+                }
+                ruler_culture = normand
+            }
+        }
+        modifier = {
+            factor = 0.75
+            has_heir = yes
+            NOT = { heir_culture = normand }
+            NOT = { heir_culture = english }
+            NOT = { heir_culture = cosmopolitan_french }
+        }
+        modifier = {
+            factor = 0.1
+            exists = CHP
+        }
+        modifier = {
+            factor = 0.1
+            exists = ORL
+        }
+        modifier = {
+            factor = 0.2
+            FRA = {
+                liberty_desire = 40
+            }
+        }
+        modifier = {
+            factor = 0.15
+            FRA = {
+                liberty_desire = 65
+            }
+        }
+        modifier = {
+            factor = 0.25
+            FRA = {
+                NOT = {
+                    has_opinion = {
+                        who = ENG
+                        value = 100
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = -0.2
+            NOT = {
+                FRA = {
+                    liberty_desire = 20
+                }
+            }
+        }
+        modifier = {
+            factor = -0.25
+            FRA = {
+                has_opinion = {
+                    who = ENG
+                    value = 180
+                }
+            }
+        }
+        modifier = {
+            factor = 0.1
+            FRA = {
+                ai_attitude = {
+                    who = ROOT
+                    attitude = attitude_disloyal
+                }
+            }
+        }
+        modifier = {
+            factor = 0.15
+            FRA = {
+                ai_attitude = {
+                    who = ROOT
+                    attitude = attitude_rebellious
+                }
+            }
+        }
+        modifier = {
+            factor = 0.2
+            custom_trigger_tooltip = {
+                tooltip = wotl_eng_no_concessions
+                has_country_flag = wotl_eng_concessions
+                NOT = {
+                    has_country_flag = wotl_eng_appeased_fra
+                }
+            }
+        }
+        modifier = {
+            factor = 0.2
+            custom_trigger_tooltip = {
+                tooltip = wotl_fra_has_scars
+                FRA = {
+                    has_country_modifier = wotl_fra_rebellious
+                }
+            }
+        }
+        modifier = {
+            factor = -0.1
+            massif_central_area = {
+                type = all
+                country_or_non_sovereign_subject_holds = ENG
+            }
+        }
+        modifier = {
+            factor = -0.5
+            FRA = {
+                all_core_province = {
+                    country_or_non_sovereign_subject_holds = ENG
+                }
+            }
+        }
+    }
+
+    on_start = wotl_proper.1
+    on_end = wotl_proper.100
+
+    on_monthly = {
+        events = {
+
+        }
+        random_events = {
+            1000 = 0
+            100 = wotl_proper.8
+            100 = wotl_proper.9
+            50 = wotl_proper.10
+            50 = wotl_proper.11
+        }
+    }
+}

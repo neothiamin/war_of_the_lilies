@@ -1,0 +1,308 @@
+########################################
+# WOTL events for Portugal huehuehue   #
+########################################
+
+namespace = wotl_por
+
+#Henrique, o Navegador
+
+country_event = {
+    id = wotl_por.1
+    title = wotl_por.1.t
+    desc = wotl_por.1.desc
+    picture = EXPLORERS_eventPicture
+
+    fire_only_once = yes
+
+    mean_time_to_happen = {
+        months = 12
+    }
+
+    trigger = {
+        tag = POR
+        current_age = age_of_discovery
+        any_owned_province = {
+            has_port = yes
+        }
+        NOT = {
+            has_idea_group = exploration_ideas
+        }
+        is_at_war = no
+        owns_core_province = 230
+        dip_tech = 3
+    }
+
+    #Give Henrique whatever he needs!
+    option = {
+        name = wotl_por.1.a
+        define_explorer = {
+            shock = 2
+            fire = 1
+            manuever = 4
+            name = "Henrique, o Navegador"
+        }
+        add_country_modifier = {
+            name = wotl_por_henrique
+            duration = 9125
+        }
+    }
+
+    #Grant Henrique whatever we can spare.
+    option = {
+        name = wotl_por.1.b
+        set_country_flag = wotl_por_henrique_must_prove_self
+        define_explorer = {
+            shock = 1
+            fire = 0
+            manuever = 2
+            name = "Henrique, o Navegador"
+        }
+    }
+    
+}
+
+#Starved Ceuta
+
+country_event = {
+    id = wotl_por.2
+    title = wotl_por.2.t
+    desc = wotl_por.2.desc
+    picture = BAD_WITH_MONARCH_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = POR
+        current_age = age_of_discovery
+        owns_core_province = 1751
+        1751 = {
+            is_core = MOR
+            NOT = {
+                culture = ROOT
+                religion = ROOT
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 6
+    }
+
+    immediate = {
+        set_country_flag = wotl_por_starved_ceuta_happened
+    }
+
+    #Explore ways to alleviate the city's suffering.
+    option = {
+        name = wotl_por.2.a
+        ai_chance = {
+            factor = 35
+        }
+        set_country_flag = wotl_por_starved_ceuta_a
+        1751 = {
+            add_province_modifier = {
+                name = wotl_por_starved_ceuta
+                duration = -1
+            }
+        }
+    }
+
+    #The people of Ceuta are secondary to the people of Portugal.
+    option = {
+        name = wotl_por.2.b
+        ai_chance = {
+            factor = 65
+        }
+        1751 = {
+            add_unrest = 8
+            add_province_modifier = {
+                name = wotl_por_starved_ceuta
+                duration = -1
+            }
+        }
+        #MOR = {
+        #    country_event = {
+        #        id = wotl_mor.1
+        #    }
+        #}
+    }
+}
+
+#Ceuta's Suffering
+
+country_event = {
+    id = wotl_por.3
+    title = wotl_por.3.t
+    desc = wotl_por.3.desc
+    picture = BAD_WITH_MONARCH_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = POR
+        has_country_flag = wotl_por_starved_ceuta_a
+    }
+
+    mean_time_to_happen = {
+        months = 3
+    }
+
+
+    #By capturing Tangiers, we can monopolize trade in Northern Morocco.
+    option = {
+        name = wotl_por.3.a
+        ai_chance = {
+            factor = 70
+        }
+        set_country_flag = wotl_por_3_a
+        334 = {
+            add_claim = ROOT
+        }
+    }
+
+    #By investing in infrastructure in Ceuta, we can turn the people towards us.
+    option = {
+        name = wotl_por.3.b
+        ai_chance = {
+            factor = 15
+        }
+        add_years_of_income = -0.25
+        1751 = {
+            add_province_modifier = {
+                name = wotl_por_3_b_effect
+                duration = -1
+            }
+        }
+    }
+
+    #By launching a religious inquisition, we can show the people of Ceuta the Light.
+    option = {
+        name = wotl_por.3.c
+        ai_chance = {
+            factor = 15
+        }
+        add_years_of_income = -0.25
+        1751 = {
+            add_province_modifier = {
+                name = wotl_por_3_c_effect
+                duration = -1
+            }
+        }
+    }
+}
+
+#Tangiers Conquered
+country_event = {
+    id = wotl_por.4
+    title = wotl_por.4.t
+    desc = wotl_por.4.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = POR
+        has_country_flag = wotl_por_starved_ceuta_happened
+        has_country_flag = wotl_por_3_a
+        owns_core_province = 334
+    }
+
+    mean_time_to_happen = {
+        months = 12
+    }
+
+    #Glory to us!
+    option = {
+        name = wotl_por.4.a
+        if = {
+            limit = {
+                has_dlc = "Golden Century"
+            }
+            complete_mission = gc_por_build_the_navy
+            complete_mission = gc_por_conquer_tangiers
+        }
+        334 = {
+            add_province_modifier = {
+                name = wotl_por_tangiers_conquered
+                duration = 18250
+            }
+        }
+    }
+}
+
+#Ceuta Built Up
+country_event = {
+    id = wotl_por.5
+    title = wotl_por.5.t
+    desc = wotl_por.5.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = POR
+        has_country_flag = wotl_por_starved_ceuta_happened
+        1751 = {
+            has_province_modifier = wotl_por_3_b_effect
+            OR = {
+                has_building = marketplace
+                has_building = workshop
+                has_building = temple
+                has_building = barracks
+                has_building = shipyard
+            }
+            development = 12
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 12
+    }
+
+    #Glory to us!
+    option = {
+        name = wotl_por.5.a
+        add_prestige = 15
+        1751 = {
+            remove_province_modifier = wotl_por_3_b_effect
+            add_base_manpower = 1
+            add_base_production = 1
+            add_base_tax = 1
+        }
+    }
+}
+
+#Ceuta Converted
+country_event = {
+    id = wotl_por.6
+    title = wotl_por.6.t
+    desc = wotl_por.6.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = POR
+        has_country_flag = wotl_por_starved_ceuta_happened
+        1751 = {
+            has_province_modifier = wotl_por_3_c_effect
+            religion = ROOT
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 12
+    }
+
+    #Glory to us!
+    option = {
+        name = wotl_por.6.a
+        add_prestige = 15
+        1751 = {
+            remove_province_modifier = wotl_por_3_c_effect
+            add_base_manpower = 1
+            add_base_production = 1
+            add_base_tax = 1
+        }
+    }
+}

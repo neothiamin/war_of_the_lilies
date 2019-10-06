@@ -7,6 +7,7 @@ eng_british_conquest = {
 	potential = {
 		OR = {
 			tag = ENG
+			tag = ANF
 			tag = GBR
 		}
 		NOT = { map_setup = map_setup_random }
@@ -105,6 +106,7 @@ eng_british_conquest_ire = {
 	potential = {
 		OR = {
 			tag = ENG
+			tag = ANF
 			tag = GBR
 		}
 		NOT = { map_setup = map_setup_random }
@@ -186,6 +188,7 @@ eng_british_conquest_scotland = {
 	potential = {
 		OR = {
 			tag = ENG
+			tag = ANF
 			tag = GBR
 		}
 		NOT = { map_setup = map_setup_random }
@@ -272,24 +275,6 @@ eng_british_conquest_scotland = {
 	
 	}
 }
-
-eng_french_conquest = {
-
-	slot = 5
-	generic = no
-	ai = yes
-	
-	potential = {
-		OR = {
-			tag = ENG
-			tag = GBR
-		}
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-	
-	
-}
 	
 eng_exploration_americas = {
 
@@ -300,6 +285,7 @@ eng_exploration_americas = {
 	potential = {
 		OR = {
 			tag = ENG
+			tag = ANF
 			tag = GBR
 		}
 		is_random_new_world = no
@@ -400,6 +386,7 @@ eng_chesapeake_dominance = {
 	potential = {
 		OR = {
 			tag = ENG
+			tag = ANF
 			tag = GBR
 		}
 		is_random_new_world = no
@@ -445,31 +432,107 @@ eng_chesapeake_dominance = {
 
 }
 
-yaahm_english_missions_5 = {
-	slot = 5
-	generic = no
-	ai = yes
-	
-	potential = {
-		OR = {
-			tag = ENG
-			tag = GBR
-		}
-		is_random_new_world = no
-		NOT = { map_setup = map_setup_random }
-		always = no
-	}
-	has_country_shield = yes
-
-	yaahm_eng_french_throne = {
-		icon = mission_empire
-		required_missions = {}
-		position = 1
-	
-		trigger = {		
-		}
-	}
-}
+#wotl_english_missions_5 = {
+#	slot = 5
+#	generic = no
+#	ai = yes
+#	
+#	potential = {
+#		OR = {
+#			tag = ENG
+#			tag = ANF
+#		}
+#		is_random_new_world = no
+#		NOT = { map_setup = map_setup_random }
+#		always = no
+#	}
+#	has_country_shield = yes
+#
+#	mission_wotl_eng_war = {
+#		icon = mission_empire
+#		required_missions = {}
+#		position = 1
+#	
+#		trigger = {
+#			custom_trigger_tooltip = {
+#				tooltip = mission_wotl_eng_war_trigger
+#				has_global_flag = wotl_war_over
+#			}
+#		}
+#
+#		effect = {
+#			if = {
+#				limit = {
+#					has_country_flag = wotl_eng_won_war
+#				}
+#				set_country_flag = mission_wotl_eng_war_a
+#				brittany_area = {
+#					limit = {
+#						NOT = {
+#							country_or_non_sovereign_subject_holds = ROOT
+#						}
+#					}
+#					add_permanent_claim = ROOT
+#				}
+#			}
+#			if = {
+#				limit = {
+#					FRA = {
+#						has_country_flag = wotl_fra_won_war
+#					}
+#				}
+#				set_country_flag = mission_wotl_eng_war_b
+#				if = {
+#					limit = {
+#						owns = 168
+#					}
+#					168 = {
+#						add_province_modifier = {
+#							name = wotl_eng_norman_defenses
+#							duration = 7300
+#						}
+#					}
+#				}
+#			}
+#			swap_non_generic_missions = yes
+#		}
+#	}
+#}
+#
+#wotl_english_missions_5_a = {
+#	slot = 5
+#	generic = no
+#	ai = yes
+#	
+#	potential = {
+#		OR = {
+#			tag = ENG
+#			tag = ANF
+#		}
+#		is_random_new_world = no
+#		NOT = { map_setup = map_setup_random }
+#		has_country_flag = mission_wotl_eng_war_a
+#	}
+#	has_country_shield = yes
+#}
+#
+#
+#wotl_english_missions_5_b = {
+#	slot = 5
+#	generic = no
+#	ai = yes
+#	
+#	potential = {
+#		OR = {
+#			tag = ENG
+#			tag = ANF
+#		}
+#		is_random_new_world = no
+#		NOT = { map_setup = map_setup_random }
+#		has_country_flag = mission_wotl_eng_war_b
+#	}
+#	has_country_shield = yes
+#}
 
 eng_indian_ocean_exploration = {
 	
@@ -479,6 +542,7 @@ eng_indian_ocean_exploration = {
 	potential = {
 		OR = {
 			tag = ENG
+			tag = ANF
 			tag = GBR
 		}
 		NOT = { map_setup = map_setup_random }
@@ -566,6 +630,7 @@ eng_indian_cot_dominance = {
 	potential = {
 		OR = {
 			tag = ENG
+			tag = ANF
 			tag = GBR
 		}
 		NOT = {
@@ -625,6 +690,7 @@ eng_british_cot_dominance = {
 	potential = {
 		OR = {
 			tag = ENG
+			tag = ANF
 			tag = GBR
 		}
 		NOT = {

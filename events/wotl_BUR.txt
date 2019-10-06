@@ -4,197 +4,132 @@
 
 namespace = wotl_bur
 
-#Flemish War (JTI Indep)
-#country_event = {
-#    id = wotl_bur.1
-#    title = wotl_bur.1.t
-#    desc = wotl_bur.1.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    trigger = {
-#        tag = BUR
-#        FLA = {
-#            has_country_flag = wotl_fla_independence
-#        }
-#        is_at_war = no
-#    }
-#
-#    fire_only_once = yes
-#
-#    mean_time_to_happen = {
-#        days = 30
-#    }
-#
-#    #We must step in.
-#    option = {
-#        name = wotl_bur.1.a
-#        ai_chance = {
-#            factor = 75
-#        }
-#        #declare_war_with_cb = {
-#        #    casus_belli = cb_annex
-#        #    who = FLA
-#        #    war_goal_province = 90            
-#        #}
-#        vassalize = FLA
-#        add_country_modifier = {
-#            name = wotl_bur_flemish_war_modifier
-#            duration = 3650            
-#        }
-#        reverse_add_opinion = {
-#            who = FLA
-#            modifier = wotl_bur_allied_fla
-#        }
-#        hidden_effect = {
-#            add_historical_rival = ENG            
-#            set_country_flag = wotl_bur_flemish_war_friend_fla
-#        }
-#    }
-#
-#    #It is none of our concern.
-#    option = {
-#        name = wotl_bur.1.b
-#        ai_chance = {
-#            factor = 25
-#        }
-#        reverse_add_opinion = {
-#            who = ENG
-#            modifier = wotl_bur_non_interference
-#        }
-#    }
-#    
-#}
-#
-#
-##Flemish War (ENG supports JTI)
-#country_event = {
-#    id = wotl_bur.2
-#    title = wotl_bur.2.t
-#    desc = wotl_bur.2.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    trigger = {
-#        tag = BUR
-#        has_global_flag = wotl_fla_flemish_revolt_happened
-#        is_at_war = no
-#        FLA = {
-#            has_ruler_flag = wotl_fla_jti_supported
-#        }
-#    }
-#
-#    fire_only_once = yes
-#
-#    mean_time_to_happen = {
-#        days = 30
-#    }
-#
-#    #We must step in.
-#    option = {
-#        name = wotl_bur.2.a
-#        ai_chance = {
-#            factor = 75
-#        }
-#        declare_war_with_cb = {
-#            casus_belli = cb_annex
-#            who = FLA
-#            war_goal_province = 90            
-#        }       
-#        add_country_modifier = {
-#            name = wotl_bur_flemish_war_modifier
-#            duration = 3650            
-#        } 
-#        hidden_effect = {
-#            add_historical_rival = ENG
-#            set_country_flag = wotl_bur_flemish_war_enemy_fla
-#        }
-#    }
-#
-#    #It is none of our concern.
-#    option = {
-#        name = wotl_bur.1.b
-#        ai_chance = {
-#            factor = 25
-#        }
-#        reverse_add_opinion = {
-#            who = ENG
-#            modifier = wotl_bur_non_interference
-#        }
-#    }
-#}
+#Imperial Relations
 
-#Victory over England!
-#country_event = {
-#    id = wotl_bur.3
-#    title = wotl_bur.3.t
-#    desc = wotl_bur.3.desc    
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    is_triggered_only = yes
-#
-#    fire_only_once = yes
-#
-#    #Hurrah! Death to [ENG.Monarch.GetName]!
-#    option = {
-#        name = wotl_bur.3.a
-#        add_country_modifier = {
-#            name = wotl_bur_big_win_effect
-#            duration = 3650
-#        }
-#        clear_global_event_target = wotl_eng_big_defeat_location
-#    }
-#}
-
-#Our Claim to France
 country_event = {
-    id = wotl_bur.4
-    title = wotl_bur.4.t
-    desc = wotl_bur.4.desc    
-    picture = LIBERUM_VETO_eventPicture
+    id = wotl_bur.1
+    title = wotl_bur.1.t
+    desc = wotl_bur.1.desc
+    picture = HRE_eventPicture
 
     fire_only_once = yes
 
     trigger = {
         tag = BUR
-        ENG = {
-            has_ruler_flag = wotl_eng_war_lost
+        OR = {
+            any_owned_province = {
+                is_part_of_hre = yes
+            }
+            any_subject_country = {
+                is_part_of_hre = yes
+            }
         }
+        is_year = 1440
         NOT = {
-            alliance_with = ENG
-            truce_with = ENG
+            is_year = 1500
         }
-        dynasty = "de Valois-Bourgogne"
     }
 
     mean_time_to_happen = {
-        months = 24
-    }
-
-    #Stake a claim to the French throne!
-    option = {
-        name = wotl_bur.4.a
-        set_country_flag = wotl_bur_claimed_france
-        add_country_modifier = {
-            name = wotl_bur_4_a_effect
-            duration = 3650
-        }
-        ile_de_france_area = {
-            add_claim = ROOT
-        }
-        champagne_area = {
-            add_claim = ROOT
-        }
-        ai_chance = {
-            factor = 90
+        months = 180
+        modifier = {
+            factor = 0.8
+            FRA = {
+                is_subject = no
+                NOT = {
+                    has_opinion = {
+                        who = ROOT
+                        value = 50
+                    }
+                }
+            }
         }
     }
 
-    #The pen is mightier than the sword.
+    #Submit an offer of fealty to the Emperor.
     option = {
-        name = wotl_bur.4.b
-        set_country_flag = wotl_bur_no_claim
-        add_prestige = 15
+        name = wotl_bur.1.a
         ai_chance = {
-            factor = 10
+            factor = 30
+            modifier = {
+                factor = 5
+                FRA = {
+                    is_subject = no
+                    NOT = {
+                        has_opinion = {
+                            who = ROOT
+                            value = 50
+                        }
+                    }
+                }
+            }
         }
+        emperor = {
+            country_event = {
+                id = wotl_misc.12
+            }
+        }
+    }
+
+    #We must not let a foreign yoke of any kind lie around our neck!
+    option = {
+        name = wotl_bur.1.b
+        ai_chance = {
+            factor = 70
+            
+        }
+        add_prestige = 10
+        every_subject_country = {
+            limit = {
+                is_part_of_hre = yes
+            }
+            add_opinion = {
+                who = ROOT
+                modifier = wotl_bur_no_hre
+            }
+        }
+    }
+}
+
+#Admission to the Empire!
+
+country_event = {
+    id = wotl_bur.2
+    title = wotl_bur.2.t
+    desc = wotl_bur.2.desc
+    picture = HRE_eventPicture
+
+    is_triggered_only = yes
+    
+    trigger = {
+        tag = BUR
+    }
+
+    #Wonderful news!
+    option = {
+        name = wotl_bur.2.a
+        tooltip = {            
+            set_in_empire = yes
+        }
+    }
+}
+
+#Imperial Membership Rejected!
+
+country_event = {
+    id = wotl_bur.3
+    title = wotl_bur.3.t
+    desc = wotl_bur.3.desc
+    picture = HRE_eventPicture
+
+    is_triggered_only = yes
+    
+    trigger = {
+        tag = BUR
+    }
+
+    #We would be better off on our own anyways...
+    option = {
+        name = wotl_bur.3.a
     }
 }

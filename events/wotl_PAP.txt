@@ -1,0 +1,48 @@
+########################################
+# WOTL events for Popeman              #
+########################################
+
+namespace = wotl_pap
+
+#Alliance with Toulouse?
+country_event = {
+    id = wotl_pap.1
+    title = wotl_pap.1.t
+    desc = wotl_pap.1.desc
+    picture = POPE_PREACHING_eventPicture
+
+    is_triggered_only = yes
+
+    #Of course! [TOU.Monarch.GetName] is truly a pious [TOU.Monarch.GetWomanMan].
+    option = {
+        name = wotl_pap.1.a
+        ai_chance = {
+            factor = 60
+        }
+        create_alliance = TOU
+        reverse_add_opinion = {
+            who = TOU
+            modifier = wotl_tou_pap_alliance
+        }
+        add_opinion = {
+            who = TOU
+            modifier = wotl_tou_pap_alliance
+        }
+    }
+
+    #Toulouse is not worth our time.
+    option = {
+        name = wotl_pap.1.b
+        ai_chance = {
+            factor = 40
+        }
+        hidden_effect = {
+            TOU = {
+                country_event = {
+                    id = wotl_tou.2
+                    days = 15
+                }
+            }
+        }
+    }
+}

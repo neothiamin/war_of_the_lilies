@@ -5,12 +5,12 @@ union = {
 	start_date = 1420.1.1
 	end_date = 1477.1.5
 }
-union = {
-	first = BUR
-	second = HOL
-	start_date = 1420.1.1
-	end_date = 1477.1.5
-}
+#union = {
+#	first = BUR
+#	second = HOL
+#	start_date = 1420.1.1
+#	end_date = 1477.1.5
+#}
 #vassal = {
 #	first = HAB
 #	second = NED

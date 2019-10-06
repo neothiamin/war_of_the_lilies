@@ -1,0 +1,118 @@
+########################################
+# WOTL events for Toulouse             #
+########################################
+
+namespace = wotl_tou
+
+#Alliance with the Pope?
+country_event = {
+    id = wotl_tou.1
+    title = wotl_tou.1.t
+    desc = wotl_tou.1.desc
+    picture = PRAYING_eventPicture
+
+    trigger = {
+        tag = TOU
+        NOT = {
+            is_rival = PAP
+            war_with = PAP
+        }
+        PAP = {
+            has_opinion = {
+                who = ROOT
+                value = 25
+            }
+        }
+        religion = catholic
+    }
+
+    fire_only_once = yes
+
+    mean_time_to_happen = {
+        months = 180
+        modifier = {
+            factor = 0.9
+            PAP = {
+                has_opinion = {
+                    who = ROOT
+                    value = 100
+                }
+            }
+        }
+        modifier = {
+            factor = 0.9
+            has_ruler_flag = wotl_tou_raymond_1
+        }
+    }
+
+    #His Holiness would make a fine ally!
+    option = {
+        name = wotl_tou.1.a
+        ai_chance = {
+            factor = 50
+        }
+        PAP = {
+            country_event = {
+                id = wotl_pap.1
+                days = 15
+            }
+        }
+    }
+
+    #We ought not place too much faith in the words of mere men.
+    option = {
+        name = wotl_tou.1.b
+        ai_chance = {
+            factor = 50
+        }
+        add_papal_influence = -5
+    }
+}
+
+#Pope rejects alliance offer!
+country_event = {
+    id = wotl_tou.2
+    title = wotl_tou.2.t
+    desc = wotl_tou.2.desc
+    picture = COURT_eventPicture
+
+    is_triggered_only = yes
+
+    #We do not need the pope anyways.
+    option = {
+        name = wotl_tou.2.a
+        add_prestige = -5
+        ai_chance = {
+            factor = 70
+        }
+    }
+
+    #Blasted pope! What power does the See have anyways?
+    option = {
+        name = wotl_tou.2.b
+        ai_chance = {
+            factor = 30
+        }
+        set_ruler_flag = wotl_tou_dislike_pope
+        add_prestige = -10
+        reverse_add_opinion = {
+            who = PAP
+            modifier = wotl_tou_mad_at_pope
+        }
+        custom_tooltip = wotl_tou.2.b.tt    
+    }
+}
+
+#Impiety of [Root.Monarch.GetName]
+#country_event = {
+#    id = wotl_tou.3
+#    title = wotl_tou.3.t
+#    desc = wotl_tou.3.desc
+#    picture = RELIGION_eventPicture
+#
+#    trigger = {
+#        has_ruler_flag = wotl_tou_dislike_pope
+#        tag = TOU
+#        religion = catholic
+#    }
+#}

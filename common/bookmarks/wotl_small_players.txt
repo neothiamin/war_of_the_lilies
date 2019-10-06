@@ -1,0 +1,12 @@
+bookmark =
+{
+	name = "wotl_small_players"
+	desc = "wotl_small_players_desc"
+	date = 1435.1.13
+	
+	center = 196
+	
+	country = TOU
+	country = AUV
+	country = ORL
+}

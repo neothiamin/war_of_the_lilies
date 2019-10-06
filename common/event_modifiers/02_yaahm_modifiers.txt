@@ -101,5 +101,122 @@ wotl_eng_23_general_french_revolt = {
 }
 
 wotl_fra_rebellious = {
-    liberty_desire = 30
+    liberty_desire = 40
+}
+
+wotl_crowned_in_reims = {
+    prestige = 0.5
+    papal_influence = 1
+}
+
+wotl_orl_cracked_down = {
+    local_unrest = 6
+    local_tax_modifier = 0.05
+    province_trade_power_modifier = 0.05
+}
+
+wotl_orl_cracked_down_country = {
+    stability_cost_modifier = 0.1
+}
+
+wotl_orl_autonomy = {
+    local_unrest = -3
+    local_tax_modifier = -0.2
+}
+
+wotl_orl_autonomy_country = {
+    yearly_corruption = -0.05
+}
+
+wotl_orl_consolidated_power = {
+    election_cycle = 2
+    republican_tradition = -2
+}
+
+wotl_misc_10_emperor = {
+    tax_income = 0.5
+}
+
+wotl_misc_10_root = {
+    tax_income = -0.5
+}
+
+wotl_eng_norman_support_effect = { 
+    local_unrest = -4
+    local_manpower_modifier = 0.1
+}
+
+wotl_eng_gascon_support_effect = { 
+    local_unrest = -4
+    local_manpower_modifier = 0.1
+}
+
+wotl_eng_norman_rebellion_effect = { 
+    local_unrest = 4
+    local_manpower_modifier = -0.1
+}
+
+wotl_eng_gascon_rebellion_effect = { 
+    local_unrest = 4
+    local_manpower_modifier = -0.1
+}
+
+wotl_fra_independence = {
+    war_exhaustion = -0.1
+    land_morale = 0.15
+    land_forcelimit_modifier = 0.2
+}
+
+wotl_won_wotl = {
+    development_cost = -0.05
+    global_unrest = -2
+}
+
+wotl_eng_integrating_france_effect = {
+    diplomatic_upkeep = -1
+    diplomatic_reputation = -1
+}
+
+wotl_fra_new_nobles = {
+    liberty_desire = -50
+}
+
+wotl_eng_integrating_area = {
+    local_unrest = 6
+    local_tax_modifier = -0.25
+    local_culture_conversion_cost = -0.2
+}
+
+wotl_eng_norman_defenses = {
+    local_defensiveness = 0.3
+}
+
+wotl_pro_naples_protection = {
+    prestige = -0.5
+}
+
+wotl_por_henrique = {
+    global_tax_income = -1.5
+    range = 0.3
+    trade_efficiency = -0.2
+}
+
+wotl_por_starved_ceuta = {
+    local_tax_modifier = -0.25
+    local_unrest = 6
+    province_trade_power_modifier = -0.25
+}
+
+wotl_por_3_b_effect = {
+    local_unrest = 4
+    local_build_cost = -0.2
+}
+
+wotl_por_3_c_effect = {
+    local_unrest = 8
+    local_missionary_strength = 0.02
+}
+
+wotl_por_tangiers_conquered = {
+    province_trade_power_modifier = 0.2
 }

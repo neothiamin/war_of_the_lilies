@@ -17,10 +17,7 @@ country_event = {
 
     trigger = {
         tag = ENG
-        NOT = {
-            is_year = 1445
-        }
-        owns_core_province = 183
+        always = no
     }
 
     mean_time_to_happen = {
@@ -56,19 +53,18 @@ country_event = {
             AND = {
                 tag = ENG
                 NOT = {
-                    has_global_flag = wotl_war_started
+                    has_global_flag = wotl_war_active
                 }
             }
             AND = {               
                 tag = ENG               
-                has_country_flag = wotl_eng_accepted_french
+                has_country_flag = wotl_eng_won_war
             }
             tag = ANF
         }
         FRA = {
             is_subject_of = ENG
         }
-        owns_core_province = 183
         has_heir = yes
         NOT = {
             has_heir_flag = wotl_eng_heir_culture_event_fired
@@ -107,950 +103,126 @@ country_event = {
     }
 }
 
-#Buckle up, here we go.
-#Real War of the Lilies starts now.
 
-#John the Invader executes Fleming for Conspiracy
-#country_event = {
-#    id = wotl_eng.3
-#    title = wotl_eng.3.t
-#    desc = wotl_eng.3.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    fire_only_once = yes
-#
-#    major = yes
-#
-#    is_triggered_only = yes
-#
-#    trigger = {
-#		normal_or_historical_nations = yes
-#        tag = ENG
-#    }
-#
-#    immediate = {
-#        set_global_flag = wotl_jti_execution_happened
-#    }
-#
-#    #We must support John.
-#    option = {
-#        name = wotl_eng.3.a
-#        ai_chance = {
-#            factor = 20
-#        }
-#        custom_tooltip = wotl_eng_3a_will_cause_unrest
-#        set_country_flag = wotl_eng_supported_jti
-#        #Used in another event.
-#        FLA = {
-#            set_ruler_flag = wotl_fla_jti_supported
-#        }
-#    }
-#    
-#    #John has gone too far!
-#    option = {
-#        name = wotl_eng.3.b
-#        ai_chance = {
-#            factor = 80
-#        }
-#        custom_tooltip = wotl_eng_3b_john_angry
-#        set_country_flag = wotl_eng_did_not_support_jti
-#        #Used in another event.
-#        FLA = {
-#            set_ruler_flag = wotl_fla_jti_not_supported
-#        }
-#    }
-#}
-
-#John the Invader questions our legitimacy!
-#country_event = {
-#    id = wotl_eng.4
-#    title = wotl_eng.4.t
-#    desc = wotl_eng.4.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    fire_only_once = yes
-#    
-#    mean_time_to_happen = {
-#        months = 4
-#    }
-#
-#    trigger = {
-#		normal_or_historical_nations = yes
-#        tag = ENG
-#        has_global_flag = wotl_eng_legitimacy_questioned
-#        FLA = {
-#            has_ruler_flag = wotl_fla_john_the_invader
-#            is_subject_of = ENG
-#            is_at_war = no
-#        }
-#    }
-#
-#    #Does he not know who gave him his title?!
-#    option = {
-#        name = wotl_eng.4.a
-#        ai_chance = {
-#            factor = 80
-#        }
-#        custom_tooltip = wotl_eng_4a_remove_jti
-#        random_list = {
-#            #JTI declares independence.
-#            80 = {
-#                custom_tooltip = wotl_eng_4a_jti_indep
-#                hidden_effect = {
-#                    FLA = {
-#                        country_event = {
-#                            id = wotl_fla.6
-#                            days = 15
-#                            random = 5
-#                        }
-#                    }
-#                }
-#            }
-#            #JTI questions executive power.
-#            35 = {
-#                custom_tooltip = wotl_eng_4a_jti_question
-#                hidden_effect = {
-#                    FLA = {
-#                        country_event = {
-#                            id = wotl_fla.5
-#                            days = 30
-#                            random = 5
-#                        }
-#                    }
-#                }
-#            }
-#            #JTI removed.
-#            20 = {
-#                custom_tooltip = wotl_eng_4a_success
-#                hidden_effect = {
-#                    add_prestige = 15
-#                FLA = {
-#                    country_event = {
-#                        id = wotl_fla.4
-#                        days = 60
-#                        random = 15
-#                    }
-#                }
-#                }
-#            }
-#        }
-#    }
-#
-#    #John is more trouble than he's worth. He is on his own.
-#    option = {
-#        name = wotl_eng.4.b
-#        ai_chance = {
-#            factor = 20
-#        }
-#        set_ruler_flag = wotl_eng_king_weak
-#        FLA = {
-#            grant_independence = yes
-#        }
-#        add_prestige = -15
-#    }
-#}
-
-##Council of Dukes (For other English subjects)
-#country_event = {
-#    id = wotl_eng.5
-#    title = wotl_eng.5.t
-#    desc = {
-#        trigger = {
-#            FROM = {
-#                tag = FLA
-#            }
-#        }
-#        desc = wotl_eng.5.desc
-#    }
-#    desc = {
-#        trigger = {
-#            FROM = {
-#                NOT = {
-#                    tag = FLA
-#                }
-#            }
-#        }
-#        desc = wotl_eng.5.desc.b
-#    }
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    is_triggered_only = yes
-#
-#    trigger = {
-#		is_subject_of = ENG
-#    }
-#
-#    #Pledge our support to John!
-#    option = {
-#        name = wotl_eng.5.a
-#        set_country_flag = wotl_eng_council_of_dukes_support_fla
-#        ai_chance = {
-#            factor = 70
-#        }
-#        custom_tooltip = wotl_eng.5.a.tt
-#        hidden_effect = {
-#            FLA = {
-#                country_event = {
-#                    id = wotl_fla.11
-#                }
-#            }
-#        }
-#    }
-#
-#    #That's treason!
-#    option = {
-#        name = wotl_eng.5.b
-#        set_country_flag = wotl_eng_council_of_dukes_do_not_support_fla
-#        ai_chance = {
-#            factor = 30
-#        }
-#    }
-#}
-#
-##Council of Dukes demands greater domains!
-#country_event = {
-#    id = wotl_eng.6
-#    title = wotl_eng.6.t
-#    desc = wotl_eng.6.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    is_triggered_only = yes
-#
-#    #Our hands are tied.
-#    option = {
-#        name = wotl_eng.6.a
-#        set_global_flag = wotl_eng_bends_to_council.6
-#        #Picardy area
-#        if = {
-#            limit = {
-#                exists = FLA
-#            }
-#            every_owned_province = {
-#                limit = {
-#                    area = picardy_area
-#                }
-#                add_core = FLA
-#                cede_province = FLA
-#            }
-#        }
-#        #Chester
-#        if = {
-#            limit = {
-#                exists = NOL
-#            }
-#            4375 = {
-#                if = {
-#                    limit = {
-#                        owned_by = ENG
-#                    }
-#                    add_core = NOL
-#                    cede_province = NOL
-#                }
-#            }  
-#        }      
-#        #Lancashire
-#        if = {
-#            limit = {
-#                exists = NOL
-#            }
-#            244 = {
-#                if = {
-#                    limit = {
-#                        owned_by = ENG
-#                    }
-#                    add_core = NOL
-#                    cede_province = NOL
-#                }
-#            }  
-#        } 
-#        #Loire area
-#        if = {
-#            limit = {
-#                exists = GUY
-#            }
-#            every_owned_province = {
-#                limit = {
-#                    area = loire_area
-#                }
-#                add_core = GUY
-#                cede_province = GUY
-#            }
-#        }
-#        #Poitou area
-#        if = {
-#            limit = {
-#                exists = GUY
-#            }
-#            every_owned_province = {
-#                limit = {
-#                    area = poitou_area
-#                }
-#                add_core = GUY
-#                cede_province = GUY
-#            }
-#        }
-#        #Alencon
-#        if = {
-#            limit = {
-#                exists = PRO
-#            }
-#            1879 = {
-#                if = {
-#                    limit = {
-#                        owned_by = ENG
-#                    }
-#                    add_core = PRO
-#                    cede_province = PRO
-#                }
-#            }
-#        }
-#        ai_chance = {
-#            factor = 30
-#
-#            modifier = {
-#                factor = 2
-#                AND = {
-#                    NOL = {
-#                        has_country_flag = wotl_eng_council_of_dukes_support_fla
-#                    }
-#                    FLA = {
-#                        has_country_flag = wotl_eng_council_of_dukes_support_fla
-#                    }
-#                    GUY = {
-#                        has_country_flag = wotl_eng_council_of_dukes_support_fla
-#                    }
-#                }
-#            }
-#        }
-#    }
-#
-#    #Never! Our lands are rightfully ours!
-#    option = {
-#        name = wotl_eng.6.b
-#        add_prestige = 10
-#        hidden_effect = {
-#            FLA = {
-#                country_event = {
-#                    id = wotl_fla.9
-#                }
-#            }
-#        }
-#        ai_chance = {
-#            factor = 70
-#            modifier = {
-#                factor = 0.5
-#                AND = {
-#                    NOL = {
-#                        has_country_flag = wotl_eng_council_of_dukes_support_fla
-#                    }
-#                    FLA = {
-#                        has_country_flag = wotl_eng_council_of_dukes_support_fla
-#                    }
-#                    GUY = {
-#                        has_country_flag = wotl_eng_council_of_dukes_support_fla
-#                    }
-#                }
-#            }
-#        }
-#    }
-#
-#}
-##Council of Dukes demands creation of a new vassal!
-#country_event = {
-#    id = wotl_eng.7
-#    title = wotl_eng.7.t
-#    desc = wotl_eng.7.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    is_triggered_only = yes
-#
-#    #We shall resurrect the Duchy of Normandy.
-#    option = {
-#        name = wotl_eng.7.a
-#        ai_chance = {
-#            factor = 20
-#            modifier = {
-#                factor = 3
-#                AND = {
-#                    NOL = {
-#                        has_country_flag = wotl_eng_council_of_dukes_support_fla
-#                    }
-#                    FLA = {
-#                        has_country_flag = wotl_eng_council_of_dukes_support_fla
-#                    }
-#                    GUY = {
-#                        has_country_flag = wotl_eng_council_of_dukes_support_fla
-#                    }
-#                }
-#            }
-#        }
-#        trigger = {
-#            NOT = {
-#                exists = NRM
-#            }
-#        }
-#        every_owned_province = {
-#            limit = {
-#                area = normandy_area
-#            }
-#            add_core = NRM
-#            cede_province = NRM
-#        }
-#        vassalize = NRM
-#        set_global_flag = wotl_eng_bends_to_council.7
-#    }
-#
-#    #We shall create a new duchy on the Loire.
-#    option = {
-#        name = wotl_eng.7.b
-#        ai_chance = {
-#            factor = 20
-#            modifier = {
-#                factor = 3
-#                AND = {
-#                    NOL = {
-#                        has_country_flag = wotl_eng_council_of_dukes_support_fla
-#                    }
-#                    FLA = {
-#                        has_country_flag = wotl_eng_council_of_dukes_support_fla
-#                    }
-#                    GUY = {
-#                        has_country_flag = wotl_eng_council_of_dukes_support_fla
-#                    }
-#                }
-#            }
-#        }
-#        trigger = {
-#            NOT = {
-#                exists = ORL
-#            }
-#        }
-#        every_owned_province = {
-#            limit = {
-#                area = loire_area
-#            }
-#            add_core = ORL
-#            cede_province = ORL
-#        }
-#        vassalize = ORL
-#        set_global_flag = wotl_eng_bends_to_council.7
-#    }
-#
-#    #We shall create a new duchy in the rich lands of Champagne.
-#    option = {
-#        name = wotl_eng.7.c
-#        ai_chance = {
-#            factor = 20
-#            modifier = {
-#                factor = 3
-#                AND = {
-#                    NOL = {
-#                        has_country_flag = wotl_eng_council_of_dukes_support_fla
-#                    }
-#                    FLA = {
-#                        has_country_flag = wotl_eng_council_of_dukes_support_fla
-#                    }
-#                    GUY = {
-#                        has_country_flag = wotl_eng_council_of_dukes_support_fla
-#                    }
-#                }
-#            }
-#        }
-#        trigger = {
-#            NOT = {
-#                exists = CHP
-#            }
-#        }
-#        every_owned_province = {
-#            limit = {
-#                area = champagne_area
-#            }
-#            add_core = CHP
-#            cede_province = CHP
-#        }
-#        vassalize = CHP
-#        set_global_flag = wotl_eng_bends_to_council.7
-#    }
-#
-#    #Refuse!
-#    option = {
-#        name = wotl_eng.7.d
-#        ai_chance = {
-#            factor = 40
-#            modifier = {
-#                factor = 0.2
-#                AND = {
-#                    NOL = {
-#                        has_country_flag = wotl_eng_council_of_dukes_support_fla
-#                    }
-#                    FLA = {
-#                        has_country_flag = wotl_eng_council_of_dukes_support_fla
-#                    }
-#                    GUY = {
-#                        has_country_flag = wotl_eng_council_of_dukes_support_fla
-#                    }
-#                }
-#            }
-#        }
-#        add_prestige = 10
-#        hidden_effect = {
-#            FLA = {
-#                country_event = {
-#                    id = wotl_fla.9
-#                }
-#            }
-#        }
-#    }
-#    
-#}
-#
-##John de Armagnac is Worried
-#country_event = {
-#    id = wotl_eng.8
-#    title = wotl_eng.8.t
-#    desc = wotl_eng.8.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    is_triggered_only = yes
-#
-#    #Assure him he is safe.
-#    option = {
-#        name = wotl_eng.8.a
-#        ai_chance = {
-#            factor = 30            
-#        }
-#        GUY = {
-#            country_event = {
-#                id = wotl_guy.2
-#            }
-#        }
-#    }
-#
-#    #Demand loyalty.
-#    option = {
-#        name = wotl_eng.8.b
-#        ai_chance = {
-#            factor = 70            
-#        }
-#        custom_tooltip = wotl_eng.8.b.tt
-#        hidden_effect = {
-#            GUY = {
-#                country_event = {
-#                    id = wotl_guy.3
-#                }
-#            }
-#        }
-#    }
-#}
-#
-##War with Burgundy!
-#country_event = {
-#    id = wotl_eng.9
-#    title = wotl_eng.9.t
-#    desc = {
-#        trigger = {
-#            AND = {
-#                war_with = BUR
-#                war_with = FLA
-#                FLA = {
-#                    has_country_flag = wotl_fla_independence
-#                }
-#            }
-#        }
-#        desc = wotl_eng.9.desc.a
-#    }
-#    desc = {
-#        trigger = {
-#            AND = {
-#                war_with = BUR
-#                has_country_flag = wotl_eng_supported_jti
-#            }
-#        }
-#        desc = wotl_eng.9.desc.b
-#    }
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    fire_only_once = yes
-#
-#    trigger = {
-#        tag = ENG
-#        BUR = {
-#            has_country_modifier = wotl_bur_flemish_war_modifier
-#        }
-#        OR = {
-#            AND = {
-#                war_with = BUR
-#                war_with = FLA
-#                FLA = {
-#                    has_country_flag = wotl_fla_independence
-#                }
-#            }
-#            AND = {
-#                war_with = BUR
-#                has_country_flag = wotl_eng_supported_jti
-#            }
-#        }
-#    }
-#
-#    mean_time_to_happen = {
-#        days = 15
-#    }
-#
-#    #Damn them! They will pay for this!
-#    option = {
-#        name = wotl_eng.9.a
-#        if = {
-#            limit = {
-#                NOT = {
-#                    has_country_modifier = wotl_eng_flemish_revolt
-#                }
-#            }
-#            add_country_modifier = {
-#                name = wotl_eng_flemish_revolt
-#                duration = -1            
-#            }
-#        }
-#        set_country_flag = wotl_eng_flemish_war_active
-#    }
-#}
-#
-##Defeat in [ROOT.GetName]!
-#province_event = {
-#    id = wotl_eng.10
-#    title = wotl_eng.10.t
-#    desc = wotl_eng.10.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    is_triggered_only = yes
-#
-#    hidden = yes
-#
-#    trigger = {
-#        OR = {
-#            owner = {
-#                OR = {
-#                    tag = BUR
-#                    is_subject_of = BUR
-#                }
-#            }
-#            owner = {
-#                OR = {
-#                    tag = ENG
-#                    is_subject_of = ENG
-#                }
-#            }
-#        }
-#        FROM = {
-#            tag = ENG
-#        }
-#        NOT = {
-#            has_global_flag = wotl_eng_big_defeat
-#        }
-#        BUR = {
-#            has_country_modifier = wotl_bur_flemish_war_modifier
-#        }
-#        ENG = {
-#            has_country_flag = wotl_eng_flemish_war_active
-#        }
-#    }    
-#
-#    immediate = {
-#        set_global_flag = wotl_eng_big_defeat
-#        save_global_event_target_as = wotl_eng_big_defeat_location
-#        ENG = {
-#            country_event = {
-#                id = wotl_eng.12
-#            }
-#        }
-#    }
-#
-#    #Blast! We must not let this phase us!
-#    option = {
-#        name = wotl_eng.10.a
-#    }
-#}
-#
-##John of Beaufort declares independence!
-#country_event = {
-#    id = wotl_eng.11
-#    title = wotl_eng.11.t
-#    desc = wotl_eng.11.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    is_triggered_only = yes
-#
-#    fire_only_once = yes
-#
-#    #Reassert control!
-#    option = {
-#        name = wotl_eng.11.a
-#        declare_war_with_cb = {
-#            casus_belli = cb_annex
-#            who = FLA
-#        }
-#        add_country_modifier = {
-#            name = wotl_eng_flemish_revolt
-#            duration = -1            
-#        }
-#    }
-#}
-#
-##Defeat in [wotl_eng_big_defeat_location.GetName]!
-#country_event = {
-#    id = wotl_eng.12
-#    title = wotl_eng.12.t
-#    desc = wotl_eng.12.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    is_triggered_only = yes
-#
-#    fire_only_once = yes
-#
-#    #Blast! We must not let this phase us!
-#    option = {
-#        name = wotl_eng.12.a
-#        remove_country_modifier = wotl_eng_flemish_revolt
-#            add_country_modifier = {
-#                name = wotl_eng_big_defeat_effect
-#                duration = -1
-#            }
-#        BUR = {
-#            country_event = {
-#                id = wotl_bur.3
-#            }
-#        }
-#        every_country = {
-#            limit = {
-#                is_subject_of = ENG
-#                NOT = {
-#                    tag = FLA
-#                }
-#            }
-#            country_event = {
-#                id = wotl_eng.15                
-#            }
-#        }
-#    }
-#}
-#
-##Brigands in the French Countryside
-#country_event = {
-#    id = wotl_eng.13
-#    title = wotl_eng.13.t
-#    desc = wotl_eng.13.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    fire_only_once = yes
-#
-#    trigger = {
-#        tag = ENG
-#        has_country_flag = wotl_eng_state_of_affairs_happened
-#        any_owned_province = {
-#            region = france_region
-#        }
-#    }
-#
-#    mean_time_to_happen = {
-#        months = 12
-#    }
-#
-#    #We must restore order!
-#    option = {
-#        name = wotl_eng.13.a
-#        set_country_flag = wotl_eng_brigands_active
-#        custom_tooltip = wotl_eng.13.a.tt
-#        random_owned_province = {
-#            limit = {
-#                region = france_region
-#            }
-#            add_province_modifier = {
-#                name = wotl_eng_french_brigands
-#                duration = -1
-#            }
-#        }
-#    }
-#}
-#
-##Brigands in [ROOT.GetName]!
-#province_event = {
-#    id = wotl_eng.14
-#    title = wotl_eng.14.t
-#    desc = wotl_eng.14.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    trigger = {
-#        owned_by = ENG
-#        ENG = {
-#            has_country_flag = wotl_eng_brigands_active
-#        }
-#        region = france_region
-#        NOT = {
-#            any_province_in_state = {
-#                has_province_modifier = wotl_eng_french_brigands
-#            }
-#            has_province_modifier = wotl_eng_possible_rebellion
-#            province_id = 87
-#        }
-#    }
-#
-#    mean_time_to_happen = {
-#        months = 36
-#
-#        modifier = {
-#            factor = 1.2
-#            owner = {
-#                has_country_flag = wotl_eng_brigands_general_hired
-#            }
-#        }
-#    }
-#
-#    #Blast!
-#    option = {
-#        name = wotl_eng.14.a
-#        add_province_modifier = {
-#            name = wotl_eng_french_brigands
-#            duration = 1825
-#        }
-#    }
-#
-#    #Send in a Caporal
-#    option = {
-#        name = wotl_eng.14.b
-#        ENG = {
-#            add_mil_power = -10
-#        }
-#        if = {
-#            limit = {
-#                owner = {
-#                    has_country_flag = wotl_eng_caporals_popular
-#                }
-#            }
-#            custom_tooltip = wotl_eng.14.b.tt
-#            add_province_modifier = {
-#                name = wotl_eng_caporal_sent
-#                duration = -1
-#            }
-#        }
-#        if = {
-#            limit = {
-#                owner = {
-#                    NOT = {
-#                        has_country_flag = wotl_eng_caporals_popular
-#                    }
-#                }
-#            }
-#            add_province_modifier = {
-#                name = wotl_eng_caporal_sent
-#                duration = 1095
-#            }
-#        }
-#        set_province_flag = wotl_eng_caporal_flag
-#        trigger = {
-#            ENG = {
-#                has_country_flag = wotl_eng_brigands_general_hired
-#            }
-#        }
-#    }
-#}
-#
-##Flemish War: Righteous or Foolish?
-#country_event = {
-#    id = wotl_eng.15
-#    title = wotl_eng.15.t
-#    desc = wotl_eng.15.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    is_triggered_only = yes
-#
-#    trigger = {
-#        is_subject_of = ENG
-#    }
-#
-#    #We must wait and see how the war pans out.
-#    option = {
-#        name = wotl_eng.15.a
-#        set_country_flag = wotl_eng_subject_waiting
-#        ai_chance = {
-#            factor = 60
-#        }
-#    }
-#
-#    #Perhaps we ought to seek outside assistance...
-#    option = {
-#        name = wotl_eng.15.b
-#        set_country_flag = wotl_eng_subject_assistance
-#        country_event = {
-#            id = wotl_eng.16
-#        }
-#        ai_chance = {
-#            factor = 40
-#        }
-#    }
-#}
-#
-##Foreign Aid
-#country_event = {
-#    id = wotl_eng.16
-#    title = wotl_eng.16.t
-#    desc = wotl_eng.16.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    is_triggered_only = yes
-#
-#    #We should look to Provence.
-#    option = {
-#        name = wotl_eng.16.a
-#        trigger = {
-#            exists = PRO
-#            PRO = {
-#                NOT = {
-#                    alliance_with = ENG
-#                }
-#            }
-#        }
-#        PRO = {
-#            country_event = {
-#                id = wotl_misc.1
-#            }
-#        }
-#    }
-#
-#    #We should look to Castile.
-#    option = {
-#        name = wotl_eng.16.b
-#        trigger = {
-#            exists = CAS
-#            CAS = {
-#                NOT = {
-#                    alliance_with = ENG
-#                }
-#            }
-#        }
-#        CAS = {
-#            country_event = {
-#                id = wotl_misc.2
-#            }
-#        }
-#    }
-#
-#    #We should look to the Holy Roman Emperor.
-#    option = {
-#        name = wotl_eng.16.c
-#        emperor = {
-#            country_event = {
-#                id = wotl_misc.3
-#            }
-#        }
-#    }
-#}
-#
-
-##England loses war
+#Concessions to France
 country_event = {
-    id = wotl_eng.17
-    title = wotl_eng.17.t
-    desc = wotl_eng.17.desc
-    picture = LIBERUM_VETO_eventPicture
+    id = wotl_eng.27
+    title = wotl_eng.27.t
+    desc = wotl_eng.27.desc
+    picture = OVEREXTENSION_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+        has_disaster_progress = {
+            disaster = war_of_the_lilies_disaster
+            value = 75
+        }
+        FRA = {
+            is_subject_of = ENG
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 30
+    }
+
+    immediate = {
+        set_country_flag = wotl_eng_concessions
+    }
+
+    #Give them control of some land, quick!
+    option = {
+        name = wotl_eng.27.a
+        ai_chance = {
+            factor = 20
+        }
+        add_disaster_progress = {
+            disaster = war_of_the_lilies_disaster
+            value = -10
+        }
+        set_country_flag = wotl_eng_appeased_fra
+        if = {
+            limit = {
+                owns_core_province = 194
+            }
+            194 = {
+                cede_province = FRA
+                add_core = FRA
+            }
+        }
+        if = {
+            limit = {
+                owns_core_province = 4112
+            }
+            4112 = {
+                cede_province = FRA
+                add_core = FRA
+            }
+        }
+        if = {
+            limit = {
+                owns_core_province = 177
+            }
+            177 = {
+                cede_province = FRA
+                add_core = FRA
+            }
+        }
+        FRA = {            
+            add_liberty_desire = -10
+        }
+    }
+
+    #All will be well. We have the Gauls under control.
+    option = {
+        name = wotl_eng.27.b
+        ai_chance = {
+            factor = 60
+        }
+        add_disaster_progress = {
+            disaster = war_of_the_lilies_disaster
+            value = 5
+        }
+    }
+
+    #Invest in their lands.
+    option = {
+        name = wotl_eng.27.c
+        add_adm_power = -75
+        add_dip_power = -75
+        add_mil_power = -75
+        ai_chance = {
+            factor = 20
+        }
+        add_disaster_progress = {
+            disaster = war_of_the_lilies_disaster
+            value = -10
+        }
+        set_country_flag = wotl_eng_appeased_fra
+        FRA = {
+            random_owned_province = {
+                add_base_manpower = 1
+            }
+            random_owned_province = {
+                add_base_tax = 1
+            }
+            random_owned_province = {
+                add_base_production = 1
+            }
+            add_liberty_desire = -10
+        }
+    }
+}
+
+#France fanning flames of war!
+
+country_event = {
+    id = wotl_eng.28
+    title = wotl_eng.28.t
+    desc = wotl_eng.28.desc
+    picture = BAD_WITH_MONARCH_eventPicture
 
     is_triggered_only = yes
 
@@ -1058,377 +230,210 @@ country_event = {
 
     trigger = {
         tag = ENG
-        NOT = {
-            is_year = 1465
+        has_disaster_progress = {
+            disaster = war_of_the_lilies_disaster
+            value = 80
         }
     }
 
-    #We are still just as strong has we have ever been!
+    #Egads!
     option = {
-        name = wotl_eng.17.a
-        custom_tooltip = wotl_eng.17.a.tt
-        set_ruler_flag = wotl_eng_war_lost
-        add_ruler_modifier = {
-            name = wotl_eng_lost_war_effect
+        name = wotl_proper.28.a
+        tooltip = {
+            add_disaster_progress = {
+                value = 5
+                disaster = war_of_the_lilies_disaster
+            }
         }
-        add_prestige = -5
     }
 }
-#
-##Benefactor or Burden?
-##For English vassals
-#country_event = {
-#    id = wotl_eng.18
-#    title = wotl_eng.18.t
-#    desc = wotl_eng.18.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    trigger = {
-#        is_subject_of = ENG
-#        is_at_war = no
-#        ENG = {
-#            has_ruler_flag = wotl_eng_war_lost
-#        }
-#        NOT = {
-#            has_country_flag = wotl_eng_benefactor_or_burden
-#        }
-#        NOT = {
-#            tag = GUY
-#        }
-#    }
-#
-#    immediate = {
-#        set_country_flag = wotl_eng_benefactor_or_burden
-#    }
-#
-#    mean_time_to_happen = {
-#        months = 6
-#    }
-#
-#    #We should begin pursuing other diplomatic options.
-#    option = {
-#        name = wotl_eng.18.a
-#        add_liberty_desire = 20
-#        custom_tooltip = wotl_eng.18.a.tt
-#        set_country_flag = wotl_eng_vassal_rebellious
-#    }
-#
-#    #We have an obligation to England!
-#    option = {
-#        name = wotl_eng.18.b
-#        add_liberty_desire = -10
-#        add_opinion = {
-#            who = ENG
-#            modifier = wotl_eng_vassal_loyal_effect
-#        }
-#    }
-#}
-#
-##Benefactor or Burden?
-##For Aquitaine
-#country_event = {
-#    id = wotl_eng.19
-#    title = wotl_eng.19.t
-#    desc = wotl_eng.19.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    trigger = {
-#        is_subject_of = ENG
-#        is_at_war = no
-#        ENG = {
-#            has_ruler_flag = wotl_eng_war_lost
-#        }
-#        NOT = {
-#            has_country_flag = wotl_eng_benefactor_or_burden_guy
-#        }
-#        tag = GUY
-#    }
-#
-#    immediate = {
-#        set_country_flag = wotl_eng_benefactor_or_burden_guy
-#    }
-#
-#    mean_time_to_happen = {
-#        months = 6
-#    }
-#
-#    #We should begin pursuing other diplomatic options.
-#    option = {
-#        name = wotl_eng.19.a
-#        add_liberty_desire = 10
-#        custom_tooltip = wotl_eng.18.a.tt
-#        set_country_flag = wotl_eng_vassal_rebellious
-#    }
-#
-#    #Perhaps... England is not the right nation to rule France.
-#    option = {
-#        name = wotl_eng.19.b
-#        add_liberty_desire = 25
-#        custom_tooltip = wotl_eng.19.b.tt
-#        set_country_flag = wotl_eng_benefactor_or_burden_guy_rebel
-#    }
-#
-#    #We have an obligation to England!
-#    option = {
-#        name = wotl_eng.19.c
-#        add_liberty_desire = -10
-#        add_opinion = {
-#            who = ENG
-#            modifier = wotl_eng_vassal_loyal_effect
-#        }
-#    }
-#}
-#
-##Popularity of Caporals
-#country_event = {
-#    id = wotl_eng.20
-#    title = wotl_eng.20.t
-#    desc = wotl_eng.20.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    fire_only_once = yes
-#
-#    trigger = {
-#        tag = ENG
-#        has_country_flag = wotl_eng_brigands_general_hired
-#        has_country_flag = wotl_eng_brigands_active
-#        any_owned_province = {
-#            has_province_flag = wotl_eng_caporal_flag
-#        }
-#    }
-#
-#    mean_time_to_happen = {
-#        months = 48
-#    }
-#
-#    immediate = {
-#        set_country_flag = wotl_eng_caporals_popular
-#        set_saved_name = {
-#            key = wotl_eng_popular_caporal
-#            type = advisor
-#            scope = event_target:wotl_eng_france_fallback            
-#        }
-#    }
-#
-#    #As long as they remember THEY serve US, not the other way around.
-#    option = {
-#        name = wotl_eng.20.a
-#        every_province = {
-#            limit = {
-#                has_province_flag = wotl_eng_caporal_flag
-#            }
-#            add_province_modifier = {
-#                name = wotl_eng_possible_rebellion
-#                duration = -1
-#            }
-#        }
-#    }
-#}
-#
-##Flemish War Over
-#country_event = {
-#    id = wotl_eng.21
-#    title = wotl_eng.21.t
-#    desc = wotl_eng.21.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    fire_only_once = yes
-#
-#    trigger = {
-#        tag = ENG
-#        has_country_modifier = wotl_eng_flemish_revolt
-#        is_at_war = no
-#        OR = {
-#            FLA = {
-#                is_subject_of = ENG
-#            }
-#            owns_core_province = 90
-#        }
-#    }
-#
-#    mean_time_to_happen = {
-#        days = 15
-#    }
-#
-#    #Hurrah!
-#    option = {
-#        name = wotl_eng.21.a
-#        remove_country_modifier = wotl_eng_flemish_revolt
-#    }
-#}
-#
-##Caporals in [Root.GetName]
-#province_event = {
-#    id = wotl_eng.22
-#    title = wotl_eng.22.t
-#    desc = wotl_eng.22.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    trigger = {
-#        owned_by = ENG
-#        has_province_flag = wotl_eng_caporal_flag
-#        NOT = {
-#            has_province_modifier = wotl_eng_possible_rebellion
-#        }
-#    }
-#
-#    mean_time_to_happen = {
-#        months = 12
-#    }
-#
-#    #It will be fiiiiine...
-#    option = {
-#        name = wotl_eng.22.a
-#        add_province_modifier = {
-#            name = wotl_eng_possible_rebellion
-#            duration = -1
-#        }
-#    }
-#}
-#
-##Generic French rebellion
-#country_event = {
-#    id = wotl_eng.23
-#    title = wotl_eng.23.t
-#    desc = wotl_eng.23.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    fire_only_once = yes
-#
-#    trigger = {
-#        tag = ENG
-#        any_owned_province = {
-#            is_core = FRA
-#        }
-#        NOT = {
-#            has_ruler_flag = wotl_eng_henry_vi
-#        }
-#    }
-#
-#    mean_time_to_happen = {
-#        months = 24
-#        modifier = {
-#            factor = 0.5
-#            is_at_war = yes
-#        }
-#    }
-#    
-#    immediate = {        
-#        set_country_flag = wotl_eng_french_revolt
-#    }
-#
-#    #Blast!
-#    option = {
-#        name = wotl_eng.23.a
-#        random_province = {
-#            limit = {
-#                OR = {
-#                    is_core = FRA
-#                    is_core = ORL
-#                }
-#                controlled_by = ENG
-#            }
-#            save_event_target_as = wotl_eng_23_target
-#            every_province_in_state = {
-#                add_province_modifier = {
-#                    name = wotl_eng_23_general_french_revolt
-#                    duration = 1825
-#                }
-#            }
-#            spawn_rebels = {
-#                size = 2
-#                type = nationalist_rebels
-#                friend = FRA
-#                win = yes
-#            }
-#        }
-#    }
-#}
-#
-##Death of Henry VI
-#country_event = {
-#    id = wotl_eng.24
-#    title = wotl_eng.24.t
-#    desc = wotl_eng.24.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    fire_only_once = yes
-#
-#    is_triggered_only = yes
-#
-#    trigger = {
-#        tag = ENG
-#    }
-#
-#    #The fate of the nation sits with [Root.Monarch.GetName] now.
-#    option = {
-#        name = wotl_eng.24.a
-#    }
-#}
-#
-##Peasant revolt
-##Caporals got too popular
-#province_event = {
-#    id = wotl_eng.25
-#    title = wotl_eng.25.t
-#    desc = wotl_eng.25.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    trigger = {
-#        owned_by = ENG
-#        has_province_modifier = wotl_eng_possible_rebellion
-#        region = france_region
-#        OR = {
-#            NOT = {
-#                has_province_flag = wotl_eng_25_flag
-#            }
-#            had_province_flag = {
-#                flag = wotl_eng_25_flag
-#                days = 1825 
-#            }
-#        }
-#    }
-#
-#    mean_time_to_happen = {
-#        months = 48
-#        modifier = {
-#            factor = 0.7
-#            owner = {
-#                is_at_war = yes
-#            }
-#        }
-#    }
-#
-#    immediate = {
-#        set_province_flag = wotl_eng_25_flag
-#    }
-#
-#    #Crush them!
-#    option = {
-#        name = wotl_eng.25.a
-#        spawn_rebels = {
-#            size = 1
-#            type = anti_tax_rebels
-#            friend = FRA
-#        }
-#    }
-#}
 
-#Caporals form Confederacy, demand independence
-#country_event = {
-#    id = wotl_eng.26
-#    title = wotl_eng.26.t
-#    desc = wotl_eng.26.desc
-#    picture = LIBERUM_VETO_eventPicture
-#
-#    fire_only_once = yes
-#
-#    trigger = {
-#        tag = ENG
-#        num_of_owned_provinces_with = {
-#            value = 6
-#            has_province_flag = wotl_eng_25_flag
-#        }
-#        has_country_flag = 
-#    }
-#}
+#Post-WOTL: Fate of France
+country_event = {
+    id = wotl_eng.29
+    title = wotl_eng.29.t
+    desc = wotl_eng.29.desc
+    picture = COURT_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = ENG
+        has_country_flag = wotl_eng_won_war
+        has_global_flag = wotl_war_over
+        FRA = {
+            is_subject_of = ROOT
+        }
+    }
+
+    major = yes
+
+    mean_time_to_happen = {
+        months = 30
+    }
+
+    #Begin the process of integration.
+    option = {
+        name = wotl_eng.29.a
+        set_country_flag = wotl_eng_integrating_france
+        add_country_modifier = {
+            name = wotl_eng_integrating_france_effect
+            duration = 3650
+        }
+        FRA = {
+            random_owned_province = {
+                limit = {
+                    NOT = {
+                        area = ile_de_france_area
+                    }
+                    any_neighbor_province = {
+                        owned_by = ENG
+                    }
+                }
+                every_province_in_state = {
+                    add_province_modifier = {
+                        name = wotl_eng_integrating_area
+                        duration = -1
+                    }
+                    set_province_flag = wotl_integration_in_progress
+                }
+            }
+        }
+    }
+
+    #Appoint new nobles to local French territories.
+    option = {
+        name = wotl_eng.29.b
+        france_region = {
+            limit = {
+                owned_by = FRA
+            }
+            add_unrest = 8
+        }
+        FRA = {
+            add_country_modifier = {
+                name = wotl_fra_new_nobles
+                duration = 7125
+            }
+        }
+    }
+
+    #A divided France will be easier to rule.
+    option = {
+        name = wotl_eng.29.c
+        balkanize_france_effect = yes
+    }
+
+    #Continue treating France as an equal to England.
+    option = {
+        name = wotl_eng.29.d
+        add_prestige = 10
+        set_country_flag = wotl_fra_eng_equal
+        FRA = {
+            add_opinion = {
+                who = ROOT
+                modifier = wotl_fra_equal_to_eng
+            }
+        }
+    }
+}
+
+#Event to facilitate French Balkanization
+country_event = {
+    id = wotl_eng.30
+    title = wotl_eng.30.t
+    desc = wotl_eng.30.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    immediate = {
+        every_country = {
+            limit = {
+                is_subject_of = FRA
+            }
+            grant_independence = yes
+            ENG = {
+                vassalize = PREV
+            }
+            remove_historical_rival = ENG
+            add_opinion = {
+                who = ENG
+                modifier = wotl_eng_freed_us
+            }
+        }
+    }
+
+    #Ok.
+    option = {
+        ai_chance = {
+            factor = 100
+        }
+        name = wotl_eng.30.a
+    }
+
+}
+
+#Integration Complete!
+country_event = {
+    id = wotl_eng.31
+    title = wotl_eng.31.t
+    desc = wotl_eng.31.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    trigger = {
+        any_province = {
+            had_province_flag = {
+                flag = wotl_integration_in_progress
+                days = 1825
+            }
+            owned_by = FRA
+        }
+        tag = ENG
+        FRA = {
+            exists = yes
+            is_subject_of = ENG
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 30
+    }
+
+    #Hurrah!
+    option = {
+        name = wotl_eng.31.a
+        FRA = {
+            random_owned_area = {
+                limit = {
+                    any_province_in_state = {
+                        has_province_modifier = wotl_eng_integrating_area
+                    }
+                }
+                cede_province = ENG
+                add_core = ENG
+                clr_province_flag = wotl_integration_in_progress
+            }
+            random_owned_province = {
+                limit = {
+                    NOT = {
+                        area = ile_de_france_area
+                    }
+                    any_neighbor_province = {
+                        owned_by = ENG
+                    }
+                }
+                every_province_in_state = {
+                    add_province_modifier = {
+                        name = wotl_eng_integrating_area
+                        duration = -1
+                    }
+                    set_province_flag = wotl_integration_in_progress
+                }
+            }
+        }
+    }
+}
+

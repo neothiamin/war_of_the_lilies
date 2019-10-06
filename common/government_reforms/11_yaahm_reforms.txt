@@ -1,0 +1,19 @@
+orl_council_reform = {
+
+    potential = {
+        tag = ORL
+    }
+
+    icon = "politician"
+    allow_normal_conversion = no
+    legacy_equivalent = noble_republic
+    valid_for_nation_designer = no
+    allow_convert = no
+    fixed_rank = 1
+    duration = 2
+
+    modifiers = {
+        global_unrest = 2
+        advisor_cost = -0.1
+    }
+}

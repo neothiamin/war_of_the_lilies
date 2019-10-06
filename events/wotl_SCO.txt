@@ -1,0 +1,33 @@
+########################################
+# WOTL events for Scotland             #
+########################################
+
+namespace = wotl_sco
+
+#English Weakness
+#country_event = {
+#	id = wotl_sco.1
+#	title = wotl_sco.1.t
+#	desc = wotl_sco.1.desc
+#	picture = COURT_eventPicture
+#
+#	fire_only_once = yes
+#
+#	trigger = {
+#		tag = SCO
+#		has_global_flag = wotl_war_active
+#		OR = {
+#			is_rival = ENG
+#			NOT = {
+#				has_opinion = {
+#					who = ENG
+#					value = 50
+#				}
+#			}
+#		}
+#	}
+#
+#	mean_time_to_happen = {
+#		months = 3
+#	}
+#}

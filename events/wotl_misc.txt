@@ -116,6 +116,9 @@ country_event = {
         }
         government = monarchy
         is_subject = no
+        FRA = {
+            is_subject = yes
+        }
         NOT = {
             OR = {
                 tag = FRA

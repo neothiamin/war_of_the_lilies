@@ -4,6 +4,7 @@
 
 namespace = wotl_chp
 
+#Fortress of Reims?
 country_event = {
     id = wotl_chp.1
     title = wotl_chp.1.t

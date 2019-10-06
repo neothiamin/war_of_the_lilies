@@ -443,3 +443,8 @@
  wotl_fra.3.a:0 "Grant the Walloons greater autonomy. They have earned it."
  wotl_fra.3.b:0 "Create a new Duchy for the Walloon people under the French Crown."
  wotl_fra.3.c:0 "Renege on our promise. The French rule in France, not the Walloons."
+
+ wotl_orl.7.t:0 "French Rule over France Restored!"
+ wotl_orl.7.desc:0 "Vive le France!\n\nFrance has finally broken free from the English yoke! This places us in a precarious situation, however. The foundation of our nation was in direct opposition to English rule. Now, with the French people ruling themselves again, the question becomes: do we rejoin our brethren? Or do we maintain our independence?"
+ wotl_orl.7.a:0 "Rejoin the French fold."
+ wotl_orl.7.b:0 "Maintain our independence."

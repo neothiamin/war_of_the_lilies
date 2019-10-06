@@ -151,6 +151,9 @@ country_event = {
     #Grant them greater autonomy.
     option = {
         name = wotl_fra.3.a
+        ai_chance = {
+            factor = 45
+        }
         every_owned_province = {
             limit = {
                 culture = wallonian
@@ -165,6 +168,9 @@ country_event = {
     #Create a new duchy for them.
     option = {
         name = wotl_fra.3.b
+        ai_chance = {
+            factor = 25
+        }
         every_owned_province = {
             limit = {
                 culture = wallonian
@@ -177,6 +183,9 @@ country_event = {
     #Renege on our promise.
     option = {
         name = wotl_fra.3.c
+        ai_chance = {
+            factor = 30
+        }
         every_owned_province = {
             limit = {
                 culture = wallonian

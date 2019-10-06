@@ -206,6 +206,9 @@ country_event = {
             flag = orl_conseil_breakdown
             days = 3650
         }
+        NOT = {
+            has_global_flag = wotl_war_over
+        }
     }
 
     mean_time_to_happen = {
@@ -248,6 +251,9 @@ country_event = {
         tag = ORL
         has_reform = orl_council_reform
         is_subject = no
+        NOT = {
+            has_global_flag = wotl_war_over
+        }
     }
 
     mean_time_to_happen = {
@@ -265,25 +271,25 @@ country_event = {
         set_government_rank = 2
         hidden_effect = {
             random_list = {
-                22 = {
+                23 = {
                     define_ruler = {
                         dynasty = "de Évreux"
                         male = yes
                     }
                 }
-                22 = {
+                23 = {
                     define_ruler = {
                         dynasty = "de Orléans"
                         male = yes
                     }
                 }
-                22 = {
+                23 = {
                     define_ruler = {
                         dynasty = "de Vermandois"
                         male = yes
                     }
                 }
-                22 = {
+                23 = {
                     define_ruler = {
                         dynasty = "de Bourbon"
                         male = yes
@@ -310,6 +316,59 @@ country_event = {
         add_country_modifier = {
             name = wotl_orl_consolidated_power
             duration = -1
+        }
+    }
+}
+
+#French Rule Over France Restored!
+country_event = {
+    id = wotl_orl.7
+    title = wotl_orl.7.t
+    desc = wotl_orl.7.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+
+    fire_only_once = yes
+
+    mean_time_to_happen = {
+        months = 8
+    }
+
+    trigger = {
+        is_subject = no
+        tag = ORL
+        FRA = {
+            has_country_flag = wotl_fra_won_war
+        }
+        has_global_flag = wotl_war_over
+    }
+
+    #Rejoin our place under the French Crown.
+    option = {
+        name = wotl_orl.7.a
+        ai_chance = {
+            factor = 70
+        }
+        FRA = {
+            vassalize = ORL
+            add_opinion = {
+                who = ROOT
+                modifier = wotl_orl_rejoined_france
+            }
+        }
+    }
+
+    #Maintain our independence.
+    option = {
+        name = wotl_orl.7.b
+        ai_chance = {
+            factor = 30
+        }
+        add_prestige = 25
+        FRA = {
+            add_opinion = {
+                who = ROOT
+                modifier = wotl_orl_refused_to_rejoin
+            }
         }
     }
 }

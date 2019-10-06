@@ -85,3 +85,5 @@
  wotl_fra_reneged_walloon_autonomy:0 "Promise Broken"
  desc_wotl_fra_walloon_autonomy:0 "The French Crown has granted this province autonomy as a reward for its support during the Guerre du Lys."
  desc_wotl_fra_reneged_walloon_autonomy:0 "The French Crown has broken their promise to this province, inciting revolts."
+ wotl_orl_rejoined_france:0 "Orleans Rejoined the Fold"
+ wotl_orl_refused_to_rejoin:0 "Orleans Refused to Swear Fealty"

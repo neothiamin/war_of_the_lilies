@@ -101,7 +101,7 @@ country_event = {
     }
 }
 
-#[ORL.Monarch.GetName], King of France?
+#[ORL.Monarch.GetName], King of France? - Orleans
 country_event = {
     id = wotl_proper.3
     title = wotl_proper.3.t
@@ -145,7 +145,7 @@ country_event = {
 
 }
 
-#[ORL.Monarch.GetName], King of France?
+#[ORL.Monarch.GetName], King of France? - France
 country_event = {
     id = wotl_proper.4
     title = wotl_proper.4.t
@@ -201,7 +201,7 @@ country_event = {
 
 }
 
-#[ORL.Monarch.GetName], King of France?
+#[ORL.Monarch.GetName], King of France? - Orleans Success
 country_event = {
     id = wotl_proper.5
     title = wotl_proper.5.t

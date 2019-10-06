@@ -4,3 +4,4 @@
 ANF = "countries/AngloFrance.txt"
 YRK = "countries/York.txt"
 LNC = "countries/Lancaster.txt"
+WLN = "countries/Wallonie.txt"

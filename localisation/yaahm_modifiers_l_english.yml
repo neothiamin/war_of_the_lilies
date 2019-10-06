@@ -81,3 +81,7 @@
  desc_wotl_por_3_b_effect:0 "The Crown has allocated funds towards the construction of buildings in Ceuta.\n\nWill be removed via event when a non-fort building has been constructed and development is greater than 12."
  desc_wotl_por_3_c_effect:0 "The Crown has launched an inquisition in Ceuta to convert the native Moroccans.\n\nWill be removed via event when Ceuta follows the True Faith."
  wotl_bur_no_hre:0 "Scorned Empire"
+ wotl_fra_walloon_autonomy:0 "Walloon Autonomy"
+ wotl_fra_reneged_walloon_autonomy:0 "Promise Broken"
+ desc_wotl_fra_walloon_autonomy:0 "The French Crown has granted this province autonomy as a reward for its support during the Guerre du Lys."
+ desc_wotl_fra_reneged_walloon_autonomy:0 "The French Crown has broken their promise to this province, inciting revolts."

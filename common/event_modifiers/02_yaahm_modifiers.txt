@@ -220,3 +220,13 @@ wotl_por_3_c_effect = {
 wotl_por_tangiers_conquered = {
     province_trade_power_modifier = 0.2
 }
+
+wotl_fra_walloon_autonomy = {
+    min_local_autonomy = 50
+    local_autonomy = 0.1
+}
+
+wotl_fra_reneged_walloon_autonomy = {
+    local_unrest = 10
+    min_local_autonomy = 50
+}

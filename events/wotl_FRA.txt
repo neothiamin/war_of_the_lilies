@@ -124,3 +124,66 @@ country_event = {
         }
     }
 }
+
+#Walloons desire repayment!
+country_event = {
+    id = wotl_fra.3
+    title = wotl_fra.3.t
+    desc = wotl_fra.3.desc
+    picture = COURT_eventPicture
+
+    fire_only_once = yes
+
+    mean_time_to_happen = {
+        months = 18
+    }
+
+    trigger = {
+        tag = FRA
+        has_country_flag = wotl_fra_won_war
+        has_country_flag = wotl_fra_walloon_support_yes
+        is_subject = no
+        any_owned_province = {
+            culture = wallonian
+        }
+    }
+
+    #Grant them greater autonomy.
+    option = {
+        name = wotl_fra.3.a
+        every_owned_province = {
+            limit = {
+                culture = wallonian
+            }
+            add_province_modifier = {
+                name = wotl_fra_walloon_autonomy
+                duration = 9125
+            }
+        }
+    }
+
+    #Create a new duchy for them.
+    option = {
+        name = wotl_fra.3.b
+        every_owned_province = {
+            limit = {
+                culture = wallonian
+            }
+            add_core = WLN
+            add_local_autonomy = -50
+        }
+    }
+
+    #Renege on our promise.
+    option = {
+        name = wotl_fra.3.c
+        every_owned_province = {
+            limit = {
+                culture = wallonian
+            }
+            add_province_modifier = {
+                name = wotl_fra_reneged_walloon_autonomy
+            }
+        }
+    }
+}

@@ -438,3 +438,8 @@
  wotl_misc.12.a:0 "Accept their offer."
  wotl_misc.12.b:0 "Accept their offer, and elevate the [BUR.Monarch.GetName] of Burgundy to Elector."
  wotl_misc.12.c:0 "A French prince? What next, flying hogs?"
+ wotl_fra.3.t:0 "Walloon Promises"
+ wotl_fra.3.desc:0 "The time has come for us to repay the Walloon people. Their support in the Guerre du Lys was invaluable, and now we must either make good on our promise to them or face the wrath of the Walloon people."
+ wotl_fra.3.a:0 "Grant the Walloons greater autonomy. They have earned it."
+ wotl_fra.3.b:0 "Create a new Duchy for the Walloon people under the French Crown."
+ wotl_fra.3.c:0 "Renege on our promise. The French rule in France, not the Walloons."

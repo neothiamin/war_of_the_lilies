@@ -230,3 +230,7 @@ wotl_fra_reneged_walloon_autonomy = {
     local_unrest = 10
     min_local_autonomy = 50
 }
+
+wotl_mlo_popular_support_ignored = {
+    local_unrest = 6
+}

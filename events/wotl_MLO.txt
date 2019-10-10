@@ -4,7 +4,8 @@
 
 namespace = wotl_mlo
 
-#Lombard Wars
+#Ambrosian Republic
+#Fires on the death of Filippo Visconti of Milan
 country_event = {
 	id = wotl_mlo.1
 	title = wotl_mlo.1.t
@@ -12,9 +13,169 @@ country_event = {
 	picture = BATTLE_eventPicture
 
 	fire_only_once = yes
+	is_triggered_only = yes
 
 	trigger = {
 		tag = MLO
-		
+		has_ruler_flag = wotl_mlo_filippo_visconti
+	}
+
+	#Side with the scholars.
+	option = {
+		name = wotl_mlo.1.a
+		ai_chance = { factor = 40 }
+		custom_tooltip = wotl_mlo_popular_support_warning.tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					NOT = {
+						province_id = 2979 #Pavia is within the province of Novara I guess?
+					}
+				}
+				add_province_modifier = {
+					name = wotl_mlo_popular_support_ignored
+					duration = 1825
+				}
+			}
+			country_event = {
+				id = wotl_mlo.2
+				days = 30
+			}
+		}
+		ARA = {
+			add_casus_belli = {
+				target = MLO
+				type = cb_fabricated_claims
+				months = 60
+			}
+		}
+		every_country = {
+			limit = {
+				marriage_with = MLO
+			}
+			add_casus_belli = {
+				target = MLO
+				type = cb_fabricated_claims
+				months = 30
+			}
+		}
+		change_government = republic
+		add_government_reform = ambrosian_republic
+		add_republican_tradition = 5
+		every_neighbor_country  = {
+			limit = {
+				is_subject = no
+				government = monarchy
+				religion = catholic
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = mlo_against_ambrosian
+			}
+			if = {
+				limit = {
+					government = monarchy
+					NOT = { has_reform = elective_monarchy }
+				}
+				
+				add_casus_belli = {	
+					target = MLO
+					type = cb_change_government
+					months = 120
+				}		
+			}
+		}
+	}
+
+	#Name Francesco Sforza as Duke.
+	option = {
+		name = wotl_mlo.1.b
+		ai_chance = {
+			factor = 40
+		}
+		define_ruler = {
+			name = "Francesco"
+			dynasty = "Sforza"
+			mil = 4
+			max_random_dip = 1
+			max_random_adm = 3
+			min_age = 34
+			male = yes
+		}
+		define_ruler_to_general = {
+			fire = 1
+			shock = 3
+			manuever = 1
+			siege = 2
+		}
+		ARA = {
+			add_casus_belli = {
+				target = MLO
+				type = cb_fabricated_claims
+				months = 60
+			}
+		}
+		every_country = {
+			limit = {
+				marriage_with = MLO
+			}
+			add_casus_belli = {
+				target = MLO
+				type = cb_fabricated_claims
+				months = 30
+			}
+		}
+	}
+
+	#Crown Bianca Maria.
+	option = {
+		name = wotl_mlo.1.c
+		ai_chance = {
+			factor = 1
+		}
+		define_ruler = {
+			name = "Bianca Maria"
+			dynasty = "Visconti"
+			min_age = 16
+			female = yes
+		}
+		ARA = {
+			add_casus_belli = {
+				target = MLO
+				type = cb_fabricated_claims
+				months = 60
+			}
+		}
+		every_country = {
+			limit = {
+				marriage_with = MLO
+			}
+			add_casus_belli = {
+				target = MLO
+				type = cb_fabricated_claims
+				months = 30
+			}
+		}
+	}
+
+	#The Duchy passes to Aragon, as Filippo intended.
+	option = {
+		name = wotl_mlo.1.d
+		ai_chance = {
+			factor = 10
+		}
+		ARA = {
+			create_union = MLO
+		}
+		every_country = {
+			limit = {
+				marriage_with = MLO
+			}
+			add_casus_belli = {
+				target = MLO
+				type = cb_fabricated_claims
+				months = 30
+			}
+		}
 	}
 }

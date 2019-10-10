@@ -92,6 +92,8 @@ add_army_professionalism = 0.05
 		dip = 2
 		mil = 2
 	}
+	set_ruler_flag = wotl_mlo_filippo_visconti
+	add_ruler_personality = infertile_personality
 }
 1412.7.24 = {
 	queen = {

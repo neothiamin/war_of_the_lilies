@@ -448,3 +448,11 @@
  wotl_orl.7.desc:0 "Vive le France!\n\nFrance has finally broken free from the English yoke! This places us in a precarious situation, however. The foundation of our nation was in direct opposition to English rule. Now, with the French people ruling themselves again, the question becomes: do we rejoin our brethren? Or do we maintain our independence?"
  wotl_orl.7.a:0 "Rejoin the French fold."
  wotl_orl.7.b:0 "Maintain our independence."
+
+ wotl_mlo.1.t:0 "Death of Filippo Visconti"
+ wotl_mlo.1.desc:0 "Filippo Maria I Visconti, born in 1392, and who acceded to the throne at the age of 20 (though he ruled nominally over the city of Pavia from age 10), lived through many struggles. The Wars of Lombardy, fought between the various Italian duchies, counties, and city-states, and which Milan played a primary role in, ravaged the country for years. Filippo Maria provoked war with Florence in 1423 after the death of Giorgio Ordelaffi, lord of Forli, through attempts to conquer the lands of Romagna. The ensuing conflicts were pivotal in the development of early-Renaissance Italy. Now, Filippo Maria I has died.\n\nFilippo left no legitimate heirs, and prior to his death wrote a will bequeathing his lands to the [ARA.Monarch.GetTitle] of Aragon, [ARA.Monarch.GetName]. Normally, this would mean the duchy would pass to the Aragonese Crown. However, while Filippo Maria I had no legitimate heirs, this does not mean there aren't other claimants.\n\nFrancesco Sforza, through marriage to Filippo Maria's illegitimate daughter Bianca Maria, has a significant claim to the throne. His accession would mean that Milan remains under the rule of a Lombard. However, Sforza is not a member of the Visconti family by blood, and our neighbors may contest his legitimacy. Alternatively, we may name Bianca Maria herself Duchess.\n\nBut there exist in Pavia a group of scholars who wish to create a republic, modeled after the teachings of St. Ambrose. Their sway over our lands cannot be ignored. This is a difficult decision, to be sure."
+ wotl_mlo.1.a:0 "Side with the Scholars at Pavia."
+ wotl_mlo_popular_support_warning.tt:0 "This will upset our people!"
+ wotl_mlo.1.b:0 "Make Francesco Sforza Duke."
+ wotl_mlo.1.c:0 "Give the Duchy to Bianca Maria."
+ wotl_mlo.1.d:0 "The Duchy passes to Aragon, as Filippo intended."

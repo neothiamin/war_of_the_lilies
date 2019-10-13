@@ -18,6 +18,7 @@ country_event = {
 	trigger = {
 		tag = MLO
 		has_ruler_flag = wotl_mlo_filippo_visconti
+		has_heir = no
 	}
 
 	#Side with the scholars.
@@ -36,10 +37,6 @@ country_event = {
 					name = wotl_mlo_popular_support_ignored
 					duration = 1825
 				}
-			}
-			country_event = {
-				id = wotl_mlo.2
-				days = 30
 			}
 		}
 		ARA = {
@@ -131,7 +128,7 @@ country_event = {
 	option = {
 		name = wotl_mlo.1.c
 		ai_chance = {
-			factor = 1
+			factor = 10
 		}
 		define_ruler = {
 			name = "Bianca Maria"
